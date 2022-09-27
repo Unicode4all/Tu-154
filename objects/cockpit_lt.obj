@@ -1,0 +1,81 @@
+I
+800
+OBJ
+
+LIGHT_SPILL_CUSTOM -1.140298 -1.619731	-20.804682 0 0 0 0 0 0 0 0 0 sim/weapons/vx #left side panel
+LIGHT_SPILL_CUSTOM -1.062888 -1.601922	-21.007065 0 0 0 0 0 0 0 0 0 sim/weapons/vx #left side panel
+LIGHT_SPILL_CUSTOM -0.973142 -1.590362	-21.218679 0 0 0 0 0 0 0 0 0 sim/weapons/vx #left side panel
+
+LIGHT_SPILL_CUSTOM 1.140298 -1.619731	-20.804682 0 0 0 0 0 0 0 0 0 sim/weapons/vy #right side panel
+LIGHT_SPILL_CUSTOM 1.062888 -1.601922	-21.007065 0 0 0 0 0 0 0 0 0 sim/weapons/vy #right side panel
+LIGHT_SPILL_CUSTOM 0.973142 -1.590362	-21.218679 0 0 0 0 0 0 0 0 0 sim/weapons/vy #right side panel
+
+LIGHT_SPILL_CUSTOM -0.579122 -1.451071 -21.575785 0 0 0 0 0 0 0 0 0 sim/weapons/vz  #front panel
+LIGHT_SPILL_CUSTOM 0.579122 -1.451071 -21.575785 0 0 0 0 0 0 0 0 0 sim/weapons/vz  #front panel
+LIGHT_SPILL_CUSTOM -0.175983 -1.375752 -21.575785 0 0 0 0 0 0 0 0 0 sim/weapons/vz  #front panel
+LIGHT_SPILL_CUSTOM 0.175983 -1.375752 -21.575785 0 0 0 0 0 0 0 0 0 sim/weapons/vz  #front panel
+
+LIGHT_SPILL_CUSTOM  -0.22 -1.304535 -21.152455 0 0 0 0 0 0 0 0 0 sim/weapons/x #center panel
+LIGHT_SPILL_CUSTOM  0.22 -1.304535 -21.152455 0 0 0 0 0 0 0 0 0 sim/weapons/x #center panel
+LIGHT_SPILL_CUSTOM  -0.18 -1.304535 -21.152455 0 0 0 0 0 0 0 0 0 sim/weapons/x #center panel
+LIGHT_SPILL_CUSTOM  0.18 -1.304535 -21.152455 0 0 0 0 0 0 0 0 0 sim/weapons/x #center panel
+
+LIGHT_SPILL_CUSTOM -0.202977 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+LIGHT_SPILL_CUSTOM -0.15 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+LIGHT_SPILL_CUSTOM -0.102977 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+LIGHT_SPILL_CUSTOM -0.05 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+LIGHT_SPILL_CUSTOM 0 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+LIGHT_SPILL_CUSTOM 0.05 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+LIGHT_SPILL_CUSTOM 0.102977 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+LIGHT_SPILL_CUSTOM 0.15 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+LIGHT_SPILL_CUSTOM 0.202977 -1.079692 -21.391 0 0 0 0 0 0 0 0 0 sim/weapons/y  #overhead front
+
+LIGHT_SPILL_CUSTOM -0.3 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM -0.25 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM -0.2 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM -0.15 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM -0.1 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM -0.05 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM -0.0 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM 0.05 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM 0.1 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM 0.15 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM 0.2 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM 0.25 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM 0.3 -0.991724 -20.799458 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+
+LIGHT_SPILL_CUSTOM -0.318412 -1.037214 -21.034838 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+LIGHT_SPILL_CUSTOM 0.33 -1.037214 -21.034838 0 0 0 0 0 0 0 0 0 sim/weapons/z  #overhead back
+
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -20.2 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -20.1 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -20.0 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.9 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.8 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.7 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.6 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.5 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.4 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.3 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.2 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.1 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+LIGHT_SPILL_CUSTOM  0.672479 -0.978909 -19.0 0 0 0 0 0 0 0 0 0 sim/weapons/L    #engine panel
+
+
+LIGHT_SPILL_CUSTOM -0.876848 -1.101303 -19.718910 0 0 0 0 0 0 0 0 0 sim/weapons/M  #left spotlight
+
+LIGHT_SPILL_CUSTOM  0.488209 -0.778942 -19.492290 0 0 0 0 0 0 0 0 0 sim/weapons/N  #right spotlight
+
+LIGHT_SPILL_CUSTOM  0.0 -0.6 -16 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 -14 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 -12 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 -10 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 -8 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 -6 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 -4 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 -2 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 0 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 2 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 4 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 6 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
+LIGHT_SPILL_CUSTOM  0.0 -0.6 8 0 0 0 0 0 0 0 0 0 sim/weapons/Prad  #cabin light
