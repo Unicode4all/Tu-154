@@ -1,0 +1,50 @@
+A
+1100
+VRCONFIG
+
+################################
+#TELEPORT HOTSPOTS
+################################
+
+###############
+#
+# AABB left X_Left Y_Bottom Z_Back X_Right Y_Up Z_front - relative to aircraft's CG
+# PRESET_XYZ pilot_head_x pilot_head_y pilot_head_z = side pos, vert pos, long pos - relative to aircraft's CG
+# PRESET_PSI head turn right deg
+# PRESET_THE head pitch up
+# PRESET_PHI heat tilt right
+#
+#
+###############
+
+BEGIN_TELEPORT_HOTSPOT SITTING Pilot's Seat
+	AABB -0.8 -0.2 -21.8 -0.2 0.5 -21.2
+	PRESET_XYZ -0.5 0.46 -21.3
+	PRESET_PSI 0.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+BEGIN_TELEPORT_HOTSPOT SITTING CoPilot's Seat
+	AABB  0.2 -0.2 -21.8 0.8 0.5 -21.2
+	PRESET_XYZ 0.50 0.46 -21.3
+	PRESET_PSI 0.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+BEGIN_TELEPORT_HOTSPOT SITTING Navigator's Seat
+	AABB -0.3 -0.2 -21.0 0.3 0.5 -20.4
+	PRESET_XYZ 0.0 0.46 -20.9
+	PRESET_PSI 0.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+BEGIN_TELEPORT_HOTSPOT SITTING Engineer's Seat
+	AABB 0.0 -0.2 -20.3 0.6 0.5 -19.7
+	PRESET_XYZ 0.2 0.46 -20.1
+	PRESET_PSI 90
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT

@@ -1,0 +1,31 @@
+Meet the legendary Tu154M! 
+From its first flight in 1968 this aircraft became the most popular in USSR and in surround countries. There were 918 aircrafts built and some of them still remain in service all over the world.
+
+This model represents the most detailed simulation of the real Tu154 with all of its systems, performance and flight dynamics. 
+It is made of documents, blueprints, videos and personal consultations of many people, including pilots, engineers and ground stuff. 
+As the reference, the real Tu154M reg. No 85748 from Belavia Airlines was used. 
+
+Right now the model has some neat features:
+- fully functional 3D cockpit
+- fully animated external model with ground stuff
+- dynamic HDR lighting
+- working TCAS with TA/RA mode
+- working EGPWS with "Terrain ahead" warning mode
+- most complicated systems, made as close to real ones as possible
+- resizible 2D panels
+
+In future there will also be:
+- SmartCopilot compatibility and profile
+- Crew voices
+- Failures
+
+
+
+
+Thanx to Belavia stuff, that provided a lot of documents, photos and videos about this exact aircraft.
+Also thanx to Andrey Belov, that provided ground cars models.
+
+
+System requirements: X-plane 10 64 bit only.
+
+
