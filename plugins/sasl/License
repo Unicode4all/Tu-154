@@ -4,7 +4,7 @@ ANY USE OF THIS CODE CONSTITUTES ACCEPTANCE OF THE TERMS OF THE COPYRIGHT NOTICE
 COPYRIGHT NOTICE
 ========================================================================================
 
-SASL Scriptable avionics modeling suite for flight simulators library is proprietary software. 
+SASL library is proprietary software. 
 Proprietary software is computer software licensed under exclusive legal right of the copyright 
 holder.
 The licensee is given the right to use the software under certain conditions, but restricted from
@@ -14,13 +14,13 @@ following conditions.
 2.	The modifier relinquishes all rights to his modification is not entitled to any part, share
  or control of the modified code. 
 
-Copyright (c) 2017, 1-sim.aero
+Copyright (c) 2020, 1-sim.aero
 All rights reserved.
 
 Redistribution in source and binary forms, with or without modification, are not permitted.
 The use of this code in course or binary form is permitted under the following conditions:
 1.	The copyright holders have been notified of the use of SASL in a commercial project, 
-and have given their agreement. The code is to be used with a special notice provided bellow.
+and have given their agreement. The code is to be used with a special notice provided below.
 2.	The code is used in a free project which is distributed for free use with no limitation 
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
@@ -47,7 +47,7 @@ ANY USE OF THIS CODE CONSTITUTES ACCEPTANCE OF THE TERMS OF THE COPYRIGHT NOTICE
 The current software uses the SASL library. Redistribution in source and binary forms, with 
 or without modification, are not permitted.
 
-Copyright (c) 2017, 1-sim.aero
+Copyright (c) 2020, 1-sim.aero
 All rights reserved.
 
 SASL copyright holders are not responsible in any event for malfunction, unavailability, 
@@ -58,5 +58,3 @@ properties for any end product which uses SASL.
 ========================================================================================
 END OF COPYRIGHT NOTICE
 ========================================================================================
-
-

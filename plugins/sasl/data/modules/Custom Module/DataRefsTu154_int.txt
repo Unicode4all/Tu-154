@@ -1,0 +1,620 @@
+tu154ce/lang/hide_rus_objects	int	спрятать русские объекты кабины	0
+tu154ce/lang/hide_eng_objects	int	спрятать английские объекты кабины	1
+tu154ce/have_pedals	int	есть педали с тормозами	0
+tu154ce/sounds_voulme	int	общая громкость звуков	1000
+tu154ce/elec/bat_volt_1	float	напряжение батареи	25																
+tu154ce/elec/bat_volt_2	float	напряжение батареи	25																
+tu154ce/elec/bat_volt_3	float	напряжение батареи	25																
+tu154ce/elec/bat_volt_4	float	напряжение батареи	25																
+tu154ce/elec/bat_amp_1	float	ток батареи	0																
+tu154ce/elec/bat_amp_2	float	ток батареи	0																
+tu154ce/elec/bat_amp_3	float	ток батареи	0																
+tu154ce/elec/bat_amp_4	float	ток батареи	0																
+tu154ce/elec/bat_cc_1	float	ток заряда батареи	0																
+tu154ce/elec/bat_cc_2	float	ток заряда батареи	0																
+tu154ce/elec/bat_cc_3	float	ток заряда батареи	0																
+tu154ce/elec/bat_cc_4	float	ток заряда батареи	0																
+tu154ce/elec/bat_therm_1	float	температура батареи	20																
+tu154ce/elec/bat_therm_2	float	температура батареи	20																
+tu154ce/elec/bat_therm_3	float	температура батареи	20																
+tu154ce/elec/bat_therm_4	float	температура батареи	20																
+tu154ce/elec/vu1_volt	float	работа ВУ	27																
+tu154ce/elec/vu2_volt	float	работа ВУ	27																
+tu154ce/elec/vu_res_volt	float	работа ВУ	27																
+tu154ce/elec/vu1_amp	float	ток ВУ	0																
+tu154ce/elec/vu2_amp	float	ток ВУ	0																
+tu154ce/elec/vu_res_amp	float	ток ВУ	0																
+tu154ce/elec/vu_res_to_L	int	резервное ВУ подключено на лев сеть	0																
+tu154ce/elec/vu_res_to_R	int	резервное ВУ подключено на прав сеть	0																
+tu154ce/elec/bus27_volt_left	float	напряжение левой сети 27	27																
+tu154ce/elec/bus27_amp_left	float	напряжение левой сети 27	27																
+tu154ce/elec/bus27_amp_right	float	ток правой сети 27	0																
+tu154ce/elec/bus27_volt_right	float	ток правой сети 27	0																
+tu154ce/elec/bus27_source_left	int	источник питания левой сети. 0 - ничего. 1 - ВУ1, 2 - ВУрезерв, 3 - батареи 1 и 3, 4- бат 1, 5 - бат 2	1																
+tu154ce/elec/bus27_source_right	int	источник питания правой сети. 0 - ничего. 1 - ВУ2, 2 - ВУрезерв, 3 - батареи 1 и 3, 4- бат 1, 5 - бат 2	0																
+tu154ce/elec/bat_is_source_1	int	батарея является источником	1																
+tu154ce/elec/bat_is_source_2	int	батарея является источником	1																
+tu154ce/elec/bat_is_source_3	int	батарея является источником	1																
+tu154ce/elec/bat_is_source_4	int	батарея является источником	1																
+tu154ce/elec/bus_connected	int	сети соеденены	0																
+tu154ce/elec/bus36_volt_left	float	напряжение левой сети 36	36																
+tu154ce/elec/bus36_volt_right	float	напряжение правой сети 36	36																
+tu154ce/elec/bus36_volt_pts250_1	float	напряжение сети 36 ПТС 1	36																
+tu154ce/elec/bus36_volt_pts250_2	float	напряжение сети 36 ПТС 2	36																
+tu154ce/elec/bus36_amp_left	float	ток левой сети 36	0																
+tu154ce/elec/bus36_amp_right	float	ток правой сети 36	0																
+tu154ce/elec/bus36_amp_pts250_1	float	ток ПТС250 сети 36 1	0																
+tu154ce/elec/bus36_amp_pts250_2	float	ток ПТС250 сети 36 2	0																
+tu154ce/elec/bus36_tr1_work	int	трансформатор 1 работает	1																
+tu154ce/elec/bus36_tr2_work	int	трансформатор 2 работает	1																
+tu154ce/elec/bus36_pts1_work	int	ПТС250 1 работает	1																
+tu154ce/elec/bus36_pts2_work	int	ПТС250 2 работает	0																
+tu154ce/elec/bus36_src_L	int	источник левой сети. 0 = ТР1, 1 = ТР2	0																
+tu154ce/elec/bus36_src_R	int	источник правой сети. 0 = ТР2, 1 = ТР1	0																
+tu154ce/elec/gen1_work	int	генератор 1 работает	1																
+tu154ce/elec/gen2_work	int	генератор 2 работает	1																
+tu154ce/elec/gen3_work	int	генератор 3 работает	1																
+tu154ce/elec/gen4_work	int	генератор ВСУ работает	0																
+tu154ce/elec/gpu_work	int	РАП работает	0																
+tu154ce/elec/gen1_overload	int	генератор 1 перегрузка	0																
+tu154ce/elec/gen2_overload	int	генератор 2 перегрузка	0																
+tu154ce/elec/gen3_overload	int	генератор 3 перегрузка	0																
+tu154ce/elec/gen4_overload	int	генератор ВСУ работает	0																
+tu154ce/elec/gpu_overload	int	РАП перегрузка	0																
+tu154ce/elec/gen1_volt	float	напряжение на генераторе	115																
+tu154ce/elec/gen2_volt	float	напряжение на генераторе	115																
+tu154ce/elec/gen3_volt	float	напряжение на генераторе	115																
+tu154ce/elec/gen4_volt	float	напряжение на генераторе	115																
+tu154ce/elec/gpu_volt	float	напряжение на генераторе	115																
+tu154ce/elec/bus115_1_volt	float	напряжение на сети 115в	115																
+tu154ce/elec/bus115_2_volt	float	напряжение на сети 115в	115																
+tu154ce/elec/bus115_3_volt	float	напряжение на сети 115в	115																
+tu154ce/elec/bus115_em_1_volt	float	напряжение на аварийной сети 115в	115																
+tu154ce/elec/bus115_em_2_volt	float	напряжение на аварийной сети 115в	115																
+tu154ce/elec/bus115_1_amp	float	ток в сети 115в	0																
+tu154ce/elec/bus115_2_amp	float	ток в сети 115в	0																
+tu154ce/elec/bus115_3_amp	float	ток в сети 115в	0																
+tu154ce/elec/bus115_em_1_amp	float	ток в сети 115в	0																
+tu154ce/elec/bus115_em_2_amp	float	ток в сети 115в	0																
+tu154ce/elec/gen1_amp	float	нагрузка на генератор	0																
+tu154ce/elec/gen2_amp	float	нагрузка на генератор	0																
+tu154ce/elec/gen3_amp	float	нагрузка на генератор	0																
+tu154ce/elec/gen4_amp	float	нагрузка на генератор	0																
+tu154ce/elec/gpu_amp	float	нагрузка на генератор	0																
+tu154ce/thermo/cockpit_temp	float	температура в кабине	20																
+tu154ce/thermo/cabin1_temp	float	температура в салоне 1	20																
+tu154ce/thermo/cabin2_temp	float	температура в салоне 2	20																
+tu154ce/elec/apu_start_bus	float	напряжение в сети ВСУ	27																
+tu154ce/elec/apu_start_cc	float	ток стартера ВСУ	0																
+tu154ce/elec/apu_start_seq	int	идет процесс запуска ВСУ	0																
+tu154ce/elec/apu_burning_fuel	float	ток стартера ВСУ	0																
+tu154ce/elec/cockpit_light_cc_left	float	нагрузка на левую сеть от освещения в кабине	0																
+tu154ce/elec/cockpit_light_cc_right	float	нагрузка на правую сеть от освещения в кабине	0																
+tu154ce/elec/cockpit_light_cc_115	float	нагрузка на сеть 115 от освещения в кабине	0																
+tu154ce/elec/ext_light_cc_left	float	нагрузка на левую сеть от внешнего освещения	0																
+tu154ce/elec/ext_light_cc_right	float	нагрузка на левую сеть от внешнего освещения	0																
+tu154ce/elec/ext_light_cc_115	float	нагрузка на левую сеть от внешнего освещения	0																
+tu154ce/eng/apu_n1	float	обороты ВСУ	0																
+tu154ce/eng/apu_oil_t	float	температура масла ВСУ	0																
+tu154ce/eng/apu_oil_q	float	количество масла ВСУ	0																
+tu154ce/eng/apu_oil_p	float	давление масла ВСУ	0																
+tu154ce/eng/apu_fuel_p	float	давление топлива ВСУ	0																
+tu154ce/eng/apu_egt	float	температура выходных газов ВСУ	0																
+tu154ce/eng/apu_air_press	float	давление воздуха для запуска двигателей	0																
+tu154ce/eng/apu_air_doors	float	положение створок для накачки воздуха	0																
+tu154ce/eng/apu_system_on	int	включение системы ВСУ	0																
+tu154ce/eng/vibration_1	float	вибрация двигателя	0																
+tu154ce/eng/vibration_2	float	вибрация двигателя	0																
+tu154ce/eng/vibration_3	float	вибрация двигателя	0																
+tu154ce/fuel/eng_fuel_press_1	int	топливо может быть подано в двигатель. без учета стоп-кранов	1																
+tu154ce/fuel/eng_fuel_press_2	int	топливо может быть подано в двигатель. без учета стоп-кранов	1																
+tu154ce/fuel/eng_fuel_press_3	int	топливо может быть подано в двигатель. без учета стоп-кранов	1																
+tu154ce/fuel/pump_tank2_left_work	int	насосы бака 2	1																
+tu154ce/fuel/pump_tank2_right_work	int	насосы бака 2	1																
+tu154ce/fuel/pump_tank3_left_work	int	насосы бака 3	1																
+tu154ce/fuel/pump_tank3_right_work	int	насосы бака 3	1																
+tu154ce/fuel/pump_tank4_work	int	насосы бака 4	1																
+tu154ce/fuel/pump_tank1_1_work	int	насосы бака 1	1																
+tu154ce/fuel/pump_tank1_2_work	int	насосы бака 1	1																
+tu154ce/fuel/pump_tank1_3_work	int	насосы бака 1	1																
+tu154ce/fuel/pump_tank1_4_work	int	насосы бака 1	1																
+tu154ce/fuel/reserv_trans	int	резервная перекачка включена	0																
+tu154ce/fuel/auto_tanks_turn	int	рабочие очередные баки. 0, 1 - не работает, 2, 3, 4	0																
+tu154ce/fuel/auto_tank_level_2	int	выравнивание в баках 2. -1 = L, 0 = none, +1 = R	0
+tu154ce/fuel/auto_tank_level_3	int	выравнивание в баках 3. -1 = L, 0 = none, +1 = R	0															
+																			
+tu154ce/fuel/fire_vlv_open_1	float	пожарный кран открыт	1																
+tu154ce/fuel/fire_vlv_open_2	float	пожарный кран открыт	1																
+tu154ce/fuel/fire_vlv_open_3	float	пожарный кран открыт	1																
+																			
+tu154ce/elec/fuel_pumps_115_1_cc	float	нагрузка на сеть 1 от топливных насосов	0																
+tu154ce/elec/fuel_pumps_115_3_cc	float	нагрузка на сеть 3 от топливных насосов	0																
+																			
+tu154ce/elec/fuel_pumps_27_cc	float	нагрузка на сеть 27в от топливных насосов	0																
+																			
+tu154ce/hydro/gs_press_1	float	давление в ГС1	0																
+tu154ce/hydro/gs_press_2	float	давление в ГС2	0																
+tu154ce/hydro/gs_press_3	float	давление в ГС3	0																
+tu154ce/hydro/gs_press_4	float	давление в аварийной тормозной системе	0																
+																			
+tu154ce/hydro/gs_qty_1	float	остаток масла в системе	55																
+tu154ce/hydro/gs_qty_2	float	остаток масла в системе	55																
+tu154ce/hydro/gs_qty_3	float	остаток масла в системе	49																
+tu154ce/hydro/gs_qty_12_show	float	остаток масла в гидробаке	48																
+tu154ce/hydro/gs_qty_3_show	float	остаток масла в гидробаке	24																
+																			
+tu154ce/hydro/gs_pump_2_cc	float	ток насосной станции	0																
+tu154ce/hydro/gs_pump_3_cc	float	ток насосной станции	0																
+																			
+tu154ce/hydro/gs_bak_qty_1	float	остаток масла в баке	17.17																
+tu154ce/hydro/gs_bak_qty_2	float	остаток масла в баке	17.17																
+tu154ce/hydro/gs_bak_qty_3	float	остаток масла в баке	23.8																
+																			
+tu154ce/bleed/air_usage_L	float	расход воздуха лев	0																
+tu154ce/bleed/air_usage_R	float	расход воздуха лев	0																
+																			
+tu154ce/bleed/eng_airvalve_1	float	открытие отбора воздуха от двигателя	1																
+tu154ce/bleed/eng_airvalve_2	float	открытие отбора воздуха от двигателя	1																
+tu154ce/bleed/eng_airvalve_3	float	открытие отбора воздуха от двигателя	1																
+																			
+tu154ce/bleed/hot_tube_t	float	температура горячего воздуха в трубопроводе	100																
+tu154ce/bleed/door_heat_tube_t	float	температура в трубопроводе обогрева дверей	80																
+tu154ce/bleed/cockpit_tube_t	float	температура в трубопроводе в кабину	30																
+tu154ce/bleed/cabin1_tube_t	float	температура в трубопроводе в салон 1	30																
+tu154ce/bleed/cabin2_tube_t	float	температура в трубопроводе в салон 2	30																
+tu154ce/bleed/cold_tube1_t	float	температура в трубопроводе1	30																
+tu154ce/bleed/cold_tube2_t	float	температура в трубопроводе2	30																
+																			
+tu154ce/bleed/cockpit_temp	float	температура в кабине	20																
+tu154ce/bleed/cabin_1_temp	float	температура в салоне 1	20																
+tu154ce/bleed/cabin_2_temp	float	температура в салоне 2	20																
+																			
+tu154ce/start/starter_pressure	float	двление в системе запуска	0																
+																			
+tu154ce/start/apd_working_1	int	работа системы АПД	0																
+tu154ce/start/apd_working_2	int	работа системы АПД	0																
+tu154ce/start/apd_working_3	int	работа системы АПД	0																
+																			
+tu154ce/start/start_sys_work	int	работа системы запуска	0																
+																			
+tu154ce/start/fuel_in_1	int	подача топлива от системы запуска	1																
+tu154ce/start/fuel_in_2	int	подача топлива от системы запуска	1																
+tu154ce/start/fuel_in_3	int	подача топлива от системы запуска	1																
+																			
+tu154ce/trimmers/int_pitch_trim	float	положение триммера руля высоты	0																
+tu154ce/trimmers/int_roll_trim	float	положение триммера элеронов	0																
+tu154ce/trimmers/int_yaw_trim	float	положение триммера руля направления	0																
+																			
+tu154ce/controls/control_force_pos	float	положение загружателя РВ. 0 - выклчюен, 1 - подключен	0
+tu154ce/controls/control_force_pos_rud	float	положение загружателя РН. 0 - выклчюен, 1 - подключен	0																	
+																			
+tu154ce/fire/ext_used_1	int	огнетушитель использован	0																
+tu154ce/fire/ext_used_2	int	огнетушитель использован	0																
+tu154ce/fire/ext_used_3	int	огнетушитель использован	0																
+																			
+tu154ce/fire/ng_used	int	НГ использован	0																
+																			
+tu154ce/fire/valve_open_1	int	кран тушения двиг 1	0																
+tu154ce/fire/valve_open_2	int	кран тушения двиг 2	0																
+tu154ce/fire/valve_open_3	int	кран тушения двиг 3	0																
+tu154ce/fire/valve_open_4	int	кран тушения ВСУ	0																
+																			
+tu154ce/fire/fire_siren	int	работа пожарной сирены	0																
+																			
+tu154ce/fire/engine_fire_state_1	int	состояние двигателя. 0 - норм, 1 - перегрев, 2 - пожар	0																
+tu154ce/fire/engine_fire_state_2	int	состояние двигателя. 0 - норм, 1 - перегрев, 2 - пожар	0																
+tu154ce/fire/engine_fire_state_3	int	состояние двигателя. 0 - норм, 1 - перегрев, 2 - пожар	0																
+tu154ce/fire/engine_fire_state_4	int	состояние ВСУ. 0 - норм, 1 - перегрев, 2 - пожар	0																
+																			
+tu154ce/fire/engine_fuel_cut_1	int	топливо перекрыто	0																
+tu154ce/fire/engine_fuel_cut_2	int	топливо перекрыто	0																
+tu154ce/fire/engine_fuel_cut_3	int	топливо перекрыто	0																
+																			
+tu154ce/fire/fire_detected	int	обнаружен пожар	0																
+																			
+tu154ce/fire/fire_sys_cc	float	потребление тока системой	0																
+																			
+tu154ce/antiice/wing_heat_t	float	температура обогрева крыла	15																
+tu154ce/antiice/stab_heat_t	float	температура обогрева стабилизатора	15																
+																			
+tu154ce/antiice/ice_detected	int	обнаружен лед	0																
+tu154ce/antiice/ice_detect_ok	int	система СОИ работает	0																
+																			
+tu154ce/antiice/wing_heating	int	работает обогрев крыла	1																
+tu154ce/antiice/slat_heating	int	работает обогрев крыла	1																
+																			
+tu154ce/antiice/ai_27_L_cc	float	нагрузка на сеть	0																
+tu154ce/antiice/ai_27_R_cc	float	нагрузка на сеть	0																
+																			
+tu154ce/antiice/ai_115_1_cc	float	нагрузка на сеть	0																
+tu154ce/antiice/ai_115_2_cc	float	нагрузка на сеть	0																
+tu154ce/antiice/ai_115_3_cc	float	нагрузка на сеть	0
+
+tu154ce/antiice/eng_heat_open_1	int	открыта заслонка обогрева двигателя	0
+tu154ce/antiice/eng_heat_open_2	int	открыта заслонка обогрева двигателя	0
+tu154ce/antiice/eng_heat_open_3	int	открыта заслонка обогрева двигателя	0															
+																			
+tu154ce/msrp/msrp_power	int	питание МСРП для индикатора часов	1																
+tu154ce/msrp/msrp_recording	int	питание МСРП для индикатора часов	1																
+tu154ce/msrp/msrp_27_L_cc	float	нагрузка на сеть	0																
+tu154ce/msrp/msrp_27_R_cc	float	нагрузка на сеть	0																
+																			
+tu154ce/control/ctr_27_L_cc	float	нагрузка на сеть	0																
+tu154ce/control/ctr_27_R_cc	float	нагрузка на сеть	0																
+																			
+tu154ce/control/ctr_115_1_cc	float	нагрузка на сеть	0																
+tu154ce/control/ctr_115_2_cc	float	нагрузка на сеть	0																
+tu154ce/control/ctr_115_3_cc	float	нагрузка на сеть	0																
+																			
+tu154ce/control/ctr_36L_cc	float	нагрузка на сеть	0																
+tu154ce/control/ctr_36R_cc	float	нагрузка на сеть	0																
+																			
+tu154ce/auasp/alpha_critical	int	сигнал от АУАСП по критическом УА	0																
+tu154ce/auasp/gforce_critical	int	сигнал от АУАСП по критической перегрузке	0																
+																			
+tu154ce/gyro/mgv_contr_roll	float	крен контрольного гироскопа	0																
+tu154ce/gyro/mgv_contr_pitch	float	тангаж контрольного гироскопа	0																
+tu154ce/gyro/mgv_contr_flag	int	флаг отказа МГВ контр	0																
+																			
+tu154ce/bkk/left_roll_big	int	сигнал с БКК - крен лев велик	0																
+tu154ce/bkk/right_roll_big	int	сигнал с БКК - крен прав велик	0																
+tu154ce/bkk/mgv_contr_fail	int	сигнал с БКК - отказ МГВ контр	0																
+tu154ce/bkk/no_contr_ag	int	сигнал с БКК - нет контроля АГ	0																
+tu154ce/bkk/pkp_fail_left	int	сигнал с БКК - отказ левого ПКП	0																
+tu154ce/bkk/pkp_fail_right	int	сигнал с БКК - отказ левого ПКП	0																
+tu154ce/bkk/pkp_roll_left	float	крен на левом МГВ	0																
+tu154ce/bkk/pkp_roll_right	float	крен на правом МГВ	0																
+																			
+tu154ce/bkk/pkp_left_power_cc	float	отребление тока ПКП	0																
+tu154ce/bkk/pkp_right_power_cc	float	отребление тока ПКП	0																
+tu154ce/bkk/mgv_ctr_power_cc	float	отребление тока ПКП	0																
+
+tu154ce/gyro/ahz_pitch_int_L	float	тангаж на левом гироскопе	0
+tu154ce/gyro/ahz_pitch_int_R	float	тангаж на правом гироскопе	0																		
+																			
+tu154ce/tcas/range_set	int	дистанция на дисплее. 0 = 3, 1 = 5, 2 = 10, 3 = 15 nm	3																
+tu154ce/tcas/mode_set	int	режим TCAS. -1 = test, 0 - stby, 1 = alt off, 2 = alt on, 3 = TA, 4 = TARA	4																
+tu154ce/tcas/screen_mode	int	режим отображения на экране.  -1 = ошибка, 0 = код ответчика, 1 = above mode, 2 = FL mode, 3 = FLT ID, 4 = PLN BIT, 5 = test, 6 = range set, 11-14 = code set, 100 = no power	0																
+tu154ce/tcas/level_mode	int	1 = above, 0 = normal, -1 = below	0																
+tu154ce/tcas/fl_mode	int	fl mode. 0 = absolute, 1 = relative	0																
+tu154ce/tcas/flt_id	int	flight ID. 0 = cover, 1 = show / change code	0																
+tu154ce/tcas/ra_scale_set	int	RA mode scale set. 0 = none.	0																
+tu154ce/tcas/traffic_det	int	появление желтых или красных меток	0																
+																			
+tu154ce/svs/altitude	float	высота, выдаваемая СВС	0																
+tu154ce/svs/machno	float	скорость маха, выдаваемая СВС	0																
+tu154ce/svs/true_airspeed	float	TAS, выдаваемая СВС	0																
+tu154ce/svs/power_27cc	float	ток, потребляемый СВС	0																
+tu154ce/svs/power_36cc	float	ток, потребляемый СВС	0																
+tu154ce/svs/power_115cc	float	ток, потребляемый СВС	0																
+																			
+tu154ce/elec/auasp_pow27_cc	float	ток, потребляемый АУАСП	0																
+tu154ce/elec/auasp_pow115_cc	float	ток, потребляемый АУАСП	0																
+																			
+tu154ce/elec/rv5_left_cc	float	ток, потребляемый RV-5	0																
+tu154ce/elec/rv5_right_cc	float	ток, потребляемый RV-5	0																
+tu154ce/misc/rv5_alt_left	float	высота на левом высотомере	0																
+tu154ce/misc/rv5_alt_right	float	высота на правом высотомере	0
+tu154ce/misc/rv5_dh_signal_left	int	сигнал DH	0																
+tu154ce/misc/rv5_dh_signal_right	int	сигнал DH	0																
+																			
+tu154ce/taws/mode_set	int	режим работы экрана. 0 - выкл, 1 - карта высот, 2 - вид сбоку, 3 - часы, 4 - процесс включения	1																
+tu154ce/taws/distance_set	int	дистанция для рисования карты, км. 0 = 10, 1 = 20, 2 = 40, 3 = 80, 4 = 160, 5 = 320, 6 = 640	0																
+tu154ce/taws/taws_cc	float	потребление тока системой СРПБЗ	0																
+tu154ce/taws/taws_message	int	сообщения СРПБЗ. 0 - none, 1 - Pull UP, 2 - alt callout, 3 - Pull Up, 4 - Terrain, 5 - Terrain Ahead, 6 - Too low, Terrain, 7 - Alt collout, 8 - Too low, Gear, 9 - Too low, Flaps, 10 - Check altitude, 11 - Sink Rate, 12 - Don't sink, 13 - Glideslope	0																
+tu154ce/taws/taws_english	int	язык системы. 0 - русский, 1 - английский	0																
+tu154ce/taws/gs_msg_int	float	интервал сигнала ГЛИССАДА	5																
+tu154ce/taws/gs_msg_vol	float	громкость сигнала ГЛИССАДА	1																
+																			
+tu154ce/taws/taws_alt_left	int	сравни высоту на левом высотомере	0																
+tu154ce/taws/taws_alt_right	int	сравни высоту на правом высотомере	0																
+																			
+tu154ce/tks/course_mk_1	float	курс на MK5	0																
+tu154ce/tks/course_mk_2	float	курс на MK5	0																
+tu154ce/tks/course_ga_1	float	курс на ГА1	0																
+tu154ce/tks/course_ga_2	float	курс на ГА1	0																
+tu154ce/tks/course_bgmk_1	float	курс на БГМК1	0																
+tu154ce/tks/course_bgmk_2	float	курс на БГМК1	0																
+tu154ce/tks/course_gpk	float	результирующий курс ТКС - ГПК	0																
+tu154ce/tks/course_gmk	float	результирующий курс ТКС - ГМК	0																
+tu154ce/tks/fail_left	int	флаг отказа	0																
+tu154ce/tks/fail_right	int	флаг отказа	0																
+																			
+tu154ce/nvu/diss_wind_course	float	курс ветра по ДИСС	0																
+tu154ce/nvu/diss_wind_spd	float	скорость ветра по ДИСС	0																
+tu154ce/nvu/diss_groundspeed	float	путевая скорость по ДИСС	0																
+tu154ce/nvu/diss_slip_angle	float	угол сноса по ДИСС	0																
+tu154ce/nvu/diss_mode	int	режим ДИСС. 0 - выкл, 1 - работа, 2 - память	1																
+																			
+tu154ce/rsbn/distance	float	геометрическая дистанция от маяка	0																
+tu154ce/rsbn/azimuth	float	азимут от маяка	0																
+																			
+tu154ce/radio/adf_bear_1	float	направление на маяк ADF	0																
+tu154ce/radio/adf_bear_2	float	направление на маяк ADF	0																
+tu154ce/radio/vor_bear_1	float	направление на маяк VOR	0																
+tu154ce/radio/vor_bear_2	float	направление на маяк VOR	0																
+tu154ce/radio/vor_dme_1	float	дистанция к VOR	0																
+tu154ce/radio/vor_dme_2	float	дистанция к VOR	0																
+																			
+tu154ce/radio/nav1_cs	float	отклонение курсовой планки	0																
+tu154ce/radio/nav1_gs	float	отклонение глиссадной планки	0																
+tu154ce/radio/nav2_cs	float	отклонение курсовой планки	0																
+tu154ce/radio/nav2_gs	float	отклонение глиссадной планки	0																
+																			
+tu154ce/radio/nav1_cs_flag	int	курсовой флаг	0																
+tu154ce/radio/nav2_cs_flag	int	курсовой флаг	0																
+tu154ce/radio/nav1_gs_flag	int	глиссадный флаг	0																
+tu154ce/radio/nav2_gs_flag	int	глиссадный флаг	0																
+																			
+tu154ce/nvu/current_Z1	float	Z1	0																
+tu154ce/nvu/current_S1	float	S1	0																
+tu154ce/nvu/next_Z1	float	Z1	0																
+tu154ce/nvu/next_S1	float	S1	0																
+																			
+tu154ce/nvu/current_Z2	float	Z2	0																
+tu154ce/nvu/current_S2	float	S2	0																
+tu154ce/nvu/next_Z2	float	Z2	0																
+tu154ce/nvu/next_S2	float	S2	0																
+																			
+tu154ce/nvu/zpu1	float	Z2	0																
+tu154ce/nvu/zpu2	float	S2	0																
+																			
+tu154ce/nvu/nvu_mode	int	режим НВУ. 0 = выкл, 1 = готов, 2 = счисление, 3 = коррекция	1																
+tu154ce/nvu/nvu_active	int	активный комплект НВУ. 1 - 2	1																
+																			
+tu154ce/nvu/nvu_res_course	float	курс полета по НВУ	0																
+tu154ce/nvu/nvu_res_z	float	смещение от курса полета НВУ	0																
+																			
+tu154ce/nvu/nvu_changing_ort	int	смена ЧО	0																
+tu154ce/nvu/nvu_fail	int	отказ или недостаточно систем для НВУ	0																
+																			
+tu154ce/absu/roll_main_mode	int	основной режим АБСУ по крену. 0 - выкл, 1 - штурвальный - 2 - стаб	1																
+tu154ce/absu/pitch_main_mode	int	основной режим АБСУ по тангажу. 0 - выкл, 1 - штурвальный - 2 - стаб	1																
+																			
+tu154ce/absu/roll_sub_mode	int	режим АБСУ по крену. 0 - выкл, 1 - стаб, 2 - ЗК, 3 - НВУ, 4 - АЗ1, 5 - АЗ2, 6 - заход	0																
+tu154ce/absu/pitch_sub_mode	int	режим АБСУ по тангажу. 0 - выкл, 1 - стаб, 2 - V, 3 - M, 4 - H, 5 - глисс, 6 - уход	0																
+																			
+tu154ce/absu/contr_pitch	float	отклонение штока РА56 по тангажу	0																
+tu154ce/absu/contr_roll	float	отклонение штока РА56 по крену	0																
+tu154ce/absu/contr_yaw	float	отклонение штока РА56 по направлению	0																
+																			
+tu154ce/bkk/bkk_pitch	float	результирующий тангаж от БКК	0																
+tu154ce/bkk/bkk_roll	float	результирующий крен от БКК	0																
+																			
+tu154ce/absu/absu_pitch_trimm	int	комманда триммеру от АБСУ. +1 = вверх, -1 = ввениз	0																
+																			
+tu154ce/absu/rud_1_spd	float	скорость изменения положения рычага	0																
+tu154ce/absu/rud_2_spd	float	скорость изменения положения рычага	0																
+tu154ce/absu/rud_3_spd	float	скорость изменения положения рычага	0																
+																			
+tu154ce/absu/absu_roll_ind	float	индикация директора крена	0																
+tu154ce/absu/absu_pitch_ind	float	индикация директора тангажа	0																
+																			
+tu154ce/absu/absu_roll_flag	int	флаг директора крена	1																
+tu154ce/absu/absu_pitch_flag	int	флаг директора тангажа	1																
+																			
+tu154ce/absu/absu_pnp_mode_1	int	режим индикации ПНП. 0 = off, 1 = НВУ, 2 = VOR1, 3 = VOR2, 4 = ПС	0																
+tu154ce/absu/absu_pnp_mode_2	int	режим индикации ПНП. 0 = off, 1 = НВУ, 2 = VOR1, 3 = VOR2, 4 = ПС	0																
+																			
+tu154ce/absu/stu_mode	int	режимы автомата тяги 0 - выкл, 1 - вкл, 2 - готов, 3 стаб, 4 - уход	0
+tu154ce/absu/toga_comm	int	режим УХОД	0																
+																			
+tu154ce/absu_at_dif_left	float	разность скоростей для индикации на ПКП	0																
+tu154ce/absu_at_dif_right	float	разность скоростей для индикации на ПКП	0																
+																			
+tu154ce/absu_course_out	int	flying outside the course limits	0																
+tu154ce/absu_gs_out	int	flying outside the glideslope limits	0																
+																			
+tu154ce/absu_power_cc	float	потребление тока АБСУ	0	
+tu154ce/absu_at_power_cc	float	потребление тока АБСУ	0
+
+tu154ce/absu_use_second_nav	int	АБСУ перешло на второй КурсМП	0
+
+tu154ce/absu/damp_roll_lamp	int	сигнал на лампочку. отказ демпера крена	0
+tu154ce/absu/damp_pitch_lamp	int	сигнал на лампочку. отказ демпера тангажа	0
+tu154ce/absu/damp_yaw_lamp	int	сигнал на лампочку. отказ демпера курса	0
+tu154ce/absu/roll_contr_lamp	int	сигнал на лампочку. отказ управления крена	0
+tu154ce/absu/pitch_contr_lamp	int	сигнал на лампочку. отказ управления тангажа	0
+tu154ce/absu/man_roll_lamp	int	сигнал на лампочку. управляй креном	0
+tu154ce/absu/man_pitch_lamp	int	сигнал на лампочку. управляй тангажом	0
+tu154ce/absu/man_toga_lamp	int	сигнал на лампочку. управляй уходом	0
+tu154ce/absu/triangle_lamp_signal	int	сигнал на лампочку. треугольник	0
+
+tu154ce/absu/absu_fail_signal	int	сигнал на сирену	0															
+																			
+tu154ce/kln90/kln_course	float	курс ЛЗП от КЛН	0																
+tu154ce/kln90/kln_dev	float	отклонение от ЛЗП, мили	0																
+tu154ce/kln90/kln_flag	int	флаг курса КЛН. 0 = флага нет, 1 = флаг	0																
+																			
+tu154ce/radio/vhf1_cc	float	потребление тока радиостанцией	0
+tu154ce/radio/vhf2_cc	float	потребление тока радиостанцией	0
+
+tu154ce/tks/km5_1_cc	float	потребление тока КМ5	0
+tu154ce/tks/km5_2_cc	float	потребление тока КМ5	0
+tu154ce/tks/ga_1_cc	float	потребление тока ГА	0
+tu154ce/tks/ga_2_cc	float	потребление тока ГА	0
+tu154ce/tks/ga_heat_cc	float	потребление тока подогрева ГА	0
+tu154ce/tks/bgmk_1_cc	float	потребление тока БГМК	0
+tu154ce/tks/bgmk_2_cc	float	потребление тока БГМК	0
+tu154ce/tks/ush_cc	float	потребление тока УШ	0
+
+tu154ce/ahz/agr_cc	float	потребление тока АГР	0
+tu154ce/nvu/nvu_cc	float	потребление тока НВУ	0
+tu154ce/radio/ark15_L_cc	float	потребление тока АРК	0
+tu154ce/radio/ark15_R_cc	float	потребление тока АРК	0
+
+tu154ce/nvu/diss_cc	float	потребление от ДИСС	0
+
+tu154ce/radio/nav1_pow_cc	float	потребление тока от КурсМП	0
+tu154ce/radio/nav2_pow_cc	float	потребление тока от КурсМП	0
+
+tu154ce/radio/radar_cc	float	потребление тока от РЛС Гроза	0
+tu154ce/radio/rsbn_cc	float	потребление тока от РСБН	0
+
+tu154ce/payload/crew_num	int	экипаж в кабине	3
+tu154ce/payload/zone_1	int	пассажиры	9
+tu154ce/payload/zone_2	int	пассажиры	22
+tu154ce/payload/cabin_num	int	экипаж в салоне	4
+tu154ce/payload/zone_4	int	пассажиры	24
+tu154ce/payload/zone_5	int	пассажиры	21
+tu154ce/payload/zone_6	int	пассажиры	7
+			
+tu154ce/payload/cargo_1	int	багаж 1	2500
+tu154ce/payload/cargo_2	int	багаж 2	1200
+			
+tu154ce/payload/kitchens	int	загрузка кухонь	300
+tu154ce/payload/various	int	прочее	50
+			
+tu154ce/payload/main_dist	int	дистанция до основного АП	1000
+tu154ce/payload/alt_dist	int	дистанция до запасного АП	500
+			
+tu154ce/payload/main_fl	int	эшелон до основного	380
+tu154ce/payload/alt_fl	int	эшелон до запасного	320
+			
+tu154ce/payload/nav_fuel	int	навигацонный запас	2500
+tu154ce/payload/taxi_fuel	int	топливо на руление	100
+
+tu154ce/payload/tank_1	int	топливо в баке	3300
+tu154ce/payload/tank_4	int	топливо в баке	0
+tu154ce/payload/tank_2L	int	топливо в баке	1500
+tu154ce/payload/tank_2R	int	топливо в баке	1500
+tu154ce/payload/tank_3L	int	топливо в баке	3225
+tu154ce/payload/tank_3R	int	топливо в баке	3225
+
+tu154ce/payload/load_fuel_btn	int	кнопка загрузки топлива	0
+tu154ce/payload/load_fast_btn	int	кнопка загрузки быстро	0
+tu154ce/payload/load_slow_btn	int	кнопка загрузки медленно	0
+tu154ce/payload/paylod_set	float	Нужно загрузить	0
+tu154ce/payload/cg_set	float	Нужно загрузить	0
+
+tu154ce/sounds/taws_eng_phrase	int	номер фразы СРПБЗ на английском	0
+tu154ce/sounds/taws_rus_phrase	int	номер фразы СРПБЗ на русском	0
+
+tu154ce/sounds/enable_crew_vo	int	включены фразы екипажа	1
+
+tu154ce/alarm/main_gear_flaps	int	не взлетное положение закрылков или не выпущенны шасси	0
+tu154ce/alarm/main_pressure	int	разгерметизация или перенаддув кабины	0
+tu154ce/alarm/speaker_auasp	int	предельный угол атаки или перегрузки	0
+tu154ce/alarm/speaker_fuel	int	остаток топлива 2500 в баке 1	0
+tu154ce/alarm/speaker_speed	int	предельная скорость	0
+tu154ce/alarm/speaker_absu	int	отключение режимов или отказы АБСУ	0
+
+tu154ce/checklist/side	int	какую сторону показывать. 0 - пред взлетом, 1 - перед заходом	0
+			
+tu154ce/checklist/fishka_1	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_2	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_3	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_4	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_5	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_6	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_7	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_8	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_9	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_10	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_11	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_12	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_13	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_14	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_15	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_16	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_17	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_18	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_19	int	положение фишки. 0 - слева, 1 - справа	1
+tu154ce/checklist/fishka_20	int	положение фишки. 0 - слева, 1 - справа	1
+
+
+tu154ce/panels/show_load_panel	int	показать панель загрузки	0
+tu154ce/panels/show_absu_panel	int	показать панель АБСУ	0
+tu154ce/panels/show_ohvd_panel	int	показать панель верхней панели	0
+tu154ce/panels/show_nvu_panel	int	показать панель НВУ	0
+tu154ce/panels/show_checklist_panel	int	показать панель ККП	0
+tu154ce/panels/show_ground_panel	int	показать панель наземного обслуживания	0
+tu154ce/panels/show_phone	int	показать панель телефона	0
+tu154ce/panels/show_cam	int	показать панель камеры	0
+tu154ce/panels/show_palette	int	показать палетку	0
+tu154ce/panels/show_fail_panel	int	показать палетку отказов	0
+
+tu154ce/misc/cg_pos_actual	float	актуальное положение CG	0
+tu154ce/misc/weight_actual	float	актуальная масса	0
+
+tu154ce/anim/rain_glass_1	float	светимость маски с дождем на стекле	0
+tu154ce/anim/rain_glass_2	float	светимость маски с дождем на стекле	0
+
+			
+tu154ce/anim/rain_glass_1_w_1_L	float	светимость маски с дождем на левом стекле сектор 1	0
+tu154ce/anim/rain_glass_1_w_2_L	float	светимость маски с дождем на левом стекле сектор 2	0
+tu154ce/anim/rain_glass_1_w_3_L	float	светимость маски с дождем на левом стекле сектор 3	0
+tu154ce/anim/rain_glass_1_w_4_L	float	светимость маски с дождем на левом стекле сектор 4	0
+tu154ce/anim/rain_glass_1_w_5_L	float	светимость маски с дождем на левом стекле сектор 5	0
+			
+tu154ce/anim/rain_glass_2_w_1_L	float	светимость маски с дождем на левом стекле сектор 1	0
+tu154ce/anim/rain_glass_2_w_2_L	float	светимость маски с дождем на левом стекле сектор 2	0
+tu154ce/anim/rain_glass_2_w_3_L	float	светимость маски с дождем на левом стекле сектор 3	0
+tu154ce/anim/rain_glass_2_w_4_L	float	светимость маски с дождем на левом стекле сектор 4	0
+tu154ce/anim/rain_glass_2_w_5_L	float	светимость маски с дождем на левом стекле сектор 5	0
+			
+			
+tu154ce/anim/rain_glass_1_w_1_R	float	светимость маски с дождем на левом стекле сектор 1	0
+tu154ce/anim/rain_glass_1_w_2_R	float	светимость маски с дождем на левом стекле сектор 2	0
+tu154ce/anim/rain_glass_1_w_3_R	float	светимость маски с дождем на левом стекле сектор 3	0
+tu154ce/anim/rain_glass_1_w_4_R	float	светимость маски с дождем на левом стекле сектор 4	0
+tu154ce/anim/rain_glass_1_w_5_R	float	светимость маски с дождем на левом стекле сектор 5	0
+			
+tu154ce/anim/rain_glass_2_w_1_R	float	светимость маски с дождем на левом стекле сектор 1	0
+tu154ce/anim/rain_glass_2_w_2_R	float	светимость маски с дождем на левом стекле сектор 2	0
+tu154ce/anim/rain_glass_2_w_3_R	float	светимость маски с дождем на левом стекле сектор 3	0
+tu154ce/anim/rain_glass_2_w_4_R	float	светимость маски с дождем на левом стекле сектор 4	0
+tu154ce/anim/rain_glass_2_w_5_R	float	светимость маски с дождем на левом стекле сектор 5	0
+
+tu154ce/anim/net_rain_ratio	float	актуальное количество осадков на стеклах	0
+			
+tu154ce/misc/water_level	float	уровень воды	0
+
+tu154ce/gauges/alt/vbe_flightlevel_left	float	установленная высота на ВБЭ	0
+tu154ce/gauges/alt/vbe_flightlevel_right	float	установленная высота на ВБЭ	0
+
+tu154ce/brakes/int_brakes_L	float	реальное положение тормоза	0
+tu154ce/brakes/int_brakes_R	float	реальное положение тормоза	0
+
+tu154ce/gauges/vvi_left	float	показания вариометра	0
+tu154ce/gauges/vvi_right	float	показания вариометра	0
+
+tu154ce/SC/control_thro_other	int	другой человек упраляет РУД-ами	0
+
+tu154ce/SC/yoke_pitch_ratio	float	управление тангажом	0
+tu154ce/SC/yoke_roll_ratio	float	управление креном	0
+tu154ce/SC/yoke_heading_ratio	float	управление педалями	0
+			
+			
+tu154ce/SC/engine/ENGN_thro_0	float	управление РУД	0
+tu154ce/SC/engine/ENGN_thro_1	float	управление РУД	0
+tu154ce/SC/engine/ENGN_thro_2	float	управление РУД	0
+			
+tu154ce/SC/engine/ENGN_propmode_0	float	управление реверсом	0
+tu154ce/SC/engine/ENGN_propmode_2	float	управление реверсом	0
+			
+tu154ce/SC/gear/tire_steer_command_deg	float	управление передней ногой	0
+			
+tu154ce/SC/controls/l_brake_add	float	управление тормозами	0
+tu154ce/SC/controls/r_brake_add	float	управление тормозами	0
+tu154ce/SC/brakes/int_brakes_L	float	управление тормозами	0
+tu154ce/SC/brakes/int_brakes_R	float	управление тормозами	0
+tu154ce/SC/controls/parkbrake	float	управление тормозами	0
+
+tu154ce/speeds/v1_15	int	скорость V1	0
+tu154ce/speeds/vr_15	int	скорость Vr	0
+tu154ce/speeds/v2_15	int	скорость V2	0
+			
+tu154ce/speeds/v1_28	int	скорость V1	0
+tu154ce/speeds/vr_28	int	скорость Vr	0
+tu154ce/speeds/v2_28	int	скорость V2	0
+
+tu154ce/checklist/checklist_selected	int	выбор чеклиста.	0
+
+tu154ce/checklist/to_ready	int	лампа горит	0
+
+tu154ce/sound/reset_crew	int	сброс фраз команды	0
+
+tu154ce/SC/GNS430_dtk	float	курс на ГНС	0
+tu154ce/SC/GNS430_dev	float	отклонение от курса на ГНС	0
+tu154ce/SC/GNS430_flag	int	флаг на ГНС	0
