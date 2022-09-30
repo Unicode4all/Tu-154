@@ -79,7 +79,7 @@ local function buttons_check()
 	change = change - but_view_last - but_empty_last - but_down_last - but_up_last - egpws_control_last - egpws_contr_gs_last
 	
 	if change ~= 0 then
-		playSample(button_sound, 0)
+		playSample(button_sound, false)
 	end
 	
 
@@ -115,7 +115,7 @@ local function switchers_check()
 	changes = changes - egpws_alarm_1_last - egpws_alarm_2_last - egpws_relief_last - egpws_mode_last
 	
 	if changes ~= 0 then
-		playSample (switcher_sound, 0)
+		playSample (switcher_sound, false)
 	end
 	
 	-- caps
@@ -123,7 +123,7 @@ local function switchers_check()
 	local egpws_alarm_2_cap_sw = get(egpws_alarm_2_cap)
 	
 	if egpws_alarm_1_cap_sw + egpws_alarm_2_cap_sw - egpws_alarm_1_cap_last - egpws_alarm_2_cap_last ~= 0 then
-		playSample(cap_sound, 0)
+		playSample(cap_sound, false)
 	end
 	
 	

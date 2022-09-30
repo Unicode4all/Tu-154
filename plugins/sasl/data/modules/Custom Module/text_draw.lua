@@ -3,12 +3,12 @@
 
 defineProperty("text")
 defineProperty("color", { 0, 0, 0, 1 })
-defineProperty("font", loadFont('basic_font.fnt'))
+font = loadFont("Verdana.ttf")
 
 function draw()
 	
 	local c = get(color)
-	
-	drawText(get(font), 0, 0, get(text), c[1], c[2], c[3], c[4])
+	local f = get(font)
+	drawText(f, 0, 0, get(text), 16, false, false, TEXT_ALIGN_LEFT, {c[1], c[2], c[3], c[4]})
 
 end

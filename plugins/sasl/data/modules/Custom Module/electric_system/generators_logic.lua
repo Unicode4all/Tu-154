@@ -41,15 +41,15 @@ defineProperty("DC_27_volt1", globalPropertyf("tu154ce/elec/bus27_volt_left")) -
 defineProperty("DC_27_volt2", globalPropertyf("tu154ce/elec/bus27_volt_right")) -- 27 volt
 
 -- all generators work from their engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 defineProperty("eng4_N1", globalPropertyf("tu154ce/eng/apu_n1")) -- обороты ВСУ
 
 -- default sim variables
-defineProperty("sim_gen1_on", globalPropertyi("sim/cockpit/electrical/generator_on[0]"))
-defineProperty("sim_gen2_on", globalPropertyi("sim/cockpit/electrical/generator_on[1]"))
-defineProperty("sim_gen3_on", globalPropertyi("sim/cockpit/electrical/generator_on[2]"))
+defineProperty("sim_gen1_on", globalProperty("sim/cockpit/electrical/generator_on[0]"))
+defineProperty("sim_gen2_on", globalProperty("sim/cockpit/electrical/generator_on[1]"))
+defineProperty("sim_gen3_on", globalProperty("sim/cockpit/electrical/generator_on[2]"))
 defineProperty("sim_gen4_on", globalPropertyi("sim/cockpit2/electrical/APU_generator_on"))
 
 -- sim failures

@@ -38,7 +38,7 @@ local rot_small_sound = loadSample('Custom Sounds/com.wav')
 
 setSampleGain(rot_small_sound, 500)
 
-local text_font = loadFont('digital7_it.fnt')
+local text_font = loadFont('digital7.ttf')
 
 
 local rot_summ_last = 0
@@ -49,7 +49,7 @@ local function rotary()
 	
 	local summ = nav_left_sw + nav_right_sw
 	
-	if summ ~= rot_summ_last then playSample(rot_small_sound, 0) end
+	if summ ~= rot_summ_last then playSample(rot_small_sound, false) end
 
 	rot_summ_last = summ
 
@@ -191,7 +191,7 @@ function draw()
 	
 	local c = get(color)
 	
-	drawText(text_font, 0, 0, "000.000", c[1], c[2], c[3], c[4])
+	drawText(text_font, 0, 0, "000.000", 12, false, false, c[1], c[2], c[3], c[4])
 
 end
 --]]

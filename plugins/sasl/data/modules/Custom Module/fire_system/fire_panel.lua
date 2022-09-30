@@ -84,9 +84,9 @@ defineProperty("bus27_volt_left", globalPropertyf("tu154ce/elec/bus27_volt_left"
 defineProperty("bus27_volt_right", globalPropertyf("tu154ce/elec/bus27_volt_right"))
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
@@ -193,17 +193,17 @@ local function swichers_check()
 	changes_but = changes_but - lamp_test_last - smoke_test_last - ext_test_last - fire_ext_1_last - fire_ext_2_last - fire_ext_3_last
 	changes_but = changes_but - cold_eng_1_last - cold_eng_2_last - cold_eng_3_last - cold_apu_last - neutral_gas_last
 	
-	if changes_but ~= 0 then playSample(button_sound, 0) end -- play sound
+	if changes_but ~= 0 then playSample(button_sound, false) end -- play sound
 	
 	local changes_rot = fire_sensor_sel_sw + fire_place_sel_sw - fire_sensor_sel_last - fire_place_sel_last
 	
-	if changes_rot ~= 0 then playSample(rotary_sound, 0) end -- play sound
+	if changes_rot ~= 0 then playSample(rotary_sound, false) end -- play sound
 	
 	local changes_sw = fire_main_switch_sw + fire_buzzer_sw - fire_main_switch_last - fire_buzzer_last
 	
-	if changes_sw ~= 0 then playSample(switcher_sound, 0) end -- play sound
+	if changes_sw ~= 0 then playSample(switcher_sound, false) end -- play sound
 	
-	if fire_buzzer_cap_sw ~= fire_buzzer_cap_last then playSample(cap_sound, 0) end -- play sound
+	if fire_buzzer_cap_sw ~= fire_buzzer_cap_last then playSample(cap_sound, false) end -- play sound
 	
 	
 	if fire_buzzer_cap_sw == 0 then set(fire_buzzer, 1) end

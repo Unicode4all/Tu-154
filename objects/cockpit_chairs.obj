@@ -11954,31 +11954,31 @@ ATTR_hard
 TRIS	0 18135
 # Cube.710
 ANIM_begin
-	ANIM_hide	0.0 0.0	sim/custom/anim/show_chairs
+	ANIM_hide	0.0 0.0	tu154ce/anim/show_chairs
 	ANIM_trans	  -0.0070   -2.3213  -20.9975	  -0.0070   -2.3213  -20.9975	0 0	no_ref
 	TRIS	18135 8652
 	# Cube.668
 	ANIM_begin
 		ANIM_trans	  -0.4820    0.5684    0.4576	  -0.4820    0.5684    0.4576	0 0	no_ref
-		ANIM_rotate	  -1.0000   -0.0000    0.0000	  0.00 105.10	0 1	sim/custom/anim/cockpit_table_1
+		ANIM_rotate	  -1.0000   -0.0000    0.0000	  0.00 105.10	0 1	tu154ce/anim/cockpit_table_1
 		TRIS	26787 372
 	ANIM_end
 	# Cube.670
 	ANIM_begin
 		ANIM_trans	   0.4960    0.5684    0.4576	   0.4960    0.5684    0.4576	0 0	no_ref
-		ANIM_rotate	  -1.0000    0.0000    0.0000	  0.00 115.02	0 1	sim/custom/anim/cockpit_table_2
+		ANIM_rotate	  -1.0000    0.0000    0.0000	  0.00 115.02	0 1	tu154ce/anim/cockpit_table_2
 		TRIS	27159 516
 	ANIM_end
 	# Cube.711
 	ANIM_begin
 		ANIM_trans	  -0.2683    0.4759    0.3104	  -0.2683    0.4759    0.3104	0 0	no_ref
-		ANIM_rotate	   1.0000    0.0000   -0.0000	  0.00  90.00	0 1	sim/custom/anim/rise_chair_arm_L
+		ANIM_rotate	   1.0000    0.0000   -0.0000	  0.00  90.00	0 1	tu154ce/anim/rise_chair_arm_L
 		TRIS	27675 234
 	ANIM_end
 	# Cube.672
 	ANIM_begin
 		ANIM_trans	   0.2823    0.4759    0.3104	   0.2823    0.4759    0.3104	0 0	no_ref
-		ANIM_rotate	   1.0000    0.0000   -0.0000	  0.00  90.00	0 1	sim/custom/anim/rise_chair_arm_R
+		ANIM_rotate	   1.0000    0.0000   -0.0000	  0.00  90.00	0 1	tu154ce/anim/rise_chair_arm_R
 		TRIS	27909 234
 	ANIM_end
 ANIM_end

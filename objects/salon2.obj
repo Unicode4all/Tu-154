@@ -9143,143 +9143,143 @@ IDX	7122
 # Plane.187
 ATTR_hard
 # Plane.187
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	0 318
 # Cube.070
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	318 90
 # Cube.071
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	408 90
 # Cube.072
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	498 90
 # Cube.073
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	588 90
 # Cube.074
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	678 90
 # Cube.075
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	768 90
 # Cube.076
-ATTR_light_level  0.000  1.000 sim/custom/lights/seats_leters_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/seats_leters_lamp
 TRIS	858 90
 # Cube.077
-ATTR_light_level  0.000  1.000 sim/custom/lights/seats_leters_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/seats_leters_lamp
 TRIS	948 90
 # Cube.078
-ATTR_light_level  0.000  1.000 sim/custom/lights/seats_leters_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/seats_leters_lamp
 TRIS	1038 90
 # Cube.079
-ATTR_light_level  0.000  1.000 sim/custom/lights/fasten_seatbelts_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/fasten_seatbelts_lamp
 TRIS	1128 60
 # Cube.080
-ATTR_light_level  0.000  1.000 sim/custom/lights/seats_leters_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/seats_leters_lamp
 TRIS	1188 90
 # Cube.081
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	1278 30
 # Cube.082
-ATTR_light_level  0.000  1.000 sim/custom/lights/nosmoking_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/nosmoking_lamp
 TRIS	1308 30
 # Cube.083
-ATTR_light_level  0.000  1.000 sim/custom/lights/toilet_busy_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/toilet_busy_lamp
 TRIS	1338 60
 # Cube.084
-ATTR_light_level  0.000  1.000 sim/custom/lights/toilet_busy_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/toilet_busy_lamp
 TRIS	1398 60
 # Cube.085
-ATTR_light_level  0.000  1.000 sim/custom/lights/nosmoking_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/nosmoking_lamp
 TRIS	1458 30
 # Cube.086
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	1488 30
 # Cube.087
-ATTR_light_level  0.000  1.000 sim/custom/lights/fasten_seatbelts_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/fasten_seatbelts_lamp
 TRIS	1518 60
 # Cube.088
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	1578 90
 # Cube.089
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	1668 90
 # Cube.090
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	1758 90
 # Cube.091
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	1848 90
 # Cube.092
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	1938 90
 # Cube.093
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	2028 90
 # Cube.094
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	2118 90
 # Cube.095
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	2208 90
 # Cube.107
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	2298 90
 # Cube.108
-ATTR_light_level  0.000  1.000 sim/custom/lights/exit_lamp
+ATTR_light_level  0.000  1.000 tu154ce/lights/exit_lamp
 TRIS	2388 90
 # Cube.118
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	2478 114
 # Cube.119
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	2592 114
 # Cube.059
 ATTR_diffuse_rgb	 0.800  0.800  0.800
 # Cube.059
 ATTR_shiny_rat	 0.500
 # Cube.059
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	2706 228
 # Cube.060
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	2934 228
 # Cube.061
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	3162 3078
 # Cube.062
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	6240 3078
 # Cube.063
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	9318 228
 # Cube.064
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	9546 228
 # Cube.065
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	9774 1710
 # Cube.066
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	11484 1710
 # Cube.067
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	13194 2052
 # Cube.068
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	15246 3078
 # Cube.100
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	18324 228
 # Cube.101
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	18552 228
 # Cube
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	18780 228
 # Cube.001
-ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 TRIS	19008 1026
 
 # Built with Blender 2.49. Exported with XPlane2Blender 3.10.

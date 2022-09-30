@@ -12,9 +12,9 @@ defineProperty("pump_tank1_3_work", globalPropertyi("tu154ce/fuel/pump_tank1_3_w
 defineProperty("pump_tank1_4_work", globalPropertyi("tu154ce/fuel/pump_tank1_4_work"))
 
 -- mixture hamdles
-defineProperty("eng_mix_1", globalPropertyf("sim/cockpit2/engine/actuators/mixture_ratio[0]")) -- положение рычагов смеси в симе
-defineProperty("eng_mix_2", globalPropertyf("sim/cockpit2/engine/actuators/mixture_ratio[1]")) -- положение рычагов смеси в симе
-defineProperty("eng_mix_3", globalPropertyf("sim/cockpit2/engine/actuators/mixture_ratio[2]")) -- положение рычагов смеси в симе
+defineProperty("eng_mix_1", globalProperty("sim/cockpit2/engine/actuators/mixture_ratio[0]")) -- положение рычагов смеси в симе
+defineProperty("eng_mix_2", globalProperty("sim/cockpit2/engine/actuators/mixture_ratio[1]")) -- положение рычагов смеси в симе
+defineProperty("eng_mix_3", globalProperty("sim/cockpit2/engine/actuators/mixture_ratio[2]")) -- положение рычагов смеси в симе
 
 -- animation
 defineProperty("fuel_cutoff_1", globalPropertyf("tu154ce/controlls/fuel_cutoff_1")) -- рычаг пожарного крана
@@ -55,7 +55,7 @@ defineProperty("eng_fuel_fluctuation_2", globalPropertyi("sim/operation/failures
 defineProperty("eng_fuel_fluctuation_3", globalPropertyi("sim/operation/failures/rel_fuelfl2"))
 
 
---defineProperty("igniter_on_1", globalPropertyi("sim/cockpit2/engine/actuators/igniter_on[0]"))
+--defineProperty("igniter_on_1", globalProperty("sim/cockpit2/engine/actuators/igniter_on[0]"))
 
 defineProperty("fuel_in_1", globalPropertyi("tu154ce/start/fuel_in_1")) -- подача топлива от системы запуска
 defineProperty("fuel_in_2", globalPropertyi("tu154ce/start/fuel_in_2")) -- подача топлива от системы запуска
@@ -104,14 +104,14 @@ function update()
 	set(fuel_cutoff_3, mix_3)
 	
 	-- set sound
-	if mix_1 ~= mix_1_last and mix_1 == 1 then playSample(rod_on, 0)
-	elseif mix_1 ~= mix_1_last and mix_1_last == 1 then playSample(rod_off, 0) end
+	if mix_1 ~= mix_1_last and mix_1 == 1 then playSample(rod_on, false)
+	elseif mix_1 ~= mix_1_last and mix_1_last == 1 then playSample(rod_off, false) end
 	
-	if mix_2 ~= mix_2_last and mix_2 == 1 then playSample(rod_on, 0)
-	elseif mix_2 ~= mix_2_last and mix_2_last == 1 then playSample(rod_off, 0) end
+	if mix_2 ~= mix_2_last and mix_2 == 1 then playSample(rod_on, false)
+	elseif mix_2 ~= mix_2_last and mix_2_last == 1 then playSample(rod_off, false) end
 	
-	if mix_3 ~= mix_3_last and mix_3 == 1 then playSample(rod_on, 0)
-	elseif mix_3 ~= mix_3_last and mix_3_last == 1 then playSample(rod_off, 0) end
+	if mix_3 ~= mix_3_last and mix_3 == 1 then playSample(rod_on, false)
+	elseif mix_3 ~= mix_3_last and mix_3_last == 1 then playSample(rod_off, false) end
 	
 	
 	

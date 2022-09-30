@@ -17366,13 +17366,13 @@ TRIS	0 8688
 # wings.011
 ANIM_begin
 	ANIM_trans	  -1.9091   -3.0078    1.4909	  -1.9091   -3.0078    1.4909	0 0	no_ref
-	ANIM_rotate	  -1.0000    0.0038    0.0000	  0.00  60.00	0 60.0	sim/custom/anim/spd_brk_inn_left
+	ANIM_rotate	  -1.0000    0.0038    0.0000	  0.00  60.00	0 60.0	tu154ce/anim/spd_brk_inn_left
 	TRIS	8688 180
 ANIM_end
 # wings.004
 ANIM_begin
 	ANIM_trans	   1.9091   -3.0078    1.4909	   1.9091   -3.0078    1.4909	0 0	no_ref
-	ANIM_rotate	  -1.0000   -0.0038   -0.0000	  0.00  60.00	0 60.0	sim/custom/anim/spd_brk_inn_right
+	ANIM_rotate	  -1.0000   -0.0038   -0.0000	  0.00  60.00	0 60.0	tu154ce/anim/spd_brk_inn_right
 	TRIS	8868 180
 ANIM_end
 # slats.R.001
@@ -17604,7 +17604,7 @@ ANIM_end
 # Cube.006
 ANIM_begin
 	ANIM_trans	   7.2201   -2.9153    0.1675	   7.2201   -2.9153    0.1675	0 0	no_ref
-	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	sim/custom/anim/wing_flx_right
+	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	tu154ce/anim/wing_flx_right
 		ANIM_rotate_key	-1.0	  1.00
 		ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_key	1	  0.00
@@ -17612,7 +17612,7 @@ ANIM_begin
 	# Cube.006
 	ANIM_begin
 		ANIM_trans	  -0.0102   -0.4496    0.0163	  -0.0102   -0.4496    0.0163	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	sim/custom/anim/wing_flx_right
+		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	tu154ce/anim/wing_flx_right
 			ANIM_rotate_key	-1.0	  0.00
 			ANIM_rotate_key	0.0	  0.00
 			ANIM_rotate_key	1	  1.00
@@ -17733,7 +17733,7 @@ ANIM_begin
 		# wing_tip
 		ANIM_begin
 			ANIM_trans	   6.8324    0.2633    4.8588	   6.8324    0.2633    4.8588	0 0	no_ref
-			ANIM_rotate_begin	   0.0000    0.0000   -1.0000	sim/custom/anim/wing_flx_right
+			ANIM_rotate_begin	   0.0000    0.0000   -1.0000	tu154ce/anim/wing_flx_right
 				ANIM_rotate_key	-1.0	  1.00
 				ANIM_rotate_key	0.0	  0.00
 				ANIM_rotate_key	1	  0.00
@@ -17741,7 +17741,7 @@ ANIM_begin
 			# wing_tip
 			ANIM_begin
 				ANIM_trans	   0.0000   -0.2789    0.0222	   0.0000   -0.2789    0.0222	0 0	no_ref
-				ANIM_rotate_begin	  -0.0000   -0.0000    1.0000	sim/custom/anim/wing_flx_right
+				ANIM_rotate_begin	  -0.0000   -0.0000    1.0000	tu154ce/anim/wing_flx_right
 					ANIM_rotate_key	-1.0	  0.00
 					ANIM_rotate_key	0.0	  0.00
 					ANIM_rotate_key	1	  1.00
@@ -17838,7 +17838,7 @@ ANIM_end
 # Cube.007
 ANIM_begin
 	ANIM_trans	  -7.2201   -2.9153    0.1675	  -7.2201   -2.9153    0.1675	0 0	no_ref
-	ANIM_rotate_begin	   0.5299    0.0000    0.8480	sim/custom/anim/wing_flx_left
+	ANIM_rotate_begin	   0.5299    0.0000    0.8480	tu154ce/anim/wing_flx_left
 		ANIM_rotate_key	-1.0	  1.00
 		ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_key	1	  0.00
@@ -17846,7 +17846,7 @@ ANIM_begin
 	# Cube.007
 	ANIM_begin
 		ANIM_trans	   0.0102   -0.4496    0.0163	   0.0102   -0.4496    0.0163	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	sim/custom/anim/wing_flx_left
+		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	tu154ce/anim/wing_flx_left
 			ANIM_rotate_key	-1.0	  0.00
 			ANIM_rotate_key	0.0	  0.00
 			ANIM_rotate_key	1	  1.00
@@ -18012,7 +18012,7 @@ ANIM_begin
 		# wing_tip.001
 		ANIM_begin
 			ANIM_trans	  -6.8324    0.2633    4.8588	  -6.8324    0.2633    4.8588	0 0	no_ref
-			ANIM_rotate_begin	   0.0000   -0.0000    1.0000	sim/custom/anim/wing_flx_left
+			ANIM_rotate_begin	   0.0000   -0.0000    1.0000	tu154ce/anim/wing_flx_left
 				ANIM_rotate_key	-1.0	  1.00
 				ANIM_rotate_key	0.0	  0.00
 				ANIM_rotate_key	1	  0.00
@@ -18020,7 +18020,7 @@ ANIM_begin
 			# wing_tip.001
 			ANIM_begin
 				ANIM_trans	  -0.0000   -0.2789    0.0222	  -0.0000   -0.2789    0.0222	0 0	no_ref
-				ANIM_rotate_begin	  -0.0000    0.0000   -1.0000	sim/custom/anim/wing_flx_left
+				ANIM_rotate_begin	  -0.0000    0.0000   -1.0000	tu154ce/anim/wing_flx_left
 					ANIM_rotate_key	-1.0	  0.00
 					ANIM_rotate_key	0.0	  0.00
 					ANIM_rotate_key	1	  1.00
@@ -18074,7 +18074,7 @@ ANIM_end
 # wings.024
 ANIM_begin
 	ANIM_trans	   7.2201   -2.9153    0.1675	   7.2201   -2.9153    0.1675	0 0	no_ref
-	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	sim/custom/anim/wing_flx_right
+	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	tu154ce/anim/wing_flx_right
 		ANIM_rotate_key	-1.0	  1.00
 		ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_key	1	  0.00
@@ -18082,7 +18082,7 @@ ANIM_begin
 	# wings.024
 	ANIM_begin
 		ANIM_trans	  -0.0102   -0.4496    0.0163	  -0.0102   -0.4496    0.0163	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	sim/custom/anim/wing_flx_right
+		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	tu154ce/anim/wing_flx_right
 			ANIM_rotate_key	-1.0	  0.00
 			ANIM_rotate_key	0.0	  0.00
 			ANIM_rotate_key	1	  1.00
@@ -18093,7 +18093,7 @@ ANIM_end
 # wings.026
 ANIM_begin
 	ANIM_trans	  -7.2201   -2.9153    0.1675	  -7.2201   -2.9153    0.1675	0 0	no_ref
-	ANIM_rotate_begin	   0.5299    0.0000    0.8480	sim/custom/anim/wing_flx_left
+	ANIM_rotate_begin	   0.5299    0.0000    0.8480	tu154ce/anim/wing_flx_left
 		ANIM_rotate_key	-1.0	  1.00
 		ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_key	1	  0.00
@@ -18101,7 +18101,7 @@ ANIM_begin
 	# wings.026
 	ANIM_begin
 		ANIM_trans	   0.0102   -0.4496    0.0163	   0.0102   -0.4496    0.0163	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	sim/custom/anim/wing_flx_left
+		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	tu154ce/anim/wing_flx_left
 			ANIM_rotate_key	-1.0	  0.00
 			ANIM_rotate_key	0.0	  0.00
 			ANIM_rotate_key	1	  1.00

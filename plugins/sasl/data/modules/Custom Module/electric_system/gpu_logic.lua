@@ -146,16 +146,16 @@ function update()
 
 		-- set sounds
 		if work_timer > 0 and work_timer < 1 and not isSamplePlaying(gpu_start_out) and present == 1 then
-			playSample(gpu_start_out, 0)
-			playSample(gpu_start_inn, 0)
+			playSample(gpu_start_out, false)
+			playSample(gpu_start_inn, false)
 			stopSample(gpu_run_out)
 			stopSample(gpu_run_inn)
 		elseif work_timer == 1 and not isSamplePlaying(gpu_run_out) then
-			playSample(gpu_run_out, 1)
-			playSample(gpu_run_inn, 1)
+			playSample(gpu_run_out, true)
+			playSample(gpu_run_inn, true)
 		elseif work_timer > 0 and work_timer < 1 and not isSamplePlaying(gpu_stop_out) and present == 0 then
-			playSample(gpu_stop_out, 0)
-			playSample(gpu_stop_inn, 0)
+			playSample(gpu_stop_out, false)
+			playSample(gpu_stop_inn, false)
 			stopSample(gpu_start_out)
 			stopSample(gpu_run_out)
 			stopSample(gpu_start_inn)

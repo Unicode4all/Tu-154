@@ -10,14 +10,14 @@ defineProperty("yoke_roll_ratio", globalPropertyf("sim/cockpit2/controls/yoke_ro
 defineProperty("yoke_heading_ratio", globalPropertyf("sim/cockpit2/controls/yoke_heading_ratio")) -- yaw position of joystick
 
 
-defineProperty("ENGN_thro_0", globalPropertyf("sim/flightmodel/engine/ENGN_thro[0]")) 
-defineProperty("ENGN_thro_1", globalPropertyf("sim/flightmodel/engine/ENGN_thro[1]")) 
-defineProperty("ENGN_thro_2", globalPropertyf("sim/flightmodel/engine/ENGN_thro[2]")) 
+defineProperty("ENGN_thro_0", globalProperty("sim/flightmodel/engine/ENGN_thro[0]")) 
+defineProperty("ENGN_thro_1", globalProperty("sim/flightmodel/engine/ENGN_thro[1]")) 
+defineProperty("ENGN_thro_2", globalProperty("sim/flightmodel/engine/ENGN_thro[2]")) 
 
-defineProperty("ENGN_propmode_0", globalPropertyf("sim/flightmodel/engine/ENGN_propmode[0]")) 
-defineProperty("ENGN_propmode_2", globalPropertyf("sim/flightmodel/engine/ENGN_propmode[2]")) 
+defineProperty("ENGN_propmode_0", globalProperty("sim/flightmodel/engine/ENGN_propmode[0]")) 
+defineProperty("ENGN_propmode_2", globalProperty("sim/flightmodel/engine/ENGN_propmode[2]")) 
 
-defineProperty("tire_steer_command_deg", globalPropertyf("sim/flightmodel2/gear/tire_steer_command_deg[0]")) 
+defineProperty("tire_steer_command_deg", globalProperty("sim/flightmodel2/gear/tire_steer_command_deg[0]")) 
 
 defineProperty("l_brake_add", globalPropertyf("sim/flightmodel/controls/l_brake_add")) 
 defineProperty("r_brake_add", globalPropertyf("sim/flightmodel/controls/r_brake_add")) 

@@ -19,9 +19,9 @@ defineProperty("anim_rud1", globalPropertyf("tu154ce/controlls/throttle_1")) -- 
 defineProperty("anim_rud2", globalPropertyf("tu154ce/controlls/throttle_2")) -- РУД 2
 defineProperty("anim_rud3", globalPropertyf("tu154ce/controlls/throttle_3")) -- РУД 3
 
---defineProperty("tro_comm_1", globalPropertyf("sim/flightmodel/engine/ENGN_thro[0]"))
---defineProperty("tro_comm_2", globalPropertyf("sim/flightmodel/engine/ENGN_thro[1]"))
---defineProperty("tro_comm_3", globalPropertyf("sim/flightmodel/engine/ENGN_thro[2]"))
+--defineProperty("tro_comm_1", globalProperty("sim/flightmodel/engine/ENGN_thro[0]"))
+--defineProperty("tro_comm_2", globalProperty("sim/flightmodel/engine/ENGN_thro[1]"))
+--defineProperty("tro_comm_3", globalProperty("sim/flightmodel/engine/ENGN_thro[2]"))
 
 defineProperty("tro_comm_1", globalPropertyf("tu154ce/SC/engine/ENGN_thro_0")) 
 defineProperty("tro_comm_2", globalPropertyf("tu154ce/SC/engine/ENGN_thro_1")) 

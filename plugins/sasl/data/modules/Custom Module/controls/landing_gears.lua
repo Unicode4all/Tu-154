@@ -12,13 +12,13 @@ defineProperty("emerg_gear_ext", globalPropertyi("tu154ce/controll/emerg_gear_ex
 defineProperty("gear_lever", globalPropertyi("tu154ce/controll/gear_lever")) -- ручка выпуска шасси. -1 - уборка, 0 - нейтр, +1 - выпуск
 
 -- landing gears
-defineProperty("gear1_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))  -- vertical deflection of front gear
-defineProperty("gear2_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]"))  -- vertical deflection of left gear
-defineProperty("gear3_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]"))  -- vertical deflection of right gear
+defineProperty("gear1_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))  -- vertical deflection of front gear
+defineProperty("gear2_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]"))  -- vertical deflection of left gear
+defineProperty("gear3_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]"))  -- vertical deflection of right gear
 
-defineProperty("gear1_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[0]"))  -- deploy of front gear
-defineProperty("gear2_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[1]"))  -- deploy of right gear
-defineProperty("gear3_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[2]"))  -- deploy of left gear
+defineProperty("gear1_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[0]"))  -- deploy of front gear
+defineProperty("gear2_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[1]"))  -- deploy of right gear
+defineProperty("gear3_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[2]"))  -- deploy of left gear
 
 -- enviroment
 defineProperty("airspeed", globalPropertyf("sim/flightmodel/position/indicated_airspeed"))  -- knots indicated air speed
@@ -289,7 +289,7 @@ local MASTER = get(ismaster) ~= 1
 		end
 		
 		-- sound
-		if lever ~= lever_last then playSample(handle_sound, 0) end
+		if lever ~= lever_last then playSample(handle_sound, false) end
 		lever_last = lever
 		
 
@@ -377,7 +377,7 @@ local MASTER = get(ismaster) ~= 1
 	
 		-- sounds
 		if lock1_last ~= lock1 then --or lock2_last ~= lock2 or lock3_last ~= lock3 then
-			playSample(lock_sound, 0)
+			playSample(lock_sound, false)
 		end
 		
 		

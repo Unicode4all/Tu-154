@@ -46,23 +46,23 @@ defineProperty("tank_2R_pr",globalPropertyi("tu154ce/payload/tank_2R"))
 defineProperty("tank_3L_pr",globalPropertyi("tu154ce/payload/tank_3L"))
 defineProperty("tank_3R_pr",globalPropertyi("tu154ce/payload/tank_3R"))
 
-defineProperty("eng_rpm1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]"))   
-defineProperty("eng_rpm2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]"))
-defineProperty("eng_rpm3", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]"))
+defineProperty("eng_rpm1", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]"))   
+defineProperty("eng_rpm2", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]"))
+defineProperty("eng_rpm3", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]"))
 
-defineProperty("gear1_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))
+defineProperty("gear1_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))
 
 
 -- results
 -- sim load
-defineProperty("payload", globalPropertyf("sim/flightmodel/weight/m_fixed"))  -- payload weight, kg
-defineProperty("CG_load", globalPropertyf("sim/flightmodel/misc/cgz_ref_to_default")) -- Center of Gravity reference to default, m
-defineProperty("fuel_q_1", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel quantity for tank 1
-defineProperty("fuel_q_4", globalPropertyf("sim/flightmodel/weight/m_fuel[1]")) -- fuel quantity for tank 4
-defineProperty("fuel_q_2R", globalPropertyf("sim/flightmodel/weight/m_fuel[2]")) -- fuel quantity for tank 2R
-defineProperty("fuel_q_2L", globalPropertyf("sim/flightmodel/weight/m_fuel[3]")) -- fuel quantity for tank 2L
-defineProperty("fuel_q_3R", globalPropertyf("sim/flightmodel/weight/m_fuel[4]")) -- fuel quantity for tank 3R
-defineProperty("fuel_q_3L", globalPropertyf("sim/flightmodel/weight/m_fuel[5]")) -- fuel quantity for tank 3L
+defineProperty("payload",   globalPropertyf("sim/flightmodel/weight/m_fixed"))  -- payload weight, kg
+defineProperty("CG_load",   globalPropertyf("sim/flightmodel/misc/cgz_ref_to_default")) -- Center of Gravity reference to default, m
+defineProperty("fuel_q_1",  globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel quantity for tank 1
+defineProperty("fuel_q_4",  globalProperty("sim/flightmodel/weight/m_fuel[1]")) -- fuel quantity for tank 4
+defineProperty("fuel_q_2R", globalProperty("sim/flightmodel/weight/m_fuel[2]")) -- fuel quantity for tank 2R
+defineProperty("fuel_q_2L", globalProperty("sim/flightmodel/weight/m_fuel[3]")) -- fuel quantity for tank 2L
+defineProperty("fuel_q_3R", globalProperty("sim/flightmodel/weight/m_fuel[4]")) -- fuel quantity for tank 3R
+defineProperty("fuel_q_3L", globalProperty("sim/flightmodel/weight/m_fuel[5]")) -- fuel quantity for tank 3L
 
 defineProperty("paylod_set", globalPropertyf("tu154ce/payload/paylod_set")) -- Нужно загрузить
 defineProperty("cg_set", globalPropertyf("tu154ce/payload/cg_set")) -- Нужно загрузить
@@ -79,7 +79,7 @@ include("fuel_tables.lua")
 
 
 
-local draw_font = loadFont('basic_font.fnt')
+local draw_font = loadFont('Verdana.ttf')
 
 ---local EMPTY_WEIGHT = 54865
 

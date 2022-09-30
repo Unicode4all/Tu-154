@@ -2375,44 +2375,44 @@ IDX	1595
 
 # GNS dome
 ANIM_begin
-	ANIM_hide	0.0 0.0	sim/custom/anim/show_gns
-	ANIM_show	1.0 1.0	sim/custom/anim/show_gns
+	ANIM_hide	0.0 0.0	tu154ce/anim/show_gns
+	ANIM_show	1.0 1.0	tu154ce/anim/show_gns
 	ANIM_trans	   0.2189   -1.8267  -21.6732	   0.2189   -1.8267  -21.6732	0 0	no_ref
 	# GNS dome
-	ATTR_light_level  0.000  1.000 sim/custom/lights/gns430_lit
+	ATTR_light_level  0.000  1.000 tu154ce/lights/gns430_lit
 	TRIS	0 5898
 	ATTR_light_level_reset
 	TRIS	5898 480
 	# Cylinder.002
 	ANIM_begin
 		ANIM_trans	  -0.0675   -0.0198    0.0098	  -0.0675   -0.0198    0.0098	0 0	no_ref
-		ANIM_rotate	   0.0000    0.0000   -1.0000	  0.00   1.00	0 1	sim/custom/rotary/GNS430/LB_angle
+		ANIM_rotate	   0.0000    0.0000   -1.0000	  0.00   1.00	0 1	tu154ce/rotary/GNS430/LB_angle
 		# Cylinder.002
-		ATTR_light_level  0.000  1.000 sim/custom/lights/gns430_lit
+		ATTR_light_level  0.000  1.000 tu154ce/lights/gns430_lit
 		TRIS	6378 384
 	ANIM_end
 	# Cylinder.003
 	ANIM_begin
 		ANIM_trans	  -0.0675   -0.0198    0.0232	  -0.0675   -0.0198    0.0232	0 0	no_ref
-		ANIM_rotate	   0.0000    0.0000   -1.0000	  0.00   1.00	0 1	sim/custom/rotary/GNS430/LS_angle
+		ANIM_rotate	   0.0000    0.0000   -1.0000	  0.00   1.00	0 1	tu154ce/rotary/GNS430/LS_angle
 		# Cylinder.003
-		ATTR_light_level  0.000  1.000 sim/custom/lights/gns430_lit
+		ATTR_light_level  0.000  1.000 tu154ce/lights/gns430_lit
 		TRIS	6762 240
 	ANIM_end
 	# Cylinder.005
 	ANIM_begin
 		ANIM_trans	   0.0666   -0.0198    0.0098	   0.0666   -0.0198    0.0098	0 0	no_ref
-		ANIM_rotate	   0.0000    0.0000   -1.0000	  0.00   1.00	0 1	sim/custom/rotary/GNS430/RB_angle
+		ANIM_rotate	   0.0000    0.0000   -1.0000	  0.00   1.00	0 1	tu154ce/rotary/GNS430/RB_angle
 		# Cylinder.005
-		ATTR_light_level  0.000  1.000 sim/custom/lights/gns430_lit
+		ATTR_light_level  0.000  1.000 tu154ce/lights/gns430_lit
 		TRIS	7002 384
 	ANIM_end
 	# Cylinder.004
 	ANIM_begin
 		ANIM_trans	   0.0666   -0.0198    0.0220	   0.0666   -0.0198    0.0220	0 0	no_ref
-		ANIM_rotate	   0.0000    0.0000   -1.0000	  0.00   1.00	0 1	sim/custom/rotary/GNS430/RS_angle
+		ANIM_rotate	   0.0000    0.0000   -1.0000	  0.00   1.00	0 1	tu154ce/rotary/GNS430/RS_angle
 		# Cylinder.004
-		ATTR_light_level  0.000  1.000 sim/custom/lights/gns430_lit
+		ATTR_light_level  0.000  1.000 tu154ce/lights/gns430_lit
 		TRIS	7386 240
 	ANIM_end
 ANIM_end

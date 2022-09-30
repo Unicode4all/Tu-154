@@ -49,8 +49,8 @@ defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flig
 
 defineProperty("IAS", globalPropertyf("sim/flightmodel/position/indicated_airspeed")) 
 
-defineProperty("deflection_mtr_2", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_2", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 
 -- failures
 defineProperty("ppd_3_heat_fail", globalPropertyi("tu154ce/antiice/ppd_3_heat_fail"))
@@ -83,9 +83,9 @@ defineProperty("window_ice_2", globalPropertyf("tu154ce/anim/window_ice_2")) -- 
 defineProperty("window_ice_3", globalPropertyf("tu154ce/anim/window_ice_3")) -- уровень льда на стеклах
 defineProperty("window_ice_4", globalPropertyf("tu154ce/anim/window_ice_4")) -- уровень льда на стеклах
 
-defineProperty("inlet_heat_1", globalPropertyi("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[0]")) -- 
-defineProperty("inlet_heat_2", globalPropertyi("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[1]")) -- 
-defineProperty("inlet_heat_3", globalPropertyi("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[2]")) -- 
+defineProperty("inlet_heat_1", globalProperty("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[0]")) -- 
+defineProperty("inlet_heat_2", globalProperty("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[1]")) -- 
+defineProperty("inlet_heat_3", globalProperty("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[2]")) -- 
 
 defineProperty("sim_pitot_heat_1", globalPropertyi("sim/cockpit2/ice/ice_pitot_heat_on_pilot")) -- 
 defineProperty("sim_pitot_heat_2", globalPropertyi("sim/cockpit2/ice/ice_pitot_heat_on_copilot")) -- 

@@ -68,7 +68,7 @@ defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have 
 local btn_click = loadSample('Custom Sounds/acs_btn.wav')
 --local tik_tak = loadSample('Custom Sounds/acs_tik_tik.wav')
 
---playSample(tik_tak, 1)  -- clock now ticks :)
+--playSample(tik_tak, true)  -- clock now ticks :)
 --setSampleGain(tik_tak, 0)
 
 
@@ -144,7 +144,7 @@ local function knob_work()
 	end
 	
 	-- calculate on press
-if knob_summ ~= knob_last then playSample(btn_click, 0)
+if knob_summ ~= knob_last then playSample(btn_click, false)
 	
 	knob_last = knob_summ
 	

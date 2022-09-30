@@ -5,7 +5,7 @@ size = {180, 350}
 defineProperty("speed", 0)
 
 
-local text_font = loadFont('taws_scr.fnt')
+local text_font = loadBitmapFont("taws_scr.fnt")
 
 
 
@@ -28,9 +28,9 @@ function draw()
 				if text > 0 then text = " "..text
 				elseif text == 0 then text = "     0" end
 				if i < 1000 then
-					drawText(text_font, 50, text_pos, text, 1,1,1,1)
+					drawText(text_font, 50, text_pos, text, 12, false, false, 1,1,1,1)
 				else
-					drawText(text_font, 25, text_pos, text, 1,1,1,1)
+					drawText(text_font, 25, text_pos, text, 12, false, false, 1,1,1,1)
 				end
 				
 			end

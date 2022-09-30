@@ -5679,79 +5679,79 @@ IDX10	2374 2375 2376 2377 2378 2376 2378 2379 2380 2381
 IDX10	2382 2380 2382 2383 2384 2385 2386 2384 2386 2387
 
 # Cube
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	0 174
 # Cube.001
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	174 174
 # salon_walls
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	348 174
 # cockpit_walls
 ATTR_hard
 # cockpit_walls
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	522 606
 # salon_walls.018
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	1128 180
 # Cube.164
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	1308 585
 # salon_walls.038
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	1893 129
 # Cube.187
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	2022 366
 # Cube.188
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	2388 78
 # Cube.189
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	2466 402
 # Cube.192
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	2868 780
 # Cube.193
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	3648 780
 # Cylinder.171
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	4428 432
 # Cube.202
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	4860 30
 # Cube.203
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	4890 48
 # Plane.207
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	4938 381
 # fuselage.032
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	5319 1941
 # Cube.685
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	7260 366
 # cockpit_wall_window
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	7626 5736
 # Cube.161
 ANIM_begin
 	ANIM_trans	  -0.2725   -1.5296  -19.0220	  -0.2725   -1.5296  -19.0220	0 0	no_ref
-	ANIM_rotate	   0.0000   -1.0000   -0.0000	  0.00  90.00	0 1	sim/custom/anim/cockpit_door
+	ANIM_rotate	   0.0000   -1.0000   -0.0000	  0.00  90.00	0 1	tu154ce/anim/cockpit_door
 	# Cube.161
-	ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+	ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 	TRIS	13362 36
 	# Cylinder.165
-	ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
+	ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
 	TRIS	13398 432
 	# Cylinder.166
-	ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+	ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 	TRIS	13830 108
 	# Cylinder.167
-	ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+	ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 	TRIS	13938 228
 ANIM_end
 # Plane
@@ -5759,79 +5759,79 @@ ANIM_end
 # Plane
 ATTR_no_hard
 # Plane
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14166 6
 # Plane.001
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14172 6
 # Plane.002
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14178 6
 # Plane.003
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14184 6
 # Plane.004
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14190 6
 # Plane.005
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14196 6
 # Plane.006
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14202 6
 # Plane.007
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14208 6
 # Plane.008
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14214 6
 # Plane.009
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14220 6
 # Plane.010
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14226 6
 # Plane.011
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14232 6
 # Plane.012
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14238 6
 # Plane.013
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14244 6
 # Plane.014
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14250 6
 # Plane.015
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14256 6
 # Plane.016
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14262 6
 # Plane.017
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14268 6
 # Plane.018
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14274 6
 # Plane.019
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14280 6
 # Plane.020
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14286 6
 # Plane.022
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14292 36
 # Plane.021
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14328 36
 # Plane.023
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14364 48
 # Plane.024
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	14412 48
 
 # Built with Blender 2.49. Exported with XPlane2Blender 3.10.

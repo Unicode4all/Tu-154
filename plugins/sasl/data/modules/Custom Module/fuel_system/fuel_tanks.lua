@@ -1,22 +1,22 @@
 -- this is fuel tanks manipulating logic
 
 -- fuel quantity
-defineProperty("tank1_w", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
-defineProperty("tank4_w", globalPropertyf("sim/flightmodel/weight/m_fuel[1]")) -- fuel weight
-defineProperty("tank2R_w", globalPropertyf("sim/flightmodel/weight/m_fuel[2]")) -- fuel weight
-defineProperty("tank2L_w", globalPropertyf("sim/flightmodel/weight/m_fuel[3]")) -- fuel weight
-defineProperty("tank3R_w", globalPropertyf("sim/flightmodel/weight/m_fuel[4]")) -- fuel weight
-defineProperty("tank3L_w", globalPropertyf("sim/flightmodel/weight/m_fuel[5]")) -- fuel weight
+defineProperty("tank1_w",  globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
+defineProperty("tank4_w",  globalProperty("sim/flightmodel/weight/m_fuel[1]")) -- fuel weight
+defineProperty("tank2R_w", globalProperty("sim/flightmodel/weight/m_fuel[2]")) -- fuel weight
+defineProperty("tank2L_w", globalProperty("sim/flightmodel/weight/m_fuel[3]")) -- fuel weight
+defineProperty("tank3R_w", globalProperty("sim/flightmodel/weight/m_fuel[4]")) -- fuel weight
+defineProperty("tank3L_w", globalProperty("sim/flightmodel/weight/m_fuel[5]")) -- fuel weight
 
 defineProperty("tank_all", globalPropertyf("sim/flightmodel/weight/m_fuel_total")) -- total fuel weight
 
 -- fuel tanks pumps control
-defineProperty("tank1_pump", globalPropertyi("sim/cockpit2/fuel/fuel_tank_pump_on[0]"))
-defineProperty("tank4_pump", globalPropertyi("sim/cockpit2/fuel/fuel_tank_pump_on[1]"))
-defineProperty("tank2R_pump", globalPropertyi("sim/cockpit2/fuel/fuel_tank_pump_on[2]"))
-defineProperty("tank2L_pump", globalPropertyi("sim/cockpit2/fuel/fuel_tank_pump_on[3]"))
-defineProperty("tank3R_pump", globalPropertyi("sim/cockpit2/fuel/fuel_tank_pump_on[4]"))
-defineProperty("tank3L_pump", globalPropertyi("sim/cockpit2/fuel/fuel_tank_pump_on[5]"))
+defineProperty("tank1_pump", globalProperty("sim/cockpit2/fuel/fuel_tank_pump_on[0]"))
+defineProperty("tank4_pump", globalProperty("sim/cockpit2/fuel/fuel_tank_pump_on[1]"))
+defineProperty("tank2R_pump", globalProperty("sim/cockpit2/fuel/fuel_tank_pump_on[2]"))
+defineProperty("tank2L_pump", globalProperty("sim/cockpit2/fuel/fuel_tank_pump_on[3]"))
+defineProperty("tank3R_pump", globalProperty("sim/cockpit2/fuel/fuel_tank_pump_on[4]"))
+defineProperty("tank3L_pump", globalProperty("sim/cockpit2/fuel/fuel_tank_pump_on[5]"))
 
 defineProperty("fuel_trans", globalPropertyi("tu154ce/switchers/fuel/fuel_trans")) -- краны резервой перекачки
 defineProperty("fuel_porc", globalPropertyi("tu154ce/switchers/fuel/fuel_porc")) -- принуд порц
@@ -37,15 +37,15 @@ defineProperty("reserv_trans", globalPropertyi("tu154ce/fuel/reserv_trans"))
 defineProperty("apu_burn_fuel", globalPropertyi("tu154ce/elec/apu_burning_fuel")) -- ВСУ работает и сжигает топливо
 
 -- fuel flow per engine
-defineProperty("ENGN_FF_1", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]")) -- FF from sim kg/second
-defineProperty("ENGN_FF_2", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]")) -- FF from sim kg/second
-defineProperty("ENGN_FF_3", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[2]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_1", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_2", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_3", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[2]")) -- FF from sim kg/second
 
 -- altitude
 defineProperty("msl_alt", globalPropertyf("sim/flightmodel/position/elevation"))  -- phisical altitude MSL. meters
 
-defineProperty("gear_defl_L", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- проседание стойки шасси
-defineProperty("gear_defl_R", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- проседание стойки шасси
+defineProperty("gear_defl_L", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- проседание стойки шасси
+defineProperty("gear_defl_R", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- проседание стойки шасси
 
 -- failures
 defineProperty("rel_fuelcap", globalPropertyi("sim/operation/failures/rel_fuelcap")) -- Fuel Cap left off

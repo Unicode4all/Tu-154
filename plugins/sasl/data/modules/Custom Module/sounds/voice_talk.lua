@@ -4,13 +4,13 @@ defineProperty("reset_crew", globalPropertyi("tu154ce/sound/reset_crew")) -- с�
 -- sources
 
 -- gears
-defineProperty("deflection_mtr_1", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]")) -- 
-defineProperty("deflection_mtr_2", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_1", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]")) -- 
+defineProperty("deflection_mtr_2", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 
-defineProperty("gear1_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[0]"))  -- deploy of front gear
-defineProperty("gear2_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[1]"))  -- deploy of right gear
-defineProperty("gear3_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[2]"))  -- deploy of left gear
+defineProperty("gear1_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[0]"))  -- deploy of front gear
+defineProperty("gear2_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[1]"))  -- deploy of right gear
+defineProperty("gear3_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[2]"))  -- deploy of left gear
 
 
 defineProperty("groundspeed", globalPropertyf("sim/flightmodel/position/groundspeed")) -- GS, m/s
@@ -67,30 +67,30 @@ defineProperty("apd_working_1", globalPropertyf("tu154ce/start/apd_working_1")) 
 defineProperty("apd_working_2", globalPropertyf("tu154ce/start/apd_working_2")) -- работа системы запуска
 defineProperty("apd_working_3", globalPropertyf("tu154ce/start/apd_working_3")) -- работа системы запуска
 
-defineProperty("eng_rpm1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]"))   
-defineProperty("eng_rpm2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]"))
-defineProperty("eng_rpm3", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]"))
+defineProperty("eng_rpm1", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]"))   
+defineProperty("eng_rpm2", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]"))
+defineProperty("eng_rpm3", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]"))
 
 defineProperty("engine_caps", globalPropertyi("tu154ce/anim/engine_caps")) -- установка крышек двигателей
 defineProperty("gear_blocks", globalPropertyi("tu154ce/anim/gear_blocks")) -- установка блоков шасси
 defineProperty("sensors_caps", globalPropertyi("tu154ce/anim/sensors_caps")) -- установка крышек датчиков
 
-defineProperty("slider_3", globalPropertyi("sim/cockpit2/switches/custom_slider_on[2]")) -- cargo 1
-defineProperty("slider_4", globalPropertyi("sim/cockpit2/switches/custom_slider_on[3]")) -- cargo 2
-defineProperty("slider_5", globalPropertyi("sim/cockpit2/switches/custom_slider_on[4]")) -- pax door 1
-defineProperty("slider_6", globalPropertyi("sim/cockpit2/switches/custom_slider_on[5]")) -- pax door 2
-defineProperty("slider_7", globalPropertyi("sim/cockpit2/switches/custom_slider_on[6]")) -- kitchen door
+defineProperty("slider_3", globalProperty("sim/cockpit2/switches/custom_slider_on[2]")) -- cargo 1
+defineProperty("slider_4", globalProperty("sim/cockpit2/switches/custom_slider_on[3]")) -- cargo 2
+defineProperty("slider_5", globalProperty("sim/cockpit2/switches/custom_slider_on[4]")) -- pax door 1
+defineProperty("slider_6", globalProperty("sim/cockpit2/switches/custom_slider_on[5]")) -- pax door 2
+defineProperty("slider_7", globalProperty("sim/cockpit2/switches/custom_slider_on[6]")) -- kitchen door
 
-defineProperty("sim_gen1_on", globalPropertyi("sim/cockpit/electrical/generator_on[0]"))
-defineProperty("sim_gen2_on", globalPropertyi("sim/cockpit/electrical/generator_on[1]"))
-defineProperty("sim_gen3_on", globalPropertyi("sim/cockpit/electrical/generator_on[2]"))
+defineProperty("sim_gen1_on", globalProperty("sim/cockpit/electrical/generator_on[0]"))
+defineProperty("sim_gen2_on", globalProperty("sim/cockpit/electrical/generator_on[1]"))
+defineProperty("sim_gen3_on", globalProperty("sim/cockpit/electrical/generator_on[2]"))
 
 defineProperty("rpm_high_1", globalPropertyf("tu154ce/gauges/engine/rpm_high_1")) -- обороты турбины высокого давления №1
 defineProperty("rpm_high_2", globalPropertyf("tu154ce/gauges/engine/rpm_high_2")) -- обороты турбины высокого давления №2
 defineProperty("rpm_high_3", globalPropertyf("tu154ce/gauges/engine/rpm_high_3")) -- обороты турбины высокого давления №3
 
-defineProperty("revers_flap_L", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
-defineProperty("revers_flap_R", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
+defineProperty("revers_flap_L", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
+defineProperty("revers_flap_R", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
 
 
 -- speeds

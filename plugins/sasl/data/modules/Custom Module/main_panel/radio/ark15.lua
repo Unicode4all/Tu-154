@@ -42,9 +42,9 @@ defineProperty("ark15_cc", globalPropertyf("tu154ce/radio/ark15_L_cc")) -- по�
 defineProperty("adf_bear", globalPropertyf("tu154ce/radio/adf_bear_1"))
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 -- Smart Copilot
 defineProperty("ismaster", globalPropertyf("scp/api/ismaster")) -- Master. 0 = plugin not found, 1 = slave 2 = master
@@ -94,17 +94,17 @@ local function rotary()
 	local ark_ones_right_sw = get(ark_ones_right)
 	
 	local big_summ = ark_hundr_left_sw + ark_hundr_right_sw
-	if big_summ ~= rot_big_last then playSample(rotary_big_sound, 0) end
+	if big_summ ~= rot_big_last then playSample(rotary_big_sound, false) end
 	
 	rot_big_last = big_summ
 	
 	local mid_summ = ark_tens_left_sw + ark_tens_right_sw
-	if mid_summ ~= rot_mid_last then playSample(rot_mid_sound, 0) end
+	if mid_summ ~= rot_mid_last then playSample(rot_mid_sound, false) end
 	
 	rot_mid_last = mid_summ
 	
 	local inn_summ = ark_ones_left_sw + ark_ones_right_sw
-	if inn_summ ~= rot_inn_last then playSample(rot_small_sound, 0) end
+	if inn_summ ~= rot_inn_last then playSample(rot_small_sound, false) end
 	
 	rot_inn_last = inn_summ
 	
@@ -119,7 +119,7 @@ local function buttons()
 	
 	local summ = ark_ramka_sw
 	
-	if summ ~= but_summ_last then playSample(button_sound, 0) end
+	if summ ~= but_summ_last then playSample(button_sound, false) end
 	
 	but_summ_last = summ
 	
@@ -134,7 +134,7 @@ local function switchers()
 	
 	local summ = ark_mode_sw + ark_channel_sw
 	
-	if summ ~= sw_summ_last then playSample(switcher_sound, 0) end
+	if summ ~= sw_summ_last then playSample(switcher_sound, false) end
 	
 	sw_summ_last = summ
 

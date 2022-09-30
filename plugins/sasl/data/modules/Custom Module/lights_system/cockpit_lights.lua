@@ -24,9 +24,9 @@ defineProperty("gpu_work_bus", globalPropertyi("tu154ce/elec/gpu_work"))
 defineProperty("percent_lights_on", globalPropertyf("sim/graphics/scenery/percent_lights_on")) -- ������� ����� � ������� �����
 
 -- nonHDR lights
-defineProperty("default_cockpit_flood", globalPropertyf("sim/cockpit2/switches/panel_brightness_ratio[0]")) -- main cockpit flood
-defineProperty("default_eng_panel_flood", globalPropertyf("sim/cockpit2/switches/panel_brightness_ratio[1]")) -- eng panel flood
-defineProperty("default_pedestal_flood", globalPropertyf("sim/cockpit2/switches/panel_brightness_ratio[2]")) -- center panel flood
+defineProperty("default_cockpit_flood", globalProperty("sim/cockpit2/switches/panel_brightness_ratio[0]")) -- main cockpit flood
+defineProperty("default_eng_panel_flood", globalProperty("sim/cockpit2/switches/panel_brightness_ratio[1]")) -- eng panel flood
+defineProperty("default_pedestal_flood", globalProperty("sim/cockpit2/switches/panel_brightness_ratio[2]")) -- center panel flood
 
 defineProperty("cabin_2d_light", globalPropertyf("tu154ce/lights/cabin_2d_light")) -- 
 
@@ -49,115 +49,115 @@ defineProperty("HDR_on", globalPropertyf("sim/graphics/settings/HDR_on")) -- set
 
 
 -- ���� ��� ����� ������� ������
-defineProperty("l1_0", globalPropertyf("sim/weapons/vx[0]")) set(l1_0, 1)  --r
-defineProperty("l1_1", globalPropertyf("sim/weapons/vx[1]")) set(l1_1, 0.7)  --g
-defineProperty("l1_2", globalPropertyf("sim/weapons/vx[2]")) set(l1_2, 0.2)  --b
-defineProperty("l1_3", globalPropertyf("sim/weapons/vx[3]")) set(l1_3, 0)  --alfa
-defineProperty("l1_4", globalPropertyf("sim/weapons/vx[4]")) set(l1_4, 0.6) --size
-defineProperty("l1_5", globalPropertyf("sim/weapons/vx[5]")) set(l1_5, 0)  --dx
-defineProperty("l1_6", globalPropertyf("sim/weapons/vx[6]")) set(l1_6, 0)  --dy
-defineProperty("l1_7", globalPropertyf("sim/weapons/vx[7]")) set(l1_7, -90)  --dz
-defineProperty("l1_8", globalPropertyf("sim/weapons/vx[8]")) set(l1_8, 20)  --width
+defineProperty("l1_0", globalProperty("sim/weapons/vx[0]")) set(l1_0, 1)  --r
+defineProperty("l1_1", globalProperty("sim/weapons/vx[1]")) set(l1_1, 0.7)  --g
+defineProperty("l1_2", globalProperty("sim/weapons/vx[2]")) set(l1_2, 0.2)  --b
+defineProperty("l1_3", globalProperty("sim/weapons/vx[3]")) set(l1_3, 0)  --alfa
+defineProperty("l1_4", globalProperty("sim/weapons/vx[4]")) set(l1_4, 0.6) --size
+defineProperty("l1_5", globalProperty("sim/weapons/vx[5]")) set(l1_5, 0)  --dx
+defineProperty("l1_6", globalProperty("sim/weapons/vx[6]")) set(l1_6, 0)  --dy
+defineProperty("l1_7", globalProperty("sim/weapons/vx[7]")) set(l1_7, -90)  --dz
+defineProperty("l1_8", globalProperty("sim/weapons/vx[8]")) set(l1_8, 20)  --width
 
 
 -- ���� ��� ������ ������� ������
-defineProperty("l2_0", globalPropertyf("sim/weapons/vy[0]")) set(l2_0, 1)  --r
-defineProperty("l2_1", globalPropertyf("sim/weapons/vy[1]")) set(l2_1, 0.7)  --g
-defineProperty("l2_2", globalPropertyf("sim/weapons/vy[2]")) set(l2_2, 0.2)  --b
-defineProperty("l2_3", globalPropertyf("sim/weapons/vy[3]")) set(l2_3, 0)  --alfa
-defineProperty("l2_4", globalPropertyf("sim/weapons/vy[4]")) set(l2_4, 0.6) --size
-defineProperty("l2_5", globalPropertyf("sim/weapons/vy[5]")) set(l2_5, 0)  --dx
-defineProperty("l2_6", globalPropertyf("sim/weapons/vy[6]")) set(l2_6, 0)  --dy
-defineProperty("l2_7", globalPropertyf("sim/weapons/vy[7]")) set(l2_7, -90)  --dz
-defineProperty("l2_8", globalPropertyf("sim/weapons/vy[8]")) set(l2_8, 20)  --width
+defineProperty("l2_0", globalProperty("sim/weapons/vy[0]")) set(l2_0, 1)  --r
+defineProperty("l2_1", globalProperty("sim/weapons/vy[1]")) set(l2_1, 0.7)  --g
+defineProperty("l2_2", globalProperty("sim/weapons/vy[2]")) set(l2_2, 0.2)  --b
+defineProperty("l2_3", globalProperty("sim/weapons/vy[3]")) set(l2_3, 0)  --alfa
+defineProperty("l2_4", globalProperty("sim/weapons/vy[4]")) set(l2_4, 0.6) --size
+defineProperty("l2_5", globalProperty("sim/weapons/vy[5]")) set(l2_5, 0)  --dx
+defineProperty("l2_6", globalProperty("sim/weapons/vy[6]")) set(l2_6, 0)  --dy
+defineProperty("l2_7", globalProperty("sim/weapons/vy[7]")) set(l2_7, -90)  --dz
+defineProperty("l2_8", globalProperty("sim/weapons/vy[8]")) set(l2_8, 20)  --width
 
 -- ���� ��� �������� ������
-defineProperty("l3_0", globalPropertyf("sim/weapons/vz[0]")) set(l3_0, 1)  --r
-defineProperty("l3_1", globalPropertyf("sim/weapons/vz[1]")) set(l3_1, 0.7)  --g
-defineProperty("l3_2", globalPropertyf("sim/weapons/vz[2]")) set(l3_2, 0.2)  --b
-defineProperty("l3_3", globalPropertyf("sim/weapons/vz[3]")) set(l3_3, 0)  --alfa
-defineProperty("l3_4", globalPropertyf("sim/weapons/vz[4]")) set(l3_4, 0.6) --size
-defineProperty("l3_5", globalPropertyf("sim/weapons/vz[5]")) set(l3_5, 0)  --dx
-defineProperty("l3_6", globalPropertyf("sim/weapons/vz[6]")) set(l3_6, 0)  --dy
-defineProperty("l3_7", globalPropertyf("sim/weapons/vz[7]")) set(l3_7, -50)  --dz
-defineProperty("l3_8", globalPropertyf("sim/weapons/vz[8]")) set(l3_8, 0.5)  --width
+defineProperty("l3_0", globalProperty("sim/weapons/vz[0]")) set(l3_0, 1)  --r
+defineProperty("l3_1", globalProperty("sim/weapons/vz[1]")) set(l3_1, 0.7)  --g
+defineProperty("l3_2", globalProperty("sim/weapons/vz[2]")) set(l3_2, 0.2)  --b
+defineProperty("l3_3", globalProperty("sim/weapons/vz[3]")) set(l3_3, 0)  --alfa
+defineProperty("l3_4", globalProperty("sim/weapons/vz[4]")) set(l3_4, 0.6) --size
+defineProperty("l3_5", globalProperty("sim/weapons/vz[5]")) set(l3_5, 0)  --dx
+defineProperty("l3_6", globalProperty("sim/weapons/vz[6]")) set(l3_6, 0)  --dy
+defineProperty("l3_7", globalProperty("sim/weapons/vz[7]")) set(l3_7, -50)  --dz
+defineProperty("l3_8", globalProperty("sim/weapons/vz[8]")) set(l3_8, 0.5)  --width
 
 -- ���� ��� �������� ������
-defineProperty("l4_0", globalPropertyf("sim/weapons/x[0]")) set(l4_0, 1)  --r
-defineProperty("l4_1", globalPropertyf("sim/weapons/x[1]")) set(l4_1, 0.7)  --g
-defineProperty("l4_2", globalPropertyf("sim/weapons/x[2]")) set(l4_2, 0.2)  --b
-defineProperty("l4_3", globalPropertyf("sim/weapons/x[3]")) set(l4_3, 1)  --alfa
-defineProperty("l4_4", globalPropertyf("sim/weapons/x[4]")) set(l4_4, 0.9) --size
-defineProperty("l4_5", globalPropertyf("sim/weapons/x[5]")) set(l4_5, 0)  --dx
-defineProperty("l4_6", globalPropertyf("sim/weapons/x[6]")) set(l4_6, 0)  --dy
-defineProperty("l4_7", globalPropertyf("sim/weapons/x[7]")) set(l4_7, -50)  --dz
-defineProperty("l4_8", globalPropertyf("sim/weapons/x[8]")) set(l4_8, 1)  --width
+defineProperty("l4_0", globalProperty("sim/weapons/x[0]")) set(l4_0, 1)  --r
+defineProperty("l4_1", globalProperty("sim/weapons/x[1]")) set(l4_1, 0.7)  --g
+defineProperty("l4_2", globalProperty("sim/weapons/x[2]")) set(l4_2, 0.2)  --b
+defineProperty("l4_3", globalProperty("sim/weapons/x[3]")) set(l4_3, 1)  --alfa
+defineProperty("l4_4", globalProperty("sim/weapons/x[4]")) set(l4_4, 0.9) --size
+defineProperty("l4_5", globalProperty("sim/weapons/x[5]")) set(l4_5, 0)  --dx
+defineProperty("l4_6", globalProperty("sim/weapons/x[6]")) set(l4_6, 0)  --dy
+defineProperty("l4_7", globalProperty("sim/weapons/x[7]")) set(l4_7, -50)  --dz
+defineProperty("l4_8", globalProperty("sim/weapons/x[8]")) set(l4_8, 1)  --width
 
 -- ���� ��� �������� ����� �������� �����
-defineProperty("l5_0", globalPropertyf("sim/weapons/y[0]")) set(l5_0, 1)  --r
-defineProperty("l5_1", globalPropertyf("sim/weapons/y[1]")) set(l5_1, 0.7)  --g
-defineProperty("l5_2", globalPropertyf("sim/weapons/y[2]")) set(l5_2, 0.2)  --b
-defineProperty("l5_3", globalPropertyf("sim/weapons/y[3]")) set(l5_3, 0)  --alfa
-defineProperty("l5_4", globalPropertyf("sim/weapons/y[4]")) set(l5_4, 0.5) --size
-defineProperty("l5_5", globalPropertyf("sim/weapons/y[5]")) set(l5_5, 0)  --dx
-defineProperty("l5_6", globalPropertyf("sim/weapons/y[6]")) set(l5_6, 0)  --dy
-defineProperty("l5_7", globalPropertyf("sim/weapons/y[7]")) set(l5_7, -160)  --dz
-defineProperty("l5_8", globalPropertyf("sim/weapons/y[8]")) set(l5_8, 20)  --width
+defineProperty("l5_0", globalProperty("sim/weapons/y[0]")) set(l5_0, 1)  --r
+defineProperty("l5_1", globalProperty("sim/weapons/y[1]")) set(l5_1, 0.7)  --g
+defineProperty("l5_2", globalProperty("sim/weapons/y[2]")) set(l5_2, 0.2)  --b
+defineProperty("l5_3", globalProperty("sim/weapons/y[3]")) set(l5_3, 0)  --alfa
+defineProperty("l5_4", globalProperty("sim/weapons/y[4]")) set(l5_4, 0.5) --size
+defineProperty("l5_5", globalProperty("sim/weapons/y[5]")) set(l5_5, 0)  --dx
+defineProperty("l5_6", globalProperty("sim/weapons/y[6]")) set(l5_6, 0)  --dy
+defineProperty("l5_7", globalProperty("sim/weapons/y[7]")) set(l5_7, -160)  --dz
+defineProperty("l5_8", globalProperty("sim/weapons/y[8]")) set(l5_8, 20)  --width
 
 -- ���� ��� ������ ����� �������� �����
-defineProperty("l6_0", globalPropertyf("sim/weapons/z[0]")) set(l6_0, 1)  --r
-defineProperty("l6_1", globalPropertyf("sim/weapons/z[1]")) set(l6_1, 0.7)  --g
-defineProperty("l6_2", globalPropertyf("sim/weapons/z[2]")) set(l6_2, 0.2)  --b
-defineProperty("l6_3", globalPropertyf("sim/weapons/z[3]")) set(l6_3, 0)  --alfa
-defineProperty("l6_4", globalPropertyf("sim/weapons/z[4]")) set(l6_4, 0.4) --size
-defineProperty("l6_5", globalPropertyf("sim/weapons/z[5]")) set(l6_5, 0)  --dx
-defineProperty("l6_6", globalPropertyf("sim/weapons/z[6]")) set(l6_6, 0)  --dy
-defineProperty("l6_7", globalPropertyf("sim/weapons/z[7]")) set(l6_7, 0)  --dz
-defineProperty("l6_8", globalPropertyf("sim/weapons/z[8]")) set(l6_8, -1)  --width
+defineProperty("l6_0", globalProperty("sim/weapons/z[0]")) set(l6_0, 1)  --r
+defineProperty("l6_1", globalProperty("sim/weapons/z[1]")) set(l6_1, 0.7)  --g
+defineProperty("l6_2", globalProperty("sim/weapons/z[2]")) set(l6_2, 0.2)  --b
+defineProperty("l6_3", globalProperty("sim/weapons/z[3]")) set(l6_3, 0)  --alfa
+defineProperty("l6_4", globalProperty("sim/weapons/z[4]")) set(l6_4, 0.4) --size
+defineProperty("l6_5", globalProperty("sim/weapons/z[5]")) set(l6_5, 0)  --dx
+defineProperty("l6_6", globalProperty("sim/weapons/z[6]")) set(l6_6, 0)  --dy
+defineProperty("l6_7", globalProperty("sim/weapons/z[7]")) set(l6_7, 0)  --dz
+defineProperty("l6_8", globalProperty("sim/weapons/z[8]")) set(l6_8, -1)  --width
 
 -- ���� ��� ������ ����-��������
-defineProperty("l7_0", globalPropertyf("sim/weapons/L[0]")) set(l7_0, 1)  --r
-defineProperty("l7_1", globalPropertyf("sim/weapons/L[1]")) set(l7_1, 0.7)  --g
-defineProperty("l7_2", globalPropertyf("sim/weapons/L[2]")) set(l7_2, 0.2)  --b
-defineProperty("l7_3", globalPropertyf("sim/weapons/L[3]")) set(l7_3, 0)  --alfa
-defineProperty("l7_4", globalPropertyf("sim/weapons/L[4]")) set(l7_4, 1.0) --size
-defineProperty("l7_5", globalPropertyf("sim/weapons/L[5]")) set(l7_5, 0)  --dx
-defineProperty("l7_6", globalPropertyf("sim/weapons/L[6]")) set(l7_6, 30)  --dy
-defineProperty("l7_7", globalPropertyf("sim/weapons/L[7]")) set(l7_7, -90)  --dz
-defineProperty("l7_8", globalPropertyf("sim/weapons/L[8]")) set(l7_8, 10)  --width
+defineProperty("l7_0", globalProperty("sim/weapons/L[0]")) set(l7_0, 1)  --r
+defineProperty("l7_1", globalProperty("sim/weapons/L[1]")) set(l7_1, 0.7)  --g
+defineProperty("l7_2", globalProperty("sim/weapons/L[2]")) set(l7_2, 0.2)  --b
+defineProperty("l7_3", globalProperty("sim/weapons/L[3]")) set(l7_3, 0)  --alfa
+defineProperty("l7_4", globalProperty("sim/weapons/L[4]")) set(l7_4, 1.0) --size
+defineProperty("l7_5", globalProperty("sim/weapons/L[5]")) set(l7_5, 0)  --dx
+defineProperty("l7_6", globalProperty("sim/weapons/L[6]")) set(l7_6, 30)  --dy
+defineProperty("l7_7", globalProperty("sim/weapons/L[7]")) set(l7_7, -90)  --dz
+defineProperty("l7_8", globalProperty("sim/weapons/L[8]")) set(l7_8, 10)  --width
 
 -- ���� ��� ������ ����-��������
-defineProperty("l7_1_0", globalPropertyf("sim/weapons/N[0]")) set(l7_1_0, 1)  --r
-defineProperty("l7_1_1", globalPropertyf("sim/weapons/N[1]")) set(l7_1_1, 0.7)  --g
-defineProperty("l7_1_2", globalPropertyf("sim/weapons/N[2]")) set(l7_1_2, 0.2)  --b
-defineProperty("l7_1_3", globalPropertyf("sim/weapons/N[3]")) set(l7_1_3, 0)  --alfa
-defineProperty("l7_1_4", globalPropertyf("sim/weapons/N[4]")) set(l7_1_4, 0.7) --size
-defineProperty("l7_1_5", globalPropertyf("sim/weapons/N[5]")) set(l7_1_5, 0)  --dx
-defineProperty("l7_1_6", globalPropertyf("sim/weapons/N[6]")) set(l7_1_6, 30)  --dy
-defineProperty("l7_1_7", globalPropertyf("sim/weapons/N[7]")) set(l7_1_7, -30)  --dz
-defineProperty("l7_1_8", globalPropertyf("sim/weapons/N[8]")) set(l7_1_8, 20)  --width
+defineProperty("l7_1_0", globalProperty("sim/weapons/N[0]")) set(l7_1_0, 1)  --r
+defineProperty("l7_1_1", globalProperty("sim/weapons/N[1]")) set(l7_1_1, 0.7)  --g
+defineProperty("l7_1_2", globalProperty("sim/weapons/N[2]")) set(l7_1_2, 0.2)  --b
+defineProperty("l7_1_3", globalProperty("sim/weapons/N[3]")) set(l7_1_3, 0)  --alfa
+defineProperty("l7_1_4", globalProperty("sim/weapons/N[4]")) set(l7_1_4, 0.7) --size
+defineProperty("l7_1_5", globalProperty("sim/weapons/N[5]")) set(l7_1_5, 0)  --dx
+defineProperty("l7_1_6", globalProperty("sim/weapons/N[6]")) set(l7_1_6, 30)  --dy
+defineProperty("l7_1_7", globalProperty("sim/weapons/N[7]")) set(l7_1_7, -30)  --dz
+defineProperty("l7_1_8", globalProperty("sim/weapons/N[8]")) set(l7_1_8, 20)  --width
 
 -- ���� ��� ������ ��������
-defineProperty("l8_0", globalPropertyf("sim/weapons/M[0]")) set(l8_0, 1)  --r
-defineProperty("l8_1", globalPropertyf("sim/weapons/M[1]")) set(l8_1, 0.7)  --g
-defineProperty("l8_2", globalPropertyf("sim/weapons/M[2]")) set(l8_2, 0.2)  --b
-defineProperty("l8_3", globalPropertyf("sim/weapons/M[3]")) set(l8_3, 0)  --alfa
-defineProperty("l8_4", globalPropertyf("sim/weapons/M[4]")) set(l8_4, 1.0) --size
-defineProperty("l8_5", globalPropertyf("sim/weapons/M[5]")) set(l8_5, 0)  --dx
-defineProperty("l8_6", globalPropertyf("sim/weapons/M[6]")) set(l8_6, 0)  --dy
-defineProperty("l8_7", globalPropertyf("sim/weapons/M[7]")) set(l8_7, -90)  --dz
-defineProperty("l8_8", globalPropertyf("sim/weapons/M[8]")) set(l8_8, 10)  --width
+defineProperty("l8_0", globalProperty("sim/weapons/M[0]")) set(l8_0, 1)  --r
+defineProperty("l8_1", globalProperty("sim/weapons/M[1]")) set(l8_1, 0.7)  --g
+defineProperty("l8_2", globalProperty("sim/weapons/M[2]")) set(l8_2, 0.2)  --b
+defineProperty("l8_3", globalProperty("sim/weapons/M[3]")) set(l8_3, 0)  --alfa
+defineProperty("l8_4", globalProperty("sim/weapons/M[4]")) set(l8_4, 1.0) --size
+defineProperty("l8_5", globalProperty("sim/weapons/M[5]")) set(l8_5, 0)  --dx
+defineProperty("l8_6", globalProperty("sim/weapons/M[6]")) set(l8_6, 0)  --dy
+defineProperty("l8_7", globalProperty("sim/weapons/M[7]")) set(l8_7, -90)  --dz
+defineProperty("l8_8", globalProperty("sim/weapons/M[8]")) set(l8_8, 10)  --width
 
 -- ���� � ������
-defineProperty("l9_0", globalPropertyf("sim/weapons/Prad[0]")) set(l9_0, 1)  --r
-defineProperty("l9_1", globalPropertyf("sim/weapons/Prad[1]")) set(l9_1, 0.7)  --g
-defineProperty("l9_2", globalPropertyf("sim/weapons/Prad[2]")) set(l9_2, 0.5)  --b
-defineProperty("l9_3", globalPropertyf("sim/weapons/Prad[3]")) set(l9_3, 1)  --alfa
-defineProperty("l9_4", globalPropertyf("sim/weapons/Prad[4]")) set(l9_4, 5) --size
-defineProperty("l9_5", globalPropertyf("sim/weapons/Prad[5]")) set(l9_5, 1)  --dx
-defineProperty("l9_6", globalPropertyf("sim/weapons/Prad[6]")) set(l9_6, 1)  --dy
-defineProperty("l9_7", globalPropertyf("sim/weapons/Prad[7]")) set(l9_7, 0)  --dz
-defineProperty("l9_8", globalPropertyf("sim/weapons/Prad[8]")) set(l9_8, 1)  --width
+defineProperty("l9_0", globalProperty("sim/weapons/Prad[0]")) set(l9_0, 1)  --r
+defineProperty("l9_1", globalProperty("sim/weapons/Prad[1]")) set(l9_1, 0.7)  --g
+defineProperty("l9_2", globalProperty("sim/weapons/Prad[2]")) set(l9_2, 0.5)  --b
+defineProperty("l9_3", globalProperty("sim/weapons/Prad[3]")) set(l9_3, 1)  --alfa
+defineProperty("l9_4", globalProperty("sim/weapons/Prad[4]")) set(l9_4, 5) --size
+defineProperty("l9_5", globalProperty("sim/weapons/Prad[5]")) set(l9_5, 1)  --dx
+defineProperty("l9_6", globalProperty("sim/weapons/Prad[6]")) set(l9_6, 1)  --dy
+defineProperty("l9_7", globalProperty("sim/weapons/Prad[7]")) set(l9_7, 0)  --dz
+defineProperty("l9_8", globalProperty("sim/weapons/Prad[8]")) set(l9_8, 1)  --width
 
 
 -- panel lights

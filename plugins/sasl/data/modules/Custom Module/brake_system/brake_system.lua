@@ -78,8 +78,8 @@ defineProperty("speed", globalPropertyf("sim/flightmodel/position/groundspeed"))
 defineProperty("thermo", globalPropertyf("sim/cockpit2/temperature/outside_air_temp_degc")) -- outside temperature
 defineProperty("gear_vent_set", globalPropertyi("tu154ce/switchers/eng/gear_fan")) -- вентиляция шасси
 
-defineProperty("gear2_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]"))  -- vertical deflection of left gear
-defineProperty("gear3_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]"))  -- vertical deflection of right gear
+defineProperty("gear2_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]"))  -- vertical deflection of left gear
+defineProperty("gear3_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]"))  -- vertical deflection of right gear
 
 
 set(brake_runtime_left, 1)
@@ -109,31 +109,31 @@ local termo_coef = {
 local axies_asgn = {}
 for i = 0, 500 do
 
-	axies_asgn[i+1] = globalPropertyi("sim/joystick/joystick_axis_assignments["..i.."]") -- 
+	axies_asgn[i+1] = globalProperty("sim/joystick/joystick_axis_assignments["..i.."]") -- 
 
 end
 
 local axies_val = {}
 for i = 0, 500 do
 
-	axies_val[i+1] = globalPropertyf("sim/joystick/joystick_axis_values["..i.."]") -- 
+	axies_val[i+1] = globalProperty("sim/joystick/joystick_axis_values["..i.."]") -- 
 
 end
 
 local axies_inv = {}
 for i = 0, 500 do
 
-	axies_inv[i+1] = globalPropertyf("sim/joystick/joystick_axis_reverse["..i.."]") -- 
+	axies_inv[i+1] = globalProperty("sim/joystick/joystick_axis_reverse["..i.."]") -- 
 
 end
 
 --]]
 
-local joy_work_L = globalPropertyi("sim/joystick/joy_mapped_axis_avail[6]")
-local joy_work_R = globalPropertyi("sim/joystick/joy_mapped_axis_avail[7]")
+local joy_work_L = globalProperty("sim/joystick/joy_mapped_axis_avail[6]")
+local joy_work_R = globalProperty("sim/joystick/joy_mapped_axis_avail[7]")
 
-local joy_value_L = globalPropertyf("sim/joystick/joy_mapped_axis_value[6]")
-local joy_value_R = globalPropertyf("sim/joystick/joy_mapped_axis_value[7]")
+local joy_value_L = globalProperty("sim/joystick/joy_mapped_axis_value[6]")
+local joy_value_R = globalProperty("sim/joystick/joy_mapped_axis_value[7]")
 
 -- now we need to find axies of brakes on pedals, if there are any
 
@@ -227,7 +227,7 @@ function park_brk_max_hnd(phase)
 			set(r_brake_add, 0) -- release pedals
 		end
 		
-		--if brk == 0 then playSample(brake_hnd_off, 0) else playSample(brake_hnd_on, 0) end
+		--if brk == 0 then playSample(brake_hnd_off, 0) else playSample(brake_hnd_on, false) end
 		
 		set(parking_brake, brk)
 	else 
@@ -251,7 +251,7 @@ function park_brk_reg_hnd(phase)
 			set(r_brake_add, 0) -- release pedals
 		end
 		
-		--if brk == 0 then playSample(brake_hnd_off, 0) else playSample(brake_hnd_on, 0) end
+		--if brk == 0 then playSample(brake_hnd_off, 0) else playSample(brake_hnd_on, false) end
 		
 		set(parking_brake, brk)
 	else 
@@ -389,8 +389,8 @@ function update()
 	
 	-- sounds
 	if park_lever_last ~= park_lvr then
-		if park_lvr == 1 then playSample(brake_hnd_on, 0)
-		else playSample(brake_hnd_off, 0) end
+		if park_lvr == 1 then playSample(brake_hnd_on, false)
+		else playSample(brake_hnd_off, false) end
 	
 	end
 	

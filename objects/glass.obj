@@ -1267,84 +1267,84 @@ IDX	788
 # fuselage.024
 #ATTR_hard
 # fuselage.024
-ATTR_light_level  0.000  1.000 sim/custom/anim/window_ice_4
+ATTR_light_level  0.000  1.000 tu154ce/anim/window_ice_4
 TRIS	0 648
 # salon_walls.042
-ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 TRIS	648 768
 # fuselage
-ATTR_light_level  0.000  1.000 sim/custom/anim/window_ice_3
+ATTR_light_level  0.000  1.000 tu154ce/anim/window_ice_3
 TRIS	1416 108
 # fuselage.001
-ATTR_light_level  0.000  1.000 sim/custom/anim/window_ice_2
+ATTR_light_level  0.000  1.000 tu154ce/anim/window_ice_2
 TRIS	1524 120
 # fuselage.002
-ATTR_light_level  0.000  1.000 sim/custom/anim/window_ice_1
+ATTR_light_level  0.000  1.000 tu154ce/anim/window_ice_1
 TRIS	1644 108
 # fuselage.027
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cockpit_window_right
+	ANIM_trans_begin	tu154ce/anim/cockpit_window_right
 		ANIM_trans_key	0	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	0.2	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	0.4	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	1	   0.9771   -1.5413  -21.2538
 	ANIM_trans_end
-	ANIM_rotate_begin	0 0 1	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	0 0 1	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 -5.34
 		ANIM_rotate_key	1	 -5.51
 	ANIM_rotate_end
-	ANIM_rotate_begin	0 1 0	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	0 1 0	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	 -0.00
 		ANIM_rotate_key	0.2	 -0.00
 		ANIM_rotate_key	0.4	 -7.55
 		ANIM_rotate_key	1	 -7.84
 	ANIM_rotate_end
-	ANIM_rotate_begin	1 0 0	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	1 0 0	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  3.24
 		ANIM_rotate_key	1	 -0.00
 	ANIM_rotate_end
 	# fuselage.027
-	ATTR_light_level  0.000  1.000 sim/custom/anim/window_ice_4
+	ATTR_light_level  0.000  1.000 tu154ce/anim/window_ice_4
 	TRIS	1752 108
 ANIM_end
 # fuselage.028
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cockpit_window_left
+	ANIM_trans_begin	tu154ce/anim/cockpit_window_left
 		ANIM_trans_key	0	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	0.2	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	0.4	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	1	  -0.9768   -1.5413  -21.2538
 	ANIM_trans_end
-	ANIM_rotate_begin	0 0 1	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	0 0 1	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  5.34
 		ANIM_rotate_key	1	  5.51
 	ANIM_rotate_end
-	ANIM_rotate_begin	0 1 0	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	0 1 0	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	 -0.00
 		ANIM_rotate_key	0.2	 -0.00
 		ANIM_rotate_key	0.4	  7.55
 		ANIM_rotate_key	1	  7.84
 	ANIM_rotate_end
-	ANIM_rotate_begin	1 0 0	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	1 0 0	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  3.24
 		ANIM_rotate_key	1	 -0.00
 	ANIM_rotate_end
 	# fuselage.028
-	ATTR_light_level  0.000  1.000 sim/custom/anim/window_ice_4
+	ATTR_light_level  0.000  1.000 tu154ce/anim/window_ice_4
 	TRIS	1860 108
 ANIM_end
 # salon_walls
 ANIM_begin
 	ANIM_trans	   1.8482   -2.0580   -8.5479	   1.8482   -2.0580   -8.5479	0 0	no_ref
-	ANIM_rotate_begin	   0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_3
+	ANIM_rotate_begin	   0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_3
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -1356,7 +1356,7 @@ ANIM_begin
 	# salon_walls
 	ANIM_begin
 		ANIM_trans	  -0.0258    0.0080    0.4461	  -0.0258    0.0080    0.4461	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_3
+		ANIM_rotate_begin	  -0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_3
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -1366,14 +1366,14 @@ ANIM_begin
 			ANIM_rotate_key	1	130.00
 		ANIM_rotate_end
 		# salon_walls
-		ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+		ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 		TRIS	1968 48
 	ANIM_end
 ANIM_end
 # salon_walls.056
 ANIM_begin
 	ANIM_trans	  -1.8750   -1.9701   -7.1527	  -1.8750   -1.9701   -7.1527	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_2
+	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_2
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -1385,7 +1385,7 @@ ANIM_begin
 	# salon_walls.056
 	ANIM_begin
 		ANIM_trans	   0.0768    0.0091    0.5163	   0.0768    0.0091    0.5163	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_2
+		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_2
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -1395,14 +1395,14 @@ ANIM_begin
 			ANIM_rotate_key	1	140.00
 		ANIM_rotate_end
 		# salon_walls.056
-		ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+		ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 		TRIS	2016 48
 	ANIM_end
 ANIM_end
 # salon_walls.044
 ANIM_begin
 	ANIM_trans	  -1.7135   -1.9701  -18.1697	  -1.7135   -1.9701  -18.1697	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_1
+	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_1
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -1414,7 +1414,7 @@ ANIM_begin
 	# salon_walls.044
 	ANIM_begin
 		ANIM_trans	  -0.0083   -0.1613    0.5216	  -0.0083   -0.1613    0.5216	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_1
+		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_1
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -1424,14 +1424,14 @@ ANIM_begin
 			ANIM_rotate_key	1	140.00
 		ANIM_rotate_end
 		# salon_walls.044
-		ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+		ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 		TRIS	2064 48
 	ANIM_end
 ANIM_end
 # wingtip glass
 ANIM_begin
 	ANIM_trans	   7.2201   -2.9153    0.1676	   7.2201   -2.9153    0.1676	0 0	no_ref
-	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	sim/custom/anim/wing_flx_right
+	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	tu154ce/anim/wing_flx_right
 		ANIM_rotate_key	-1.0	  1.00
 		ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_key	1	  0.00
@@ -1439,7 +1439,7 @@ ANIM_begin
 	# wingtip glass
 	ANIM_begin
 		ANIM_trans	  -0.0102   -0.4496    0.0162	  -0.0102   -0.4496    0.0162	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	sim/custom/anim/wing_flx_right
+		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	tu154ce/anim/wing_flx_right
 			ANIM_rotate_key	-1.0	  0.00
 			ANIM_rotate_key	0.0	  0.00
 			ANIM_rotate_key	1	  1.00
@@ -1447,7 +1447,7 @@ ANIM_begin
 		# wingtip glass
 		ANIM_begin
 			ANIM_trans	   6.8324    0.2632    4.8588	   6.8324    0.2632    4.8588	0 0	no_ref
-			ANIM_rotate_begin	  -0.0000    0.0000   -1.0000	sim/custom/anim/wing_flx_right
+			ANIM_rotate_begin	  -0.0000    0.0000   -1.0000	tu154ce/anim/wing_flx_right
 				ANIM_rotate_key	-1.0	  1.00
 				ANIM_rotate_key	0.0	  0.00
 				ANIM_rotate_key	1	  0.00
@@ -1455,7 +1455,7 @@ ANIM_begin
 			# wingtip glass
 			ANIM_begin
 				ANIM_trans	   0.0000   -0.2788    0.0222	   0.0000   -0.2788    0.0222	0 0	no_ref
-				ANIM_rotate_begin	   0.0000   -0.0000    1.0000	sim/custom/anim/wing_flx_right
+				ANIM_rotate_begin	   0.0000   -0.0000    1.0000	tu154ce/anim/wing_flx_right
 					ANIM_rotate_key	-1.0	  0.00
 					ANIM_rotate_key	0.0	  0.00
 					ANIM_rotate_key	1	  1.00
@@ -1465,7 +1465,7 @@ ANIM_begin
 				# wingtip glass
 				#ATTR_no_hard
 				# wingtip glass
-				ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+				ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 				TRIS	2112 207
 				# wingtip glass
 				#ATTR_hard
@@ -1477,7 +1477,7 @@ ANIM_end
 # wingtip glass.001
 ANIM_begin
 	ANIM_trans	  -7.2200   -2.9153    0.1676	  -7.2200   -2.9153    0.1676	0 0	no_ref
-	ANIM_rotate_begin	   0.5299    0.0000    0.8480	sim/custom/anim/wing_flx_left
+	ANIM_rotate_begin	   0.5299    0.0000    0.8480	tu154ce/anim/wing_flx_left
 		ANIM_rotate_key	-1.0	  1.00
 		ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_key	1	  0.00
@@ -1485,7 +1485,7 @@ ANIM_begin
 	# wingtip glass.001
 	ANIM_begin
 		ANIM_trans	   0.0100   -0.4496    0.0162	   0.0100   -0.4496    0.0162	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	sim/custom/anim/wing_flx_left
+		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	tu154ce/anim/wing_flx_left
 			ANIM_rotate_key	-1.0	  0.00
 			ANIM_rotate_key	0.0	  0.00
 			ANIM_rotate_key	1	  1.00
@@ -1493,7 +1493,7 @@ ANIM_begin
 		# wingtip glass.001
 		ANIM_begin
 			ANIM_trans	  -6.8320    0.2633    4.8588	  -6.8320    0.2633    4.8588	0 0	no_ref
-			ANIM_rotate_begin	  -0.0000   -0.0000    1.0000	sim/custom/anim/wing_flx_left
+			ANIM_rotate_begin	  -0.0000   -0.0000    1.0000	tu154ce/anim/wing_flx_left
 				ANIM_rotate_key	-1.0	  1.00
 				ANIM_rotate_key	0.0	  0.00
 				ANIM_rotate_key	1	  0.00
@@ -1501,7 +1501,7 @@ ANIM_begin
 			# wingtip glass.001
 			ANIM_begin
 				ANIM_trans	   0.0000   -0.2789    0.0222	   0.0000   -0.2789    0.0222	0 0	no_ref
-				ANIM_rotate_begin	   0.0000    0.0000   -1.0000	sim/custom/anim/wing_flx_left
+				ANIM_rotate_begin	   0.0000    0.0000   -1.0000	tu154ce/anim/wing_flx_left
 					ANIM_rotate_key	-1.0	  0.00
 					ANIM_rotate_key	0.0	  0.00
 					ANIM_rotate_key	1	  1.00
@@ -1509,7 +1509,7 @@ ANIM_begin
 				# wingtip glass.001
 				#ATTR_no_hard
 				# wingtip glass.001
-				ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+				ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 				TRIS	2655 207
 				# wingtip glass.001
 				#ATTR_hard

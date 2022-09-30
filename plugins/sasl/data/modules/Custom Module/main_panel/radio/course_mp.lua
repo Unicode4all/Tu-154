@@ -105,7 +105,7 @@ local function rotary()
 	
 	local summ = nav_left_sw + nav_right_sw
 	
-	if summ ~= rot_summ_last then playSample(rot_small_sound, 0) end
+	if summ ~= rot_summ_last then playSample(rot_small_sound, false) end
 
 	rot_summ_last = summ
 
@@ -121,7 +121,7 @@ local function buttons()
 	
 	local summ = nav_but_1_sw + nav_but_2_sw + nav_but_3_sw
 	
-	if summ ~= but_summ_last then playSample(button_sound, 0) end
+	if summ ~= but_summ_last then playSample(button_sound, false) end
 	
 	but_summ_last = summ
 	
@@ -136,7 +136,7 @@ local function switchers()
 	
 	local summ = nav_mode_sw + nav_man_auto_sw + nav_mile_km_sw
 	
-	if summ ~= sw_summ_last then playSample(switcher_sound, 0) end
+	if summ ~= sw_summ_last then playSample(switcher_sound, false) end
 	
 	sw_summ_last = summ
 
@@ -158,7 +158,7 @@ local function lamps(flag)
 	
 end
 
-local text_font = loadFont('digital7_it.fnt')
+local text_font = loadFont('digital7.ttf')
 
 -- variables for separate manipulations
 

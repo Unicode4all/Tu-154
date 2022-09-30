@@ -19,7 +19,7 @@ defineProperty("table_draw")
 
 defineProperty("tcas_range_set", globalPropertyi("tu154ce/tcas/range_set"))  -- дистанция на дисплее. 0 = 3, 1 = 5, 2 = 10, 3 = 18 nm
 
-local font = loadFont('tcas_scr.fnt')
+local font = loadBitmapFont("tcas_scr.fnt")
 
 function draw()
 	
@@ -72,17 +72,17 @@ function draw()
 				local above = sign(targets[i][3])
 				
 				if mark == 2 or mark == 1 then
-					drawText(font, x-10, y + above * 27 + 2, text, 0, 1, 1)
+					drawText(font, x-10, y + above * 27 + 2, text, 12, false, false, 0, 1, 1)
 					if rate == -1 then drawTexture(blu_dn, x + 24, y, 18, 26, 1,1,1)
 					elseif rate == 1 then drawTexture(blu_up, x + 24, y, 18, 26, 1,1,1)
 					end
 				elseif mark == 3 then
-					drawText(font, x-10, y + above * 27 + 2, text, 1, 1, 0)
+					drawText(font, x-10, y + above * 27 + 2, text, 12, false, false, 1, 1, 0)
 					if rate == -1 then drawTexture(yel_dn, x + 24, y, 18, 26, 1,1,1)
 					elseif rate == 1 then drawTexture(yel_up, x + 24, y, 18, 26, 1,1,1)
 					end
 				elseif mark == 4 then
-					drawText(font, x-10, y + above * 27 + 2, text, 1, 0, 0)
+					drawText(font, x-10, y + above * 27 + 2, text, 12, false, false, 1, 0, 0)
 					if rate == -1 then drawTexture(red_dn, x + 24, y, 18, 26, 1,1,1)
 					elseif rate == 1 then drawTexture(red_up, x + 24, y, 18, 26, 1,1,1)
 					end

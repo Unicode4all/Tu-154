@@ -3,11 +3,11 @@ size = {170, 45}
 
 defineProperty("text")
 
-local font = loadFont('segmental.fnt')
+font = loadBitmapFont("segmental.fnt")
 
 function draw()
-
-	drawText(font, 0, 0, get(text), 1, 0.8, 0.7)
+	local f = get(font)
+	--drawText(f, 0, 0, get(text), 12, false, false, TEXT_ALIGN_LEFT, {1, 0.8, 0.7})
 
 end
 

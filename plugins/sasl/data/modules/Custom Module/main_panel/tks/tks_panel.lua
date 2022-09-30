@@ -50,7 +50,7 @@ local function switchers_check()
 	local sw_summ = tks_mode_sw + tks_user_sw + tks_source_sw + tks_course_set_sw
 	
 	if sw_summ ~= sw_last then
-		playSample(switcher_sound, 0)
+		playSample(switcher_sound, false)
 	end
 	
 	sw_last = sw_summ
@@ -58,7 +58,7 @@ local function switchers_check()
 	local butt_now = get(tks_corrr_button)
 	
 	if butt_last ~= butt_now then
-		playSample(button_sound, 0)
+		playSample(button_sound, false)
 	end
 	
 	butt_last = butt_now

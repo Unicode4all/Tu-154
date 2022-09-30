@@ -3,24 +3,24 @@
 -- sim/version/xplane_internal_version
 defineProperty("xp_version", globalPropertyi("sim/version/xplane_internal_version"))
 -- controls
---defineProperty("tro_comm_1", globalPropertyf("sim/flightmodel/engine/ENGN_thro[0]"))
---defineProperty("tro_comm_2", globalPropertyf("sim/flightmodel/engine/ENGN_thro[1]"))
---defineProperty("tro_comm_3", globalPropertyf("sim/flightmodel/engine/ENGN_thro[2]"))
+--defineProperty("tro_comm_1", globalProperty("sim/flightmodel/engine/ENGN_thro[0]"))
+--defineProperty("tro_comm_2", globalProperty("sim/flightmodel/engine/ENGN_thro[1]"))
+--defineProperty("tro_comm_3", globalProperty("sim/flightmodel/engine/ENGN_thro[2]"))
 
 defineProperty("tro_comm_1", globalPropertyf("tu154ce/SC/engine/ENGN_thro_0")) 
 defineProperty("tro_comm_2", globalPropertyf("tu154ce/SC/engine/ENGN_thro_1")) 
 defineProperty("tro_comm_3", globalPropertyf("tu154ce/SC/engine/ENGN_thro_2"))
 
 
-defineProperty("sim_rud_1", globalPropertyf("sim/flightmodel/engine/ENGN_thro_use[0]"))
-defineProperty("sim_rud_2", globalPropertyf("sim/flightmodel/engine/ENGN_thro_use[1]"))
-defineProperty("sim_rud_3", globalPropertyf("sim/flightmodel/engine/ENGN_thro_use[2]"))
+defineProperty("sim_rud_1", globalProperty("sim/flightmodel/engine/ENGN_thro_use[0]"))
+defineProperty("sim_rud_2", globalProperty("sim/flightmodel/engine/ENGN_thro_use[1]"))
+defineProperty("sim_rud_3", globalProperty("sim/flightmodel/engine/ENGN_thro_use[2]"))
 
-defineProperty("revers_flap_L", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
-defineProperty("revers_flap_R", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
+defineProperty("revers_flap_L", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
+defineProperty("revers_flap_R", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
 
-defineProperty("eng_modL", globalPropertyf("sim/flightmodel/engine/ENGN_propmode[0]")) -- reverse on left engine feather=0,normal=1,beta=2,reverse=3
-defineProperty("eng_modR", globalPropertyf("sim/flightmodel/engine/ENGN_propmode[2]")) -- reverse on right engine feather=0,normal=1,beta=2,reverse=3
+defineProperty("eng_modL", globalProperty("sim/flightmodel/engine/ENGN_propmode[0]")) -- reverse on left engine feather=0,normal=1,beta=2,reverse=3
+defineProperty("eng_modR", globalProperty("sim/flightmodel/engine/ENGN_propmode[2]")) -- reverse on right engine feather=0,normal=1,beta=2,reverse=3
 
 
 

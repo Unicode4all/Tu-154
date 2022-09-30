@@ -49,7 +49,7 @@ function update()
 	
 	set(VHF2Freq, get(VHF1Freq))
 	
-	if mode ~= mode_last then playSample(switch_sound, 0) end
+	if mode ~= mode_last then playSample(switch_sound, false) end
 	mode_last = mode
 	
 	

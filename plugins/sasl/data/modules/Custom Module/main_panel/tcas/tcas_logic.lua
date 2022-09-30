@@ -129,9 +129,9 @@ defineProperty("acf_19_x", globalPropertyf("sim/multiplayer/position/plane19_x")
 defineProperty("acf_19_y", globalPropertyf("sim/multiplayer/position/plane19_y"))  -- x
 defineProperty("acf_19_z", globalPropertyf("sim/multiplayer/position/plane19_z"))  -- x
 
-defineProperty("acf_20_x", globalPropertyf("sim/multiplayer/position/plane20_x"))  -- x
-defineProperty("acf_20_y", globalPropertyf("sim/multiplayer/position/plane20_y"))  -- x
-defineProperty("acf_20_z", globalPropertyf("sim/multiplayer/position/plane20_z"))  -- x
+--defineProperty("acf_20_x", globalPropertyf("sim/multiplayer/position/plane20_x"))  -- x
+--defineProperty("acf_20_y", globalPropertyf("sim/multiplayer/position/plane20_y"))  -- x
+--defineProperty("acf_20_z", globalPropertyf("sim/multiplayer/position/plane20_z"))  -- x
 
 
 -- local aircraft coordinates
@@ -306,10 +306,6 @@ local function refresh_data()
 			acf_local_tbl[19][2] = get(acf_19_y)
 			acf_local_tbl[19][3] = get(acf_19_z)
 			
-			acf_local_tbl[20][1] = get(acf_20_x)
-			acf_local_tbl[20][2] = get(acf_20_y)
-			acf_local_tbl[20][3] = get(acf_20_z)
-			
 			-- recalculate relative table	
 			local local_x = get(pos_x) -- longtitude. positive from W to E
 			local local_z = get(pos_z) -- latitude. positive from N to S
@@ -319,8 +315,8 @@ local function refresh_data()
 			
 			local cur = get(course)
 			
-			for i = 1, 20, 1 do
-				-- bearing				
+			for i = 1, 19, 1 do
+				-- bearing			
 				acf_circ_tbl[i][1] = math.deg(math.atan2(acf_local_tbl[i][1] - local_x, -acf_local_tbl[i][3] + local_z)) - cur
 				while acf_circ_tbl[i][1] > 180 do acf_circ_tbl[i][1] = acf_circ_tbl[i][1] - 360 end
 				while acf_circ_tbl[i][1] < -180 do acf_circ_tbl[i][1] = acf_circ_tbl[i][1] + 360 end

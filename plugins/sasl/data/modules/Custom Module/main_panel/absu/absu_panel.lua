@@ -214,9 +214,9 @@ defineProperty("absu_pitch_trimm", globalPropertyi("tu154ce/absu/absu_pitch_trim
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 
 defineProperty("damp_roll_lamp", globalPropertyi("tu154ce/absu/damp_roll_lamp")) -- 
@@ -311,7 +311,7 @@ local function buttons()
 	summ = summ + get(absu_arrest) + get(absu_speed_test_1) + get(absu_speed_test_2)
 	summ = summ + get(absu_stab_speed) + get(absu_throt_off_1) + get(absu_throt_off_2) + get(absu_throt_off_3) + get(lamp_test_eng)
 	
-	if button_summ_last ~= summ then playSample(button_sound, 0) end
+	if button_summ_last ~= summ then playSample(button_sound, false) end
 	
 	button_summ_last = summ
 
@@ -331,7 +331,7 @@ local function switchers()
 	summ = summ + get(hydro_circuit_auto_man) + get(hydro_long_control)
 	summ = summ + get(ZK_select) + get(nav_select) + get(vbe_select)
 	
-	if switchers_summ ~= summ then playSample(switcher_sound, 0) end
+	if switchers_summ ~= summ then playSample(switcher_sound, false) end
 	
 	switchers_summ = summ
 	
@@ -362,7 +362,7 @@ local function caps()
 	local summ = get(absu_arrest_cap) + get(absu_smooth_on_cap) + get(absu_speed_prepare_cap) + get(absu_speed_off_cap)
 	summ = summ + get(hydro_circuit_auto_man_cap) + get(hydro_long_control_cap)
 	
-	if caps_summ ~= summ then playSample(cap_sound, 0) end
+	if caps_summ ~= summ then playSample(cap_sound, false) end
 	
 	caps_summ = summ
 	

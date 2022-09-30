@@ -85,25 +85,25 @@ IDX	45
 # Circle
 ANIM_begin
 	ANIM_trans	  -0.2986   -1.7897  -21.6835	  -0.2986   -1.7897  -21.6835	0 0	no_ref
-	ANIM_rotate	   0.0000   -0.0000   -1.0000	  0.00 171.50	800.0 700.0	sim/custom/gauges/alt/vd15_pressure_left
+	ANIM_rotate	   0.0000   -0.0000   -1.0000	  0.00 171.50	800.0 700.0	tu154ce/gauges/alt/vd15_pressure_left
 	# Circle
-	ATTR_light_level  0.000  1.000 sim/custom/lights/left_panel_int
+	ATTR_light_level  0.000  1.000 tu154ce/lights/left_panel_int
 	TRIS	0 66
 ANIM_end
 # Circle.001
 ANIM_begin
 	ANIM_trans	   0.7065   -1.8473  -21.6835	   0.7065   -1.8473  -21.6835	0 0	no_ref
-	ANIM_rotate	  -0.0000   -0.0000   -1.0000	  0.00 171.50	800.0 700.0	sim/custom/gauges/alt/vd15_pressure_right
+	ANIM_rotate	  -0.0000   -0.0000   -1.0000	  0.00 171.50	800.0 700.0	tu154ce/gauges/alt/vd15_pressure_right
 	# Circle.001
-	ATTR_light_level  0.000  1.000 sim/custom/lights/right_panel_int
+	ATTR_light_level  0.000  1.000 tu154ce/lights/right_panel_int
 	TRIS	66 66
 ANIM_end
 # Circle.002
 ANIM_begin
 	ANIM_trans	   0.8743   -1.2127  -19.5356	   0.8743   -1.2127  -19.5356	0 0	no_ref
-	ANIM_rotate	   1.0000    0.0000    0.0000	  0.00 171.50	800.0 700.0	sim/custom/gauges/alt/vd15_pressure_eng
+	ANIM_rotate	   1.0000    0.0000    0.0000	  0.00 171.50	800.0 700.0	tu154ce/gauges/alt/vd15_pressure_eng
 	# Circle.002
-	ATTR_light_level  0.000  1.000 sim/custom/light/no_LIT
+	ATTR_light_level  0.000  1.000 tu154ce/light/no_LIT
 	TRIS	132 66
 ANIM_end
 

@@ -88,9 +88,9 @@ defineProperty("scale_6", loadImage("radar_scale_marks.png", 251, 154, 250, 156)
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 -- failures
 defineProperty("radar_fail", globalPropertyi("tu154ce/failures/radar_fail")) --
@@ -157,15 +157,15 @@ function update()
 	
 	-- panel sounds
 	local power_switch = get(rls_on)
-	if power_switch ~= power_sw_last then playSample(button_sound, 0) end
+	if power_switch ~= power_sw_last then playSample(button_sound, false) end
 	power_sw_last = power_switch
 	
 	mode = get(rls_mode)
-	if mode ~= mode_sw_last then playSample(rotary_sound, 0) end
+	if mode ~= mode_sw_last then playSample(rotary_sound, false) end
 	mode_sw_last = mode
 
 	range = get(map_range)
-	if range ~= range_last then playSample(rotary_sound_pl, 0) end
+	if range ~= range_last then playSample(rotary_sound_pl, false) end
 	range_last = range
 
 

@@ -104,12 +104,12 @@ defineProperty("int_yaw_trim", globalPropertyf("tu154ce/trimmers/int_yaw_trim"))
 defineProperty("control_force_pos", globalPropertyf("tu154ce/controls/control_force_pos")) -- положение загружателя РВ. 0 - выклчюен, 1 - подключен
 defineProperty("control_force_pos_rud", globalPropertyf("tu154ce/controls/control_force_pos_rud")) -- положение загружателя РН. 0 - выклчюен, 1 - подключен
 
-defineProperty("gear1_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[0]"))  -- deploy of front gear
-defineProperty("gear2_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[1]"))  -- deploy of right gear
-defineProperty("gear3_deploy", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[2]"))  -- deploy of left gear
+defineProperty("gear1_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[0]"))  -- deploy of front gear
+defineProperty("gear2_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[1]"))  -- deploy of right gear
+defineProperty("gear3_deploy", globalProperty("sim/aircraft/parts/acf_gear_deploy[2]"))  -- deploy of left gear
 
-defineProperty("deflection_mtr_2", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_2", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 
 
 defineProperty("indicated_airspeed", globalPropertyf("sim/flightmodel/position/indicated_airspeed")) -- приборная скорость
@@ -133,9 +133,9 @@ defineProperty("bus36_volt_pts250_2", globalPropertyf("tu154ce/elec/bus36_volt_p
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 -- other datarefs
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
@@ -546,7 +546,7 @@ local function caps_check()
 	
 	changes = changes - stab_man_cap_last - contr_force_cap_last - nosewheel_turn_cap_last - slat_man_cap_last - gears_retr_lock_cap_last - gears_ext_3GS_cap_last - busters_cap_last - flaps_sel_cap_last - emerg_elev_trimm_cap_last
 	
-	if changes ~= 0 then playSample(cap_sound, 0) end
+	if changes ~= 0 then playSample(cap_sound, false) end
 	
 
 	stab_man_cap_last = stab_man_cap_sw
@@ -611,7 +611,7 @@ local function swichers_check()
 	changes = changes - stab_manual_last - stab_setting_last - ail_trimm_sw_last - rudd_trimm_sw_last - contr_force_set_last - nosewheel_turn_enable_last - nosewheel_turn_sel_last
 	changes = changes - slat_man_last - flaps_sel_last - gears_retr_lock_last - gears_ext_3GS_last - buster_on_1_last - buster_on_2_last - buster_on_3_last - emerg_elev_trimm_last
 	
-	if changes ~= 0 then playSample(switcher_sound, 0) end
+	if changes ~= 0 then playSample(switcher_sound, false) end
 
 	stab_manual_last = stab_manual_sw
 	stab_setting_last = stab_setting_sw

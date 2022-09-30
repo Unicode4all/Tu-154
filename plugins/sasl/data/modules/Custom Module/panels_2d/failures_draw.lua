@@ -3,7 +3,7 @@
 size = {100, 100}
 
 
-local text_font = loadFont('basic_font.fnt')
+local text_font = loadFont('Verdana.ttf')
 
 
 
@@ -21,9 +21,9 @@ function draw()
 	for k, v in ipairs(tbl) do
 		
 		if pos < count / 2 then
-			drawText(text_font, 0, -pos * 30, v, 0, 0, 0, 1)
+			drawText(text_font, 0, -pos * 30, v, 12, false, false, 0, 0, 0, 1)
 		elseif pos < get(maxDraw) then
-			drawText(text_font, 500, -(pos - count / 2) * 30, v, 0, 0, 0, 1)
+			drawText(text_font, 500, -(pos - count / 2) * 30, v, 12, false, false, 0, 0, 0, 1)
 		end
 		
 		pos = pos + 1

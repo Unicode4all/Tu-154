@@ -1,12 +1,12 @@
 -- this is fuel pumps logic
 
 -- fuel ammount
-defineProperty("tank1_w", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
-defineProperty("tank4_w", globalPropertyf("sim/flightmodel/weight/m_fuel[1]")) -- fuel weight
-defineProperty("tank2R_w", globalPropertyf("sim/flightmodel/weight/m_fuel[2]")) -- fuel weight
-defineProperty("tank2L_w", globalPropertyf("sim/flightmodel/weight/m_fuel[3]")) -- fuel weight
-defineProperty("tank3R_w", globalPropertyf("sim/flightmodel/weight/m_fuel[4]")) -- fuel weight
-defineProperty("tank3L_w", globalPropertyf("sim/flightmodel/weight/m_fuel[5]")) -- fuel weight
+defineProperty("tank1_w",  globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
+defineProperty("tank4_w",  globalProperty("sim/flightmodel/weight/m_fuel[1]")) -- fuel weight
+defineProperty("tank2R_w", globalProperty("sim/flightmodel/weight/m_fuel[2]")) -- fuel weight
+defineProperty("tank2L_w", globalProperty("sim/flightmodel/weight/m_fuel[3]")) -- fuel weight
+defineProperty("tank3R_w", globalProperty("sim/flightmodel/weight/m_fuel[4]")) -- fuel weight
+defineProperty("tank3L_w", globalProperty("sim/flightmodel/weight/m_fuel[5]")) -- fuel weight
 
 -- controls
 defineProperty("pump_tank2_left", globalPropertyi("tu154ce/switchers/fuel/pump_tank2_left")) -- насосы бака 2

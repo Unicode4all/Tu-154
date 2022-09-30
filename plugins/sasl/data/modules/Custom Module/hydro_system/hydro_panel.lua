@@ -171,9 +171,9 @@ local function check_switchers ()
 	
 	local sw_changes = connect2to1_sw + pump_2_sw + pump_3_sw - connect2to1_last - pump_2_last - pump_3_last
 	
-	if sw_changes ~= 0 then playSample(switcher_sound, 0) end
+	if sw_changes ~= 0 then playSample(switcher_sound, false) end
 	
-	if connect2to1_cap_sw - connect2to1_cap_last ~= 0 then playSample(cap_sound, 0) end
+	if connect2to1_cap_sw - connect2to1_cap_last ~= 0 then playSample(cap_sound, false) end
 	
 	connect2to1_last = connect2to1_sw
 	pump_2_last = pump_2_sw
@@ -204,7 +204,7 @@ local function buttons_check ()
 	
 	local sw_changes = lamp_test_hydro_sw + qty_test_12_sw + qty_test_3_sw + accum_fill_sw - lamp_test_hydro_last - qty_test_12_last - qty_test_3_last - accum_fill_last
 	
-	if sw_changes ~= 0 then playSample(button_sound, 0) end
+	if sw_changes ~= 0 then playSample(button_sound, false) end
 	
 	lamp_test_hydro_last = lamp_test_hydro_sw
 	qty_test_12_last = qty_test_12_sw

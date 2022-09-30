@@ -13,25 +13,25 @@ defineProperty("eng1_fire", globalPropertyf("sim/operation/failures/rel_engfir0"
 defineProperty("eng2_fire", globalPropertyf("sim/operation/failures/rel_engfir1"))
 defineProperty("eng3_fire", globalPropertyf("sim/operation/failures/rel_engfir2"))
 
-defineProperty("eng1_oil_p", globalPropertyf("sim/flightmodel/engine/ENGN_oil_press_psi[0]"))  -- oil pressure
-defineProperty("eng2_oil_p", globalPropertyf("sim/flightmodel/engine/ENGN_oil_press_psi[1]"))
-defineProperty("eng3_oil_p", globalPropertyf("sim/flightmodel/engine/ENGN_oil_press_psi[2]"))
+defineProperty("eng1_oil_p", globalProperty("sim/flightmodel/engine/ENGN_oil_press_psi[0]"))  -- oil pressure
+defineProperty("eng2_oil_p", globalProperty("sim/flightmodel/engine/ENGN_oil_press_psi[1]"))
+defineProperty("eng3_oil_p", globalProperty("sim/flightmodel/engine/ENGN_oil_press_psi[2]"))
 
-defineProperty("chip_detect1", globalPropertyf("sim/cockpit/warnings/annunciators/chip_detected[0]")) -- chip in engine
-defineProperty("chip_detect2", globalPropertyf("sim/cockpit/warnings/annunciators/chip_detected[1]")) -- chip in engine
-defineProperty("chip_detect3", globalPropertyf("sim/cockpit/warnings/annunciators/chip_detected[2]")) -- chip in engine
+defineProperty("chip_detect1", globalProperty("sim/cockpit/warnings/annunciators/chip_detected[0]")) -- chip in engine
+defineProperty("chip_detect2", globalProperty("sim/cockpit/warnings/annunciators/chip_detected[1]")) -- chip in engine
+defineProperty("chip_detect3", globalProperty("sim/cockpit/warnings/annunciators/chip_detected[2]")) -- chip in engine
 
-defineProperty("eng_rpm1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]")) -- engine rpm in % of N2  
-defineProperty("eng_rpm2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]"))
-defineProperty("eng_rpm3", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]"))
+defineProperty("eng_rpm1", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]")) -- engine rpm in % of N2  
+defineProperty("eng_rpm2", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]"))
+defineProperty("eng_rpm3", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]"))
 
 defineProperty("comsta0", globalPropertyi("sim/operation/failures/rel_comsta0")) -- compressor stall
 defineProperty("comsta1", globalPropertyi("sim/operation/failures/rel_comsta1"))
 defineProperty("comsta2", globalPropertyi("sim/operation/failures/rel_comsta2"))
 
-defineProperty("sim_rud_1", globalPropertyf("sim/flightmodel/engine/ENGN_thro_use[0]"))
-defineProperty("sim_rud_2", globalPropertyf("sim/flightmodel/engine/ENGN_thro_use[1]"))
-defineProperty("sim_rud_3", globalPropertyf("sim/flightmodel/engine/ENGN_thro_use[2]"))
+defineProperty("sim_rud_1", globalProperty("sim/flightmodel/engine/ENGN_thro_use[0]"))
+defineProperty("sim_rud_2", globalProperty("sim/flightmodel/engine/ENGN_thro_use[1]"))
+defineProperty("sim_rud_3", globalProperty("sim/flightmodel/engine/ENGN_thro_use[2]"))
 
 -- resilts
 defineProperty("vibration_1", globalPropertyf("tu154ce/eng/vibration_1")) -- вибрация двигателя

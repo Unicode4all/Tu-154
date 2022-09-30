@@ -50,9 +50,9 @@ defineProperty("bus27_volt_left", globalPropertyf("tu154ce/elec/bus27_volt_left"
 defineProperty("bus27_volt_right", globalPropertyf("tu154ce/elec/bus27_volt_right"))
 
 
-defineProperty("ice_inlet_heat_1", globalPropertyi("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[0]"))
-defineProperty("ice_inlet_heat_2", globalPropertyi("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[1]"))
-defineProperty("ice_inlet_heat_3", globalPropertyi("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[2]"))
+defineProperty("ice_inlet_heat_1", globalProperty("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[0]"))
+defineProperty("ice_inlet_heat_2", globalProperty("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[1]"))
+defineProperty("ice_inlet_heat_3", globalProperty("sim/cockpit2/ice/ice_inlet_heat_on_per_engine[2]"))
 
 defineProperty("eng_heat_open_1", globalPropertyi("tu154ce/antiice/eng_heat_open_1")) -- открыта заслонка обогрева двигателя
 defineProperty("eng_heat_open_2", globalPropertyi("tu154ce/antiice/eng_heat_open_2")) -- открыта заслонка обогрева двигателя
@@ -83,9 +83,9 @@ defineProperty("slat_heating", globalPropertyi("tu154ce/antiice/slat_heating")) 
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
@@ -185,11 +185,11 @@ local function check_controls()
 	changes = changes - soi21_on_last - antiice_slats_last - antiice_eng_1_last - antiice_eng_2_last - antiice_eng_3_last - antiice_wing_last
 	changes = changes - window_heat_1_last - window_heat_2_last - window_heat_3_last - pitot_heat_1_last - pitot_heat_2_last - pitot_heat_3_last
 	
-	if 0 ~= changes then playSample(switcher_sound, 0) end
+	if 0 ~= changes then playSample(switcher_sound, false) end
 	
 	local soi21_test_sw = get(soi21_test)
 	
-	if soi21_test_sw ~= soi21_test_last then playSample(button_sound, 0) end
+	if soi21_test_sw ~= soi21_test_last then playSample(button_sound, false) end
 	
 	
 	soi21_on_last = soi21_on_sw

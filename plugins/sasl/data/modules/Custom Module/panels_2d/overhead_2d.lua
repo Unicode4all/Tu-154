@@ -303,9 +303,9 @@ local function getDigits(squawk)
     return d1, d2, d3, d4
 end
 
-local so72_font = loadFont("digital7_space.fnt")
+local so72_font = loadBitmapFont("digital7_space.fnt")
 
-local text_font = loadFont('digital7_it.fnt')
+local text_font = loadFont('digital7.ttf')
 
 local nav_1_power = false
 local nav_1_freq_show = ""

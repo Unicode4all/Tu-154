@@ -36,12 +36,12 @@ defineProperty("control_force_pos_rud", globalPropertyf("tu154ce/controls/contro
 defineProperty("contr_force_set", globalPropertyi("tu154ce/controll/contr_force_set")) -- переключатель загружателя РВ РН. -1 - полет, 0 авто, +1 - взлет-посадка
 
 
-defineProperty("deploy_ratio_2", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[1]")) -- 
-defineProperty("deploy_ratio_3", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[2]")) -- 
+defineProperty("deploy_ratio_2", globalProperty("sim/flightmodel2/gear/deploy_ratio[1]")) -- 
+defineProperty("deploy_ratio_3", globalProperty("sim/flightmodel2/gear/deploy_ratio[2]")) -- 
 
-defineProperty("gear1_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))  -- vertical deflection of front gear
-defineProperty("gear2_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]"))  -- vertical deflection of left gear
-defineProperty("gear3_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]"))  -- vertical deflection of right gear
+defineProperty("gear1_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))  -- vertical deflection of front gear
+defineProperty("gear2_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]"))  -- vertical deflection of left gear
+defineProperty("gear3_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]"))  -- vertical deflection of right gear
 
 
 -- wings --
@@ -80,8 +80,8 @@ defineProperty("elevator_R", globalPropertyf("sim/flightmodel/controls/hstab2_el
 defineProperty("rudder", globalPropertyf("sim/flightmodel/controls/vstab2_rud1def")) -- degrees, positive is trailing-edge left
 defineProperty("stab_ratio", globalPropertyf("sim/cockpit2/controls/elevator_trim")) -- sim pitch trimmer
 
---defineProperty("stap_pos_real", globalPropertyf("sim/flightmodel2/wing/elevator2_deg[0]")) -- sim stab position
---defineProperty("elev_pos_real", globalPropertyf("sim/flightmodel2/wing/elevator1_deg[0]")) -- sim elevator position
+--defineProperty("stap_pos_real", globalProperty("sim/flightmodel2/wing/elevator2_deg[0]")) -- sim stab position
+--defineProperty("elev_pos_real", globalProperty("sim/flightmodel2/wing/elevator1_deg[0]")) -- sim elevator position
 
 -- hydraulics
 defineProperty("gs_press_1", globalPropertyf("tu154ce/hydro/gs_press_1")) -- давление в ГС1
@@ -95,8 +95,8 @@ defineProperty("yoke_roll", globalPropertyf("tu154ce/controlls/yoke_roll")) -- �
 defineProperty("pedals_turn", globalPropertyf("tu154ce/controlls/pedals")) -- поворот штурвала ко тангажу
 defineProperty("spoilers_lever", globalPropertyf("tu154ce/controlls/spoilers_lever")) -- рычаг интерцепторов
 
-defineProperty("revers_flap_L", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
-defineProperty("revers_flap_R", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
+defineProperty("revers_flap_L", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
+defineProperty("revers_flap_R", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
 defineProperty("rpm_high_1", globalPropertyf("tu154ce/gauges/engine/rpm_high_1")) -- обороты турбины высокого давления №1
 defineProperty("rpm_high_3", globalPropertyf("tu154ce/gauges/engine/rpm_high_3")) -- обороты турбины высокого давления №3
 
@@ -114,8 +114,8 @@ defineProperty("bus36_volt_pts250_1", globalPropertyf("tu154ce/elec/bus36_volt_p
 defineProperty("bus36_volt_pts250_2", globalPropertyf("tu154ce/elec/bus36_volt_pts250_2")) -- напряжение сети 36 ПТС 2
 
 -- spoilers sources
-defineProperty("deflection_mtr_2", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_2", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 
 defineProperty("anim_rud1", globalPropertyf("tu154ce/controlls/throttle_1")) -- РУД 1
 defineProperty("anim_rud2", globalPropertyf("tu154ce/controlls/throttle_2")) -- РУД 2

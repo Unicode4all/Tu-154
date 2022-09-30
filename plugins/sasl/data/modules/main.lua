@@ -2,6 +2,10 @@
 size = { 2048, 2048 }
 print("Lua version is", _VERSION)
 
+sasl.options.set3DRendering(true)
+sasl.options.setAircraftPanelRendering(true)
+sasl.options.setInteractivity(true)
+
 addSearchPath(moduleDirectory.."/Custom Module/KLN90/")
 addSearchPath(moduleDirectory.."/Custom Module/sounds")
 

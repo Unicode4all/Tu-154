@@ -23,7 +23,7 @@ defineProperty("apu_system_on", globalPropertyi("tu154ce/eng/apu_system_on"))
 defineProperty("apu_fuel_last", globalPropertyf("tu154ce/eng/apu_fuel_last")) -- остаток топлива в двигателе
 
 -- fuel weight in tank 1
-defineProperty("tank1_w", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
+defineProperty("tank1_w", globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
 
 -- results
 defineProperty("apu_air_press", globalPropertyf("tu154ce/eng/apu_air_press")) -- давление воздуха для запуска двигателей

@@ -11,7 +11,7 @@ defineProperty("brt_handle", globalPropertyf("tu154ce/rotary/srpbz/brightness"))
 
 defineProperty("mode_set", globalPropertyi("tu154ce/taws/mode_set")) -- режим работы экрана. 0 - выкл, 1 - карта высот, 2 - вид сбоку, 3 - часы, 4 - процесс включения
 
-local text_font = loadFont('taws_scr.fnt')
+local text_font = loadBitmapFont("taws_scr.fnt")
 
 local msg = 0
 local eng = false

@@ -16,7 +16,7 @@ components = {
 		bus_volt = globalPropertyf("tu154ce/elec/bus27_volt_right"), 
 		bat_fail = globalPropertyi("tu154ce/failures/bat_2_fail"),
 		bat_kz = globalPropertyi("tu154ce/failures/bat_2_kz"),
-		sim_bat_on = globalPropertyf("sim/cockpit2/electrical/battery_on[1]"),
+		sim_bat_on = globalProperty("sim/cockpit2/electrical/battery_on[1]"),
 		bat_thermo = globalPropertyf("tu154ce/elec/bat_therm_2"),
 	},
 	
@@ -29,7 +29,7 @@ components = {
 		bus_volt = globalPropertyf("tu154ce/elec/bus27_volt_left"), 
 		bat_fail = globalPropertyi("tu154ce/failures/bat_3_fail"),
 		bat_kz = globalPropertyi("tu154ce/failures/bat_3_kz"),
-		sim_bat_on = globalPropertyf("sim/cockpit2/electrical/battery_on[2]"),
+		sim_bat_on = globalProperty("sim/cockpit2/electrical/battery_on[2]"),
 		bat_thermo = globalPropertyf("tu154ce/elec/bat_therm_3"),	
 	},
 
@@ -42,7 +42,7 @@ components = {
 		bus_volt = globalPropertyf("tu154ce/elec/bus27_volt_right"),
 		bat_fail = globalPropertyi("tu154ce/failures/bat_4_fail"),
 		bat_kz = globalPropertyi("tu154ce/failures/bat_4_kz"),
-		sim_bat_on = globalPropertyf("sim/cockpit2/electrical/battery_on[3]"),
+		sim_bat_on = globalProperty("sim/cockpit2/electrical/battery_on[3]"),
 		bat_thermo = globalPropertyf("tu154ce/elec/bat_therm_4"),
 	},
 	

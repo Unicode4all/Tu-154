@@ -21,7 +21,7 @@ defineProperty("bus115_volt", globalPropertyf("tu154ce/elec/bus115_1_volt"))
 defineProperty("fail", globalPropertyi("sim/operation/failures/rel_dme")) -- fail
 defineProperty("dme_fail", globalPropertyi("tu154ce/failures/dme1_fail")) -- fail
 
-local text_font = loadFont('digital7_it.fnt')
+local text_font = loadFont('digital7.ttf')
 
 local dist_text = "888.8"
 

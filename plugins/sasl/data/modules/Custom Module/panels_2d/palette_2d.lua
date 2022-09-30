@@ -7,14 +7,14 @@ defineProperty("show_palette",globalPropertyi("tu154ce/panels/show_palette")) --
 
 defineProperty("payload", globalPropertyf("sim/flightmodel/weight/m_fixed"))  -- payload weight, kg
 defineProperty("CG_load", globalPropertyf("sim/flightmodel/misc/cgz_ref_to_default")) -- Center of Gravity reference to default, m
-defineProperty("fuel_q_1", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel quantity for tank 1
-defineProperty("fuel_q_4", globalPropertyf("sim/flightmodel/weight/m_fuel[1]")) -- fuel quantity for tank 4
-defineProperty("fuel_q_2R", globalPropertyf("sim/flightmodel/weight/m_fuel[2]")) -- fuel quantity for tank 2R
-defineProperty("fuel_q_2L", globalPropertyf("sim/flightmodel/weight/m_fuel[3]")) -- fuel quantity for tank 2L
-defineProperty("fuel_q_3R", globalPropertyf("sim/flightmodel/weight/m_fuel[4]")) -- fuel quantity for tank 3R
-defineProperty("fuel_q_3L", globalPropertyf("sim/flightmodel/weight/m_fuel[5]")) -- fuel quantity for tank 3L
+defineProperty("fuel_q_1",  globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel quantity for tank 1
+defineProperty("fuel_q_4",  globalProperty("sim/flightmodel/weight/m_fuel[1]")) -- fuel quantity for tank 4
+defineProperty("fuel_q_2R", globalProperty("sim/flightmodel/weight/m_fuel[2]")) -- fuel quantity for tank 2R
+defineProperty("fuel_q_2L", globalProperty("sim/flightmodel/weight/m_fuel[3]")) -- fuel quantity for tank 2L
+defineProperty("fuel_q_3R", globalProperty("sim/flightmodel/weight/m_fuel[4]")) -- fuel quantity for tank 3R
+defineProperty("fuel_q_3L", globalProperty("sim/flightmodel/weight/m_fuel[5]")) -- fuel quantity for tank 3L
 
-defineProperty("gear1_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))
+defineProperty("gear1_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))
 
 -- load images
 defineProperty("bg_img1", loadImage("palette.png", 0, 0, 251, 305))
@@ -459,6 +459,7 @@ components = {
 		position = {155, 164, 50, 50},
 		color = {0, 0, 0, 1},
 		text = function()
+			
 			return show_Vr_15
 		end,
 		visible = function()

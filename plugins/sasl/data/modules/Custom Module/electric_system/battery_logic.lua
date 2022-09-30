@@ -20,7 +20,7 @@ defineProperty("cockpit_temp", globalPropertyf("tu154ce/thermo/cockpit_temp")) -
 -- other datarefs
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
-defineProperty("sim_bat_on", globalPropertyf("sim/cockpit2/electrical/battery_on[0]")) -- sim battery on
+defineProperty("sim_bat_on", globalProperty("sim/cockpit2/electrical/battery_on[0]")) -- sim battery on
 
 
 -- Smart Copilot

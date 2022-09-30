@@ -23,18 +23,18 @@ defineProperty("hide_eng_objects", globalPropertyi("tu154ce/lang/hide_eng_object
 defineProperty("sounds_volume", globalPropertyi("tu154ce/sounds_voulme")) -- общая громкость звуков
 
 
-defineProperty("slider_1", globalPropertyi("sim/cockpit2/switches/custom_slider_on[0]")) -- window L
-defineProperty("slider_2", globalPropertyi("sim/cockpit2/switches/custom_slider_on[1]")) -- window R
-defineProperty("slider_3", globalPropertyi("sim/cockpit2/switches/custom_slider_on[2]")) -- cargo 1
-defineProperty("slider_4", globalPropertyi("sim/cockpit2/switches/custom_slider_on[3]")) -- cargo 2
-defineProperty("slider_5", globalPropertyi("sim/cockpit2/switches/custom_slider_on[4]")) -- pax door 1
-defineProperty("slider_6", globalPropertyi("sim/cockpit2/switches/custom_slider_on[5]")) -- pax door 2
-defineProperty("slider_7", globalPropertyi("sim/cockpit2/switches/custom_slider_on[6]")) -- kitchen door
-defineProperty("slider_8", globalPropertyi("sim/cockpit2/switches/custom_slider_on[7]")) --
-defineProperty("slider_9", globalPropertyi("sim/cockpit2/switches/custom_slider_on[8]")) -- yokes
-defineProperty("slider_10", globalPropertyi("sim/cockpit2/switches/custom_slider_on[9]")) -- 
-defineProperty("slider_11", globalPropertyi("sim/cockpit2/switches/custom_slider_on[10]")) -- 
-defineProperty("slider_12", globalPropertyi("sim/cockpit2/switches/custom_slider_on[11]")) -- 
+defineProperty("slider_1", globalProperty("sim/cockpit2/switches/custom_slider_on[0]")) -- window L
+defineProperty("slider_2", globalProperty("sim/cockpit2/switches/custom_slider_on[1]")) -- window R
+defineProperty("slider_3", globalProperty("sim/cockpit2/switches/custom_slider_on[2]")) -- cargo 1
+defineProperty("slider_4", globalProperty("sim/cockpit2/switches/custom_slider_on[3]")) -- cargo 2
+defineProperty("slider_5", globalProperty("sim/cockpit2/switches/custom_slider_on[4]")) -- pax door 1
+defineProperty("slider_6", globalProperty("sim/cockpit2/switches/custom_slider_on[5]")) -- pax door 2
+defineProperty("slider_7", globalProperty("sim/cockpit2/switches/custom_slider_on[6]")) -- kitchen door
+defineProperty("slider_8", globalProperty("sim/cockpit2/switches/custom_slider_on[7]")) --
+defineProperty("slider_9", globalProperty("sim/cockpit2/switches/custom_slider_on[8]")) -- yokes
+defineProperty("slider_10", globalProperty("sim/cockpit2/switches/custom_slider_on[9]")) -- 
+defineProperty("slider_11", globalProperty("sim/cockpit2/switches/custom_slider_on[10]")) -- 
+defineProperty("slider_12", globalProperty("sim/cockpit2/switches/custom_slider_on[11]")) -- 
 
 
 defineProperty("gear_blocks", globalPropertyi("tu154ce/anim/gear_blocks")) -- установка блоков шасси
@@ -56,9 +56,9 @@ defineProperty("fuel_tanker", globalPropertyf("tu154ce/anim/fuel_tanker")) --
 
 defineProperty("GS", globalPropertyf("sim/flightmodel/position/groundspeed"))  -- ground speed
 
-defineProperty("eng_rpm1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]"))   
-defineProperty("eng_rpm2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]"))
-defineProperty("eng_rpm3", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]"))
+defineProperty("eng_rpm1", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]"))   
+defineProperty("eng_rpm2", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]"))
+defineProperty("eng_rpm3", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]"))
 
 defineProperty("zone_1_pr",globalPropertyi("tu154ce/payload/zone_1"))
 defineProperty("zone_2_pr",globalPropertyi("tu154ce/payload/zone_2"))
@@ -81,9 +81,9 @@ defineProperty("alpha_fail", globalPropertyi("sim/operation/failures/rel_AOA")) 
 --defineProperty("parkbrake", globalPropertyf("sim/flightmodel/controls/parkbrake")) -- Parking Brake
 --defineProperty("parkbrake", globalPropertyf("tu154ce/SC/controls/parkbrake")) 
 
-defineProperty("deflection_mtr_1", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]")) -- 
-defineProperty("deflection_mtr_2", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_1", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]")) -- 
+defineProperty("deflection_mtr_2", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 
 
 defineProperty("enable_crew_vo", globalPropertyi("tu154ce/sounds/enable_crew_vo")) -- включены фразы екипажа
@@ -102,7 +102,7 @@ defineProperty("static_fail_R", globalPropertyi("tu154ce/failures/static2"))  --
 defineProperty("uap_fail", globalPropertyi("tu154ce/failures/AOA")) -- fail
 
 
-local text_font = loadFont('basic_font.fnt')
+local text_font = loadFont('Verdana.ttf')
 
 
 -- load images

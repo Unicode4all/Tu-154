@@ -70,8 +70,8 @@ defineProperty("air_usage_L", globalPropertyf("tu154ce/bleed/air_usage_L")) -- �
 defineProperty("air_usage_R", globalPropertyf("tu154ce/bleed/air_usage_R")) -- расход воздуха прав
 
 -- gears
-defineProperty("deflection_mtr_2", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_2", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 defineProperty("groundspeed", globalPropertyf("sim/flightmodel/position/groundspeed")) -- GS, m/s
 
 -- flaps
@@ -128,14 +128,14 @@ local absu_last = get(roll_main_mode) + get(pitch_main_mode)
 local stu_last = get(stu_mode)
 
 local invert_counter = 0
-playSample(inverters, 1)
+playSample(inverters, true)
 setSampleGain(inverters, 0)
 
 local short_siren_timer = 0
 local short_speaker_timer = 0
 local long_speaker_timer = 0
 
-playSample(air_cond_noise, 1)
+playSample(air_cond_noise, true)
 setSampleGain(air_cond_noise, 0)
 
 
@@ -170,21 +170,21 @@ function update()
 	
 	local switchers = get(srd_buzzer) + get(fuel_buzzer)
 	
-	if switchers ~= switchers_last then playSample(switcher_sound, 0) end
+	if switchers ~= switchers_last then playSample(switcher_sound, false) end
 	
 	switchers_last = switchers
 	
 	
 	local caps = get(srd_buzzer_cap) + get(fuel_buzzer_cap)
 	
-	if caps ~= caps_last then playSample(cap_sound, 0) end
+	if caps ~= caps_last then playSample(cap_sound, false) end
 	
 	caps_last = caps
 	
 	
 	local buttons = get(srd_buzzer_test)
 	
-	if buttons ~= buttons_last then playSample(button_sound, 0) end
+	if buttons ~= buttons_last then playSample(button_sound, false) end
 	
 	buttons_last = buttons	
 	
@@ -216,7 +216,7 @@ function update()
 	end
 	
 	RV_counter = RV_counter - passed
-	if not isSamplePlaying(rv5_tone) and RV_counter > 0 then playSample(rv5_tone, 1) end
+	if not isSamplePlaying(rv5_tone) and RV_counter > 0 then playSample(rv5_tone, true) end
 	if RV_counter <= 0 then stopSample(rv5_tone) end
 	
 	setSampleGain(rv5_tone, 1000 * warn_vl)
@@ -226,12 +226,12 @@ function update()
 	-------------------
 	
 	if (get(main_gear_flaps) == 1 or get(fire_siren) == 1) and power and get(srd_buzzer) == 1 and external == 0 and get(main_alarm_fail) == 0 then -- continous buzz
-		if not isSamplePlaying(long_sirena) then playSample(long_sirena, 1) end
+		if not isSamplePlaying(long_sirena) then playSample(long_sirena, true) end
 		--stopSample(short_sirena)
 	elseif get(srd_buzzer) == 1 and get(main_pressure) == 1 and power and external == 0 and get(main_alarm_fail) == 0 then
 		short_siren_timer = short_siren_timer + passed
 		
-		if not isSamplePlaying(long_sirena) and short_siren_timer > 0.2 then playSample(long_sirena, 1) end
+		if not isSamplePlaying(long_sirena) and short_siren_timer > 0.2 then playSample(long_sirena, true) end
 		
 		if short_siren_timer > 0.4 then 
 			short_siren_timer = 0 
@@ -261,17 +261,17 @@ function update()
 	local stu_now = get(stu_mode)
 	
 	if power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 and get(absu_fail_signal) == 1 then -- ABSU fails
-		if not isSamplePlaying(absu_sound) then playSample(absu_sound, 0) end
+		if not isSamplePlaying(absu_sound) then playSample(absu_sound, false) end
 		stopSample(long_speaker)
 	elseif get(speaker_auasp) == 1 and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then -- long buzzer
-		if not isSamplePlaying(long_speaker) then playSample(long_speaker, 1) end
+		if not isSamplePlaying(long_speaker) then playSample(long_speaker, true) end
 		stopSample(absu_sound)
 		
 	elseif (get(speaker_fuel) == 1 or get(speaker_speed) == 1) and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0  then
 		
 		short_speaker_timer = short_speaker_timer + passed
 		
-		if not isSamplePlaying(long_speaker) and short_speaker_timer > 0.3 then playSample(long_speaker, 1) end
+		if not isSamplePlaying(long_speaker) and short_speaker_timer > 0.3 then playSample(long_speaker, true) end
 		
 		if short_speaker_timer > 0.6 then 
 			short_speaker_timer = 0 
@@ -280,7 +280,7 @@ function update()
 		stopSample(absu_sound)
 		
 	elseif ((absu_now ~= absu_last and absu_now < 4) or (stu_last >= 3 and stu_now <= 2)) and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then -- ABSU signals
-		playSample(absu_sound, 0) 
+		playSample(absu_sound, false) 
 		stopSample(long_speaker)
 	else
 		stopSample(long_speaker)
@@ -304,7 +304,7 @@ function update()
 	local mrp_power = power -- need to extend this logic for MRP
 	
 	if (inner or middle or outer) and mrp_power and external == 0 then 
-		if not isSamplePlaying(bell) then playSample(bell, 0) end
+		if not isSamplePlaying(bell) then playSample(bell, false) end
 	else 
 		--stopSample(bell) 
 	end
@@ -352,7 +352,7 @@ function update()
 	-- 80 m/s
 	
 	if taxi_gain > 0 then
-		if not isSamplePlaying(taxi_noise) then playSample(taxi_noise, 1) end
+		if not isSamplePlaying(taxi_noise) then playSample(taxi_noise, true) end
 	else
 		stopSample(taxi_noise)
 	end
@@ -372,7 +372,7 @@ function update()
 	local IAS = get(airspeed)
 	
 	if light_L + light_R > 0.1 then
-		if not isSamplePlaying(lights_noise) then playSample(lights_noise, 1) end
+		if not isSamplePlaying(lights_noise) then playSample(lights_noise, true) end
 		
 		local gain =  math.max(IAS - 150, 0) * (light_L + light_R) * (1 - external) * 1 * get(weather_volume_ratio)
 		

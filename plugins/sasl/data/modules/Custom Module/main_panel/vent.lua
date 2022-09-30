@@ -37,11 +37,11 @@ local vent1_sound = loadSample('Custom Sounds/cockpit_fan.wav')
 local vent2_sound = loadSample('Custom Sounds/cockpit_fan.wav')
 local vent3_sound = loadSample('Custom Sounds/cockpit_fan.wav')
 
-playSample(vent1_sound, 1) -- fan sound
+playSample(vent1_sound, true) -- fan sound
 setSampleGain(vent1_sound, 0)
-playSample(vent2_sound, 1) -- fan sound
+playSample(vent2_sound, true) -- fan sound
 setSampleGain(vent2_sound, 0)
-playSample(vent3_sound, 1) -- fan sound
+playSample(vent3_sound, true) -- fan sound
 setSampleGain(vent3_sound, 0)
 
 

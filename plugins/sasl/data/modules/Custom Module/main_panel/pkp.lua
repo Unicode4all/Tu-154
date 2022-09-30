@@ -29,9 +29,9 @@ defineProperty("absu_pitch_flag", globalPropertyi("tu154ce/absu/absu_pitch_flag"
 defineProperty("absu_at_dif", globalPropertyf("tu154ce/absu_at_dif_left")) -- разность скоростей для индикации на ПКП
 
 
-defineProperty("N1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]"))
-defineProperty("N2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]"))
-defineProperty("N3", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]"))
+defineProperty("N1", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]"))
+defineProperty("N2", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]"))
+defineProperty("N3", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]"))
 
 
 -- controls

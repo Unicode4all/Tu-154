@@ -85,6 +85,8 @@ payload_panel = subpanel {
 		
 		textureLit {
 			position = { 1024 * coef - 15, 683 * coef - 15, 15, 15 },
+			size_w = 32,
+			size_h = 32,
 			image = get(closeImage),
 		};
 		

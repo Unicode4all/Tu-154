@@ -11,9 +11,9 @@ defineProperty("pitch_sim", globalPropertyf("sim/flightmodel/position/theta"))
 defineProperty("roll_sim", globalPropertyf("sim/flightmodel/position/phi"))
 
 
-defineProperty("N1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]"))   
-defineProperty("N2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]"))
-defineProperty("N3", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]"))
+defineProperty("N1", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]"))   
+defineProperty("N2", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]"))
+defineProperty("N3", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]"))
 
 
 -- controls

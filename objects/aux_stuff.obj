@@ -9987,19 +9987,19 @@ IDX	4074
 
 # Cube
 ANIM_begin
-	ANIM_hide	0.0 0.0	sim/custom/anim/gear_blocks
-	ANIM_trans	   6.0610   -5.8140    1.8777	   6.0610   -5.4140    2.1332	-1.0 -5.0	sim/custom/anim/lg/main_pos_right
+	ANIM_hide	0.0 0.0	tu154ce/anim/gear_blocks
+	ANIM_trans	   6.0610   -5.8140    1.8777	   6.0610   -5.4140    2.1332	-1.0 -5.0	tu154ce/anim/lg/main_pos_right
 	TRIS	0 2088
 ANIM_end
 # Cube.002
 ANIM_begin
-	ANIM_hide	0.0 0.0	sim/custom/anim/gear_blocks
-	ANIM_trans	  -6.0610   -5.8140    1.8777	  -6.0610   -5.4140    2.1331	-1.0 -5.0	sim/custom/anim/lg/main_pos_left
+	ANIM_hide	0.0 0.0	tu154ce/anim/gear_blocks
+	ANIM_trans	  -6.0610   -5.8140    1.8777	  -6.0610   -5.4140    2.1331	-1.0 -5.0	tu154ce/anim/lg/main_pos_left
 	TRIS	2088 2088
 ANIM_end
 # Torus
 ANIM_begin
-	ANIM_hide	0.0 0.0	sim/custom/anim/engine_caps
+	ANIM_hide	0.0 0.0	tu154ce/anim/engine_caps
 	ANIM_trans	   0.2038   -1.4599    6.5652	   0.2038   -1.4599    6.5652	0 0	no_ref
 	TRIS	4176 7584
 	# Cylinder.021
@@ -10008,7 +10008,7 @@ ANIM_begin
 ANIM_end
 # Cube.014
 ANIM_begin
-	ANIM_hide	0.0 0.0	sim/custom/anim/sensors_caps
+	ANIM_hide	0.0 0.0	tu154ce/anim/sensors_caps
 	ATTR_reset
 	TRIS	16848 15132
 	# Cylinder.202

@@ -57,25 +57,25 @@ defineProperty("fuel_temp_2", globalPropertyf("tu154ce/gauges/eng/fuel_temp_2"))
 
 
 -- sources
-defineProperty("sim_egt_1", globalPropertyf("sim/cockpit2/engine/indicators/EGT_deg_C[0]")) -- EGT from sim
-defineProperty("sim_egt_2", globalPropertyf("sim/cockpit2/engine/indicators/EGT_deg_C[1]")) -- EGT from sim
-defineProperty("sim_egt_3", globalPropertyf("sim/cockpit2/engine/indicators/EGT_deg_C[2]")) -- EGT from sim
+defineProperty("sim_egt_1", globalProperty("sim/cockpit2/engine/indicators/EGT_deg_C[0]")) -- EGT from sim
+defineProperty("sim_egt_2", globalProperty("sim/cockpit2/engine/indicators/EGT_deg_C[1]")) -- EGT from sim
+defineProperty("sim_egt_3", globalProperty("sim/cockpit2/engine/indicators/EGT_deg_C[2]")) -- EGT from sim
 
-defineProperty("ENGN_FF_1", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]")) -- FF from sim kg/second
-defineProperty("ENGN_FF_2", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]")) -- FF from sim kg/second
-defineProperty("ENGN_FF_3", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[2]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_1", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_2", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_3", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[2]")) -- FF from sim kg/second
 
-defineProperty("fuel_p_1", globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[0]"))
-defineProperty("fuel_p_2", globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[1]"))
-defineProperty("fuel_p_3", globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[2]"))
+defineProperty("fuel_p_1", globalProperty("sim/cockpit2/engine/indicators/fuel_pressure_psi[0]"))
+defineProperty("fuel_p_2", globalProperty("sim/cockpit2/engine/indicators/fuel_pressure_psi[1]"))
+defineProperty("fuel_p_3", globalProperty("sim/cockpit2/engine/indicators/fuel_pressure_psi[2]"))
 
-defineProperty("oil_p_1", globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"))
-defineProperty("oil_p_2", globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[1]"))
-defineProperty("oil_p_3", globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[2]"))
+defineProperty("oil_p_1", globalProperty("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"))
+defineProperty("oil_p_2", globalProperty("sim/cockpit2/engine/indicators/oil_pressure_psi[1]"))
+defineProperty("oil_p_3", globalProperty("sim/cockpit2/engine/indicators/oil_pressure_psi[2]"))
 
-defineProperty("oil_t_1", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"))
-defineProperty("oil_t_2", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]"))
-defineProperty("oil_t_3", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[2]"))
+defineProperty("oil_t_1", globalProperty("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"))
+defineProperty("oil_t_2", globalProperty("sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]"))
+defineProperty("oil_t_3", globalProperty("sim/cockpit2/engine/indicators/oil_temperature_deg_C[2]"))
 
 defineProperty("vibration_1", globalPropertyf("tu154ce/eng/vibration_1")) -- вибрация двигателя
 defineProperty("vibration_2", globalPropertyf("tu154ce/eng/vibration_2")) -- вибрация двигателя
@@ -90,13 +90,13 @@ defineProperty("engn_oil_qty_3", globalPropertyf("tu154ce/failures/engn_oil_qty_
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
-defineProperty("eng1_N2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]")) -- engine 1 rpm
-defineProperty("eng2_N2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]")) -- engine 2 rpm
-defineProperty("eng3_N2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]")) -- engine 3 rpm
+defineProperty("eng1_N2", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]")) -- engine 1 rpm
+defineProperty("eng2_N2", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]")) -- engine 2 rpm
+defineProperty("eng3_N2", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]")) -- engine 3 rpm
 
 defineProperty("comsta0", globalPropertyi("sim/operation/failures/rel_comsta0")) -- compressor stall
 defineProperty("comsta1", globalPropertyi("sim/operation/failures/rel_comsta1"))

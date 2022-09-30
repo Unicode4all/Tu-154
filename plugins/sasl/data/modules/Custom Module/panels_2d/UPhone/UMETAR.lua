@@ -2,7 +2,7 @@ size = {205, 305}
 
 defineProperty("bg", loadImage("UMETAR.png", 0, 0, 205, 305))
 
-local font = loadFont('UPhone.fnt')
+local font = loadBitmapFont("UPhone.fnt")
 
 local METAR1 = ""
 local METAR2 = ""
@@ -523,13 +523,13 @@ notLoaded = true
 }
 function draw()
  drawAll(components)
- drawText(font, 10, 264, METAR1, 1.0, 1.0, 1.0)
- drawText(font, 10, 237, METAR2, 1.0, 1.0, 1.0)
- drawText(font, 10, 210, METAR3, 1.0, 1.0, 1.0)
- drawText(font, 10, 183, METAR4, 1.0, 1.0, 1.0)
- drawText(font, 10, 156, METAR5, 1.0, 1.0, 1.0)
- drawText(font, 10, 129, METAR6, 1.0, 1.0, 1.0)
- drawText(font, 10, 92, input, 1.0, 1.0, 1.0)
+ drawText(font, 10, 264, METAR1, 12, false, false, 1.0, 1.0, 1.0)
+ drawText(font, 10, 237, METAR2, 12, false, false, 1.0, 1.0, 1.0)
+ drawText(font, 10, 210, METAR3, 12, false, false, 1.0, 1.0, 1.0)
+ drawText(font, 10, 183, METAR4, 12, false, false, 1.0, 1.0, 1.0)
+ drawText(font, 10, 156, METAR5, 12, false, false, 1.0, 1.0, 1.0)
+ drawText(font, 10, 129, METAR6, 12, false, false, 1.0, 1.0, 1.0)
+ drawText(font, 10, 92, input, 12, false, false, 1.0, 1.0, 1.0)
 
 
 end

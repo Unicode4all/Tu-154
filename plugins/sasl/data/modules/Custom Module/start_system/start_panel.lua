@@ -71,7 +71,7 @@ local function check_controls()
 	local starter_mode_sw = get(starter_mode)
 	
 	----------------
-	if starter_cap_sw - starter_cap_last ~= 0 then playSample(cap_sound, 0) end
+	if starter_cap_sw - starter_cap_last ~= 0 then playSample(cap_sound, false) end
 	
 	if starter_cap_sw == 0 then
 		set(starter_switch, 0)
@@ -84,7 +84,7 @@ local function check_controls()
 	
 	switch_change = switch_change - starter_switch_last - starter_eng_select_last - starter_mode_last
 	
-	if switch_change ~= 0 then playSample(switcher_sound, 0) end
+	if switch_change ~= 0 then playSample(switcher_sound, false) end
 	
 	----------------
 	local starter_start_sw = get(starter_start)
@@ -98,7 +98,7 @@ local function check_controls()
 	
 	button_change = button_change - starter_start_last - starter_stop_last - flight_start_1_last - flight_start_2_last - flight_start_3_last - reserv_pump_test_last
 	
-	if button_change ~= 0 then playSample(button_sound, 0) end
+	if button_change ~= 0 then playSample(button_sound, false) end
 	
 	starter_cap_last = starter_cap_sw
 	
