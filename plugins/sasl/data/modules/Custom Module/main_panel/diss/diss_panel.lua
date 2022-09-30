@@ -61,9 +61,9 @@ local button_sound = loadSample('Custom Sounds/plastic_btn.wav')
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 
 local notLoaded = true
@@ -99,7 +99,7 @@ local function switchers()
 	
 	local summ = diss_on_sw + diss_mode_sw + nvu_mode_sw
 	
-	if summ ~= sw_summ_last then playSample(switcher_sound, 0) end
+	if summ ~= sw_summ_last then playSample(switcher_sound, false) end
 	
 	sw_summ_last = summ
 	
@@ -123,7 +123,7 @@ local function buttons()
 	local summ = wind_course_left_sw + wind_course_ctr_sw + wind_course_right_sw
 	summ = summ + wind_spd_left_sw + wind_spd_ctr_sw + wind_spd_right_sw
 	
-	if summ ~= but_summ_last then playSample(button_sound, 0) end
+	if summ ~= but_summ_last then playSample(button_sound, false) end
 
 	but_summ_last = summ
 

@@ -202,9 +202,9 @@ defineProperty("compas_knob", globalPropertyf("tu154ce/gauges/misc/compas_knob")
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 
 local notLoaded = true
@@ -490,7 +490,7 @@ local function switchers()
 	
 	local summ = get(nvu_power_on) + get(nvu_calc_on) + get(nvu_corr_on)
 	
-	if summ ~= switchers_summ then playSample(switcher_sound, 0) end
+	if summ ~= switchers_summ then playSample(switcher_sound, false) end
 	
 	
 	switchers_summ = summ
@@ -505,7 +505,7 @@ local function buttons()
 	local summ = get(nvu_left_btn) + get(nvu_ctr_btn) + get(nvu_right_btn) + get(zpu_1_left_btn) + get(zpu_1_ctr_btn) + get(zpu_1_right_btn)
 	summ = summ + get(zpu_2_left_btn) + get(zpu_2_ctr_btn) + get(zpu_2_right_btn)
 	
-	if summ ~= but_summ then playSample(button_sound, 0) end
+	if summ ~= but_summ then playSample(button_sound, false) end
 	
 	but_summ = summ
 
@@ -518,7 +518,7 @@ local function rotary()
 	
 	local summ = get(nvu_param_sel) + get(nvu_turn_sel)
 	
-	if summ ~= rot_summ then playSample(rotary_sound, 0) end
+	if summ ~= rot_summ then playSample(rotary_sound, false) end
 	
 	rot_summ = summ
 

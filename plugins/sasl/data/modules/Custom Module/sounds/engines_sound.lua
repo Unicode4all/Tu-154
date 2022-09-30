@@ -6,18 +6,18 @@ defineProperty("external_view", globalPropertyi("sim/graphics/view/view_is_exter
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]")) -- engine 3 rpm
 
 defineProperty("apd_working_1", globalPropertyf("tu154ce/start/apd_working_1")) -- работа системы запуска
 defineProperty("apd_working_2", globalPropertyf("tu154ce/start/apd_working_2")) -- работа системы запуска
 defineProperty("apd_working_3", globalPropertyf("tu154ce/start/apd_working_3")) -- работа системы запуска
 
 
-defineProperty("eng_working_1", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[0]"))
-defineProperty("eng_working_2", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[1]"))
-defineProperty("eng_working_3", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[2]"))
+defineProperty("eng_working_1", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[0]"))
+defineProperty("eng_working_2", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[1]"))
+defineProperty("eng_working_3", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[2]"))
 
 
 defineProperty("apu_n1", globalPropertyf("tu154ce/eng/apu_n1")) -- обороты ВСУ
@@ -55,8 +55,8 @@ defineProperty("cockpit_door", globalPropertyf("tu154ce/anim/cockpit_door")) -- 
 defineProperty("eng_main_vol", globalPropertyf("sim/operation/sound/engine_volume_ratio")) -- регулятор громкости для двигателей
 defineProperty("main_sound_on", globalPropertyi("sim/operation/sound/sound_on")) -- выключатель звука
 
-defineProperty("revers_flap_L", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
-defineProperty("revers_flap_R", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
+defineProperty("revers_flap_L", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
+defineProperty("revers_flap_R", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
 
 
 
@@ -102,33 +102,33 @@ local out_apu_right = loadSample('Custom Sounds/engines/out_apu_right.wav')
 local inn_reverse = loadSample('Custom Sounds/engines/inn_reverse.wav')
 
 -- play all sounds
-playSample(inn_middle_left_1, 1)
-playSample(inn_middle_right_1, 1)
-playSample(out_behind_left_1, 1)
-playSample(out_behind_right_1, 1)
-playSample(out_idle_left_1, 1)
-playSample(out_idle_right_1, 1)
+playSample(inn_middle_left_1, true)
+playSample(inn_middle_right_1, true)
+playSample(out_behind_left_1, true)
+playSample(out_behind_right_1, true)
+playSample(out_idle_left_1, true)
+playSample(out_idle_right_1, true)
 
-playSample(inn_middle_left_2, 1)
-playSample(inn_middle_right_2, 1)
-playSample(out_behind_left_2, 1)
-playSample(out_behind_right_2, 1)
-playSample(out_idle_left_2, 1)
-playSample(out_idle_right_2, 1)
+playSample(inn_middle_left_2, true)
+playSample(inn_middle_right_2, true)
+playSample(out_behind_left_2, true)
+playSample(out_behind_right_2, true)
+playSample(out_idle_left_2, true)
+playSample(out_idle_right_2, true)
 
-playSample(inn_middle_left_3, 1)
-playSample(inn_middle_right_3, 1)
-playSample(out_behind_left_3, 1)
-playSample(out_behind_right_3, 1)
-playSample(out_idle_left_3, 1)
-playSample(out_idle_right_3, 1)
+playSample(inn_middle_left_3, true)
+playSample(inn_middle_right_3, true)
+playSample(out_behind_left_3, true)
+playSample(out_behind_right_3, true)
+playSample(out_idle_left_3, true)
+playSample(out_idle_right_3, true)
 
-playSample(inn_apu_left, 1)
-playSample(inn_apu_right, 1)
-playSample(out_apu_left, 1)
-playSample(out_apu_right, 1)
+playSample(inn_apu_left, true)
+playSample(inn_apu_right, true)
+playSample(out_apu_left, true)
+playSample(out_apu_right, true)
 
---playSample(inn_reverse, 1)
+--playSample(inn_reverse, true)
 
 		
 setSampleGain(out_behind_left_1, 0)
@@ -400,10 +400,10 @@ function update()
 	local starter_3 = get(apd_working_3)
 	
 	if starter_1 ~= starter_1_last and starter_1 == 1 and rpm_1 < 20 then
-		playSample(inn_starter_left_1, 0)
-		playSample(inn_starter_right_1, 0)
-		playSample(out_starter_left_1, 0)
-		playSample(out_starter_right_1, 0)
+		playSample(inn_starter_left_true, false)
+		playSample(inn_starter_right_true, false)
+		playSample(out_starter_left_true, false)
+		playSample(out_starter_right_true, false)
 	
 	elseif starter_1 ~= starter_1_last and starter_1 == 0 then
 		stopSample(inn_starter_left_1)
@@ -413,10 +413,10 @@ function update()
 	end
 	
 	if starter_2 ~= starter_2_last and starter_2 == 1 and rpm_2 < 20 then
-		playSample(inn_starter_left_2, 0)
-		playSample(inn_starter_right_2, 0)
-		playSample(out_starter_left_2, 0)
-		playSample(out_starter_right_2, 0)
+		playSample(inn_starter_left_2, false)
+		playSample(inn_starter_right_2, false)
+		playSample(out_starter_left_2, false)
+		playSample(out_starter_right_2, false)
 	
 	elseif starter_2 ~= starter_2_last and starter_2 == 0 then
 		stopSample(inn_starter_left_2)
@@ -426,10 +426,10 @@ function update()
 	end
 
 	if starter_3 ~= starter_3_last and starter_3 == 1 and rpm_3 < 20 then
-		playSample(inn_starter_left_3, 0)
-		playSample(inn_starter_right_3, 0)
-		playSample(out_starter_left_3, 0)
-		playSample(out_starter_right_3, 0)
+		playSample(inn_starter_left_3, false)
+		playSample(inn_starter_right_3, false)
+		playSample(out_starter_left_3, false)
+		playSample(out_starter_right_3, false)
 	
 	elseif starter_3 ~= starter_3_last and starter_3 == 0 then
 		stopSample(inn_starter_left_3)
@@ -448,7 +448,7 @@ function update()
 	local rev_flaps = math.max(get(revers_flap_L) * rpm_1, get(revers_flap_R) * rpm_3)
 	
 	if rev_flaps > 1 then
-		if not isSamplePlaying(inn_reverse) then playSample(inn_reverse, 1) end
+		if not isSamplePlaying(inn_reverse) then playSample(inn_reverse, true) end
 	else
 		stopSample(inn_reverse)
 	end

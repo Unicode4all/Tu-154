@@ -81,11 +81,11 @@ end
 --]]
 
 function read_nav_dat()
-	local file_name = panelDir.."/rsbn.dat"
+	local file_name = sasl.getAircraftPath().."/rsbn.dat"
 	
 	local file = io.open(file_name, "r")
 	
-	--print(panelDir, file_name)
+	--print(sasl.getAircraftPath(), file_name)
 	
 	if file then
 		nav_table = {}

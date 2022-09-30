@@ -40,9 +40,9 @@ defineProperty("bus27_volt_right", globalPropertyf("tu154ce/elec/bus27_volt_righ
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 -- gears
-defineProperty("deploy_ratio_1", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[0]")) -- 
-defineProperty("deploy_ratio_2", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[1]")) -- 
-defineProperty("deploy_ratio_3", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[2]")) -- 
+defineProperty("deploy_ratio_1", globalProperty("sim/flightmodel2/gear/deploy_ratio[0]")) -- 
+defineProperty("deploy_ratio_2", globalProperty("sim/flightmodel2/gear/deploy_ratio[1]")) -- 
+defineProperty("deploy_ratio_3", globalProperty("sim/flightmodel2/gear/deploy_ratio[2]")) -- 
 
 defineProperty("groundspeed", globalPropertyf("sim/flightmodel/position/groundspeed")) -- GS, m/s
 
@@ -73,13 +73,13 @@ local function controls()
 	local switchers = get(wing_light) + get(gear_fan) + get(galley_heat) + get(lavatory_heat) + get(water_meter) + get(water_compressor_1)
 	switchers = switchers + get(water_compressor_2) + get(tail_temp_signal) + get(tail_temp_heat)
 	
-	if switchers ~= switchers_last then playSample(switch_sound, 0) end
+	if switchers ~= switchers_last then playSample(switch_sound, false) end
 	
 	switchers_last = switchers
 	
 	local buttons = get(tail_temp_signal_control_1) + get(tail_temp_signal_control_2) + get(lamp_test_eng_up_1) + get(lamp_test_eng_up_2)
 
-	if buttons ~= buttons_last then playSample(btn_click, 0) end
+	if buttons ~= buttons_last then playSample(btn_click, false) end
 	
 	buttons_last = buttons
 

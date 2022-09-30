@@ -1732,10 +1732,10 @@ ATTR_hard
 ATTR_light_level  0.000  1.000 sim/cockpit2/switches/navigation_lights_on
 TRIS	0 330
 # beacon_T
-ATTR_light_level  0.000  1.000 sim/custom/lights/beacon_light_T
+ATTR_light_level  0.000  1.000 tu154ce/lights/beacon_light_T
 TRIS	330 270
 # beacon_B
-ATTR_light_level  0.000  1.000 sim/custom/lights/beacon_light_B
+ATTR_light_level  0.000  1.000 tu154ce/lights/beacon_light_B
 TRIS	600 270
 # front_light.R
 ANIM_begin
@@ -1756,7 +1756,7 @@ ANIM_end
 # front_light.R.002
 ANIM_begin
 	ANIM_trans	   0.0000   -3.7393  -17.0889	   0.0000   -3.7393  -17.0889	0 0	no_ref
-	ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	sim/custom/anim/lg/front_pos
+	ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	tu154ce/anim/lg/front_pos
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.9	  5.00
 		ANIM_rotate_key	0.8	 10.00
@@ -1798,7 +1798,7 @@ ANIM_end
 # wing_tip.002
 ANIM_begin
 	ANIM_trans	   7.2201   -2.9153    0.1675	   7.2201   -2.9153    0.1675	0 0	no_ref
-	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	sim/custom/anim/wing_flx_right
+	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	tu154ce/anim/wing_flx_right
 		ANIM_rotate_key	-1.0	  1.00
 		ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_key	1	  0.00
@@ -1806,7 +1806,7 @@ ANIM_begin
 	# wing_tip.002
 	ANIM_begin
 		ANIM_trans	  -0.0102   -0.4496    0.0163	  -0.0102   -0.4496    0.0163	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	sim/custom/anim/wing_flx_right
+		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	tu154ce/anim/wing_flx_right
 			ANIM_rotate_key	-1.0	  0.00
 			ANIM_rotate_key	0.0	  0.00
 			ANIM_rotate_key	1	  1.00
@@ -1814,7 +1814,7 @@ ANIM_begin
 		# wing_tip.002
 		ANIM_begin
 			ANIM_trans	   6.8324    0.2633    4.8588	   6.8324    0.2633    4.8588	0 0	no_ref
-			ANIM_rotate_begin	   0.0000    0.0000   -1.0000	sim/custom/anim/wing_flx_right
+			ANIM_rotate_begin	   0.0000    0.0000   -1.0000	tu154ce/anim/wing_flx_right
 				ANIM_rotate_key	-1.0	  1.00
 				ANIM_rotate_key	0.0	  0.00
 				ANIM_rotate_key	1	  0.00
@@ -1822,7 +1822,7 @@ ANIM_begin
 			# wing_tip.002
 			ANIM_begin
 				ANIM_trans	   0.0000   -0.2789    0.0222	   0.0000   -0.2789    0.0222	0 0	no_ref
-				ANIM_rotate_begin	  -0.0000   -0.0000    1.0000	sim/custom/anim/wing_flx_right
+				ANIM_rotate_begin	  -0.0000   -0.0000    1.0000	tu154ce/anim/wing_flx_right
 					ANIM_rotate_key	-1.0	  0.00
 					ANIM_rotate_key	0.0	  0.00
 					ANIM_rotate_key	1	  1.00
@@ -1831,7 +1831,7 @@ ANIM_begin
 				ATTR_light_level  0.000  1.000 sim/cockpit2/switches/navigation_lights_on
 				TRIS	3750 393
 				# wing_tip
-				ATTR_light_level  0.000  1.000 sim/custom/lights/white_light_right
+				ATTR_light_level  0.000  1.000 tu154ce/lights/white_light_right
 				TRIS	4143 384
 			ANIM_end
 		ANIM_end
@@ -1840,7 +1840,7 @@ ANIM_end
 # wing_tip.003
 ANIM_begin
 	ANIM_trans	  -7.2201   -2.9153    0.1675	  -7.2201   -2.9153    0.1675	0 0	no_ref
-	ANIM_rotate_begin	   0.5299    0.0000    0.8480	sim/custom/anim/wing_flx_left
+	ANIM_rotate_begin	   0.5299    0.0000    0.8480	tu154ce/anim/wing_flx_left
 		ANIM_rotate_key	-1.0	  1.00
 		ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_key	1	  0.00
@@ -1848,7 +1848,7 @@ ANIM_begin
 	# wing_tip.003
 	ANIM_begin
 		ANIM_trans	   0.0102   -0.4496    0.0163	   0.0102   -0.4496    0.0163	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	sim/custom/anim/wing_flx_left
+		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	tu154ce/anim/wing_flx_left
 			ANIM_rotate_key	-1.0	  0.00
 			ANIM_rotate_key	0.0	  0.00
 			ANIM_rotate_key	1	  1.00
@@ -1856,7 +1856,7 @@ ANIM_begin
 		# wing_tip.003
 		ANIM_begin
 			ANIM_trans	  -6.8324    0.2633    4.8588	  -6.8324    0.2633    4.8588	0 0	no_ref
-			ANIM_rotate_begin	   0.0000   -0.0000    1.0000	sim/custom/anim/wing_flx_left
+			ANIM_rotate_begin	   0.0000   -0.0000    1.0000	tu154ce/anim/wing_flx_left
 				ANIM_rotate_key	-1.0	  1.00
 				ANIM_rotate_key	0.0	  0.00
 				ANIM_rotate_key	1	  0.00
@@ -1864,7 +1864,7 @@ ANIM_begin
 			# wing_tip.003
 			ANIM_begin
 				ANIM_trans	  -0.0000   -0.2789    0.0222	  -0.0000   -0.2789    0.0222	0 0	no_ref
-				ANIM_rotate_begin	  -0.0000    0.0000   -1.0000	sim/custom/anim/wing_flx_left
+				ANIM_rotate_begin	  -0.0000    0.0000   -1.0000	tu154ce/anim/wing_flx_left
 					ANIM_rotate_key	-1.0	  0.00
 					ANIM_rotate_key	0.0	  0.00
 					ANIM_rotate_key	1	  1.00
@@ -1873,7 +1873,7 @@ ANIM_begin
 				ATTR_light_level  0.000  1.000 sim/cockpit2/switches/navigation_lights_on
 				TRIS	4527 393
 				# wing_tip.004
-				ATTR_light_level  0.000  1.000 sim/custom/lights/white_light_left
+				ATTR_light_level  0.000  1.000 tu154ce/lights/white_light_left
 				TRIS	4920 384
 			ANIM_end
 		ANIM_end

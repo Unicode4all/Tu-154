@@ -26,8 +26,8 @@ defineProperty("window_heat_fail_2", globalPropertyi("tu154ce/failures/window_he
 defineProperty("window_heat_fail_3", globalPropertyi("tu154ce/failures/window_heat_fail_3"))
 
 -- sources
-defineProperty("deflection_mtr_2", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_2", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 
 
 -- 

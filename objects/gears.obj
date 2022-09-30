@@ -46771,7 +46771,7 @@ TRIS	0 600
 # Cylinder.031
 ANIM_begin
 	ANIM_trans	   0.0000   -3.7393  -17.0889	   0.0000   -3.7393  -17.0889	0 0	no_ref
-	ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	sim/custom/anim/lg/front_pos
+	ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	tu154ce/anim/lg/front_pos
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.9	  5.00
 		ANIM_rotate_key	0.8	 10.00
@@ -46788,7 +46788,7 @@ ANIM_begin
 	# Cylinder.005
 	ANIM_begin
 		ANIM_trans	   0.0303   -0.7511   -0.0903	   0.0303   -0.7511   -0.0903	0 0	no_ref
-		ANIM_rotate_begin	0 0 1	sim/custom/anim/lg/front_turn
+		ANIM_rotate_begin	0 0 1	tu154ce/anim/lg/front_turn
 			ANIM_rotate_key	-70.0	-13.75
 			ANIM_rotate_key	-60.0	-12.37
 			ANIM_rotate_key	-50.0	-10.18
@@ -46804,7 +46804,7 @@ ANIM_begin
 			ANIM_rotate_key	50.0	  9.67
 			ANIM_rotate_key	60.0	 11.11
 		ANIM_rotate_end
-		ANIM_rotate_begin	0 1 0	sim/custom/anim/lg/front_turn
+		ANIM_rotate_begin	0 1 0	tu154ce/anim/lg/front_turn
 			ANIM_rotate_key	-70.0	 -0.00
 			ANIM_rotate_key	-60.0	 -0.00
 			ANIM_rotate_key	-50.0	 -0.00
@@ -46820,7 +46820,7 @@ ANIM_begin
 			ANIM_rotate_key	50.0	 -1.83
 			ANIM_rotate_key	60.0	 -2.10
 		ANIM_rotate_end
-		ANIM_rotate_begin	1 0 0	sim/custom/anim/lg/front_turn
+		ANIM_rotate_begin	1 0 0	tu154ce/anim/lg/front_turn
 			ANIM_rotate_key	-70.0	  0.00
 			ANIM_rotate_key	-60.0	  0.00
 			ANIM_rotate_key	-50.0	  0.00
@@ -46840,7 +46840,7 @@ ANIM_begin
 		# Cylinder.004
 		ANIM_begin
 			ANIM_trans	  -0.0041   -0.1821    0.0000	  -0.0041   -0.1821    0.0000	0 0	no_ref
-			ANIM_rotate_begin	0 0 1	sim/custom/anim/lg/front_turn
+			ANIM_rotate_begin	0 0 1	tu154ce/anim/lg/front_turn
 				ANIM_rotate_key	-70.0	-13.97
 				ANIM_rotate_key	-60.0	-10.56
 				ANIM_rotate_key	-50.0	 -6.96
@@ -46856,7 +46856,7 @@ ANIM_begin
 				ANIM_rotate_key	50.0	 16.75
 				ANIM_rotate_key	60.0	 21.16
 			ANIM_rotate_end
-			ANIM_rotate_begin	0 1 0	sim/custom/anim/lg/front_turn
+			ANIM_rotate_begin	0 1 0	tu154ce/anim/lg/front_turn
 				ANIM_rotate_key	-70.0	  7.97
 				ANIM_rotate_key	-60.0	  1.84
 				ANIM_rotate_key	-50.0	  0.50
@@ -46872,7 +46872,7 @@ ANIM_begin
 				ANIM_rotate_key	50.0	-23.89
 				ANIM_rotate_key	60.0	-25.64
 			ANIM_rotate_end
-			ANIM_rotate_begin	1 0 0	sim/custom/anim/lg/front_turn
+			ANIM_rotate_begin	1 0 0	tu154ce/anim/lg/front_turn
 				ANIM_rotate_key	-70.0	 -5.68
 				ANIM_rotate_key	-60.0	  1.52
 				ANIM_rotate_key	-50.0	  2.47
@@ -46892,7 +46892,7 @@ ANIM_begin
 			# Cylinder.003
 			ANIM_begin
 				ANIM_trans	  -0.1254   -0.1330   -0.0018	  -0.1254   -0.1330   -0.0018	0 0	no_ref
-				ANIM_rotate_begin	0 0 1	sim/custom/anim/lg/front_turn
+				ANIM_rotate_begin	0 0 1	tu154ce/anim/lg/front_turn
 					ANIM_rotate_key	-70.0	 -1.22
 					ANIM_rotate_key	-60.0	 -2.19
 					ANIM_rotate_key	-50.0	 -0.28
@@ -46908,7 +46908,7 @@ ANIM_begin
 					ANIM_rotate_key	50.0	-10.33
 					ANIM_rotate_key	60.0	 -8.83
 				ANIM_rotate_end
-				ANIM_rotate_begin	0 1 0	sim/custom/anim/lg/front_turn
+				ANIM_rotate_begin	0 1 0	tu154ce/anim/lg/front_turn
 					ANIM_rotate_key	-70.0	 14.79
 					ANIM_rotate_key	-60.0	 10.85
 					ANIM_rotate_key	-50.0	 10.39
@@ -46924,7 +46924,7 @@ ANIM_begin
 					ANIM_rotate_key	50.0	-42.32
 					ANIM_rotate_key	60.0	-49.81
 				ANIM_rotate_end
-				ANIM_rotate_begin	1 0 0	sim/custom/anim/lg/front_turn
+				ANIM_rotate_begin	1 0 0	tu154ce/anim/lg/front_turn
 					ANIM_rotate_key	-70.0	-11.78
 					ANIM_rotate_key	-60.0	-13.99
 					ANIM_rotate_key	-50.0	-13.36
@@ -46944,7 +46944,7 @@ ANIM_begin
 				# Cylinder.002
 				ANIM_begin
 					ANIM_trans	   0.1695   -0.0735   -0.0291	   0.1695   -0.0735   -0.0291	0 0	no_ref
-					ANIM_rotate_begin	0 0 1	sim/custom/anim/lg/front_turn
+					ANIM_rotate_begin	0 0 1	tu154ce/anim/lg/front_turn
 						ANIM_rotate_key	-70.0	 -7.89
 						ANIM_rotate_key	-60.0	-21.40
 						ANIM_rotate_key	-50.0	-29.58
@@ -46960,7 +46960,7 @@ ANIM_begin
 						ANIM_rotate_key	50.0	-31.84
 						ANIM_rotate_key	60.0	-24.58
 					ANIM_rotate_end
-					ANIM_rotate_begin	0 1 0	sim/custom/anim/lg/front_turn
+					ANIM_rotate_begin	0 1 0	tu154ce/anim/lg/front_turn
 						ANIM_rotate_key	-70.0	 -8.15
 						ANIM_rotate_key	-60.0	  1.24
 						ANIM_rotate_key	-50.0	  5.27
@@ -46976,7 +46976,7 @@ ANIM_begin
 						ANIM_rotate_key	50.0	 28.14
 						ANIM_rotate_key	60.0	 32.72
 					ANIM_rotate_end
-					ANIM_rotate_begin	1 0 0	sim/custom/anim/lg/front_turn
+					ANIM_rotate_begin	1 0 0	tu154ce/anim/lg/front_turn
 						ANIM_rotate_key	-70.0	  1.25
 						ANIM_rotate_key	-60.0	  6.66
 						ANIM_rotate_key	-50.0	 16.53
@@ -47000,7 +47000,7 @@ ANIM_begin
 	# Cylinder.028
 	ANIM_begin
 		ANIM_trans	   0.0000   -1.0842    0.0000	   0.0000   -1.0842    0.0000	0 0	no_ref
-		ANIM_rotate_begin	   0.0000    1.0000   -0.0000	sim/custom/anim/lg/front_turn
+		ANIM_rotate_begin	   0.0000    1.0000   -0.0000	tu154ce/anim/lg/front_turn
 			ANIM_rotate_key	-70.0	 70.00
 			ANIM_rotate_key	-60.0	 60.00
 			ANIM_rotate_key	-50.0	 50.00
@@ -47019,7 +47019,7 @@ ANIM_begin
 		TRIS	7146 1290
 		# Cylinder.024
 		ANIM_begin
-			ANIM_trans_begin	sim/custom/anim/lg/front_defl
+			ANIM_trans_begin	tu154ce/anim/lg/front_defl
 				ANIM_trans_key	0	  -0.0000   -0.3494    0.0000
 				ANIM_trans_key	0.5	  -0.0000   -0.3185    0.0000
 				ANIM_trans_key	1.0	  -0.0000   -0.2887    0.0000
@@ -47032,7 +47032,7 @@ ANIM_begin
 			# Cylinder
 			ANIM_begin
 				ANIM_trans	   0.0000   -0.1068   -0.0014	   0.0000   -0.1068   -0.0014	0 0	no_ref
-				ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	sim/custom/anim/lg/front_defl
+				ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	tu154ce/anim/lg/front_defl
 					ANIM_rotate_key	0	  0.00
 					ANIM_rotate_key	0.5	 12.09
 					ANIM_rotate_key	1.0	 21.97
@@ -47045,7 +47045,7 @@ ANIM_begin
 				# Cylinder.029
 				ANIM_begin
 					ANIM_trans	   0.0000    0.1364   -0.1261	   0.0000    0.1364   -0.1261	0 0	no_ref
-					ANIM_rotate_begin	   1.0000   -0.0000   -0.0000	sim/custom/anim/lg/front_defl
+					ANIM_rotate_begin	   1.0000   -0.0000   -0.0000	tu154ce/anim/lg/front_defl
 						ANIM_rotate_key	0	  0.00
 						ANIM_rotate_key	0.5	 19.19
 						ANIM_rotate_key	1.0	 33.62
@@ -47073,7 +47073,7 @@ ANIM_begin
 	# Cylinder.032
 	ANIM_begin
 		ANIM_trans	   0.3096   -0.3407   -0.0406	   0.3096   -0.3407   -0.0406	0 0	no_ref
-		ANIM_rotate_begin	0 0 1	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	0 0 1	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	 -7.84
 			ANIM_rotate_key	0.9	 10.37
 			ANIM_rotate_key	0.8	 17.45
@@ -47086,7 +47086,7 @@ ANIM_begin
 			ANIM_rotate_key	0.1	-28.97
 			ANIM_rotate_key	0.0	-49.36
 		ANIM_rotate_end
-		ANIM_rotate_begin	0 1 0	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	0 1 0	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	 -3.64
 			ANIM_rotate_key	0.9	 -3.17
 			ANIM_rotate_key	0.8	 -2.43
@@ -47099,7 +47099,7 @@ ANIM_begin
 			ANIM_rotate_key	0.1	 55.42
 			ANIM_rotate_key	0.0	 82.61
 		ANIM_rotate_end
-		ANIM_rotate_begin	1 0 0	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	1 0 0	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	-23.78
 			ANIM_rotate_key	0.9	-10.57
 			ANIM_rotate_key	0.8	  2.29
@@ -47117,7 +47117,7 @@ ANIM_begin
 	# Cylinder.033
 	ANIM_begin
 		ANIM_trans	  -0.3096   -0.3407   -0.0406	  -0.3096   -0.3407   -0.0406	0 0	no_ref
-		ANIM_rotate_begin	0 0 1	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	0 0 1	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	  9.09
 			ANIM_rotate_key	0.9	 -8.30
 			ANIM_rotate_key	0.8	-16.89
@@ -47130,7 +47130,7 @@ ANIM_begin
 			ANIM_rotate_key	0.1	 31.20
 			ANIM_rotate_key	0.0	 60.39
 		ANIM_rotate_end
-		ANIM_rotate_begin	0 1 0	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	0 1 0	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	  2.80
 			ANIM_rotate_key	0.9	  1.66
 			ANIM_rotate_key	0.8	  1.03
@@ -47143,7 +47143,7 @@ ANIM_begin
 			ANIM_rotate_key	0.1	-55.50
 			ANIM_rotate_key	0.0	-82.53
 		ANIM_rotate_end
-		ANIM_rotate_begin	1 0 0	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	1 0 0	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	-24.54
 			ANIM_rotate_key	0.9	-11.04
 			ANIM_rotate_key	0.8	  1.97
@@ -47161,7 +47161,7 @@ ANIM_begin
 	# Cylinder.034
 	ANIM_begin
 		ANIM_trans	   0.4124    0.0852    0.0962	   0.4124    0.0852    0.0962	0 0	no_ref
-		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.9	  5.12
 			ANIM_rotate_key	0.8	 10.56
@@ -47180,7 +47180,7 @@ ANIM_end
 # Cylinder.027
 ANIM_begin
 	ANIM_trans	  -0.4127   -3.3659  -15.8369	  -0.4127   -3.3659  -15.8369	0 0	no_ref
-	ANIM_rotate_begin	   1.0000    0.0000    0.0001	sim/custom/anim/lg/front_pos
+	ANIM_rotate_begin	   1.0000    0.0000    0.0001	tu154ce/anim/lg/front_pos
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.9	 11.96
 		ANIM_rotate_key	0.8	 15.66
@@ -47197,7 +47197,7 @@ ANIM_begin
 	# Cylinder.026
 	ANIM_begin
 		ANIM_trans	   0.3568   -0.7780   -0.6665	   0.3568   -0.7780   -0.6665	0 0	no_ref
-		ANIM_rotate_begin	0 0 1	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	0 0 1	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.9	 -0.01
 			ANIM_rotate_key	0.8	  0.00
@@ -47210,7 +47210,7 @@ ANIM_begin
 			ANIM_rotate_key	0.1	  0.00
 			ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_end
-		ANIM_rotate_begin	0 1 0	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	0 1 0	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	 -0.00
 			ANIM_rotate_key	0.9	 -0.01
 			ANIM_rotate_key	0.8	  0.00
@@ -47223,7 +47223,7 @@ ANIM_begin
 			ANIM_rotate_key	0.1	  0.00
 			ANIM_rotate_key	0.0	  0.00
 		ANIM_rotate_end
-		ANIM_rotate_begin	1 0 0	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	1 0 0	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.9	-34.72
 			ANIM_rotate_key	0.8	-48.61
@@ -47241,7 +47241,7 @@ ANIM_begin
 	# Cylinder.035
 	ANIM_begin
 		ANIM_trans	   0.8251    0.1194   -0.0991	   0.8251    0.1194   -0.0991	0 0	no_ref
-		ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/front_pos
+		ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/front_pos
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.9	 11.75
 			ANIM_rotate_key	0.8	 15.02
@@ -47260,7 +47260,7 @@ ANIM_end
 # Cylinder.091
 ANIM_begin
 	ANIM_trans	  -5.7520   -3.5270    1.4193	  -5.7520   -3.5270    1.4193	0 0	no_ref
-	ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+	ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.8	 10.00
 		ANIM_rotate_key	0.7	 20.00
@@ -47280,7 +47280,7 @@ ANIM_begin
 	# Cylinder.090
 	ANIM_begin
 		ANIM_trans	  -0.0599   -1.1661    0.3602	  -0.0599   -1.1661    0.3602	0 0	no_ref
-		ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	sim/custom/anim/lg/main_pos_left
+		ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	tu154ce/anim/lg/main_pos_left
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.8	  0.00
 			ANIM_rotate_key	0.7	  0.00
@@ -47300,7 +47300,7 @@ ANIM_begin
 		# Cylinder.093
 		ANIM_begin
 			ANIM_trans	   0.0000   -0.1871    0.1359	   0.0000   -0.1871    0.1359	0 0	no_ref
-			ANIM_rotate_begin	   1.0000   -0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+			ANIM_rotate_begin	   1.0000   -0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 				ANIM_rotate_key	1.0	  0.00
 				ANIM_rotate_key	0.8	  0.00
 				ANIM_rotate_key	0.7	  0.00
@@ -47321,7 +47321,7 @@ ANIM_begin
 	ANIM_end
 	# Cylinder.037
 	ANIM_begin
-		ANIM_trans_begin	sim/custom/anim/lg/main_pos_left
+		ANIM_trans_begin	tu154ce/anim/lg/main_pos_left
 			ANIM_trans_key	1.0	   0.0000   -0.9476    0.1587
 			ANIM_trans_key	0.8	   0.0000   -0.9476    0.1587
 			ANIM_trans_key	0.7	   0.0000   -0.9476    0.1587
@@ -47345,10 +47345,10 @@ ANIM_begin
 		# Cylinder.075
 		ANIM_begin
 			ANIM_trans	   0.0000   -0.9532    0.2997	   0.0000   -0.9532    0.2997	0 0	no_ref
-			ANIM_rotate	   1.0000   -0.0000   -0.0000	  0.00   1.00	-11.0 -10.0	sim/custom/anim/lg/main_rot_left
+			ANIM_rotate	   1.0000   -0.0000   -0.0000	  0.00   1.00	-11.0 -10.0	tu154ce/anim/lg/main_rot_left
 			# Cylinder.075
 			ANIM_begin
-				ANIM_rotate_begin	  -1.0000    0.0000    0.0000	sim/custom/anim/lg/main_pos_left
+				ANIM_rotate_begin	  -1.0000    0.0000    0.0000	tu154ce/anim/lg/main_pos_left
 					ANIM_rotate_key	1.0	  0.00
 					ANIM_rotate_key	0.8	  7.00
 					ANIM_rotate_key	0.7	 15.62
@@ -47400,7 +47400,7 @@ ANIM_begin
 	# Cylinder.081
 	ANIM_begin
 		ANIM_trans	   0.0000   -1.1799    0.0340	   0.0000   -1.1799    0.0340	0 0	no_ref
-		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.8	  0.00
 			ANIM_rotate_key	0.7	  0.00
@@ -47420,7 +47420,7 @@ ANIM_begin
 		# Cylinder.053
 		ANIM_begin
 			ANIM_trans	   0.0000   -0.2210   -0.1402	   0.0000   -0.2210   -0.1402	0 0	no_ref
-			ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+			ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 				ANIM_rotate_key	1.0	  0.00
 				ANIM_rotate_key	0.8	  0.00
 				ANIM_rotate_key	0.7	  0.00
@@ -47442,7 +47442,7 @@ ANIM_begin
 	# Cylinder.080
 	ANIM_begin
 		ANIM_trans	  -0.0787   -1.0244    0.0303	  -0.0787   -1.0244    0.0303	0 0	no_ref
-		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.8	  0.00
 			ANIM_rotate_key	0.7	  0.00
@@ -47462,7 +47462,7 @@ ANIM_begin
 		# Cylinder.082
 		ANIM_begin
 			ANIM_trans	   0.0000   -0.0737   -0.1014	   0.0000   -0.0737   -0.1014	0 0	no_ref
-			ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	sim/custom/anim/lg/main_pos_left
+			ANIM_rotate_begin	  -1.0000   -0.0000    0.0000	tu154ce/anim/lg/main_pos_left
 				ANIM_rotate_key	1.0	  0.00
 				ANIM_rotate_key	0.8	  0.00
 				ANIM_rotate_key	0.7	  0.00
@@ -47485,7 +47485,7 @@ ANIM_end
 # Cylinder.039
 ANIM_begin
 	ANIM_trans	  -5.7520   -3.8098   -0.2160	  -5.7520   -3.8098   -0.2160	0 0	no_ref
-	ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+	ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.8	  4.02
 		ANIM_rotate_key	0.7	  8.20
@@ -47509,7 +47509,7 @@ ANIM_begin
 	TRIS	80784 6486
 	# Cylinder.102
 	ANIM_begin
-		ANIM_trans_begin	sim/custom/anim/lg/main_pos_left
+		ANIM_trans_begin	tu154ce/anim/lg/main_pos_left
 			ANIM_trans_key	1.0	   0.0000   -0.1683    0.2300
 			ANIM_trans_key	0.8	  -0.0012   -0.2873    0.3927
 			ANIM_trans_key	0.7	  -0.0022   -0.3967    0.5423
@@ -47529,7 +47529,7 @@ ANIM_begin
 		# Cylinder.067
 		ANIM_begin
 			ANIM_trans	   0.0000   -1.0164    1.4453	   0.0000   -1.0164    1.4453	0 0	no_ref
-			ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+			ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 				ANIM_rotate_key	1.0	  0.00
 				ANIM_rotate_key	0.8	  7.40
 				ANIM_rotate_key	0.7	 18.37
@@ -47549,7 +47549,7 @@ ANIM_begin
 			# Cylinder.064
 			ANIM_begin
 				ANIM_trans	   0.0000   -0.0460   -0.1550	   0.0000   -0.0460   -0.1550	0 0	no_ref
-				ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+				ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 					ANIM_rotate_key	1.0	  0.00
 					ANIM_rotate_key	0.8	  5.19
 					ANIM_rotate_key	0.7	  9.32
@@ -47569,7 +47569,7 @@ ANIM_begin
 				# Cylinder.074
 				ANIM_begin
 					ANIM_trans	   0.0000   -0.0163   -0.1036	   0.0000   -0.0163   -0.1036	0 0	no_ref
-					ANIM_rotate_begin	   1.0000   -0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+					ANIM_rotate_begin	   1.0000   -0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 						ANIM_rotate_key	1.0	  0.00
 						ANIM_rotate_key	0.8	  5.59
 						ANIM_rotate_key	0.7	 13.23
@@ -47588,7 +47588,7 @@ ANIM_begin
 					TRIS	89790 312
 					# Cylinder.073
 					ANIM_begin
-						ANIM_trans_begin	sim/custom/anim/lg/main_pos_left
+						ANIM_trans_begin	tu154ce/anim/lg/main_pos_left
 							ANIM_trans_key	1.0	   0.0000   -0.4098    0.4731
 							ANIM_trans_key	0.8	   0.0000   -0.4098    0.4731
 							ANIM_trans_key	0.7	   0.0000   -0.4098    0.4731
@@ -47614,7 +47614,7 @@ ANIM_end
 # Cylinder.097
 ANIM_begin
 	ANIM_trans	   5.7520   -3.5270    1.4193	   5.7520   -3.5270    1.4193	0 0	no_ref
-	ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+	ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.8	 10.00
 		ANIM_rotate_key	0.7	 20.00
@@ -47633,7 +47633,7 @@ ANIM_begin
 	TRIS	91062 10530
 	# Cylinder.047
 	ANIM_begin
-		ANIM_trans_begin	sim/custom/anim/lg/main_pos_right
+		ANIM_trans_begin	tu154ce/anim/lg/main_pos_right
 			ANIM_trans_key	1.0	   0.0000   -0.9476    0.1587
 			ANIM_trans_key	0.8	   0.0000   -0.9476    0.1587
 			ANIM_trans_key	0.7	   0.0000   -0.9476    0.1587
@@ -47657,10 +47657,10 @@ ANIM_begin
 		# Cylinder.078
 		ANIM_begin
 			ANIM_trans	   0.3090   -0.9532    0.2997	   0.3090   -0.9532    0.2997	0 0	no_ref
-			ANIM_rotate	   1.0000   -0.0000   -0.0000	  0.00   1.00	-11.0 -10.0	sim/custom/anim/lg/main_rot_right
+			ANIM_rotate	   1.0000   -0.0000   -0.0000	  0.00   1.00	-11.0 -10.0	tu154ce/anim/lg/main_rot_right
 			# Cylinder.078
 			ANIM_begin
-				ANIM_rotate_begin	  -1.0000    0.0000    0.0000	sim/custom/anim/lg/main_pos_right
+				ANIM_rotate_begin	  -1.0000    0.0000    0.0000	tu154ce/anim/lg/main_pos_right
 					ANIM_rotate_key	1.0	  0.00
 					ANIM_rotate_key	0.8	  7.00
 					ANIM_rotate_key	0.7	 15.62
@@ -47712,7 +47712,7 @@ ANIM_begin
 	# Cylinder.096
 	ANIM_begin
 		ANIM_trans	   0.0507   -1.1661    0.3602	   0.0507   -1.1661    0.3602	0 0	no_ref
-		ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+		ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.8	  0.00
 			ANIM_rotate_key	0.7	  0.00
@@ -47732,7 +47732,7 @@ ANIM_begin
 		# Cylinder.095
 		ANIM_begin
 			ANIM_trans	   0.0000   -0.1871    0.1359	   0.0000   -0.1871    0.1359	0 0	no_ref
-			ANIM_rotate_begin	   0.9991    0.0232    0.0364	sim/custom/anim/lg/main_pos_right
+			ANIM_rotate_begin	   0.9991    0.0232    0.0364	tu154ce/anim/lg/main_pos_right
 				ANIM_rotate_key	1.0	  0.00
 				ANIM_rotate_key	0.8	  0.00
 				ANIM_rotate_key	0.7	  0.00
@@ -47754,7 +47754,7 @@ ANIM_begin
 	# Cylinder.085
 	ANIM_begin
 		ANIM_trans	   0.0790   -1.0244    0.0303	   0.0790   -1.0244    0.0303	0 0	no_ref
-		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.8	  0.00
 			ANIM_rotate_key	0.7	  0.00
@@ -47774,7 +47774,7 @@ ANIM_begin
 		# Cylinder.084
 		ANIM_begin
 			ANIM_trans	   0.0000   -0.0737   -0.1014	   0.0000   -0.0737   -0.1014	0 0	no_ref
-			ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+			ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 				ANIM_rotate_key	1.0	  0.00
 				ANIM_rotate_key	0.8	  0.00
 				ANIM_rotate_key	0.7	  0.00
@@ -47796,7 +47796,7 @@ ANIM_begin
 	# Cylinder.057
 	ANIM_begin
 		ANIM_trans	   0.0000   -1.1799    0.0340	   0.0000   -1.1799    0.0340	0 0	no_ref
-		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+		ANIM_rotate_begin	   1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 			ANIM_rotate_key	1.0	  0.00
 			ANIM_rotate_key	0.8	  0.00
 			ANIM_rotate_key	0.7	  0.00
@@ -47816,7 +47816,7 @@ ANIM_begin
 		# Cylinder.055
 		ANIM_begin
 			ANIM_trans	   0.0000   -0.2210   -0.1402	   0.0000   -0.2210   -0.1402	0 0	no_ref
-			ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+			ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 				ANIM_rotate_key	1.0	  0.00
 				ANIM_rotate_key	0.8	  0.00
 				ANIM_rotate_key	0.7	  0.00
@@ -47839,7 +47839,7 @@ ANIM_end
 # Cylinder.042
 ANIM_begin
 	ANIM_trans	   5.7520   -3.8098   -0.2160	   5.7520   -3.8098   -0.2160	0 0	no_ref
-	ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+	ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.8	  4.02
 		ANIM_rotate_key	0.7	  8.20
@@ -47863,7 +47863,7 @@ ANIM_begin
 	TRIS	145704 6486
 	# Cylinder.103
 	ANIM_begin
-		ANIM_trans_begin	sim/custom/anim/lg/main_pos_right
+		ANIM_trans_begin	tu154ce/anim/lg/main_pos_right
 			ANIM_trans_key	1.0	   0.0000   -0.1683    0.2300
 			ANIM_trans_key	0.8	   0.0000   -0.2873    0.3927
 			ANIM_trans_key	0.7	   0.0000   -0.3967    0.5423
@@ -47883,7 +47883,7 @@ ANIM_begin
 		# Cylinder.070
 		ANIM_begin
 			ANIM_trans	   0.0000   -1.0164    1.4453	   0.0000   -1.0164    1.4453	0 0	no_ref
-			ANIM_rotate_begin	  -1.0000    0.0000    0.0000	sim/custom/anim/lg/main_pos_right
+			ANIM_rotate_begin	  -1.0000    0.0000    0.0000	tu154ce/anim/lg/main_pos_right
 				ANIM_rotate_key	1.0	  0.00
 				ANIM_rotate_key	0.8	  7.40
 				ANIM_rotate_key	0.7	 18.37
@@ -47903,7 +47903,7 @@ ANIM_begin
 			# Cylinder.079
 			ANIM_begin
 				ANIM_trans	   0.0000   -0.0460   -0.1550	   0.0000   -0.0460   -0.1550	0 0	no_ref
-				ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+				ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 					ANIM_rotate_key	1.0	  0.00
 					ANIM_rotate_key	0.8	  5.19
 					ANIM_rotate_key	0.7	  9.32
@@ -47923,7 +47923,7 @@ ANIM_begin
 				# Cylinder.076
 				ANIM_begin
 					ANIM_trans	   0.0000   -0.0163   -0.1036	   0.0000   -0.0163   -0.1036	0 0	no_ref
-					ANIM_rotate_begin	   1.0000   -0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+					ANIM_rotate_begin	   1.0000   -0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 						ANIM_rotate_key	1.0	  0.00
 						ANIM_rotate_key	0.8	  5.59
 						ANIM_rotate_key	0.7	 13.23
@@ -47942,7 +47942,7 @@ ANIM_begin
 					TRIS	154710 312
 					# Cylinder.077
 					ANIM_begin
-						ANIM_trans_begin	sim/custom/anim/lg/main_pos_right
+						ANIM_trans_begin	tu154ce/anim/lg/main_pos_right
 							ANIM_trans_key	1.0	   0.0000   -0.4098    0.4731
 							ANIM_trans_key	0.8	   0.0000   -0.4098    0.4731
 							ANIM_trans_key	0.7	   0.0000   -0.4098    0.4731

@@ -130,9 +130,9 @@ local passed = get(frame_time)
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 
 local notLoaded = true
@@ -167,7 +167,7 @@ local cab_high_lit = 0
 local function lamps()
 	-- make sound for button
 	local test_btn = get(lamp_test_srd)
-	if test_btn ~= lamp_test_srd_last then playSample(button_sound, 0) end
+	if test_btn ~= lamp_test_srd_last then playSample(button_sound, false) end
 	lamp_test_srd_last = test_btn
 	
 	local day_night = 1 - get(day_night_set) * 0.25
@@ -297,7 +297,7 @@ local function rotary_sw()
 	local change = cockpit_temp_set_sw + cabin1_temp_set_sw + cabin2_temp_set_sw + left_sys_temp_set_sw + right_sys_temp_set_sw + sys_temp_select_sw
 	change = change - cockpit_temp_set_last - cabin1_temp_set_last - cabin2_temp_set_last - left_sys_temp_set_last - right_sys_temp_set_last - sys_temp_select_last
 	
-	if change ~= 0 then playSample(rotary_sound, 0) end
+	if change ~= 0 then playSample(rotary_sound, false) end
 	
 	
 	cockpit_temp_set_last = cockpit_temp_set_sw
@@ -473,7 +473,7 @@ local function check_switchers()
 	change = change - cockpit_mode_set_last - cabin1_mode_set_last - cabin2_mode_set_last - left_sys_mode_set_last - right_sys_mode_set_last
 	change = change - sard_disable_last - door_heat_last
 	
-	if change ~= 0 then playSample(switcher_sound, 0) end
+	if change ~= 0 then playSample(switcher_sound, false) end
 	
 	
 	cabin_sel_last = cabin_sel_sw
@@ -547,7 +547,7 @@ local function caps_check()
 	change = change - heat_close_cap_last - ground_cond_on_cap_last - skv_faster_work_cap_last - psvp_left_on_cap_last - psvp_right_on_cap_last
 	change = change - emerg_decompress_cap_last - dubler_on_cap_last - sard_disable_cap_last
 
-	if change ~= 0 then playSample(cap_sound, 0) end
+	if change ~= 0 then playSample(cap_sound, false) end
 
 	heat_close_cap_last = heat_close_cap_sw
 	ground_cond_on_cap_last = ground_cond_on_cap_sw
@@ -562,7 +562,7 @@ local function caps_check()
 	-- check switchers position under their caps
 	--if skv_faster_work_cap_sw == 0 then set(skv_faster_work, 0) end
 	if dubler_on_cap_sw == 0 then set(dubler_on, 0) end
-	if emerg_decompress_cap_sw == 0 then set(emerg_decompress) end
+	if emerg_decompress_cap_sw == 0 then set(emerg_decompress, 0) end
 	
 	if sard_disable_cap_sw == 0 then set(sard_disable, 0) end
 	

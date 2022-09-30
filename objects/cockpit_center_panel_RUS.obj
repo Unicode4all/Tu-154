@@ -10396,29 +10396,29 @@ IDX 8128
 IDX 8127
 IDX 8129
 IDX 8128
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/mid_left_panel_int
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/mid_left_panel_int
 TRIS 0 168
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/nvu_2_active
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/nvu_2_active
 TRIS 168 6
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/nvu_1_active
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/nvu_1_active
 TRIS 174 12
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/mid_left_panel_int
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/mid_left_panel_int
 TRIS 186 36
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/nvu_1_active
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/nvu_1_active
 TRIS 222 6
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/nvu_2_active
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/nvu_2_active
 TRIS 228 12
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/nvu_1_active
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/nvu_1_active
 TRIS 240 6
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/nvu_2_active
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/nvu_2_active
 TRIS 246 6
 ATTR_light_level_reset
 TRIS 252 12768
 ATTR_hard 
 TRIS 13020 360
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/mid_left_panel_int
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/mid_left_panel_int
 TRIS 13380 8523
-ATTR_light_level 0.000000 1.000000 sim/custom/light/no_LIT
+ATTR_light_level 0.000000 1.000000 tu154ce/light/no_LIT
 TRIS 21903 468
 ATTR_no_hard
 TRIS 22371 120

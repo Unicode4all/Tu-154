@@ -12,10 +12,10 @@ defineProperty("rel_lites_beac", globalPropertyi("sim/operation/failures/rel_lit
 
 
 -- sources
-defineProperty("sim_lan_FL", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[7]")) -- front left landing light
-defineProperty("sim_lan_FR", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[6]")) -- front right landing light
-defineProperty("sim_lan_WL", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[5]")) -- wing left landing light
-defineProperty("sim_lan_WR", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[4]")) -- wing right landing light
+defineProperty("sim_lan_FL", globalProperty("sim/cockpit2/switches/landing_lights_switch[7]")) -- front left landing light
+defineProperty("sim_lan_FR", globalProperty("sim/cockpit2/switches/landing_lights_switch[6]")) -- front right landing light
+defineProperty("sim_lan_WL", globalProperty("sim/cockpit2/switches/landing_lights_switch[5]")) -- wing left landing light
+defineProperty("sim_lan_WR", globalProperty("sim/cockpit2/switches/landing_lights_switch[4]")) -- wing right landing light
 
 
 -- define sources

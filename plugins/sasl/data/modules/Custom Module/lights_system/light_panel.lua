@@ -43,9 +43,9 @@ defineProperty("landing_light_off_cap", globalPropertyi("tu154ce/lights/landing_
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
@@ -158,7 +158,7 @@ function update()
 	
 	-- check changes and play sounds
 	if mid_left_panel + left_panel + right_panel + mid_right_panel + ovhd_panel - mid_left_panel_last - left_panel_last - right_panel_last - mid_right_panel_last - ovhd_panel_last ~= 0 then
-		playSample(rotary_sound, 0)
+		playSample(rotary_sound, false)
 	end
 
 	local switchers = cabinl_flood + azs_panel_flood - cabinl_flood_last - azs_panel_flood_last + cargo_1 + cargo_2 + tech_light + gear_nacelle - cargo_1_last - cargo_2_last - tech_light_last - gear_nacelle_last
@@ -169,11 +169,11 @@ function update()
 	switchers = switchers + sign_belts_sw + sign_nosmoke_sw + sign_exit_sw - sign_belts_last - sign_nosmoke_last - sign_exit_last + lights_off - lights_off_last
 	
 	if switchers ~= 0 then
-		playSample(switcher_sound, 0)
+		playSample(switcher_sound, false)
 	end
 	
 	if lights_cap ~= lights_cap_last then
-		playSample(cap_sound, 0)
+		playSample(cap_sound, false)
 	end
 	
 	if lights_cap == 0 then set(landing_light_off, 0) end

@@ -13,22 +13,22 @@ defineProperty("ext_light_cc_right", globalPropertyf("tu154ce/elec/ext_light_cc_
 defineProperty("sim_nav_light", globalPropertyf("sim/cockpit2/switches/navigation_lights_on")) -- nav lights
 defineProperty("sim_beacon", globalPropertyf("sim/cockpit2/switches/beacon_on")) -- beacon lights
 defineProperty("sim_strobes", globalPropertyf("sim/cockpit2/switches/strobe_lights_on")) -- strobes lights
-defineProperty("sim_lan_FL", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[7]")) -- front left landing light
-defineProperty("sim_lan_FR", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[6]")) -- front right landing light
-defineProperty("sim_lan_WL", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[5]")) -- wing left landing light
-defineProperty("sim_lan_WR", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[4]")) -- wing right landing light
-defineProperty("sim_NW_L", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[9]")) -- nosewheel left landing light
-defineProperty("sim_NW_R", globalPropertyf("sim/cockpit2/switches/landing_lights_switch[8]")) -- nosewheel right landing light 
+defineProperty("sim_lan_FL", globalProperty("sim/cockpit2/switches/landing_lights_switch[7]")) -- front left landing light
+defineProperty("sim_lan_FR", globalProperty("sim/cockpit2/switches/landing_lights_switch[6]")) -- front right landing light
+defineProperty("sim_lan_WL", globalProperty("sim/cockpit2/switches/landing_lights_switch[5]")) -- wing left landing light
+defineProperty("sim_lan_WR", globalProperty("sim/cockpit2/switches/landing_lights_switch[4]")) -- wing right landing light
+defineProperty("sim_NW_L", globalProperty("sim/cockpit2/switches/landing_lights_switch[9]")) -- nosewheel left landing light
+defineProperty("sim_NW_R", globalProperty("sim/cockpit2/switches/landing_lights_switch[8]")) -- nosewheel right landing light 
 defineProperty("sim_spot", globalPropertyf("sim/cockpit2/switches/spot_light_on")) -- spot lights
-defineProperty("sim_logo", globalPropertyf("sim/cockpit2/switches/generic_lights_switch[0]")) -- logo light
-defineProperty("sim_wings_L", globalPropertyf("sim/cockpit2/switches/generic_lights_switch[1]")) -- wings light
-defineProperty("sim_wings_R", globalPropertyf("sim/cockpit2/switches/generic_lights_switch[2]")) -- wings light
-defineProperty("sim_cargo_1", globalPropertyf("sim/cockpit2/switches/generic_lights_switch[3]")) -- cargo light
-defineProperty("sim_cargo_2", globalPropertyf("sim/cockpit2/switches/generic_lights_switch[4]")) -- cargo light
+defineProperty("sim_logo", globalProperty("sim/cockpit2/switches/generic_lights_switch[0]")) -- logo light
+defineProperty("sim_wings_L", globalProperty("sim/cockpit2/switches/generic_lights_switch[1]")) -- wings light
+defineProperty("sim_wings_R", globalProperty("sim/cockpit2/switches/generic_lights_switch[2]")) -- wings light
+defineProperty("sim_cargo_1", globalProperty("sim/cockpit2/switches/generic_lights_switch[3]")) -- cargo light
+defineProperty("sim_cargo_2", globalProperty("sim/cockpit2/switches/generic_lights_switch[4]")) -- cargo light
 
 
 
-defineProperty("sim_lan_brt", globalPropertyf("sim/flightmodel2/lights/landing_lights_brightness_ratio[1]")) -- front left landing light
+defineProperty("sim_lan_brt", globalProperty("sim/flightmodel2/lights/landing_lights_brightness_ratio[1]")) -- front left landing light
 
 
 defineProperty("sim_landing", globalPropertyi("sim/cockpit/electrical/landing_lights_on")) -- logo light
@@ -42,15 +42,15 @@ defineProperty("white_light_right", globalPropertyi("tu154ce/lights/white_light_
 defineProperty("beacon_light_B", globalPropertyi("tu154ce/lights/beacon_light_B")) -- светимость красного маяка
 defineProperty("beacon_light_T", globalPropertyi("tu154ce/lights/beacon_light_T")) -- светимость красного маяка
 
-defineProperty("gear_defl", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- просадка шасси
-defineProperty("deploy_ratio_1", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[0]")) -- выпуск шасси 1
+defineProperty("gear_defl", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- просадка шасси
+defineProperty("deploy_ratio_1", globalProperty("sim/flightmodel2/gear/deploy_ratio[0]")) -- выпуск шасси 1
 
 
 
-defineProperty("lamp_deploy_FL", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[3]"))  -- deploy of left front lamp
-defineProperty("lamp_deploy_FR", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[4]"))  -- deploy of right front lamp
-defineProperty("lamp_deploy_WL", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[5]"))  -- deploy of left wing lamp
-defineProperty("lamp_deploy_WR", globalPropertyf("sim/aircraft/parts/acf_gear_deploy[6]"))  -- deploy of right wing lamp
+defineProperty("lamp_deploy_FL", globalProperty("sim/aircraft/parts/acf_gear_deploy[3]"))  -- deploy of left front lamp
+defineProperty("lamp_deploy_FR", globalProperty("sim/aircraft/parts/acf_gear_deploy[4]"))  -- deploy of right front lamp
+defineProperty("lamp_deploy_WL", globalProperty("sim/aircraft/parts/acf_gear_deploy[5]"))  -- deploy of left wing lamp
+defineProperty("lamp_deploy_WR", globalProperty("sim/aircraft/parts/acf_gear_deploy[6]"))  -- deploy of right wing lamp
 
 -- controls
 defineProperty("nav_lights_set", globalPropertyf("tu154ce/lights/nav_lights_set")) -- выключатель нав огней

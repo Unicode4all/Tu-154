@@ -39,9 +39,9 @@ defineProperty("msrp_recording", globalPropertyi("tu154ce/msrp/msrp_recording"))
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 
 local notLoaded = true
@@ -97,7 +97,7 @@ local function set_date()
 		route_one = flightNum - route_hun - route_ten
 		
 		local panel_numbers = date_ten .. date_one .."_".. month_ten .. month_one .."_".. year_ten .. year_one .."_".. route_hun .. route_ten .. route_one
-		local filename = panelDir.."/black_box/".. panel_numbers .. ".bbox"	
+		local filename = sasl.getAircraftPath().."/black_box/".. panel_numbers .. ".bbox"	
 		
 		local file = io.open(filename, "r")
 		
@@ -161,7 +161,7 @@ local function check_controls()
 
 	local lamp_test_msrp_sw = get(lamp_test_msrp)
 
-	if lamp_test_msrp_sw ~= lamp_test_msrp_last then playSample(button_sound, 0) end
+	if lamp_test_msrp_sw ~= lamp_test_msrp_last then playSample(button_sound, false) end
 	
 	local msrp_date_ten_sw = get(msrp_date_ten)
 	local msrp_date_one_sw = get(msrp_date_one)
@@ -181,7 +181,7 @@ local function check_controls()
 	changes = changes - msrp_date_ten_last - msrp_date_one_last - msrp_month_ten_last - msrp_month_one_last - msrp_year_ten_last - msrp_year_one_last
 	changes = changes - msrp_route_hun_last - msrp_route_ten_last - msrp_route_one_last
 	
-	if changes ~= 0 then playSample(rot_sound, 0) end
+	if changes ~= 0 then playSample(rot_sound, false) end
 	
 	
 	local msrp_mlp_1_sw = get(msrp_mlp_1)
@@ -193,7 +193,7 @@ local function check_controls()
 	local swt = msrp_mlp_1_sw + msrp_mlp_2_sw + msrp_night_day_sw + msrp_main_switch_sw + mars_on_sw
 	swt = swt - msrp_mlp_1_last - msrp_mlp_2_last - msrp_night_day_last - msrp_main_switch_last - mars_on_last
 	
-	if swt ~= 0 then  playSample(switcher_sound, 0) end
+	if swt ~= 0 then  playSample(switcher_sound, false) end
 	
 	
 	msrp_date_ten_last = msrp_date_ten_sw

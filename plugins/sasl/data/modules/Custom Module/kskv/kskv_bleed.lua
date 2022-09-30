@@ -35,7 +35,7 @@ defineProperty("psvp_fail_right", globalPropertyi("tu154ce/failures/psvp_fail_ri
 
 
 -- sources
-defineProperty("gear_defl", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- проседание стойки шасси
+defineProperty("gear_defl", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- проседание стойки шасси
 
 -- internal datarefs
 defineProperty("air_usage_L", globalPropertyf("tu154ce/bleed/air_usage_L")) -- расход воздуха лев
@@ -54,9 +54,9 @@ defineProperty("start_sys_work", globalPropertyf("tu154ce/start/start_sys_work")
 
 
 
-defineProperty("engine_bleed_sov_1", globalPropertyf("sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]")) -- открытие отбора воздуха от двигателя
-defineProperty("engine_bleed_sov_2", globalPropertyf("sim/cockpit2/bleedair/actuators/engine_bleed_sov[1]")) -- открытие отбора воздуха от двигателя
-defineProperty("engine_bleed_sov_3", globalPropertyf("sim/cockpit2/bleedair/actuators/engine_bleed_sov[2]")) -- открытие отбора воздуха от двигателя
+defineProperty("engine_bleed_sov_1", globalProperty("sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]")) -- открытие отбора воздуха от двигателя
+defineProperty("engine_bleed_sov_2", globalProperty("sim/cockpit2/bleedair/actuators/engine_bleed_sov[1]")) -- открытие отбора воздуха от двигателя
+defineProperty("engine_bleed_sov_3", globalProperty("sim/cockpit2/bleedair/actuators/engine_bleed_sov[2]")) -- открытие отбора воздуха от двигателя
 
 -- sim/cockpit2/bleedair/actuators/engine_bleed_sov
 

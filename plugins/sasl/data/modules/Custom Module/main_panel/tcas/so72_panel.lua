@@ -45,7 +45,7 @@ set(transponder_green, 0)
 
 
 
-local text_font = loadFont("digital7_space.fnt")
+local text_font = loadBitmapFont("digital7_space.fnt")
 
 local rot_sound = loadSample('Custom Sounds/rot_click_big.wav')
 local button_sound = loadSample('Custom Sounds/plastic_btn.wav')
@@ -66,12 +66,12 @@ local buttons_last = 0
 
 local function sounds()
 	local sw = get(transponder_mode)
-	if sw_last ~= sw then playSample(rot_sound, 0) end
+	if sw_last ~= sw then playSample(rot_sound, false) end
 	
 	sw_last = sw
 	
 	local buttons = get(transponder_control) + get(transponder_sign) + get(transponder_but_1) + get(transponder_but_2) + get(transponder_but_3) + get(transponder_but_4) + get(transponder_emerg)
-	if buttons_last ~= buttons then playSample(button_sound, 0) end
+	if buttons_last ~= buttons then playSample(button_sound, false) end
 	
 	buttons_last = buttons
 

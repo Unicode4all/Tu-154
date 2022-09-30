@@ -84,7 +84,7 @@ if coef > 1 then coef = 1 end  -- set initial coefficient for float panel's size
 local popx2 = get(window_width) - 100
 local popy2 = get(window_height)- 100
 
-local filename = panelDir .. "/KLNconfig.txt"
+local filename = sasl.getAircraftPath() .. "/KLNconfig.txt"
 local file = io.open(filename, "r")
 if file then
 	while true do

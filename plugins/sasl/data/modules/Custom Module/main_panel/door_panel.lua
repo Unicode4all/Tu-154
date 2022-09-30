@@ -85,7 +85,7 @@ function update()
 	
 	local button_sw = get(test_lamps)
 	
-	if button_sw ~= buttn_last then playSample(button_sound, 0) end
+	if button_sw ~= buttn_last then playSample(button_sound, false) end
 	buttn_last = button_sw
 
 

@@ -193,8 +193,8 @@ local function check_controls()
 	local changes_sw = apu_main_sw + apu_start_mod_sw + apu_air_sw - apu_main_last - apu_start_mod_last - apu_air_last
 	local changes_but = apu_start_but + apu_stop_but + test_lamps_but - apu_start_last - apu_stop_last - test_lamps_last
 
-	if changes_sw ~= 0 then playSample(switcher_sound, 0) end
-	if changes_but ~= 0 then playSample(button_sound, 0) end
+	if changes_sw ~= 0 then playSample(switcher_sound, false) end
+	if changes_but ~= 0 then playSample(button_sound, false) end
 	
 	apu_main_last = apu_main_sw
 	apu_start_mod_last = apu_start_mod_sw

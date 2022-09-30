@@ -17,7 +17,7 @@ local pong_sound = loadSample('Custom Sounds/pong.wav') --
 local sqr_sound = loadSample('Custom Sounds/square.wav') --
 
 -- images
-local text_font = loadFont('taws_scr.fnt')
+local text_font = loadBitmapFont("taws_scr.fnt")
 
 local screen_work = false
 
@@ -154,19 +154,19 @@ function update()
 		if ball.x <= ball.size/2 then 
 			ball.x = ball.size/2
 			ball.vel_x = math.abs(ball.vel_x) 
-			playSample(pong_sound, 0) 
+			playSample(pong_sound, false) 
 		end 
 		-- right wall
 		if ball.x >= size[1]-ball.size/2 then 
 			ball.x = size[1]-ball.size/2
 			ball.vel_x = -math.abs(ball.vel_x) 
-			playSample(pong_sound, 0) 
+			playSample(pong_sound, false) 
 		end 
 		-- upper wall
 		if ball.y >= size[2]-ball.size/2 - 50 then 
 			ball.y = size[2]-ball.size/2 - 50
 			ball.vel_y = -math.abs(ball.vel_y) 
-			playSample(pong_sound, 0) 
+			playSample(pong_sound, false) 
 		end 
 		
 		-- ball hit the floor
@@ -195,7 +195,7 @@ function update()
 				
 				score = score + 10
 				
-				playSample(sqr_sound, 0)
+				playSample(sqr_sound, false)
 				
 				if ball.x + ball.size/2 < v.x + barrel_x / 10 or ball.x - ball.size/2 > v.x + barrel_x - barrel_x / 10 then
 					ball.vel_x = -ball.vel_x
@@ -219,7 +219,7 @@ function update()
 			ball.vel_x = math.sin((ball.x - player.x) / player.size_x * 2)
 			ball.vel_y = math.abs(math.cos((ball.x - player.x) / player.size_x * 2))
 			
-			if game_started then playSample(pong_sound, 0) end
+			if game_started then playSample(pong_sound, false) end
 		
 		end
 		
@@ -250,18 +250,18 @@ if screen_work then
 		drawRectangle(v.x, v.y, barrel_x, barrel_y, 0.8, 0.8, 0.5, 1)
 	end
 	
-	drawText(text_font, 10, 350, "P: "..player.life, 1,1,1,1)
-	drawText(text_font, 100, 350, "LVL: "..level, 1,1,1,1)
-	drawText(text_font, 250, 350, "PTS: "..score, 1,1,1,1)
+	drawText(text_font, 10, 350, "P: "..player.life, 12, false, false, 1,1,1,1)
+	drawText(text_font, 100, 350, "LVL: "..level, 12, false, false, 1,1,1,1)
+	drawText(text_font, 250, 350, "PTS: "..score, 12, false, false, 1,1,1,1)
 	
 	if game_lost then
-		drawText(text_font, 130, 210, "GAME OVER", 1,1,1,1)
-		drawText(text_font, 40, 150, "PRESS MOD TO EXIT", 1,1,1,1)
-		drawText(text_font, 15, 100, "PRESS BUT2 TO RESET", 1,1,1,1)
+		drawText(text_font, 130, 210, "GAME OVER", 12, false, false, 1,1,1,1)
+		drawText(text_font, 40, 150, "PRESS MOD TO EXIT", 12, false, false, 1,1,1,1)
+		drawText(text_font, 15, 100, "PRESS BUT2 TO RESET", 12, false, false, 1,1,1,1)
 	end
 	
 	if not game_started then
-		drawText(text_font, 160, 170, "LEVEL: "..level, 1,1,1,1)
+		drawText(text_font, 160, 170, "LEVEL: "..level, 12, false, false, 1,1,1,1)
 	end
 	
 	

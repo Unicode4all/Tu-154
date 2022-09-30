@@ -154,9 +154,9 @@ defineProperty("bat_therm_3", globalPropertyf("tu154ce/elec/bat_therm_3")) -- т
 defineProperty("bat_therm_4", globalPropertyf("tu154ce/elec/bat_therm_4")) -- температурыа батаре
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 defineProperty("sim_avionics", globalPropertyi("sim/cockpit2/switches/avionics_power_on")) -- default sim avionics switcher
 
@@ -225,7 +225,7 @@ local function voltmetr115()
 	if v115_sw ~= v115_sw_last or phaseSel_115 ~= phaseSel_115_last then
 		volt115_timer = 0
 		freq115_timer = 0
-		playSample(rotary_sound, 0)
+		playSample(rotary_sound, false)
 	end
 	
 	v115_sw_last = v115_sw
@@ -310,7 +310,7 @@ local function ampermeter115()
 	-- play sound and reset timers
 	if ampSel_115 ~= ampSel_115_last or ampPhaseSel_115 ~= ampPhaseSel_115_last then
 		amp115_timer = 0
-		playSample(rotary_sound, 0)
+		playSample(rotary_sound, false)
 	end	
 	ampSel_115_last = ampSel_115
 	ampPhaseSel_115_last = ampPhaseSel_115
@@ -366,7 +366,7 @@ local function voltmeter36()
 	-- play sound and reset timers
 	if volSel_36 ~= volSel_36_last then
 		volt36_timer = 0
-		playSample(rotary_sound, 0)
+		playSample(rotary_sound, false)
 	end	
 	
 	local volt36_angle = -120
@@ -443,15 +443,15 @@ local function bus27_gaug()
 	-- play sounds and reset timers
 	if volSel_27 ~= volSel_27_last then
 		volt27_timer = 0
-		playSample(rotary_sound, 0)
+		playSample(rotary_sound, false)
 	end
 	if ampSel_27_1 ~= ampSel_27_1_last then
 		amp27_1_timer = 0
-		playSample(rotary_sound, 0)
+		playSample(rotary_sound, false)
 	end
 	if ampSel_27_2 ~= ampSel_27_2_last then
 		amp27_2_timer = 0
-		playSample(rotary_sound, 0)
+		playSample(rotary_sound, false)
 	end
 	
 	volSel_27_last = volSel_27
@@ -578,7 +578,7 @@ local function swichers_check()
 	sw_change = sw_change + vu1 - vu1_last + vu2 - vu2_last + bat1 - bat1_last + bat2 - bat2_last + bat3 - bat3_last + bat4 - bat4_last
 	sw_change = sw_change + emerg_115 + bus_con - emerg_115_last - bus_con_last
 	
-	if sw_change ~= 0 then playSample(switcher_sound, 0) end -- play sound
+	if sw_change ~= 0 then playSample(switcher_sound, false) end -- play sound
 	
 	gpu_sw_last = gpu_sw
 	apu_sw_last = apu_sw
@@ -618,7 +618,7 @@ local function caps_check()
 	
 	local cap_change = em115_cap + pts_on_cap + pts_mod_cap + bus_con_cap - em115_cap_last - pts_on_cap_last - pts_mod_cap_last - bus_con_cap_last
 	
-	if cap_change ~= 0 then playSample(cap_sound, 0) end -- play sound
+	if cap_change ~= 0 then playSample(cap_sound, false) end -- play sound
 	
 	if em115_cap == 0 then set(emerg_inv115, 0) end
 	if pts_on_cap == 0 then set(pts250_on, 0) end

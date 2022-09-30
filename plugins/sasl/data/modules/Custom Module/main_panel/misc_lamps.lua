@@ -64,11 +64,11 @@ defineProperty("spd_brk_inn_L", globalPropertyf("sim/flightmodel/controls/wing1l
 defineProperty("spd_brk_inn_R", globalPropertyf("sim/flightmodel/controls/wing1r_spo1def")) -- inner speedbrake right Degrees
 defineProperty("slats", globalPropertyf("sim/flightmodel2/controls/slat1_deploy_ratio")) -- slats position. this one works too
 
-defineProperty("gear2_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]"))  -- vertical deflection of left gear
-defineProperty("gear3_deflect", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]"))  -- vertical deflection of right gear
+defineProperty("gear2_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]"))  -- vertical deflection of left gear
+defineProperty("gear3_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]"))  -- vertical deflection of right gear
 
 -- fuel 2500
-defineProperty("tank1_w", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
+defineProperty("tank1_w", globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
 
 -- speed
 defineProperty("ias_L", globalPropertyf("sim/cockpit2/gauges/indicators/airspeed_kts_pilot")) -- indicated airspeed in KTS
@@ -148,7 +148,7 @@ function update()
 	
 	-- power and controlls
 	local test_btn = get(lamp_test)-- 
-	if button_last ~= test_btn then playSample(button_sound, 0) end
+	if button_last ~= test_btn then playSample(button_sound, false) end
 	button_last = test_btn
 	test_btn = test_btn * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
 	

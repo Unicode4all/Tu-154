@@ -90,20 +90,20 @@ defineProperty("rpm_high_1", globalPropertyf("tu154ce/gauges/engine/rpm_high_1")
 defineProperty("rpm_high_2", globalPropertyf("tu154ce/gauges/engine/rpm_high_2")) -- обороты турбины высокого давления №2
 defineProperty("rpm_high_3", globalPropertyf("tu154ce/gauges/engine/rpm_high_3")) -- обороты турбины высокого давления №3
 
-defineProperty("revers_flap_L", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
-defineProperty("revers_flap_R", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
+defineProperty("revers_flap_L", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
+defineProperty("revers_flap_R", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
 
-defineProperty("chip_detect1", globalPropertyf("sim/cockpit/warnings/annunciators/chip_detected[0]")) -- chip in engine1
-defineProperty("chip_detect2", globalPropertyf("sim/cockpit/warnings/annunciators/chip_detected[1]")) -- chip in engine1
-defineProperty("chip_detect3", globalPropertyf("sim/cockpit/warnings/annunciators/chip_detected[2]")) -- chip in engine1
+defineProperty("chip_detect1", globalProperty("sim/cockpit/warnings/annunciators/chip_detected[0]")) -- chip in engine1
+defineProperty("chip_detect2", globalProperty("sim/cockpit/warnings/annunciators/chip_detected[1]")) -- chip in engine1
+defineProperty("chip_detect3", globalProperty("sim/cockpit/warnings/annunciators/chip_detected[2]")) -- chip in engine1
 
-defineProperty("fuel_p_1", globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[0]"))
-defineProperty("fuel_p_2", globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[1]"))
-defineProperty("fuel_p_3", globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[2]"))
+defineProperty("fuel_p_1", globalProperty("sim/cockpit2/engine/indicators/fuel_pressure_psi[0]"))
+defineProperty("fuel_p_2", globalProperty("sim/cockpit2/engine/indicators/fuel_pressure_psi[1]"))
+defineProperty("fuel_p_3", globalProperty("sim/cockpit2/engine/indicators/fuel_pressure_psi[2]"))
 
-defineProperty("oil_p_1", globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"))
-defineProperty("oil_p_2", globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[1]"))
-defineProperty("oil_p_3", globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[2]"))
+defineProperty("oil_p_1", globalProperty("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"))
+defineProperty("oil_p_2", globalProperty("sim/cockpit2/engine/indicators/oil_pressure_psi[1]"))
+defineProperty("oil_p_3", globalProperty("sim/cockpit2/engine/indicators/oil_pressure_psi[2]"))
 
 defineProperty("eng_fuel_press_1", globalPropertyi("tu154ce/fuel/eng_fuel_press_1")) -- топливо может быть подано в двигатель. без учета стоп-кранов
 defineProperty("eng_fuel_press_2", globalPropertyi("tu154ce/fuel/eng_fuel_press_2")) -- топливо может быть подано в двигатель. без учета стоп-кранов
@@ -111,7 +111,7 @@ defineProperty("eng_fuel_press_3", globalPropertyi("tu154ce/fuel/eng_fuel_press_
 
 defineProperty("throttle_lock", globalPropertyf("tu154ce/controlls/throttle_lock")) -- рычаг фиксации РУД
 
-defineProperty("tank1_w", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
+defineProperty("tank1_w", globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
 defineProperty("pump_tank2_left_work", globalPropertyi("tu154ce/fuel/pump_tank2_left_work"))
 defineProperty("pump_tank2_right_work", globalPropertyi("tu154ce/fuel/pump_tank2_right_work"))
 defineProperty("pump_tank3_left_work", globalPropertyi("tu154ce/fuel/pump_tank3_left_work"))
@@ -153,9 +153,9 @@ defineProperty("bus27_volt_right", globalPropertyf("tu154ce/elec/bus27_volt_righ
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 defineProperty("fire_main_switch", globalPropertyi("tu154ce/switchers/eng/fire_main_switch")) -- выключатель пожарной системы
 
@@ -535,9 +535,9 @@ local function check_controls()
 	
 	local caps_change = gauges_on_1_cap_sw + gauges_on_2_cap_sw + gauges_on_3_cap_sw - gauges_on_1_cap_last - gauges_on_2_cap_last - gauges_on_3_cap_last
 	
-	if change_but ~= 0 then	playSample(button_sound, 0)	end
-	if change_sw ~= 0 then playSample(rotary_sound, 0) end
-	if caps_change ~= 0 then playSample(cap_sound, 0) end 
+	if change_but ~= 0 then	playSample(button_sound, false)	end
+	if change_sw ~= 0 then playSample(rotary_sound, false) end
+	if caps_change ~= 0 then playSample(cap_sound, false) end 
 	
 	-- check caps
 	if gauges_on_1_cap_sw == 0 then set(gauges_on_1, 1) end

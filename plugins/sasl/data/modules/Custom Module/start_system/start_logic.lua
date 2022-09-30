@@ -14,21 +14,21 @@ defineProperty("flight_start_2", globalPropertyi("tu154ce/buttons/eng/flight_sta
 defineProperty("flight_start_3", globalPropertyi("tu154ce/buttons/eng/flight_start_3")) -- запуск в полете
 
 -- default datarefs and commands
-defineProperty("sim_igniter1", globalPropertyi("sim/cockpit2/engine/actuators/igniter_on[0]")) -- igniters on/off
-defineProperty("sim_igniter2", globalPropertyi("sim/cockpit2/engine/actuators/igniter_on[1]")) -- igniters on/off
-defineProperty("sim_igniter3", globalPropertyi("sim/cockpit2/engine/actuators/igniter_on[2]")) -- igniters on/off
+defineProperty("sim_igniter1", globalProperty("sim/cockpit2/engine/actuators/igniter_on[0]")) -- igniters on/off
+defineProperty("sim_igniter2", globalProperty("sim/cockpit2/engine/actuators/igniter_on[1]")) -- igniters on/off
+defineProperty("sim_igniter3", globalProperty("sim/cockpit2/engine/actuators/igniter_on[2]")) -- igniters on/off
 
-defineProperty("sim_ignition1", globalPropertyi("sim/cockpit2/engine/actuators/ignition_on[0]")) -- ignition on/off
-defineProperty("sim_ignition2", globalPropertyi("sim/cockpit2/engine/actuators/ignition_on[1]")) -- ignition on/off
-defineProperty("sim_ignition3", globalPropertyi("sim/cockpit2/engine/actuators/ignition_on[2]")) -- ignition on/off
+defineProperty("sim_ignition1", globalProperty("sim/cockpit2/engine/actuators/ignition_on[0]")) -- ignition on/off
+defineProperty("sim_ignition2", globalProperty("sim/cockpit2/engine/actuators/ignition_on[1]")) -- ignition on/off
+defineProperty("sim_ignition3", globalProperty("sim/cockpit2/engine/actuators/ignition_on[2]")) -- ignition on/off
 
-defineProperty("sim_starter1", globalPropertyf("sim/cockpit/engine/starter_duration[1]")) -- time of starter work
-defineProperty("sim_starter2", globalPropertyf("sim/cockpit/engine/starter_duration[0]")) -- time of starter work
-defineProperty("sim_starter3", globalPropertyf("sim/cockpit/engine/starter_duration[2]")) -- time of starter work
+defineProperty("sim_starter1", globalProperty("sim/cockpit/engine/starter_duration[1]")) -- time of starter work
+defineProperty("sim_starter2", globalProperty("sim/cockpit/engine/starter_duration[0]")) -- time of starter work
+defineProperty("sim_starter3", globalProperty("sim/cockpit/engine/starter_duration[2]")) -- time of starter work
 
-defineProperty("sim_start1", globalPropertyf("sim/flightmodel2/engines/starter_making_torque[1]")) -- time of starter work
-defineProperty("sim_start2", globalPropertyf("sim/flightmodel2/engines/starter_making_torque[0]")) -- time of starter work
-defineProperty("sim_start3", globalPropertyf("sim/flightmodel2/engines/starter_making_torque[2]")) -- time of starter work
+defineProperty("sim_start1", globalProperty("sim/flightmodel2/engines/starter_making_torque[1]")) -- time of starter work
+defineProperty("sim_start2", globalProperty("sim/flightmodel2/engines/starter_making_torque[0]")) -- time of starter work
+defineProperty("sim_start3", globalProperty("sim/flightmodel2/engines/starter_making_torque[2]")) -- time of starter work
 
 starter_1 = findCommand("sim/starters/engage_starter_1")  -- simulator command for starter 1
 starter_2 = findCommand("sim/starters/engage_starter_2")  -- simulator command for starter 2
@@ -43,13 +43,13 @@ defineProperty("bus27_volt_right", globalPropertyf("tu154ce/elec/bus27_volt_righ
 defineProperty("apu_air_doors", globalPropertyf("tu154ce/eng/apu_air_doors")) -- положение створок для накачки воздуха
 defineProperty("apu_n1", globalPropertyf("tu154ce/eng/apu_n1")) -- обороты ВСУ
 
-defineProperty("eng_rpm1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]"))   
-defineProperty("eng_rpm2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]"))
-defineProperty("eng_rpm3", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]"))
+defineProperty("eng_rpm1", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]"))   
+defineProperty("eng_rpm2", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]"))
+defineProperty("eng_rpm3", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]"))
 
-defineProperty("eng_work1", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[0]"))
-defineProperty("eng_work2", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[1]"))
-defineProperty("eng_work3", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[2]"))
+defineProperty("eng_work1", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[0]"))
+defineProperty("eng_work2", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[1]"))
+defineProperty("eng_work3", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[2]"))
 
 defineProperty("eng_airvalve_1", globalPropertyf("tu154ce/bleed/eng_airvalve_1")) -- открытие отбора воздуха от двигателя
 defineProperty("eng_airvalve_2", globalPropertyf("tu154ce/bleed/eng_airvalve_2")) -- открытие отбора воздуха от двигателя

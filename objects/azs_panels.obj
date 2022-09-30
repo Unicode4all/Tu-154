@@ -230,7 +230,7 @@ IDX	110
 # Cube
 ATTR_shiny_rat	 0.500
 # Cube
-ATTR_light_level  0.000  1.000 sim/custom/lights/azs_panel_flood
+ATTR_light_level  0.000  1.000 tu154ce/lights/azs_panel_flood
 TRIS	0 588
 
 # Built with Blender 2.49. Exported with XPlane2Blender 3.10.

@@ -102,23 +102,23 @@ defineProperty("fuel_level_automat", globalPropertyf("tu154ce/lights/small/fuel_
 -- sources -- 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
-defineProperty("ENGN_FF_1", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]")) -- FF from sim kg/second
-defineProperty("ENGN_FF_2", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]")) -- FF from sim kg/second
-defineProperty("ENGN_FF_3", globalPropertyf("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[2]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_1", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[0]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_2", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[1]")) -- FF from sim kg/second
+defineProperty("ENGN_FF_3", globalProperty("sim/cockpit2/engine/indicators/fuel_flow_kg_sec[2]")) -- FF from sim kg/second
 
 -- fuel tanks
 defineProperty("total_w", globalPropertyf("sim/flightmodel/weight/m_fuel_total")) -- fuel weight
 
-defineProperty("tank1_w", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
-defineProperty("tank4_w", globalPropertyf("sim/flightmodel/weight/m_fuel[1]")) -- fuel weight
-defineProperty("tank2R_w", globalPropertyf("sim/flightmodel/weight/m_fuel[2]")) -- fuel weight
-defineProperty("tank2L_w", globalPropertyf("sim/flightmodel/weight/m_fuel[3]")) -- fuel weight
-defineProperty("tank3R_w", globalPropertyf("sim/flightmodel/weight/m_fuel[4]")) -- fuel weight
-defineProperty("tank3L_w", globalPropertyf("sim/flightmodel/weight/m_fuel[5]")) -- fuel weight
+defineProperty("tank1_w", globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
+defineProperty("tank4_w", globalProperty("sim/flightmodel/weight/m_fuel[1]")) -- fuel weight
+defineProperty("tank2R_w", globalProperty("sim/flightmodel/weight/m_fuel[2]")) -- fuel weight
+defineProperty("tank2L_w", globalProperty("sim/flightmodel/weight/m_fuel[3]")) -- fuel weight
+defineProperty("tank3R_w", globalProperty("sim/flightmodel/weight/m_fuel[4]")) -- fuel weight
+defineProperty("tank3L_w", globalProperty("sim/flightmodel/weight/m_fuel[5]")) -- fuel weight
 
 defineProperty("reserv_trans", globalPropertyi("tu154ce/fuel/reserv_trans"))
 
@@ -151,7 +151,7 @@ defineProperty("auto_tank_level_2", globalPropertyi("tu154ce/fuel/auto_tank_leve
 defineProperty("auto_tank_level_3", globalPropertyi("tu154ce/fuel/auto_tank_level_3")) -- выравнивание в баках 3. -1 = L, 0 = none, +1 = R	0
 
 
-defineProperty("tank1_w", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
+defineProperty("tank1_w", globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel weight
 
 defineProperty("fire_vlv_open_1", globalPropertyf("tu154ce/fuel/fire_vlv_open_1")) -- пожарный кран открыт
 defineProperty("fire_vlv_open_2", globalPropertyf("tu154ce/fuel/fire_vlv_open_2")) -- пожарный кран открыт
@@ -438,7 +438,7 @@ local function check_switchers()
 	sw_change = sw_change - fuel_trans_last - fuel_porc_last - fuel_level_last - fuel_flow_mode_last - fuel_flow_on_last
 	sw_change = sw_change - fuel_meter_on_last - fuel_meter_mech_on_last - fire_valve_1_last - fire_valve_2_last - fire_valve_3_last
 	
-	if sw_change ~= 0 then playSample(switcher_sound, 0) end -- play sound
+	if sw_change ~= 0 then playSample(switcher_sound, false) end -- play sound
 
 	pump_tank2_left_last = pump_tank2_left_sw
 	pump_tank2_right_last = pump_tank2_right_sw
@@ -488,7 +488,7 @@ local function caps_check()
 	
 	cap_change = cap_change - fuel_trans_cap_last - fuel_porc_cap_last - fuel_flow_on_cap_last - fire_valve_1_cap_last - fire_valve_2_cap_last - fire_valve_3_cap_last
 	
-	if cap_change ~= 0 then playSample(cap_sound, 0) end -- play sound
+	if cap_change ~= 0 then playSample(cap_sound, false) end -- play sound
 	
 	fuel_trans_cap_last = fuel_trans_cap_sw
 	fuel_porc_cap_last = fuel_porc_cap_sw

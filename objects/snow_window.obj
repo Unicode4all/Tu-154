@@ -1144,62 +1144,62 @@ IDX	874
 IDX	871
 
 # fuselage.013
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 TRIS	0 138
 # fuselage.014
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_1_L
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_1_L
 TRIS	138 18
 # fuselage.015
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_2_L
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_2_L
 TRIS	156 18
 # fuselage.016
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_3_L
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_3_L
 TRIS	174 18
 # fuselage.017
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_4_L
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_4_L
 TRIS	192 18
 # fuselage.018
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_5_L
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_5_L
 TRIS	210 18
 # fuselage.019
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_5_R
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_5_R
 TRIS	228 18
 # fuselage.020
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_4_R
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_4_R
 TRIS	246 18
 # fuselage.021
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_3_R
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_3_R
 TRIS	264 18
 # fuselage.022
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_2_R
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_2_R
 TRIS	282 18
 # fuselage.023
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2_w_1_R
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2_w_1_R
 TRIS	300 18
 # fuselage.026
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 TRIS	318 138
 # fuselage.013
 ATTR_hard
 # fuselage.013
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 TRIS	456 96
 # fuselage.025
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 TRIS	552 120
 # fuselage.026
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 TRIS	672 96
 # salon_walls.001
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 TRIS	768 768
 # fuselage.029
-ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 TRIS	1536 648
 # salon_walls.002
 ANIM_begin
 	ANIM_trans	  -1.7135   -1.9701  -18.1697	  -1.7135   -1.9701  -18.1697	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_1
+	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_1
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -1211,7 +1211,7 @@ ANIM_begin
 	# salon_walls.002
 	ANIM_begin
 		ANIM_trans	  -0.0083   -0.1613    0.5216	  -0.0083   -0.1613    0.5216	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_1
+		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_1
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -1221,14 +1221,14 @@ ANIM_begin
 			ANIM_rotate_key	1	140.00
 		ANIM_rotate_end
 		# salon_walls.002
-		ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+		ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 		TRIS	2184 48
 	ANIM_end
 ANIM_end
 # salon_walls.003
 ANIM_begin
 	ANIM_trans	  -1.8750   -1.9701   -7.1527	  -1.8750   -1.9701   -7.1527	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_2
+	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_2
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -1240,7 +1240,7 @@ ANIM_begin
 	# salon_walls.003
 	ANIM_begin
 		ANIM_trans	   0.0768    0.0091    0.5163	   0.0768    0.0091    0.5163	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_2
+		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_2
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -1250,14 +1250,14 @@ ANIM_begin
 			ANIM_rotate_key	1	140.00
 		ANIM_rotate_end
 		# salon_walls.003
-		ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+		ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 		TRIS	2232 48
 	ANIM_end
 ANIM_end
 # salon_walls.004
 ANIM_begin
 	ANIM_trans	   1.8482   -2.0580   -8.5479	   1.8482   -2.0580   -8.5479	0 0	no_ref
-	ANIM_rotate_begin	   0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_3
+	ANIM_rotate_begin	   0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_3
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -1269,7 +1269,7 @@ ANIM_begin
 	# salon_walls.004
 	ANIM_begin
 		ANIM_trans	  -0.0258    0.0080    0.4461	  -0.0258    0.0080    0.4461	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_3
+		ANIM_rotate_begin	  -0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_3
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -1279,68 +1279,68 @@ ANIM_begin
 			ANIM_rotate_key	1	130.00
 		ANIM_rotate_end
 		# salon_walls.004
-		ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+		ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 		TRIS	2280 48
 	ANIM_end
 ANIM_end
 # fuselage.030
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cockpit_window_left
+	ANIM_trans_begin	tu154ce/anim/cockpit_window_left
 		ANIM_trans_key	0	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	0.2	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	0.4	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	1	  -0.9768   -1.5413  -21.2538
 	ANIM_trans_end
-	ANIM_rotate_begin	0 0 1	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	0 0 1	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  5.34
 		ANIM_rotate_key	1	  5.51
 	ANIM_rotate_end
-	ANIM_rotate_begin	0 1 0	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	0 1 0	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	 -0.00
 		ANIM_rotate_key	0.2	 -0.00
 		ANIM_rotate_key	0.4	  7.55
 		ANIM_rotate_key	1	  7.84
 	ANIM_rotate_end
-	ANIM_rotate_begin	1 0 0	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	1 0 0	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  3.24
 		ANIM_rotate_key	1	 -0.00
 	ANIM_rotate_end
 	# fuselage.030
-	ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+	ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 	TRIS	2328 108
 ANIM_end
 # fuselage.031
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cockpit_window_right
+	ANIM_trans_begin	tu154ce/anim/cockpit_window_right
 		ANIM_trans_key	0	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	0.2	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	0.4	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	1	   0.9771   -1.5413  -21.2538
 	ANIM_trans_end
-	ANIM_rotate_begin	0 0 1	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	0 0 1	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 -5.34
 		ANIM_rotate_key	1	 -5.51
 	ANIM_rotate_end
-	ANIM_rotate_begin	0 1 0	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	0 1 0	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	 -0.00
 		ANIM_rotate_key	0.2	 -0.00
 		ANIM_rotate_key	0.4	 -7.55
 		ANIM_rotate_key	1	 -7.84
 	ANIM_rotate_end
-	ANIM_rotate_begin	1 0 0	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	1 0 0	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  3.24
 		ANIM_rotate_key	1	 -0.00
 	ANIM_rotate_end
 	# fuselage.031
-	ATTR_light_level  0.000  1.000 sim/custom/anim/rain_glass_2
+	ATTR_light_level  0.000  1.000 tu154ce/anim/rain_glass_2
 	TRIS	2436 108
 ANIM_end
 

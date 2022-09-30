@@ -11,12 +11,12 @@
 -- like this:
 -- tu154ce/anim/cargo_1	float	положение багажной двери 1. 0 - закрыта, 1 - открыта	0
 
--- panelDir = path to your aircraft
+-- sasl.getAircraftPath() = path to your aircraft
 
-print("panel dir = ",panelDir)
+print("panel dir = ",sasl.getAircraftPath())
 
-local dataref_filename = panelDir .. "/Custom Avionics/DataRefsTu154_int.txt" -- path for source file
-local save_filename = panelDir .. "/Custom Avionics/dataref_creator_2.lua" -- path for output fils
+local dataref_filename = sasl.getAircraftPath() .. "/Custom Avionics/DataRefsTu154_int.txt" -- path for source file
+local save_filename = sasl.getAircraftPath() .. "/Custom Avionics/dataref_creator_2.lua" -- path for output fils
 
 local dataref_file = io.open(dataref_filename, "r") -- read the source file
 local save_file = io.open(save_filename, "w") -- save output file

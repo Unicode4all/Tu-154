@@ -6,9 +6,9 @@ defineProperty("sim_engine_on_fire2", globalPropertyi("sim/operation/failures/re
 defineProperty("sim_engine_on_fire3", globalPropertyi("sim/operation/failures/rel_engfir2"))  -- right engine on fire
 
 
-defineProperty("sim_engine_ext1", globalPropertyi("sim/cockpit2/engine/actuators/fire_extinguisher_on[0]"))  -- left engine fire extinguiher
-defineProperty("sim_engine_ext2", globalPropertyi("sim/cockpit2/engine/actuators/fire_extinguisher_on[1]"))  -- mid engine fire extinguiher
-defineProperty("sim_engine_ext3", globalPropertyi("sim/cockpit2/engine/actuators/fire_extinguisher_on[2]"))  -- right engine fire extinguiher
+defineProperty("sim_engine_ext1", globalProperty("sim/cockpit2/engine/actuators/fire_extinguisher_on[0]"))  -- left engine fire extinguiher
+defineProperty("sim_engine_ext2", globalProperty("sim/cockpit2/engine/actuators/fire_extinguisher_on[1]"))  -- mid engine fire extinguiher
+defineProperty("sim_engine_ext3", globalProperty("sim/cockpit2/engine/actuators/fire_extinguisher_on[2]"))  -- right engine fire extinguiher
 
 -- controls
 defineProperty("lamp_test", globalPropertyi("tu154ce/buttons/lamp_test_fire_panel")) -- кнопка проверки ламп на пожарной панели	0

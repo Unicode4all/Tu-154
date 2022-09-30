@@ -5,7 +5,7 @@ size = {180, 350}
 defineProperty("seconds", 0)
 
 
-local text_font = loadFont('taws_scr.fnt')
+local text_font = loadBitmapFont("taws_scr.fnt")
 
 
 
@@ -30,7 +30,7 @@ function draw()
 				if text >= 60 then text = text - 60
 				elseif text	< 0 then text = text + 60 end
 								
-				drawText(text_font, 60, text_pos, text, 1,1,1,1)
+				drawText(text_font, 60, text_pos, text, 12, false, false, 1,1,1,1)
 			end--]]
 		else -- small lines
 			local line_pos = 168 + (i - sec) * 11

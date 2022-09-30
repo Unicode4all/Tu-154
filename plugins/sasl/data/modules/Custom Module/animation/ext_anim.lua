@@ -57,18 +57,18 @@ defineProperty("rise_chair_arm_R", globalPropertyf("tu154ce/anim/rise_chair_arm_
 defineProperty("yokes_show", globalPropertyi("tu154ce/anim/show_yokes")) -- штурвалы
 
 -- sliders
-defineProperty("slider_1", globalPropertyf("sim/cockpit2/switches/custom_slider_on[0]")) -- sim slider on
-defineProperty("slider_2", globalPropertyf("sim/cockpit2/switches/custom_slider_on[1]")) -- sim slider on
-defineProperty("slider_3", globalPropertyf("sim/cockpit2/switches/custom_slider_on[2]")) -- sim slider on
-defineProperty("slider_4", globalPropertyf("sim/cockpit2/switches/custom_slider_on[3]")) -- sim slider on
-defineProperty("slider_5", globalPropertyf("sim/cockpit2/switches/custom_slider_on[4]")) -- sim slider on
-defineProperty("slider_6", globalPropertyf("sim/cockpit2/switches/custom_slider_on[5]")) -- sim slider on
-defineProperty("slider_7", globalPropertyf("sim/cockpit2/switches/custom_slider_on[6]")) -- sim slider on
-defineProperty("slider_8", globalPropertyf("sim/cockpit2/switches/custom_slider_on[7]")) -- sim slider on
-defineProperty("slider_9", globalPropertyf("sim/cockpit2/switches/custom_slider_on[8]")) -- sim slider on
-defineProperty("slider_10", globalPropertyf("sim/cockpit2/switches/custom_slider_on[9]")) -- sim slider on
-defineProperty("slider_11", globalPropertyf("sim/cockpit2/switches/custom_slider_on[10]")) -- sim slider on
-defineProperty("slider_12", globalPropertyf("sim/cockpit2/switches/custom_slider_on[11]")) -- sim slider on
+defineProperty("slider_1", globalProperty("sim/cockpit2/switches/custom_slider_on[0]")) -- sim slider on
+defineProperty("slider_2", globalProperty("sim/cockpit2/switches/custom_slider_on[1]")) -- sim slider on
+defineProperty("slider_3", globalProperty("sim/cockpit2/switches/custom_slider_on[2]")) -- sim slider on
+defineProperty("slider_4", globalProperty("sim/cockpit2/switches/custom_slider_on[3]")) -- sim slider on
+defineProperty("slider_5", globalProperty("sim/cockpit2/switches/custom_slider_on[4]")) -- sim slider on
+defineProperty("slider_6", globalProperty("sim/cockpit2/switches/custom_slider_on[5]")) -- sim slider on
+defineProperty("slider_7", globalProperty("sim/cockpit2/switches/custom_slider_on[6]")) -- sim slider on
+defineProperty("slider_8", globalProperty("sim/cockpit2/switches/custom_slider_on[7]")) -- sim slider on
+defineProperty("slider_9", globalProperty("sim/cockpit2/switches/custom_slider_on[8]")) -- sim slider on
+defineProperty("slider_10", globalProperty("sim/cockpit2/switches/custom_slider_on[9]")) -- sim slider on
+defineProperty("slider_11", globalProperty("sim/cockpit2/switches/custom_slider_on[10]")) -- sim slider on
+defineProperty("slider_12", globalProperty("sim/cockpit2/switches/custom_slider_on[11]")) -- sim slider on
 
 -- brake levers
 defineProperty("brake_emerg", globalPropertyf("tu154ce/controlls/brake_emerg")) --
@@ -86,22 +86,22 @@ defineProperty("ground_stuff_angle", globalPropertyf("tu154ce/anim/ground_stuff_
 
 
 -- sources
-defineProperty("tire_steer_actual_deg", globalPropertyf("sim/flightmodel2/gear/tire_steer_actual_deg[0]")) -- 
+defineProperty("tire_steer_actual_deg", globalProperty("sim/flightmodel2/gear/tire_steer_actual_deg[0]")) -- 
 
-defineProperty("deploy_ratio_1", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[0]")) -- 
-defineProperty("deploy_ratio_2", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[1]")) -- 
-defineProperty("deploy_ratio_3", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[2]")) -- 
+defineProperty("deploy_ratio_1", globalProperty("sim/flightmodel2/gear/deploy_ratio[0]")) -- 
+defineProperty("deploy_ratio_2", globalProperty("sim/flightmodel2/gear/deploy_ratio[1]")) -- 
+defineProperty("deploy_ratio_3", globalProperty("sim/flightmodel2/gear/deploy_ratio[2]")) -- 
 
-defineProperty("deflection_mtr_1", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]")) -- 
-defineProperty("deflection_mtr_2", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_1", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]")) -- 
+defineProperty("deflection_mtr_2", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 
 defineProperty("groundspeed", globalPropertyf("sim/flightmodel/position/groundspeed")) -- GS, m/s
 defineProperty("yaw_apd", globalPropertyf("sim/flightmodel/position/R")) -- GS, m/s
 
 defineProperty("rudder", globalPropertyf("sim/flightmodel/controls/vstab2_rud1def")) -- degrees, positive is trailing-edge left
-defineProperty("revers_flap_L", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
-defineProperty("revers_flap_R", globalPropertyf("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
+defineProperty("revers_flap_L", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0]")) -- reverse on left engine
+defineProperty("revers_flap_R", globalProperty("sim/flightmodel2/engines/thrust_reverser_deploy_ratio[2]")) -- reverse on right engine
 defineProperty("rpm_high_1", globalPropertyf("tu154ce/gauges/engine/rpm_high_1")) -- обороты турбины высокого давления №1
 defineProperty("rpm_high_3", globalPropertyf("tu154ce/gauges/engine/rpm_high_3")) -- обороты турбины высокого давления №3
 
@@ -117,19 +117,19 @@ defineProperty("brake_R", globalPropertyf("sim/flightmodel/controls/r_brake_add"
 --defineProperty("brake_R", globalPropertyf("tu154ce/SC/controls/r_brake_add")) 
 
 
-defineProperty("EC_L", globalPropertyf("sim/flightmodel2/gear/eagle_claw_angle_deg[1]")) -- 
-defineProperty("EC_R", globalPropertyf("sim/flightmodel2/gear/eagle_claw_angle_deg[2]")) -- 
+defineProperty("EC_L", globalProperty("sim/flightmodel2/gear/eagle_claw_angle_deg[1]")) -- 
+defineProperty("EC_R", globalProperty("sim/flightmodel2/gear/eagle_claw_angle_deg[2]")) -- 
 
 defineProperty("indicated_airspeed", globalPropertyf("sim/flightmodel/position/indicated_airspeed")) -- приборная скорость
 
 defineProperty("elevator_L", globalPropertyf("sim/flightmodel/controls/hstab1_elv1def")) -- Degrees, positive is trailing-edge down.
 defineProperty("elevator_R", globalPropertyf("sim/flightmodel/controls/hstab2_elv1def")) -- Degrees, positive is trailing-edge down.
 
-defineProperty("wing_tip_defl", globalPropertyf("sim/flightmodel2/wing/wing_tip_deflection_deg[0]")) -- изгиб крыла
+defineProperty("wing_tip_defl", globalProperty("sim/flightmodel2/wing/wing_tip_deflection_deg[0]")) -- изгиб крыла
 defineProperty("gforce", globalPropertyf("sim/flightmodel2/misc/gforce_normal")) -- G overload
 
-defineProperty("tank3R_w", globalPropertyf("sim/flightmodel/weight/m_fuel[4]")) -- fuel weight
-defineProperty("tank3L_w", globalPropertyf("sim/flightmodel/weight/m_fuel[5]")) -- fuel weight
+defineProperty("tank3R_w", globalProperty("sim/flightmodel/weight/m_fuel[4]")) -- fuel weight
+defineProperty("tank3L_w", globalProperty("sim/flightmodel/weight/m_fuel[5]")) -- fuel weight
 
 defineProperty("airspeed", globalPropertyf("sim/flightmodel/position/indicated_airspeed")) -- приборная скорость
 
@@ -364,9 +364,9 @@ function update()
 	
 	-- sound
 	if (window_L ~= window_L_last and window_L_last == 0) or (window_R ~= window_R_last and window_R_last == 0) then
-		playSample(window_open, 0)
+		playSample(window_open, false)
 	elseif (window_L ~= window_L_last and window_L_last == 1) or (window_R ~= window_R_last and window_R_last == 1) then
-		playSample(window_close, 0)
+		playSample(window_close, false)
 	end
 	
 	window_L_last = window_L

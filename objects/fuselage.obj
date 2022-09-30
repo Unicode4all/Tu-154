@@ -26838,7 +26838,7 @@ TRIS	390 57348
 # fuselage.004
 ANIM_begin
 	ANIM_trans	   1.8482   -2.0580   -8.5479	   1.8482   -2.0580   -8.5479	0 0	no_ref
-	ANIM_rotate_begin	   0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_3
+	ANIM_rotate_begin	   0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_3
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -26850,7 +26850,7 @@ ANIM_begin
 	# fuselage.004
 	ANIM_begin
 		ANIM_trans	  -0.0258    0.0080    0.4461	  -0.0258    0.0080    0.4461	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_3
+		ANIM_rotate_begin	  -0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_3
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -26865,7 +26865,7 @@ ANIM_end
 # fuselage.034
 ANIM_begin
 	ANIM_trans	  -1.8750   -1.9701   -7.1527	  -1.8750   -1.9701   -7.1527	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_2
+	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_2
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -26877,7 +26877,7 @@ ANIM_begin
 	# fuselage.034
 	ANIM_begin
 		ANIM_trans	   0.0768    0.0091    0.5163	   0.0768    0.0091    0.5163	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_2
+		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_2
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -26892,7 +26892,7 @@ ANIM_end
 # fuselage.016
 ANIM_begin
 	ANIM_trans	  -1.7135   -1.9701  -18.1697	  -1.7135   -1.9701  -18.1697	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_1
+	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_1
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -26904,7 +26904,7 @@ ANIM_begin
 	# fuselage.016
 	ANIM_begin
 		ANIM_trans	  -0.0083   -0.1613    0.5216	  -0.0083   -0.1613    0.5216	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_1
+		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_1
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -26919,7 +26919,7 @@ ANIM_end
 # right_gear_door.010
 ANIM_begin
 	ANIM_trans	   5.7520   -3.8098   -0.2160	   5.7520   -3.8098   -0.2160	0 0	no_ref
-	ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	sim/custom/anim/lg/main_pos_right
+	ANIM_rotate_begin	  -1.0000    0.0000   -0.0000	tu154ce/anim/lg/main_pos_right
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.8	  4.02
 		ANIM_rotate_key	0.7	  8.20
@@ -26940,7 +26940,7 @@ ANIM_end
 # right_gear_door
 ANIM_begin
 	ANIM_trans	  -5.7520   -3.8098   -0.2160	  -5.7520   -3.8098   -0.2160	0 0	no_ref
-	ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	sim/custom/anim/lg/main_pos_left
+	ANIM_rotate_begin	  -1.0000   -0.0000   -0.0000	tu154ce/anim/lg/main_pos_left
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.8	  4.02
 		ANIM_rotate_key	0.7	  8.20
@@ -26961,7 +26961,7 @@ ANIM_end
 # front_gear_door
 ANIM_begin
 	ANIM_trans	   0.4602   -3.8958  -16.1803	   0.4602   -3.8958  -16.1803	0 0	no_ref
-	ANIM_rotate_begin	  -0.0000   -0.0044    1.0000	sim/custom/anim/lg/front_pos
+	ANIM_rotate_begin	  -0.0000   -0.0044    1.0000	tu154ce/anim/lg/front_pos
 		ANIM_rotate_key	1.0	 78.38
 		ANIM_rotate_key	0.9	 87.67
 		ANIM_rotate_key	0.8	 94.07
@@ -26979,7 +26979,7 @@ ANIM_end
 # front_gear_door.003
 ANIM_begin
 	ANIM_trans	  -0.4602   -3.8958  -16.1803	  -0.4602   -3.8958  -16.1803	0 0	no_ref
-	ANIM_rotate_begin	  -0.0000    0.0044   -1.0000	sim/custom/anim/lg/front_pos
+	ANIM_rotate_begin	  -0.0000    0.0044   -1.0000	tu154ce/anim/lg/front_pos
 		ANIM_rotate_key	1.0	 78.38
 		ANIM_rotate_key	0.9	 87.67
 		ANIM_rotate_key	0.8	 94.07
@@ -26996,7 +26996,7 @@ ANIM_begin
 ANIM_end
 # fuselage.019
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cargo_1
+	ANIM_trans_begin	tu154ce/anim/cargo_1
 		ANIM_trans_key	0	   1.4368   -3.1026  -10.9359
 		ANIM_trans_key	0.2	   1.1850   -3.1026  -10.9359
 		ANIM_trans_key	1	   1.1850   -3.1026  -12.2315
@@ -27006,7 +27006,7 @@ ANIM_end
 # Cube.044
 ANIM_begin
 	ANIM_trans	   1.6965   -3.1181    4.2188	   1.6965   -3.1181    4.2188	0 0	no_ref
-	ANIM_rotate_begin	   0.1319    0.9913   -0.0000	sim/custom/anim/cargo_2
+	ANIM_rotate_begin	   0.1319    0.9913   -0.0000	tu154ce/anim/cargo_2
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	138.88
 		ANIM_rotate_key	1	138.88
@@ -27015,7 +27015,7 @@ ANIM_begin
 ANIM_end
 # fuselage.017
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cargo_2
+	ANIM_trans_begin	tu154ce/anim/cargo_2
 		ANIM_trans_key	0	   1.3896   -3.0469    5.0280
 		ANIM_trans_key	0.2	   1.3896   -3.0469    5.0280
 		ANIM_trans_key	0.4	   1.1972   -3.0469    5.0280
@@ -27026,13 +27026,13 @@ ANIM_end
 # fuselage.012
 ANIM_begin
 	ANIM_trans	   1.1794   -1.2252   12.0472	   1.1794   -1.2252   12.0472	0 0	no_ref
-	ANIM_rotate	  -0.4006    0.9163   -0.0000	  0.00  21.73	0 1	sim/custom/anim/apu_doors
+	ANIM_rotate	  -0.4006    0.9163   -0.0000	  0.00  21.73	0 1	tu154ce/anim/apu_doors
 	TRIS	61305 120
 ANIM_end
 # fuselage.015
 ANIM_begin
 	ANIM_trans	  -0.0252   -2.8292   12.3872	  -0.0252   -2.8292   12.3872	0 0	no_ref
-	ANIM_rotate	  -0.9822    0.1876   -0.0077	  0.00  15.00	0 1	sim/custom/anim/apu_doors
+	ANIM_rotate	  -0.9822    0.1876   -0.0077	  0.00  15.00	0 1	tu154ce/anim/apu_doors
 	TRIS	61425 120
 ANIM_end
 # stab_base
@@ -27043,26 +27043,26 @@ ANIM_begin
 	# elevator.001
 	ANIM_begin
 		ANIM_trans	  -0.4500    0.2152    1.0917	  -0.4500    0.2152    1.0917	0 0	no_ref
-		ANIM_rotate	   0.8111   -0.0164   -0.5847	  0.00   1.00	0 1	sim/custom/anim/elev_anim_L
+		ANIM_rotate	   0.8111   -0.0164   -0.5847	  0.00   1.00	0 1	tu154ce/anim/elev_anim_L
 		TRIS	66453 978
 	ANIM_end
 	# elevator
 	ANIM_begin
 		ANIM_trans	   0.4500    0.2152    1.0917	   0.4500    0.2152    1.0917	0 0	no_ref
-		ANIM_rotate	   0.8111    0.0164    0.5847	  0.00   1.00	0 1	sim/custom/anim/elev_anim_R
+		ANIM_rotate	   0.8111    0.0164    0.5847	  0.00   1.00	0 1	tu154ce/anim/elev_anim_R
 		TRIS	67431 978
 	ANIM_end
 ANIM_end
 # rudder
 ANIM_begin
 	ANIM_trans	   0.0000    1.1706   15.4624	   0.0000    1.1706   15.4624	0 0	no_ref
-	ANIM_rotate	   0.0000   -0.8134   -0.5817	  0.00   1.00	0 1	sim/custom/anim/rudder_anim
+	ANIM_rotate	   0.0000   -0.8134   -0.5817	  0.00   1.00	0 1	tu154ce/anim/rudder_anim
 	TRIS	68409 612
 ANIM_end
 # front_gear_door.002
 ANIM_begin
 	ANIM_trans	   0.4602   -3.8981  -14.6753	   0.4602   -3.8981  -14.6753	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -0.0015    1.0000	sim/custom/anim/lg/front_pos
+	ANIM_rotate_begin	   0.0000   -0.0015    1.0000	tu154ce/anim/lg/front_pos
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.1	 90.00
 		ANIM_rotate_key	0.9	 90.00
@@ -27073,7 +27073,7 @@ ANIM_end
 # front_gear_door.001
 ANIM_begin
 	ANIM_trans	  -0.4600   -3.8981  -14.6753	  -0.4600   -3.8981  -14.6753	0 0	no_ref
-	ANIM_rotate_begin	   0.0000    0.0015   -1.0000	sim/custom/anim/lg/front_pos
+	ANIM_rotate_begin	   0.0000    0.0015   -1.0000	tu154ce/anim/lg/front_pos
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.1	 90.00
 		ANIM_rotate_key	0.9	 90.00
@@ -27084,7 +27084,7 @@ ANIM_end
 # right_gear_door.006
 ANIM_begin
 	ANIM_trans	   6.1667   -3.9024    1.7266	   6.1667   -3.9024    1.7266	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -0.0340    0.9994	sim/custom/anim/lg/main_pos_right
+	ANIM_rotate_begin	   0.0000   -0.0340    0.9994	tu154ce/anim/lg/main_pos_right
 		ANIM_rotate_key	1.0	 60.00
 		ANIM_rotate_key	0.8	 65.00
 		ANIM_rotate_key	0.7	 70.00
@@ -27105,7 +27105,7 @@ ANIM_end
 # right_gear_door.007
 ANIM_begin
 	ANIM_trans	   5.3373   -3.9024    1.7266	   5.3373   -3.9024    1.7266	0 0	no_ref
-	ANIM_rotate_begin	   0.0000    0.0340   -0.9994	sim/custom/anim/lg/main_pos_right
+	ANIM_rotate_begin	   0.0000    0.0340   -0.9994	tu154ce/anim/lg/main_pos_right
 		ANIM_rotate_key	1.0	 60.00
 		ANIM_rotate_key	0.8	 65.00
 		ANIM_rotate_key	0.7	 70.00
@@ -27126,7 +27126,7 @@ ANIM_end
 # left_gear_door
 ANIM_begin
 	ANIM_trans	  -5.3370   -3.9024    1.7266	  -5.3370   -3.9024    1.7266	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -0.0340    0.9994	sim/custom/anim/lg/main_pos_left
+	ANIM_rotate_begin	   0.0000   -0.0340    0.9994	tu154ce/anim/lg/main_pos_left
 		ANIM_rotate_key	1.0	 60.00
 		ANIM_rotate_key	0.8	 65.00
 		ANIM_rotate_key	0.7	 70.00
@@ -27147,7 +27147,7 @@ ANIM_end
 # left_gear_door.006
 ANIM_begin
 	ANIM_trans	  -6.1670   -3.9024    1.7266	  -6.1670   -3.9024    1.7266	0 0	no_ref
-	ANIM_rotate_begin	   0.0000    0.0340   -0.9994	sim/custom/anim/lg/main_pos_left
+	ANIM_rotate_begin	   0.0000    0.0340   -0.9994	tu154ce/anim/lg/main_pos_left
 		ANIM_rotate_key	1.0	 60.00
 		ANIM_rotate_key	0.8	 65.00
 		ANIM_rotate_key	0.7	 70.00
@@ -27168,7 +27168,7 @@ ANIM_end
 # right_gear_door.003
 ANIM_begin
 	ANIM_trans	   6.2253   -3.7428    4.7400	   6.2253   -3.7428    4.7400	0 0	no_ref
-	ANIM_rotate_begin	  -0.0276    0.0000    0.9996	sim/custom/anim/lg/main_pos_right
+	ANIM_rotate_begin	  -0.0276    0.0000    0.9996	tu154ce/anim/lg/main_pos_right
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.9	 75.00
 		ANIM_rotate_key	0.1	 75.00
@@ -27180,7 +27180,7 @@ ANIM_end
 # right_gear_door.004
 ANIM_begin
 	ANIM_trans	   5.2787   -3.7428    4.7400	   5.2787   -3.7428    4.7400	0 0	no_ref
-	ANIM_rotate_begin	  -0.0276   -0.0000   -0.9996	sim/custom/anim/lg/main_pos_right
+	ANIM_rotate_begin	  -0.0276   -0.0000   -0.9996	tu154ce/anim/lg/main_pos_right
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.9	 75.00
 		ANIM_rotate_key	0.1	 75.00
@@ -27192,7 +27192,7 @@ ANIM_end
 # left_gear_door.003
 ANIM_begin
 	ANIM_trans	  -5.2787   -3.7428    4.7400	  -5.2787   -3.7428    4.7400	0 0	no_ref
-	ANIM_rotate_begin	  -0.0276    0.0000    0.9996	sim/custom/anim/lg/main_pos_left
+	ANIM_rotate_begin	  -0.0276    0.0000    0.9996	tu154ce/anim/lg/main_pos_left
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.9	 75.00
 		ANIM_rotate_key	0.1	 75.00
@@ -27204,7 +27204,7 @@ ANIM_end
 # left_gear_door.004
 ANIM_begin
 	ANIM_trans	  -6.2253   -3.7428    4.7400	  -6.2253   -3.7428    4.7400	0 0	no_ref
-	ANIM_rotate_begin	  -0.0276    0.0000   -0.9996	sim/custom/anim/lg/main_pos_left
+	ANIM_rotate_begin	  -0.0276    0.0000   -0.9996	tu154ce/anim/lg/main_pos_left
 		ANIM_rotate_key	1.0	  0.00
 		ANIM_rotate_key	0.9	 75.00
 		ANIM_rotate_key	0.1	 75.00
@@ -27219,7 +27219,7 @@ TRIS	76869 582
 # fuselage.004
 ANIM_begin
 	ANIM_trans	   1.8482   -2.0580   -8.5479	   1.8482   -2.0580   -8.5479	0 0	no_ref
-	ANIM_rotate_begin	   0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_3
+	ANIM_rotate_begin	   0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_3
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -27231,7 +27231,7 @@ ANIM_begin
 	# fuselage.004
 	ANIM_begin
 		ANIM_trans	  -0.0258    0.0080    0.4461	  -0.0258    0.0080    0.4461	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_3
+		ANIM_rotate_begin	  -0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_3
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -27246,7 +27246,7 @@ ANIM_end
 # fuselage.034
 ANIM_begin
 	ANIM_trans	  -1.8750   -1.9701   -7.1527	  -1.8750   -1.9701   -7.1527	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_2
+	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_2
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -27258,7 +27258,7 @@ ANIM_begin
 	# fuselage.034
 	ANIM_begin
 		ANIM_trans	   0.0768    0.0091    0.5163	   0.0768    0.0091    0.5163	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_2
+		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_2
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -27273,7 +27273,7 @@ ANIM_end
 # fuselage.016
 ANIM_begin
 	ANIM_trans	  -1.7135   -1.9701  -18.1697	  -1.7135   -1.9701  -18.1697	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	sim/custom/anim/pax_door_1
+	ANIM_rotate_begin	   0.0000   -1.0000    0.0000	tu154ce/anim/pax_door_1
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 30.00
@@ -27285,7 +27285,7 @@ ANIM_begin
 	# fuselage.016
 	ANIM_begin
 		ANIM_trans	  -0.0083   -0.1613    0.5216	  -0.0083   -0.1613    0.5216	0 0	no_ref
-		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	sim/custom/anim/pax_door_1
+		ANIM_rotate_begin	  -0.0000    1.0000   -0.0000	tu154ce/anim/pax_door_1
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	  0.00
 			ANIM_rotate_key	0.4	 30.00
@@ -27299,7 +27299,7 @@ ANIM_begin
 ANIM_end
 # fuselage.019
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cargo_1
+	ANIM_trans_begin	tu154ce/anim/cargo_1
 		ANIM_trans_key	0	   1.4368   -3.1026  -10.9359
 		ANIM_trans_key	0.2	   1.1850   -3.1026  -10.9359
 		ANIM_trans_key	1	   1.1850   -3.1026  -12.2315
@@ -27315,7 +27315,7 @@ ANIM_end
 # right_gear_door.006
 ANIM_begin
 	ANIM_trans	   6.1667   -3.9024    1.7266	   6.1667   -3.9024    1.7266	0 0	no_ref
-	ANIM_rotate_begin	   0.0000   -0.0340    0.9994	sim/custom/anim/lg/main_pos_right
+	ANIM_rotate_begin	   0.0000   -0.0340    0.9994	tu154ce/anim/lg/main_pos_right
 		ANIM_rotate_key	1.0	 60.00
 		ANIM_rotate_key	0.8	 65.00
 		ANIM_rotate_key	0.7	 70.00
@@ -27336,7 +27336,7 @@ ANIM_end
 # left_gear_door.006
 ANIM_begin
 	ANIM_trans	  -6.1670   -3.9024    1.7266	  -6.1670   -3.9024    1.7266	0 0	no_ref
-	ANIM_rotate_begin	   0.0000    0.0340   -0.9994	sim/custom/anim/lg/main_pos_left
+	ANIM_rotate_begin	   0.0000    0.0340   -0.9994	tu154ce/anim/lg/main_pos_left
 		ANIM_rotate_key	1.0	 60.00
 		ANIM_rotate_key	0.8	 65.00
 		ANIM_rotate_key	0.7	 70.00

@@ -11,9 +11,9 @@ defineProperty("roll_sim", globalPropertyf("sim/flightmodel/position/phi"))
 sim/flightmodel/position/theta	float	y	degrees	The pitch relative to the plane normal to the Y axis in degrees
 sim/flightmodel/position/phi	float	y	degrees	The roll of the aircraft in degrees
 --]]
-defineProperty("N1", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[1]"))   
-defineProperty("N2", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[0]"))
-defineProperty("N3", globalPropertyf("sim/flightmodel/engine/ENGN_N2_[2]"))
+defineProperty("N1", globalProperty("sim/flightmodel/engine/ENGN_N2_[1]"))   
+defineProperty("N2", globalProperty("sim/flightmodel/engine/ENGN_N2_[0]"))
+defineProperty("N3", globalProperty("sim/flightmodel/engine/ENGN_N2_[2]"))
 
 
 -- controls

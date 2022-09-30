@@ -158,16 +158,16 @@ defineProperty("SATin", globalPropertyf("sim/cockpit2/temperature/outside_air_te
 defineProperty("TATin", globalPropertyf("sim/cockpit2/temperature/outside_air_LE_temp_degc"))
 
 defineProperty("EnginesNum", globalPropertyi("sim/aircraft/overflow/acf_num_thrustpoints"))
-defineProperty("Enginestype", globalPropertyi("sim/aircraft/prop/acf_en_type[0]"))
+defineProperty("Enginestype", globalProperty("sim/aircraft/prop/acf_en_type[0]"))
 
-defineProperty("FuelFlow1", globalPropertyf("sim/flightmodel/engine/ENGN_FF_[0]"))
-defineProperty("FuelFlow2", globalPropertyf("sim/flightmodel/engine/ENGN_FF_[1]"))
-defineProperty("FuelFlow3", globalPropertyf("sim/flightmodel/engine/ENGN_FF_[2]"))
-defineProperty("FuelFlow4", globalPropertyf("sim/flightmodel/engine/ENGN_FF_[3]"))
-defineProperty("FuelFlow5", globalPropertyf("sim/flightmodel/engine/ENGN_FF_[4]"))
-defineProperty("FuelFlow6", globalPropertyf("sim/flightmodel/engine/ENGN_FF_[5]"))
-defineProperty("FuelFlow7", globalPropertyf("sim/flightmodel/engine/ENGN_FF_[6]"))
-defineProperty("FuelFlow8", globalPropertyf("sim/flightmodel/engine/ENGN_FF_[7]"))
+defineProperty("FuelFlow1", globalProperty("sim/flightmodel/engine/ENGN_FF_[0]"))
+defineProperty("FuelFlow2", globalProperty("sim/flightmodel/engine/ENGN_FF_[1]"))
+defineProperty("FuelFlow3", globalProperty("sim/flightmodel/engine/ENGN_FF_[2]"))
+defineProperty("FuelFlow4", globalProperty("sim/flightmodel/engine/ENGN_FF_[3]"))
+defineProperty("FuelFlow5", globalProperty("sim/flightmodel/engine/ENGN_FF_[4]"))
+defineProperty("FuelFlow6", globalProperty("sim/flightmodel/engine/ENGN_FF_[5]"))
+defineProperty("FuelFlow7", globalProperty("sim/flightmodel/engine/ENGN_FF_[6]"))
+defineProperty("FuelFlow8", globalProperty("sim/flightmodel/engine/ENGN_FF_[7]"))
 defineProperty("FuelTOT", globalPropertyf("sim/flightmodel/weight/m_fuel_total"))
 defineProperty("MD41test", globalPropertyi("tu154ce/xap/MD41/test"))
 
@@ -987,7 +987,7 @@ KLN90_panel = subpanel {
 
 --this reads the config file
 --luckily, we still have default values if the file is not present
-local filename = panelDir .. "/KLNconfig.txt"
+local filename = sasl.getAircraftPath() .. "/KLNconfig.txt"
 local file = io.open(filename, "r")
 if file then
 	while true do
@@ -3129,7 +3129,7 @@ function onAvionicsDone()
 	set(overrideGPS, 0)
 	set(overrideNAV, 0)
 	
-	local filename = panelDir .. "/KLNconfig.txt"
+	local filename = sasl.getAircraftPath() .. "/KLNconfig.txt"
 	local file = io.open(filename, "w")
 	file:write("###########################\n  DO NOT MODIFY THIS FILE!\nYOU SHOULDN'T EVEN READ IT!\n###########################\n")
 	file:write("#popx" .. popx2 .. "\n" )
@@ -8020,7 +8020,7 @@ function WPTpage(types, mode, subpage)
 									end
 								end
 							elseif values["HTlevel"] == 1 and isSamplePlaying(alert) == false then
-								playSample(alertl, 0)
+								playSample(alertl, false)
 								values["HTlevel"] = 2
 							elseif values["HTlevel"] == 2 and isSamplePlaying(alertl) == false then
 								values["HTlevel"] = 3
@@ -8098,7 +8098,7 @@ function WPTpage(types, mode, subpage)
 						if values["warnnum"] > 0 then
 							if isSamplePlaying(alert) == false then
 								values["warnnum"] = values["warnnum"] - 1
-								playSample(alert, 0)
+								playSample(alert, false)
 							end
 						end
 						
@@ -15488,7 +15488,7 @@ function WPTpage(types, mode, subpage)
 										values["MSGSTAT"][10] = 1
 										if values["VNVpause"] == 1 then
 											set(simspeed, 0)
-											playSample(alertl, 0)
+											playSample(alertl, false)
 										end
 										
 									elseif reqsec > 90 then
@@ -17658,43 +17658,43 @@ function draw()
 		--drawAll(Nav5Comp)
 		--drawAll(APT3Comp)
 		
-		drawText(font, 125, 98, get(sc_gline_1), brt, brt, brt)
-		drawText(font, 125, 87, get(sc_gline_2), brt, brt, brt)
-		drawText(font, 125, 76, get(sc_gline_3), brt, brt, brt)
-		drawText(font, 125, 65, get(sc_gline_4), brt, brt, brt)
-		drawText(font, 125, 54, get(sc_gline_5), brt, brt, brt)
-		drawText(font, 125, 43, get(sc_gline_6), brt, brt, brt)
-		drawText(font, 125, 29, get(sc_gline_7), brt, brt, brt)
+		drawText(font, 125, 98, get(sc_gline_1), 12, false, false, brt, brt, brt)
+		drawText(font, 125, 87, get(sc_gline_2), 12, false, false, brt, brt, brt)
+		drawText(font, 125, 76, get(sc_gline_3), 12, false, false, brt, brt, brt)
+		drawText(font, 125, 65, get(sc_gline_4), 12, false, false, brt, brt, brt)
+		drawText(font, 125, 54, get(sc_gline_5), 12, false, false, brt, brt, brt)
+		drawText(font, 125, 43, get(sc_gline_6), 12, false, false, brt, brt, brt)
+		drawText(font, 125, 29, get(sc_gline_7), 12, false, false, brt, brt, brt)
 	
-		drawText(fontb, 125, 98, get(sc_bline_1), brt, brt, brt)
-		drawText(fontb, 125, 87, get(sc_bline_2), brt, brt, brt)
-		drawText(fontb, 125, 76, get(sc_bline_3), brt, brt, brt)
-		drawText(fontb, 125, 65, get(sc_bline_4), brt, brt, brt)
-		drawText(fontb, 125, 54, get(sc_bline_5), brt, brt, brt)
-		drawText(fontb, 125, 43, get(sc_bline_6), brt, brt, brt)
-		drawText(fontb, 125, 29, get(sc_bline_7), brt, brt, brt)
+		drawText(fontb, 125, 98, get(sc_bline_1), 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 87, get(sc_bline_2), 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 76, get(sc_bline_3), 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 65, get(sc_bline_4), 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 54, get(sc_bline_5), 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 43, get(sc_bline_6), 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 29, get(sc_bline_7), 12, false, false, brt, brt, brt)
 		
-		drawText(fontl, 129.5, 87, get(sc_scaleline), brt, brt, brt)
+		drawText(fontl, 129.5, 87, get(sc_scaleline), 12, false, false, brt, brt, brt)
 	else
 		
 
 	
-		drawText(font, 125, 98, gline[1], brt, brt, brt)
-		drawText(font, 125, 87, gline[2], brt, brt, brt)
-		drawText(font, 125, 76, gline[3], brt, brt, brt)
-		drawText(font, 125, 65, gline[4], brt, brt, brt)
-		drawText(font, 125, 54, gline[5], brt, brt, brt)
-		drawText(font, 125, 43, gline[6], brt, brt, brt)
-		drawText(font, 125, 29, gline[7], brt, brt, brt)
+		drawText(font, 125, 98, gline[1], 12, false, false, brt, brt, brt)
+		drawText(font, 125, 87, gline[2], 12, false, false, brt, brt, brt)
+		drawText(font, 125, 76, gline[3], 12, false, false, brt, brt, brt)
+		drawText(font, 125, 65, gline[4], 12, false, false, brt, brt, brt)
+		drawText(font, 125, 54, gline[5], 12, false, false, brt, brt, brt)
+		drawText(font, 125, 43, gline[6], 12, false, false, brt, brt, brt)
+		drawText(font, 125, 29, gline[7], 12, false, false, brt, brt, brt)
 	
-		drawText(fontb, 125, 98, bline[1], brt, brt, brt)
-		drawText(fontb, 125, 87, bline[2], brt, brt, brt)
-		drawText(fontb, 125, 76, bline[3], brt, brt, brt)
-		drawText(fontb, 125, 65, bline[4], brt, brt, brt)
-		drawText(fontb, 125, 54, bline[5], brt, brt, brt)
-		drawText(fontb, 125, 43, bline[6], brt, brt, brt)
-		drawText(fontb, 125, 29, bline[7], brt, brt, brt)
-		drawText(fontl, 129.5, 87, values["scaleline"], brt, brt, brt)
+		drawText(fontb, 125, 98, bline[1], 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 87, bline[2], 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 76, bline[3], 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 65, bline[4], 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 54, bline[5], 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 43, bline[6], 12, false, false, brt, brt, brt)
+		drawText(fontb, 125, 29, bline[7], 12, false, false, brt, brt, brt)
+		drawText(fontl, 129.5, 87, values["scaleline"], 12, false, false, brt, brt, brt)
 	end
 	
 	drawAll(Nav5Comp)

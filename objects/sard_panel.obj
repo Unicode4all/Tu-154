@@ -342,7 +342,7 @@ IDX	276
 IDX	277
 
 # srd_panel
-ATTR_light_level  0.000  1.000 sim/custom/lights/sard_panel_lit
+ATTR_light_level  0.000  1.000 tu154ce/lights/sard_panel_lit
 TRIS	0 522
 
 # Built with Blender 2.49. Exported with XPlane2Blender 3.10.

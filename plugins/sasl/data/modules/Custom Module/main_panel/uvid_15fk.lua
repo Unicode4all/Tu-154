@@ -64,7 +64,7 @@ function update()
 	
 	-- sounds
 	if switcher_last ~= sw_on then
-		playSample(switcher_sound, 0)
+		playSample(switcher_sound, false)
 	end
 	switcher_last = sw_on
 	

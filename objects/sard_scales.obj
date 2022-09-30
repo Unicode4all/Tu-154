@@ -615,25 +615,25 @@ IDX	480
 IDX	469
 
 # Plane
-ATTR_light_level  0.000  1.000 sim/custom/lights/sard_panel_lit
+ATTR_light_level  0.000  1.000 tu154ce/lights/sard_panel_lit
 TRIS	0 6
 # Plane.001
-ATTR_light_level  0.000  1.000 sim/custom/lights/sard_panel_lit
+ATTR_light_level  0.000  1.000 tu154ce/lights/sard_panel_lit
 TRIS	6 6
 # Circle.001
 ANIM_begin
 	ANIM_trans	   0.5759   -2.1705  -19.2022	   0.5759   -2.1705  -19.2022	0 0	no_ref
-	ANIM_rotate	   0.0000    1.0000    0.0000	  0.00 128.41	930.0 990.0	sim/custom/switchers/sard/sard_abs_press_set
+	ANIM_rotate	   0.0000    1.0000    0.0000	  0.00 128.41	930.0 990.0	tu154ce/switchers/sard/sard_abs_press_set
 	# Circle.001
-	ATTR_light_level  0.000  1.000 sim/custom/lights/sard_panel_lit
+	ATTR_light_level  0.000  1.000 tu154ce/lights/sard_panel_lit
 	TRIS	12 96
 ANIM_end
 # Circle
 ANIM_begin
 	ANIM_trans	   0.5759   -2.1417  -19.2022	   0.5759   -2.1417  -19.2022	0 0	no_ref
-	ANIM_rotate	   0.0000    1.0000   -0.0000	  0.00 136.36	525.0 650.0	sim/custom/switchers/sard/sard_cabin_press_set
+	ANIM_rotate	   0.0000    1.0000   -0.0000	  0.00 136.36	525.0 650.0	tu154ce/switchers/sard/sard_cabin_press_set
 	# Circle
-	ATTR_light_level  0.000  1.000 sim/custom/lights/sard_panel_lit
+	ATTR_light_level  0.000  1.000 tu154ce/lights/sard_panel_lit
 	TRIS	108 192
 	# Circle
 	ATTR_hard
@@ -642,11 +642,11 @@ ANIM_end
 # Circle.002
 ANIM_begin
 	ANIM_trans	   0.5916   -2.1709  -19.1329	   0.5916   -2.1709  -19.1329	0 0	no_ref
-	ANIM_rotate	   0.0000    1.0000   -0.0000	  0.00 150.22	0 0.4	sim/custom/switchers/sard/sard_diff_set
+	ANIM_rotate	   0.0000    1.0000   -0.0000	  0.00 150.22	0 0.4	tu154ce/switchers/sard/sard_diff_set
 	# Circle.002
 	ATTR_no_hard
 	# Circle.002
-	ATTR_light_level  0.000  1.000 sim/custom/lights/sard_panel_lit
+	ATTR_light_level  0.000  1.000 tu154ce/lights/sard_panel_lit
 	TRIS	678 96
 	# Circle.002
 	ATTR_hard
@@ -655,7 +655,7 @@ ANIM_end
 # srd_knob3
 ANIM_begin
 	ANIM_trans	   0.5486   -2.1768  -19.1597	   0.5486   -2.1768  -19.1597	0 0	no_ref
-	ANIM_rotate	   0.0000   -1.0000   -0.0000	  0.00 102.00	0.5 1	sim/custom/switchers/sard/sard_spd_set
+	ANIM_rotate	   0.0000   -1.0000   -0.0000	  0.00 102.00	0.5 1	tu154ce/switchers/sard/sard_spd_set
 	ATTR_light_level_reset
 	TRIS	864 330
 ANIM_end

@@ -48,9 +48,9 @@ defineProperty("vvi", globalPropertyf("sim/flightmodel/position/vh_ind"))  -- ve
 
 
 -- engines
-defineProperty("eng1_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
-defineProperty("eng2_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
-defineProperty("eng3_N1", globalPropertyf("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
+defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
+defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
+defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 
 -- Smart Copilot
@@ -204,7 +204,7 @@ function update()
 	
 	-- sounds	
 	if tcas_rot_big_now - tcas_rot_big_last + tcas_rot_small_now - tcas_rot_small_last + tcas_mode_now - tcas_mode_last ~= 0 then
-		playSample(rot_sound, 0)
+		playSample(rot_sound, false)
 	end
 	
 	
@@ -229,7 +229,7 @@ function update()
 	changes = changes - tcas_ident_btn_last - tcas_fcn_btn_last - tcas_left_btn_last - tcas_right_btn_last - tcas_ent_btn_last
 	changes = changes - tcas_atc_btn_last - tcas_rng_dn_btn_last - tcas_alt_btn_last - tcas_rng_up_btn_last
 	
-	if changes ~= 0 then playSample(button_sound, 0) end
+	if changes ~= 0 then playSample(button_sound, false) end
 	
 	
 	
@@ -374,12 +374,12 @@ function update()
 	
 	-- traffic sound
 	if mode >= 3 and scale == 0 and traffic and traffic ~= traffic_last then
-		playSample(traffic_snd, 0)
+		playSample(traffic_snd, false)
 	end
 	
 	-- clear of conflict
 	if mode == 4 and scale == 0 and scale ~= scale_last then
-		playSample(clear_conflict, 0)
+		playSample(clear_conflict, false)
 		
 		stopSample(traffic_snd)
 		stopSample(ajust_v_speed)
@@ -395,47 +395,47 @@ function update()
 	
 	-- climb
 	if mode == 4 and scale == 1 and scale_last == 0 and scale ~= scale_last then
-		playSample(climb, 0)
+		playSample(climb, false)
 	end
 	
 	-- climb now
 	if mode == 4 and scale == 1 and scale_last == 3 and scale ~= scale_last then
-		playSample(climb_now, 0)
+		playSample(climb_now, false)
 	end
 	
 	-- descend
 	if mode == 4 and scale == 3 and scale_last == 0 and scale ~= scale_last then
-		playSample(descend, 0)
+		playSample(descend, false)
 	end	
 	
 	-- descend now
 	if mode == 4 and scale == 3 and scale_last == 1 and scale ~= scale_last then
-		playSample(descend_now, 0)
+		playSample(descend_now, false)
 	end
 	
 	-- increase climb
 	if mode == 4 and scale == 2 and our_vvi < 12 and scale ~= scale_last then
-		playSample(increase_climb, 0)
+		playSample(increase_climb, false)
 	end	
 	
 	-- increase descend
 	if mode == 4 and scale == 4 and our_vvi > -12 and scale ~= scale_last then
-		playSample(increase_descend, 0)
+		playSample(increase_descend, false)
 	end		
 	
 	-- adjust VS
 	if mode == 4 and ((scale == 1 and our_vvi > 12) or (scale == 3 and our_vvi < -12) or (scale == 7 and our_vvi > 0) or (scale == 9 and our_vvi < 0) or (scale == 6 and our_vvi > 10) or (scale == 8 and our_vvi < -10)) and scale ~= scale_last then
-		playSample(ajust_v_speed, 0)
+		playSample(ajust_v_speed, false)
 	end		
 	
 	-- maintain VS
 	if mode == 4 and ((scale == 2 and our_vvi > 12) or (scale == 4 and our_vvi < -12)) and scale ~= scale_last then
-		playSample(maintain_v_speed, 0)
+		playSample(maintain_v_speed, false)
 	end	
 	
 	-- test OK
 	if mode == 0 and text == 0 and text_last == 5 and text_last ~= text then
-		playSample(tcas_test_passed, 0)
+		playSample(tcas_test_passed, false)
 	end	
 	
 	
@@ -550,11 +550,11 @@ components = {
 
 
 --[[
-local font = loadFont('segmental.fnt')
+local font = loadBitmapFont("segmental.fnt")
 
 function draw()
 
-	drawText(font, 235, 1245, "@@@@@@@@", 1, 0.7, 0.5)
+	drawText(font, 235, 1245, "@@@@@@@@", 12, false, false, 1, 0.7, 0.5)
 
 end
 

@@ -62,7 +62,7 @@ defineProperty("apu_start_cc", globalPropertyf("tu154ce/elec/apu_start_cc")) -- 
 
 defineProperty("apu_main_switch", globalPropertyi("tu154ce/switchers/eng/apu_main_switch")) -- выключатель ВСУ
 
-defineProperty("gear_defl", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- проседание стойки шасси
+defineProperty("gear_defl", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[1]")) -- проседание стойки шасси
 
 -- results
 defineProperty("bus27_volt_left", globalPropertyf("tu154ce/elec/bus27_volt_left")) -- напряжение сети 27

@@ -56,18 +56,18 @@ defineProperty("eng_ign_3", globalPropertyi("sim/operation/failures/rel_ignitr2"
 defineProperty("eng_revrs_1", globalPropertyi("sim/operation/failures/rel_revers0"))
 defineProperty("eng_revrs_3", globalPropertyi("sim/operation/failures/rel_revers2"))
 
-defineProperty("ENGN_oil_q_1", globalPropertyf("sim/flightmodel/engine/ENGN_oil_quan[0]"))
-defineProperty("ENGN_oil_q_2", globalPropertyf("sim/flightmodel/engine/ENGN_oil_quan[1]"))
-defineProperty("ENGN_oil_q_3", globalPropertyf("sim/flightmodel/engine/ENGN_oil_quan[2]"))
+defineProperty("ENGN_oil_q_1", globalProperty("sim/flightmodel/engine/ENGN_oil_quan[0]"))
+defineProperty("ENGN_oil_q_2", globalProperty("sim/flightmodel/engine/ENGN_oil_quan[1]"))
+defineProperty("ENGN_oil_q_3", globalProperty("sim/flightmodel/engine/ENGN_oil_quan[2]"))
 
 
 defineProperty("fuel_fluct_1", globalPropertyi("sim/operation/failures/rel_fuelfl0")) -- Fuel Flow Fluctuation
 defineProperty("fuel_fluct_2", globalPropertyi("sim/operation/failures/rel_fuelfl1")) -- Fuel Flow Fluctuation
 defineProperty("fuel_fluct_3", globalPropertyi("sim/operation/failures/rel_fuelfl2")) -- Fuel Flow Fluctuation
 
-defineProperty("sim_egt_1", globalPropertyf("sim/cockpit2/engine/indicators/EGT_deg_C[0]")) -- EGT from sim
-defineProperty("sim_egt_2", globalPropertyf("sim/cockpit2/engine/indicators/EGT_deg_C[1]")) -- EGT from sim
-defineProperty("sim_egt_3", globalPropertyf("sim/cockpit2/engine/indicators/EGT_deg_C[2]")) -- EGT from sim
+defineProperty("sim_egt_1", globalProperty("sim/cockpit2/engine/indicators/EGT_deg_C[0]")) -- EGT from sim
+defineProperty("sim_egt_2", globalProperty("sim/cockpit2/engine/indicators/EGT_deg_C[1]")) -- EGT from sim
+defineProperty("sim_egt_3", globalProperty("sim/cockpit2/engine/indicators/EGT_deg_C[2]")) -- EGT from sim
 
 
 
@@ -76,9 +76,9 @@ defineProperty("rpm_high_1", globalPropertyf("tu154ce/gauges/engine/rpm_high_1")
 defineProperty("rpm_high_2", globalPropertyf("tu154ce/gauges/engine/rpm_high_2")) -- обороты турбины высокого давления №2
 defineProperty("rpm_high_3", globalPropertyf("tu154ce/gauges/engine/rpm_high_3")) -- обороты турбины высокого давления №3
 
-defineProperty("eng_work_1", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[0]"))
-defineProperty("eng_work_2", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[1]"))
-defineProperty("eng_work_3", globalPropertyf("sim/flightmodel2/engines/engine_is_burning_fuel[2]"))
+defineProperty("eng_work_1", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[0]"))
+defineProperty("eng_work_2", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[1]"))
+defineProperty("eng_work_3", globalProperty("sim/flightmodel2/engines/engine_is_burning_fuel[2]"))
 
 
 defineProperty("alpha", globalPropertyf("sim/flightmodel2/misc/AoA_angle_degrees"))  -- angle of attack

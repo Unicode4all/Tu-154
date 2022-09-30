@@ -20,7 +20,7 @@ defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flig
 
 -- images
 defineProperty("screen_img_img", loadImage("taws_clock.png", 0, 0, 1000, 770))
-local text_font = loadFont('taws_scr.fnt')
+local text_font = loadBitmapFont("taws_scr.fnt")
 
 
 

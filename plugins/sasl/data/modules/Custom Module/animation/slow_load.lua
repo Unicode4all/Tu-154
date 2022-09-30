@@ -17,17 +17,17 @@ defineProperty("gear_blocks", globalPropertyi("tu154ce/anim/gear_blocks")) -- у
 defineProperty("fuel_tanker", globalPropertyf("tu154ce/anim/fuel_tanker")) -- скрыт. +50..0 - подъезжает, 0 - стоит возле замолета, 0..-50 - уезжает	100 
 
 
-defineProperty("slider_5", globalPropertyi("sim/cockpit2/switches/custom_slider_on[4]")) -- pax door 1
+defineProperty("slider_5", globalProperty("sim/cockpit2/switches/custom_slider_on[4]")) -- pax door 1
 
 -- sim load
 defineProperty("payload", globalPropertyf("sim/flightmodel/weight/m_fixed"))  -- payload weight, kg
 defineProperty("CG_load", globalPropertyf("sim/flightmodel/misc/cgz_ref_to_default")) -- Center of Gravity reference to default, m
-defineProperty("fuel_q_1", globalPropertyf("sim/flightmodel/weight/m_fuel[0]")) -- fuel quantity for tank 1
-defineProperty("fuel_q_4", globalPropertyf("sim/flightmodel/weight/m_fuel[1]")) -- fuel quantity for tank 4
-defineProperty("fuel_q_2R", globalPropertyf("sim/flightmodel/weight/m_fuel[2]")) -- fuel quantity for tank 2R
-defineProperty("fuel_q_2L", globalPropertyf("sim/flightmodel/weight/m_fuel[3]")) -- fuel quantity for tank 2L
-defineProperty("fuel_q_3R", globalPropertyf("sim/flightmodel/weight/m_fuel[4]")) -- fuel quantity for tank 3R
-defineProperty("fuel_q_3L", globalPropertyf("sim/flightmodel/weight/m_fuel[5]")) -- fuel quantity for tank 3L
+defineProperty("fuel_q_1", globalProperty("sim/flightmodel/weight/m_fuel[0]")) -- fuel quantity for tank 1
+defineProperty("fuel_q_4", globalProperty("sim/flightmodel/weight/m_fuel[1]")) -- fuel quantity for tank 4
+defineProperty("fuel_q_2R", globalProperty("sim/flightmodel/weight/m_fuel[2]")) -- fuel quantity for tank 2R
+defineProperty("fuel_q_2L", globalProperty("sim/flightmodel/weight/m_fuel[3]")) -- fuel quantity for tank 2L
+defineProperty("fuel_q_3R", globalProperty("sim/flightmodel/weight/m_fuel[4]")) -- fuel quantity for tank 3R
+defineProperty("fuel_q_3L", globalProperty("sim/flightmodel/weight/m_fuel[5]")) -- fuel quantity for tank 3L
 
 defineProperty("paylod_set", globalPropertyf("tu154ce/payload/paylod_set")) -- Нужно загрузить
 defineProperty("cg_set", globalPropertyf("tu154ce/payload/cg_set")) -- Нужно загрузить

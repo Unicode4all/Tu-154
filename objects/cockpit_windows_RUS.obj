@@ -7664,25 +7664,25 @@ ATTR_hard
 TRIS	636 6816
 # fuselage.004
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cockpit_window_left
+	ANIM_trans_begin	tu154ce/anim/cockpit_window_left
 		ANIM_trans_key	0	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	0.2	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	0.4	  -0.8299   -1.4926  -21.6419
 		ANIM_trans_key	1	  -0.9768   -1.5413  -21.2538
 	ANIM_trans_end
-	ANIM_rotate_begin	0 0 1	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	0 0 1	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  5.34
 		ANIM_rotate_key	1	  5.51
 	ANIM_rotate_end
-	ANIM_rotate_begin	0 1 0	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	0 1 0	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	 -0.00
 		ANIM_rotate_key	0.2	 -0.00
 		ANIM_rotate_key	0.4	  7.55
 		ANIM_rotate_key	1	  7.84
 	ANIM_rotate_end
-	ANIM_rotate_begin	1 0 0	sim/custom/anim/cockpit_window_left
+	ANIM_rotate_begin	1 0 0	tu154ce/anim/cockpit_window_left
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  3.24
@@ -7697,7 +7697,7 @@ ANIM_begin
 	# Cylinder.151
 	ANIM_begin
 		ANIM_trans	  -0.0801    0.1415    0.4861	  -0.0801    0.1415    0.4861	0 0	no_ref
-		ANIM_rotate_begin	  -0.4316   -0.0037    0.9021	sim/custom/anim/cockpit_window_left
+		ANIM_rotate_begin	  -0.4316   -0.0037    0.9021	tu154ce/anim/cockpit_window_left
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	 90.00
 			ANIM_rotate_key	1	 90.00
@@ -7707,25 +7707,25 @@ ANIM_begin
 ANIM_end
 # fuselage.002
 ANIM_begin
-	ANIM_trans_begin	sim/custom/anim/cockpit_window_right
+	ANIM_trans_begin	tu154ce/anim/cockpit_window_right
 		ANIM_trans_key	0	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	0.2	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	0.4	   0.8303   -1.4926  -21.6419
 		ANIM_trans_key	1	   0.9771   -1.5413  -21.2538
 	ANIM_trans_end
-	ANIM_rotate_begin	0 0 1	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	0 0 1	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	 -5.34
 		ANIM_rotate_key	1	 -5.51
 	ANIM_rotate_end
-	ANIM_rotate_begin	0 1 0	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	0 1 0	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	 -0.00
 		ANIM_rotate_key	0.2	 -0.00
 		ANIM_rotate_key	0.4	 -7.55
 		ANIM_rotate_key	1	 -7.84
 	ANIM_rotate_end
-	ANIM_rotate_begin	1 0 0	sim/custom/anim/cockpit_window_right
+	ANIM_rotate_begin	1 0 0	tu154ce/anim/cockpit_window_right
 		ANIM_rotate_key	0	  0.00
 		ANIM_rotate_key	0.2	  0.00
 		ANIM_rotate_key	0.4	  3.24
@@ -7740,7 +7740,7 @@ ANIM_begin
 	# Cylinder.150
 	ANIM_begin
 		ANIM_trans	   0.0798    0.1415    0.4861	   0.0798    0.1415    0.4861	0 0	no_ref
-		ANIM_rotate_begin	  -0.4142   -0.0037   -0.9102	sim/custom/anim/cockpit_window_right
+		ANIM_rotate_begin	  -0.4142   -0.0037   -0.9102	tu154ce/anim/cockpit_window_right
 			ANIM_rotate_key	0	  0.00
 			ANIM_rotate_key	0.2	 90.00
 			ANIM_rotate_key	1	 90.00
@@ -7751,7 +7751,7 @@ ANIM_end
 # Cylinder.003
 ANIM_begin
 	ANIM_trans	   0.5678   -1.4707  -21.9087	   0.5678   -1.4707  -21.9087	0 0	no_ref
-	ANIM_rotate	  -0.4264   -0.6871    0.5883	  0.00  62.00	0 62.0	sim/custom/anim/wiper_angle_right
+	ANIM_rotate	  -0.4264   -0.6871    0.5883	  0.00  62.00	0 62.0	tu154ce/anim/wiper_angle_right
 	# Cylinder.003
 	ATTR_no_hard
 	TRIS	12912 1362
@@ -7759,7 +7759,7 @@ ANIM_end
 # Cylinder.006
 ANIM_begin
 	ANIM_trans	  -0.5680   -1.4707  -21.9087	  -0.5680   -1.4707  -21.9087	0 0	no_ref
-	ANIM_rotate	  -0.4264    0.6871   -0.5883	  0.00  62.00	0 62.0	sim/custom/anim/wiper_angle_left
+	ANIM_rotate	  -0.4264    0.6871   -0.5883	  0.00  62.00	0 62.0	tu154ce/anim/wiper_angle_left
 	TRIS	14274 1362
 ANIM_end
 # Plane.265
@@ -7770,7 +7770,7 @@ TRIS	15636 414
 # Plane.206
 ANIM_begin
 	ANIM_trans	  -0.2725   -1.5296  -19.0220	  -0.2725   -1.5296  -19.0220	0 0	no_ref
-	ANIM_rotate	   0.0000   -1.0000   -0.0000	  0.00  90.00	0 1	sim/custom/anim/cockpit_door
+	ANIM_rotate	   0.0000   -1.0000   -0.0000	  0.00  90.00	0 1	tu154ce/anim/cockpit_door
 	TRIS	16050 6
 ANIM_end
 

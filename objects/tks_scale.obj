@@ -67,9 +67,9 @@ IDX	36
 # Circle
 ANIM_begin
 	ANIM_trans	   0.1680   -1.0719  -20.9811	   0.1680   -1.0719  -20.9811	0 0	no_ref
-	ANIM_rotate	   0.0000   -0.9847    0.1742	  0.00 160.00	0 90.0	sim/custom/rotary/ovhd/tks_lat_set
+	ANIM_rotate	   0.0000   -0.9847    0.1742	  0.00 160.00	0 90.0	tu154ce/rotary/ovhd/tks_lat_set
 	# Circle
-	ATTR_light_level  0.000  1.000 sim/custom/lights/ovhd_panel_int
+	ATTR_light_level  0.000  1.000 tu154ce/lights/ovhd_panel_int
 	TRIS	0 108
 ANIM_end
 

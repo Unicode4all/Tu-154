@@ -13915,31 +13915,31 @@ IDX10 10708 10706 10708 10709 10710 10711 10712 10710 10712 10713
 IDX10 10714 10715 10716 10716 10715 10717 10718 10719 10720 10719
 IDX10 10721 10720 10722 10723 10724 10723 10725 10724 10726 10727
 IDX10 10728 10728 10727 10729 10730 10731 10732 10731 10733 10732
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/ovhd_panel_int
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/ovhd_panel_int
 TRIS 0 117
 ATTR_light_level_reset
 TRIS 117 828
-ATTR_light_level 0.000000 1.000000 sim/custom/light/no_LIT
+ATTR_light_level 0.000000 1.000000 tu154ce/light/no_LIT
 ATTR_hard 
 TRIS 945 4830
 ATTR_light_level_reset
 TRIS 5775 1920
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/ovhd_panel_int
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/ovhd_panel_int
 TRIS 7695 1311
 ATTR_light_level_reset
 TRIS 9006 5760
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/ark1_all_lit
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/ark1_all_lit
 TRIS 14766 78
-ATTR_light_level 0.000000 1.000000 sim/custom/lights/ark2_all_lit
+ATTR_light_level 0.000000 1.000000 tu154ce/lights/ark2_all_lit
 TRIS 14844 78
 ANIM_begin
-ANIM_hide 1.000000 1.000000 sim/custom/anim/show_gns
-ANIM_show 0.000000 0.000000 sim/custom/anim/show_gns
-ATTR_light_level 0.000000 1.000000 sim/custom/light/no_LIT
+ANIM_hide 1.000000 1.000000 tu154ce/anim/show_gns
+ANIM_show 0.000000 0.000000 tu154ce/anim/show_gns
+ATTR_light_level 0.000000 1.000000 tu154ce/light/no_LIT
 TRIS 14922 72
 ANIM_end
 ANIM_begin
-ANIM_trans 0.000000 0.000000 0.000000 0.000000 -0.020000 0.000000 0.000000 1.000000 sim/custom/anim/show_gns
+ANIM_trans 0.000000 0.000000 0.000000 0.000000 -0.020000 0.000000 0.000000 1.000000 tu154ce/anim/show_gns
 TRIS 14994 462
 ANIM_end
 ATTR_no_hard

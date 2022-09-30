@@ -92,9 +92,9 @@ defineProperty("rpm_high_1", globalPropertyf("tu154ce/gauges/engine/rpm_high_1")
 defineProperty("rpm_high_2", globalPropertyf("tu154ce/gauges/engine/rpm_high_2")) -- обороты турбины высокого давления №2
 defineProperty("rpm_high_3", globalPropertyf("tu154ce/gauges/engine/rpm_high_3")) -- обороты турбины высокого давления №3
 
-defineProperty("ENGN_propmode_1", globalPropertyf("sim/flightmodel/engine/ENGN_propmode[0]"))
-defineProperty("ENGN_propmode_2", globalPropertyf("sim/flightmodel/engine/ENGN_propmode[1]"))
-defineProperty("ENGN_propmode_3", globalPropertyf("sim/flightmodel/engine/ENGN_propmode[2]"))
+defineProperty("ENGN_propmode_1", globalProperty("sim/flightmodel/engine/ENGN_propmode[0]"))
+defineProperty("ENGN_propmode_2", globalProperty("sim/flightmodel/engine/ENGN_propmode[1]"))
+defineProperty("ENGN_propmode_3", globalProperty("sim/flightmodel/engine/ENGN_propmode[2]"))
 
 
 defineProperty("fuel_flow_1", globalPropertyf("tu154ce/gauges/eng/fuel_flow_1")) -- расход топлива двиг 1
@@ -105,15 +105,15 @@ defineProperty("m_total", globalPropertyf("sim/flightmodel/weight/m_total")) -- 
 defineProperty("m_fuel", globalPropertyf("sim/flightmodel/weight/m_fuel_total")) -- kgs	Fuel Tank Weight - for 9 tanks
 defineProperty("cg_pos_actual", globalPropertyf("tu154ce/misc/cg_pos_actual")) -- актуальное положение CG
 
-defineProperty("deflection_mtr_3", globalPropertyf("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
+defineProperty("deflection_mtr_3", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[2]")) -- 
 
 defineProperty("roll_main_mode", globalPropertyi("tu154ce/absu/roll_main_mode")) -- основной режим АБСУ по крену. 0 - выкл, 1 - штурвальный - 2 - стаб
 defineProperty("pitch_main_mode", globalPropertyi("tu154ce/absu/pitch_main_mode")) -- основной режим АБСУ по тангажу. 0 - выкл, 1 - штурвальный - 2 - стаб
 defineProperty("stu_mode", globalPropertyi("tu154ce/absu/stu_mode")) -- режимы автомата тяги 0 - выкл, 1 - вкл, 2 - готов, 3 стаб, 4 - уход	
 
-defineProperty("deploy_ratio_1", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[0]")) -- 
-defineProperty("deploy_ratio_2", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[1]")) -- 
-defineProperty("deploy_ratio_3", globalPropertyf("sim/flightmodel2/gear/deploy_ratio[2]")) -- 
+defineProperty("deploy_ratio_1", globalProperty("sim/flightmodel2/gear/deploy_ratio[0]")) -- 
+defineProperty("deploy_ratio_2", globalProperty("sim/flightmodel2/gear/deploy_ratio[1]")) -- 
+defineProperty("deploy_ratio_3", globalProperty("sim/flightmodel2/gear/deploy_ratio[2]")) -- 
 
 defineProperty("outer_marker", globalPropertyi("sim/cockpit/misc/outer_marker_lit"))   -- runway markers
 defineProperty("middle_marker", globalPropertyi("sim/cockpit/misc/middle_marker_lit"))
@@ -147,7 +147,7 @@ defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flig
 
 
 
-local filename = panelDir.."/black_box/default_file.bbox" -- current name of file
+local filename = sasl.getAircraftPath().."/black_box/default_file.bbox" -- current name of file
 local panel_numbers = "0"
 
 
@@ -166,7 +166,7 @@ local function createFileName()
 	
 	panel_numbers = date_ten .. date_one .."_".. month_ten .. month_one .."_".. year_ten .. year_one .."_".. route_hun .. route_ten .. route_one
 	
-	filename = panelDir.."/black_box/".. panel_numbers .. ".bbox"
+	filename = sasl.getAircraftPath().."/black_box/".. panel_numbers .. ".bbox"
 	
 
 
@@ -484,7 +484,7 @@ function create_file()
 		savefile:close()
 		return true
 	else
-		print("error saving file. check if there is \"black_box\" folder here: "..panelDir.. " and permissions for it")
+		print("error saving file. check if there is \"black_box\" folder here: "..sasl.getAircraftPath().. " and permissions for it")
 		return false
 	end
 	

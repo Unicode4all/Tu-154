@@ -10,16 +10,17 @@ defineProperty("gs_press_2", globalPropertyf("tu154ce/hydro/gs_press_2")) -- Ð´Ð
 
 defineProperty("have_pedals", globalPropertyi("tu154ce/have_pedals"))
 
-tiller_avail = globalPropertyi("sim/joystick/joy_mapped_axis_avail[37]") -- index 37 is nosewheel tiller
-tiller_val = globalPropertyf("sim/joystick/joy_mapped_axis_value[37]") -- "1 + because Lua tables start with 1"
+tiller_avail = globalProperty("sim/joystick/joy_mapped_axis_avail[37]") -- index 37 is nosewheel tiller
+tiller_val = globalProperty("sim/joystick/joy_mapped_axis_value[37]") -- "1 + because Lua tables start with 1"
 
 joy_yaw = globalPropertyf("sim/cockpit2/controls/yoke_heading_ratio") -- yaw position of joystick
 
-tire_steer_command_deg = globalPropertyf("sim/flightmodel2/gear/tire_steer_command_deg[0]")
-tire_steer_actual_deg = globalPropertyf("sim/flightmodel2/gear/tire_steer_actual_deg[0]")
+tire_steer_command_deg = globalProperty("sim/flightmodel2/gear/tire_steer_command_deg[0]")
+tire_steer_actual_deg = globalProperty("sim/flightmodel2/gear/tire_steer_actual_deg[0]")
 
 
 pushback = globalPropertyi("bp/connected")
+
 override_wheel_steer = globalPropertyi("sim/operation/override/override_wheel_steer")
 
 -- results

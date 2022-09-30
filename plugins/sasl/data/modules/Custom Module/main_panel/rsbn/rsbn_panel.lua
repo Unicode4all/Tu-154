@@ -57,7 +57,7 @@ local function buttons()
 
 	local but_summ = rsbn_control_strobe_sw + rsbn_control_azimuth_sw + rsbn_control_distance_sw
 	
-	if but_summ ~= but_summ_last then playSample(button_sound, 0) end
+	if but_summ ~= but_summ_last then playSample(button_sound, false) end
 	
 	but_summ_last = but_summ
 
@@ -73,7 +73,7 @@ local function rotary()
 	
 	local summ = rsbn_ch_ten_sw + rsbn_ch_one_sw
 	
-	if summ ~= rot_summ_last then playSample(rotary_sound, 0) end
+	if summ ~= rot_summ_last then playSample(rotary_sound, false) end
 	
 	rot_summ_last = summ
 

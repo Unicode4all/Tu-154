@@ -9,9 +9,8 @@ local prefile = ""
 local endfile = ""
 
 
-
-local afl_file = panelDir.."/airfoils/wing.afl"
-local afl2 = panelDir.."/airfoils/wing_test.afl"
+local afl_file = sasl.getAircraftPath().."/airfoils/wing.afl"
+local afl2 = sasl.getAircraftPath().."/airfoils/wing_test.afl"
 
 
 
