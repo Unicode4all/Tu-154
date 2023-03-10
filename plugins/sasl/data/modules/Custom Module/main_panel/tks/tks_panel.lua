@@ -31,7 +31,7 @@ defineProperty("ga_reserve_fail", globalPropertyf("tu154ce/lights/ga_reserve_fai
 
 defineProperty("lamp_test", globalPropertyi("tu154ce/buttons/lamp_test_front")) -- кнопка проверки ламп на передней панели	0
 defineProperty("day_night_set", globalPropertyf("tu154ce/lights/day_night_set")) -- переключатель день - ночь. 0 - день, 1 - ночь. приглушает яркость сигнальных ламп.
-
+include("smooth_light.lua")
 
 -- sounds
 local switcher_sound = loadSample('Custom Sounds/plastic_switch.wav')
@@ -50,7 +50,7 @@ local function switchers_check()
 	local sw_summ = tks_mode_sw + tks_user_sw + tks_source_sw + tks_course_set_sw
 	
 	if sw_summ ~= sw_last then
-		playSample(switcher_sound, false)
+		
 	end
 	
 	sw_last = sw_summ
@@ -58,7 +58,7 @@ local function switchers_check()
 	local butt_now = get(tks_corrr_button)
 	
 	if butt_last ~= butt_now then
-		playSample(button_sound, false)
+		
 	end
 	
 	butt_last = butt_now
@@ -77,13 +77,13 @@ local function lamps()
 	local fail_main = bool2int(get(fail_left) == 1) --bool2int(get(fail_left) == 1 or (get(stabil_ga_main) == 1 and mgv))
 	
 	local tks_main_fail_brt = math.max(fail_main * lamps_brt, 0)
-	set(tks_main_fail, tks_main_fail_brt)
+	set(tks_main_fail, smooth_light(tks_main_fail_brt, get(tks_main_fail)))
 	
 	
 	local fail_aux = bool2int(get(fail_right) == 1) --bool2int(get(fail_right) == 1 or (get(stabil_ga_reserv) == 1 and mgv))
 	
 	local tks_contr_fail_brt = math.max(fail_aux * lamps_brt, 0)
-	set(tks_contr_fail, tks_contr_fail_brt)
+	set(tks_contr_fail, smooth_light(tks_contr_fail_brt, get(tks_contr_fail)))
 	
 	
 	local test_btn = get(lamp_test) * math.max(get(bus27_volt_right) - 10 / 18.5, 0)
@@ -91,10 +91,10 @@ local function lamps()
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0) * day_night
 	
 	local ga_main_fail_brt = math.max(fail_main * lamps_brt, test_btn)
-	set(ga_main_fail, ga_main_fail_brt)
+	set(ga_main_fail, smooth_light(ga_main_fail_brt, get(ga_main_fail)))
 	
 	local ga_reserve_fail_brt = math.max(fail_aux * lamps_brt, test_btn)
-	set(ga_reserve_fail, ga_reserve_fail_brt)
+	set(ga_reserve_fail, smooth_light(ga_reserve_fail_brt, get(ga_reserve_fail)))
 	
 	
 	

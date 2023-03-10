@@ -22,36 +22,36 @@ defineProperty("vvi_int", globalPropertyf("tu154ce/gauges/vvi_left")) -- VVI
 
 
 -- load images
-defineProperty("scale_img", loadImage("tcas_scale.png", 14, 6, 482, 482))
-defineProperty("needle_img", loadImage("tcas_scale.png", 2, 478, 346, 32))
+defineProperty("scale_img", loadImage("tcas_scale.png", 14, 47, 482, 482))
+defineProperty("needle_img", loadImage("tcas_scale.png", 2, 0, 346, 38))
 
-defineProperty("scale_15", loadImage("tcas_marks.png", 18, 66, 72, 72))
-defineProperty("scale_10", loadImage("tcas_marks.png", 123, 65, 102, 102))
-defineProperty("scale_5", loadImage("tcas_marks.png", 276, 57, 194, 194))
-defineProperty("scale_3", loadImage("tcas_marks.png", 18, 293, 268, 174))
-defineProperty("mc_img", loadImage("tcas_marks.png", 0, 0, 53, 22))
-defineProperty("stby_img", loadImage("tcas_marks.png", 8, 190, 110, 46))
-defineProperty("ta_img", loadImage("tcas_marks.png", 144, 191, 83, 46))
-defineProperty("test_img", loadImage("tcas_marks.png", 64, 0, 78, 22))
+defineProperty("scale_15", loadImage("tcas_marks.png", 18, 377, 72, 72))
+defineProperty("scale_10", loadImage("tcas_marks.png", 123, 343, 102, 102))
+defineProperty("scale_5", loadImage("tcas_marks.png", 276, 256, 194, 194))
+defineProperty("scale_3", loadImage("tcas_marks.png", 18, 48, 268, 174))
+defineProperty("mc_img", loadImage("tcas_marks.png", 0, 493, 53, 22))
+defineProperty("stby_img", loadImage("tcas_marks.png", 8, 275, 110, 46))
+defineProperty("ta_img", loadImage("tcas_marks.png", 144, 275, 83, 46))
+defineProperty("test_img", loadImage("tcas_marks.png", 64, 493, 78, 22))
 
 defineProperty("range_15", loadImage("tcas_marks.png", 372, 399, 112, 24))
 defineProperty("range_10", loadImage("tcas_marks.png", 372, 364, 112, 24))
 defineProperty("range_5", loadImage("tcas_marks.png", 372, 329, 112, 24))
 defineProperty("range_3", loadImage("tcas_marks.png", 372, 293, 112, 24))
 
-defineProperty("above_img", loadImage("tcas_marks.png", 372, 433, 113, 22))
-defineProperty("below_img", loadImage("tcas_marks.png", 371, 465, 115, 22))
+defineProperty("above_img", loadImage("tcas_marks.png", 372, 58, 113, 22))
+defineProperty("below_img", loadImage("tcas_marks.png", 371, 25, 115, 22))
 
 -- RA scales
-defineProperty("tcas_scale_climb", loadImage("tcas_scale_climb.png", 14, 6, 482, 482))
-defineProperty("tcas_scale_climb_10", loadImage("tcas_scale_climb_10.png", 14, 6, 482, 482))
-defineProperty("tcas_scale_descend", loadImage("tcas_scale_descend.png", 14, 6, 482, 482))
-defineProperty("tcas_scale_descend_10", loadImage("tcas_scale_descend_10.png", 14, 6, 482, 482))
-defineProperty("tcas_scale_maintain_lvl", loadImage("tcas_scale_maintain_lvl.png", 14, 6, 482, 482))
-defineProperty("tcas_scale_not_climb", loadImage("tcas_scale_not_climb.png", 14, 6, 482, 482))
-defineProperty("tcas_scale_not_climb_2", loadImage("tcas_scale_not_climb_2.png", 14, 6, 482, 482))
-defineProperty("tcas_scale_not_descend", loadImage("tcas_scale_not_descend.png", 14, 6, 482, 482))
-defineProperty("tcas_scale_not_descend_2", loadImage("tcas_scale_not_descend_2.png", 14, 6, 482, 482))
+defineProperty("tcas_scale_climb", loadImage("tcas_scale_climb.png", 14, 47, 482, 482))
+defineProperty("tcas_scale_climb_10", loadImage("tcas_scale_climb_10.png", 14, 47, 482, 482))
+defineProperty("tcas_scale_descend", loadImage("tcas_scale_descend.png", 14, 47, 482, 482))
+defineProperty("tcas_scale_descend_10", loadImage("tcas_scale_descend_10.png", 14, 47, 482, 482))
+defineProperty("tcas_scale_maintain_lvl", loadImage("tcas_scale_maintain_lvl.png", 14, 47, 482, 482))
+defineProperty("tcas_scale_not_climb", loadImage("tcas_scale_not_climb.png", 14, 47, 482, 482))
+defineProperty("tcas_scale_not_climb_2", loadImage("tcas_scale_not_climb_2.png", 14, 47, 482, 482))
+defineProperty("tcas_scale_not_descend", loadImage("tcas_scale_not_descend.png", 14, 47, 482, 482))
+defineProperty("tcas_scale_not_descend_2", loadImage("tcas_scale_not_descend_2.png", 14, 47, 482, 482))
 
 -- datarefs
 defineProperty("mode_set", globalPropertyi("tu154ce/tcas/mode_set"))  -- режим TCAS. -1 = test, 0 - stby, 1 = alt off, 2 = alt on, 3 = TA, 4 = TARA	4
@@ -201,7 +201,7 @@ components = {
 
 	-- main scale
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(scale_img),
 	},
 
@@ -216,7 +216,7 @@ components = {
 
 	-- tcas_scale_climb_10
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(tcas_scale_climb_10),
 		visible = function()
 			return ra_mode == 2 and tcas_power
@@ -225,7 +225,7 @@ components = {
 	
 	-- tcas_scale_descend
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(tcas_scale_descend),
 		visible = function()
 			return ra_mode == 3 and tcas_power
@@ -234,7 +234,7 @@ components = {
 
 	-- tcas_scale_descend_10
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(tcas_scale_descend_10),
 		visible = function()
 			return ra_mode == 4 and tcas_power
@@ -243,7 +243,7 @@ components = {
 
 	-- tcas_scale_maintain_lvl
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(tcas_scale_maintain_lvl),
 		visible = function()
 			return ra_mode == 5 and tcas_power
@@ -252,7 +252,7 @@ components = {
 
 	-- tcas_scale_not_climb
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(tcas_scale_not_climb),
 		visible = function()
 			return ra_mode == 6 and tcas_power
@@ -261,7 +261,7 @@ components = {
 
 	-- tcas_scale_not_climb_2
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(tcas_scale_not_climb_2),
 		visible = function()
 			return ra_mode == 7 and tcas_power
@@ -270,7 +270,7 @@ components = {
 
 	-- tcas_scale_not_descend
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(tcas_scale_not_descend),
 		visible = function()
 			return ra_mode == 8 and tcas_power
@@ -279,7 +279,7 @@ components = {
 
 	-- tcas_scale_not_descend_2
 	textureLit {
-		position = {0, 38, 482, 482},
+		position = {0, 60, 482, 482},
 		image = get(tcas_scale_not_descend_2),
 		visible = function()
 			return (ra_mode == 9 or mode_show == -1) and tcas_power
@@ -324,7 +324,7 @@ components = {
 	
 	-- stby mark
 	textureLit {
-		position = {40, 60, 110, 46},
+		position = {40, 40, 110, 46},
 		image = get(stby_img),
 		visible = function()
 			return mode_show >= 0 and mode_show <= 2 and tcas_power
@@ -335,7 +335,7 @@ components = {
 	
 	-- ta only mark
 	textureLit {
-		position = {50, 60, 83, 46},
+		position = {50, 40, 83, 46},
 		image = get(ta_img),
 		visible = function()
 			return mode_show == 3 and tcas_power
@@ -345,7 +345,7 @@ components = {
 
 	-- test mark
 	textureLit {
-		position = {50, 60, 78, 22},
+		position = {50, 40, 78, 22},
 		image = get(test_img),
 		visible = function()
 			return mode_show == -1 and tcas_power
@@ -354,7 +354,7 @@ components = {
 
 	-- above mark
 	textureLit {
-		position = {30, 455, 115, 22},
+		position = {30, 485, 115, 22},
 		image = get(above_img),
 		visible = function()
 			return (level == 1 or mode_show == -1) and tcas_power
@@ -363,7 +363,7 @@ components = {
 
 	-- below mark
 	textureLit {
-		position = {30, 455, 115, 22},
+		position = {30, 485, 115, 22},
 		image = get(below_img),
 		visible = function()
 			return level == -1 and tcas_power
@@ -372,7 +372,7 @@ components = {
 	
 	-- FL text
 	fl_text{
-		position = {30, 420, 160, 40},
+		position = {30, 485, 160, 40},
 		text = function()
 			return fl_text_draw
 		end, 

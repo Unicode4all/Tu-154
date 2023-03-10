@@ -1,0 +1,35 @@
+tu154ce/switchers/breakers/right/ap_subchannel3 int АЗС САУ III ПК          1
+tu154ce/switchers/breakers/right/fd_subchannel3 int АЗС СТУ III ПК          1
+tu154ce/switchers/breakers/right/fd_test int контроль СТУ                    1
+tu154ce/switchers/breakers/right/afcs_sc3 int АБСУ 3 ПК                     1
+tu154ce/switchers/breakers/right/afcs_sc2 int АБСУ 2 ПК                     1
+tu154ce/switchers/breakers/right/ahrs2 int МГВ 2                            1
+tu154ce/switchers/breakers/right/ga_calc_sc1 int вычислитель ухода 1 ПК         1
+tu154ce/switchers/breakers/right/ga_calc_sc2 int вычислитель ухода 2 ПК         1
+tu154ce/switchers/breakers/right/at_c2 int автомат тяги 2 канал                 1
+tu154ce/switchers/breakers/right/el_trim_sc2        int       триммирование РВ 2 ПК 1
+tu154ce/switchers/breakers/right/agr                int       АГР 1
+tu154ce/switchers/breakers/right/rcs                int       БКК 1
+tu154ce/switchers/breakers/right/snp                int       СНП 1
+tu154ce/switchers/breakers/right/hyd3_el_pump       int       насосная станция 3 ГС 1
+tu154ce/switchers/breakers/right/hyd3_boost         int       бустерное управление 3 ГС 1
+tu154ce/switchers/breakers/right/hyd3_gauge         int       уровнемер 3 ГС 1
+
+tu154ce/switchers/breakers/right/aoa_ind int  АУАСП       1
+tu154ce/switchers/breakers/right/ahrs1  int МГВ 1             1
+tu154ce/switchers/breakers/right/el_damp       int загружатель РВ          1
+tu154ce/switchers/breakers/right/rudder_trim       int триммер РН         1
+tu154ce/switchers/breakers/right/flaps_sc2       int  закрылки 2 ПК        1
+tu154ce/switchers/breakers/right/slats_sc2       int  предкрылки 2 ПК        1
+tu154ce/switchers/breakers/right/stab_motor2       int мотор стабилизатора 2        1
+tu154ce/switchers/breakers/right/flaps_brake_sc2       int          1
+tu154ce/switchers/breakers/right/cont_ind       int          1
+tu154ce/switchers/breakers/right/fire_control_chan2       int          1
+tu154ce/switchers/breakers/right/fire_test       int          1
+tu154ce/switchers/breakers/right/fire_ind       int          1
+tu154ce/switchers/breakers/right/fire_bottle1_chan2       int          1
+tu154ce/switchers/breakers/right/fire_bottle3       int          1
+tu154ce/switchers/breakers/right/fire_smoke_det       int          1
+tu154ce/switchers/breakers/right/fuel_ind_423_l       int          1
+tu154ce/switchers/breakers/right/fuel_ind_123_r       int          1
+

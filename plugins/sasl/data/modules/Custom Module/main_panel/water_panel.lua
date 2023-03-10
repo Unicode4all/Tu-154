@@ -54,7 +54,7 @@ defineProperty("water_lvl", globalPropertyf("tu154ce/misc/water_level")) -- ур
 defineProperty("ismaster", globalPropertyf("scp/api/ismaster")) -- Master. 0 = plugin not found, 1 = slave 2 = master
 defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have control. 0 = plugin not found, 1 = no control 2 = has control
 
-
+include("smooth_light.lua")
 
 local switch_sound = loadSample('Custom Sounds/metal_switch.wav')
 local cap_sound = loadSample('Custom Sounds/cap.wav')
@@ -73,13 +73,13 @@ local function controls()
 	local switchers = get(wing_light) + get(gear_fan) + get(galley_heat) + get(lavatory_heat) + get(water_meter) + get(water_compressor_1)
 	switchers = switchers + get(water_compressor_2) + get(tail_temp_signal) + get(tail_temp_heat)
 	
-	if switchers ~= switchers_last then playSample(switch_sound, false) end
+	if switchers ~= switchers_last then if get(xplane_version) < 120000 then playSample(switch_sound, false) end end
 	
 	switchers_last = switchers
 	
 	local buttons = get(tail_temp_signal_control_1) + get(tail_temp_signal_control_2) + get(lamp_test_eng_up_1) + get(lamp_test_eng_up_2)
 
-	if buttons ~= buttons_last then playSample(btn_click, false) end
+	if buttons ~= buttons_last then if get(xplane_version) < 120000 then playSample(btn_click, false) end end
 	
 	buttons_last = buttons
 
@@ -121,25 +121,25 @@ local function lamps()
 	local level_meter = get(water_meter) == 1
 
 	local water_level_1_brt = math.max(bool2int(water_level >= 0.9 and level_meter) * lamps_brt, test_btn, test_btn_2) -- temp
-	set(water_level_1, water_level_1_brt)
+	set(water_level_1, smooth_light(water_level_1_brt, get(water_level_1)))
 	
 	local water_level_12_brt = math.max(bool2int(water_level < 0.9 and water_level >= 0.5 and level_meter) * lamps_brt, test_btn, test_btn_2) -- temp
-	set(water_level_12, water_level_12_brt)
+	set(water_level_12, smooth_light(water_level_12_brt, get(water_level_12)))
 	
 	local water_level_14_brt = math.max(bool2int(water_level < 0.5 and water_level >= 0.25 and level_meter) * lamps_brt, test_btn, test_btn_2) -- temp
-	set(water_level_14, water_level_14_brt)
+	set(water_level_14, smooth_light(water_level_14_brt, get(water_level_14)))
 	
 	local water_level_0_brt = math.max(bool2int(water_level < 0.25 and water_level >= 0 and level_meter) * lamps_brt, test_btn, test_btn_2) -- temp
-	set(water_level_0, water_level_0_brt)
+	set(water_level_0, smooth_light(water_level_0_brt, get(water_level_0)))
 	
 	local tail_temp_high_brt = math.max(bool2int(get(tail_temp_signal_control_1) + get(tail_temp_signal_control_2) > 0) * get(tail_temp_signal) * lamps_brt, test_btn) -- temp
-	set(tail_temp_high, tail_temp_high_brt)
+	set(tail_temp_high, smooth_light(tail_temp_high_brt, get(tail_temp_high)))
 	
 	local lavatory_heat_brt = math.max(bool2int(get(lavatory_heat) < 0) * lamps_brt, test_btn) -- temp get(lavatory_heat)
-	set(lavatory_heat_lamp, lavatory_heat_brt)
+	set(lavatory_heat_lamp, smooth_light(lavatory_heat_brt, get(lavatory_heat_lamp)))
 	
 	local galley_heat_brt = math.max(bool2int(get(galley_heat) < 0) * lamps_brt, test_btn) -- temp
-	set(galley_heat_lamp, galley_heat_brt)
+	set(galley_heat_lamp, smooth_light(galley_heat_brt, get(galley_heat_lamp)))
 	
 	
 	

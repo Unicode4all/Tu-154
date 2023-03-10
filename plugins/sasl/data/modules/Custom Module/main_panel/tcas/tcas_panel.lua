@@ -57,7 +57,7 @@ defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) 
 defineProperty("ismaster", globalPropertyf("scp/api/ismaster")) -- Master. 0 = plugin not found, 1 = slave 2 = master
 defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have control. 0 = plugin not found, 1 = no control 2 = has control
 
-
+defineProperty("text_font", loadFont("Verdana.ttf"))
 
 
 local notLoaded = true
@@ -204,7 +204,7 @@ function update()
 	
 	-- sounds	
 	if tcas_rot_big_now - tcas_rot_big_last + tcas_rot_small_now - tcas_rot_small_last + tcas_mode_now - tcas_mode_last ~= 0 then
-		playSample(rot_sound, false)
+		if get(xplane_version) < 120000 then playSample(rot_sound, false) end
 	end
 	
 	
@@ -229,7 +229,7 @@ function update()
 	changes = changes - tcas_ident_btn_last - tcas_fcn_btn_last - tcas_left_btn_last - tcas_right_btn_last - tcas_ent_btn_last
 	changes = changes - tcas_atc_btn_last - tcas_rng_dn_btn_last - tcas_alt_btn_last - tcas_rng_up_btn_last
 	
-	if changes ~= 0 then playSample(button_sound, false) end
+	if changes ~= 0 then  end
 	
 	
 	
@@ -374,68 +374,68 @@ function update()
 	
 	-- traffic sound
 	if mode >= 3 and scale == 0 and traffic and traffic ~= traffic_last then
-		playSample(traffic_snd, false)
+		if get(xplane_version) < 120000 then playSample(traffic_snd, false) end
 	end
 	
 	-- clear of conflict
 	if mode == 4 and scale == 0 and scale ~= scale_last then
-		playSample(clear_conflict, false)
+		if get(xplane_version) < 120000 then playSample(clear_conflict, false) end
 		
-		stopSample(traffic_snd)
-		stopSample(ajust_v_speed)
-		stopSample(climb)
-		stopSample(climb_now)
-		stopSample(descend)
-		stopSample(descend_now)
-		stopSample(increase_climb)
-		stopSample(increase_descend)
-		stopSample(maintain_v_speed)
-		stopSample(monitor_v_speed)
+		if get(xplane_version) < 120000 then stopSample(traffic_snd) end
+		if get(xplane_version) < 120000 then stopSample(ajust_v_speed) end
+		if get(xplane_version) < 120000 then stopSample(climb) end
+		if get(xplane_version) < 120000 then stopSample(climb_now) end
+		if get(xplane_version) < 120000 then stopSample(descend) end
+		if get(xplane_version) < 120000 then stopSample(descend_now) end
+		if get(xplane_version) < 120000 then stopSample(increase_climb) end
+		if get(xplane_version) < 120000 then stopSample(increase_descend) end
+		if get(xplane_version) < 120000 then stopSample(maintain_v_speed) end
+		if get(xplane_version) < 120000 then stopSample(monitor_v_speed) end
 	end
 	
 	-- climb
 	if mode == 4 and scale == 1 and scale_last == 0 and scale ~= scale_last then
-		playSample(climb, false)
+		if get(xplane_version) < 120000 then playSample(climb, false) end
 	end
 	
 	-- climb now
 	if mode == 4 and scale == 1 and scale_last == 3 and scale ~= scale_last then
-		playSample(climb_now, false)
+		if get(xplane_version) < 120000 then playSample(climb_now, false) end
 	end
 	
 	-- descend
 	if mode == 4 and scale == 3 and scale_last == 0 and scale ~= scale_last then
-		playSample(descend, false)
+		if get(xplane_version) < 120000 then playSample(descend, false) end
 	end	
 	
 	-- descend now
 	if mode == 4 and scale == 3 and scale_last == 1 and scale ~= scale_last then
-		playSample(descend_now, false)
+		if get(xplane_version) < 120000 then playSample(descend_now, false) end
 	end
 	
 	-- increase climb
 	if mode == 4 and scale == 2 and our_vvi < 12 and scale ~= scale_last then
-		playSample(increase_climb, false)
+		if get(xplane_version) < 120000 then playSample(increase_climb, false) end
 	end	
 	
 	-- increase descend
 	if mode == 4 and scale == 4 and our_vvi > -12 and scale ~= scale_last then
-		playSample(increase_descend, false)
+		if get(xplane_version) < 120000 then playSample(increase_descend, false) end
 	end		
 	
 	-- adjust VS
 	if mode == 4 and ((scale == 1 and our_vvi > 12) or (scale == 3 and our_vvi < -12) or (scale == 7 and our_vvi > 0) or (scale == 9 and our_vvi < 0) or (scale == 6 and our_vvi > 10) or (scale == 8 and our_vvi < -10)) and scale ~= scale_last then
-		playSample(ajust_v_speed, false)
+		if get(xplane_version) < 120000 then playSample(ajust_v_speed, false) end
 	end		
 	
 	-- maintain VS
 	if mode == 4 and ((scale == 2 and our_vvi > 12) or (scale == 4 and our_vvi < -12)) and scale ~= scale_last then
-		playSample(maintain_v_speed, false)
+		if get(xplane_version) < 120000 then playSample(maintain_v_speed, false) end
 	end	
 	
 	-- test OK
 	if mode == 0 and text == 0 and text_last == 5 and text_last ~= text then
-		playSample(tcas_test_passed, false)
+		if get(xplane_version) < 120000 then playSample(tcas_test_passed, false) end
 	end	
 	
 	
@@ -486,7 +486,7 @@ components = {
 	
 	text_draw {
 		position = {47, 977, 110, 110},
-		--font = text_font,
+		font = text_font,
 		color = {1, 0.8, 0.3, 1},
 		visible = function()
 			return get(screen_mode) == 5
@@ -498,7 +498,7 @@ components = {
 	
 	text_draw { -- "1  1 "
 		position = {70, 1255, 110, 110},
-		--font = text_font,
+		font = text_font,
 		color = {0.8, 0.8, 0.8, 1},
 		visible = function()
 			return get(screen_mode) ~= 100
@@ -510,7 +510,7 @@ components = {
 
 	text_draw { -- "1  1 "
 		position = {70, 1255, 110, 110},
-		--font = text_font,
+		font = text_font,
 		color = {0.8, 0.8, 0.8, 1},
 		visible = function()
 			return get(screen_mode) == 5
@@ -550,7 +550,7 @@ components = {
 
 
 --[[
-local font = loadBitmapFont("segmental.fnt")
+local font = loadFont("segmental.fnt")
 
 function draw()
 

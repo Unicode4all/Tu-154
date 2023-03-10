@@ -88,19 +88,16 @@ components = {
 		color = {0,0,1,1},
 	},
 	--]]
-
-	text_draw {
+	dme_display {
 		position = {16, 12, 130, 130},
 		color = {1, 0.3, 0.2, 1},
-		font = text_font,
-		visible = function()
-			return power
-		end,
 		text = function()
 			return dist_text
 		end,
-	
-	},
+		visible = function()
+			return power
+		end,
+	}
 
 
 }

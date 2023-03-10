@@ -11,7 +11,7 @@ defineProperty("bat1_on", globalPropertyi("tu154ce/switchers/eng/bat1_on")) -- �
 defineProperty("bat2_on", globalPropertyi("tu154ce/switchers/eng/bat2_on")) -- батарея 2
 defineProperty("bat3_on", globalPropertyi("tu154ce/switchers/eng/bat3_on")) -- батарея 3
 defineProperty("bat4_on", globalPropertyi("tu154ce/switchers/eng/bat4_on")) -- батарея 4
-
+defineProperty("bat_connected", globalPropertyi("tu154ce/elec/bat_connected")) -- is any battery connected
 -- sources
 defineProperty("bat_volt_1", globalPropertyf("tu154ce/elec/bat_volt_1")) -- напряжение батареи
 defineProperty("bat_volt_2", globalPropertyf("tu154ce/elec/bat_volt_2")) -- напряжение батареи
@@ -142,6 +142,12 @@ function update()
 		local vu1 = bool2int(vu1_work)
 		local vu2 = bool2int(vu2_work)
 		local vu3 = bool2int(vu3_work)
+
+		if bat1 == 0 and bat2 == 0 and bat3 == 0 and bat4 == 0 then
+			set(bat_connected, 0)
+		else
+			set(bat_connected, 1)
+		end
 		
 		local vu1_conn = 0
 		if vu1_work and vu1_sw == 1 then vu1_conn = 1 end

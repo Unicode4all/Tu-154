@@ -47,7 +47,7 @@ defineProperty("mode_set", globalPropertyi("tu154ce/taws/mode_set")) -- режи
 -- time
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
-
+include("smooth_light.lua")
 -- sounds
 local switcher_sound = loadSample('Custom Sounds/metal_switch.wav')
 local button_sound = loadSample('Custom Sounds/plastic_btn.wav')
@@ -79,7 +79,7 @@ local function buttons_check()
 	change = change - but_view_last - but_empty_last - but_down_last - but_up_last - egpws_control_last - egpws_contr_gs_last
 	
 	if change ~= 0 then
-		playSample(button_sound, false)
+		
 	end
 	
 
@@ -123,7 +123,7 @@ local function switchers_check()
 	local egpws_alarm_2_cap_sw = get(egpws_alarm_2_cap)
 	
 	if egpws_alarm_1_cap_sw + egpws_alarm_2_cap_sw - egpws_alarm_1_cap_last - egpws_alarm_2_cap_last ~= 0 then
-		playSample(cap_sound, false)
+		
 	end
 	
 	
@@ -179,7 +179,8 @@ local function lamps()
 	elseif not pull_up then pull_up_lit = 0 end
 	
 	local pull_up_lamp_brt = math.max(pull_up_lit * lamps_brt * alarm, test_btn)
-	set(pull_up_lamp, pull_up_lamp_brt)
+
+	set(pull_up_lamp, smooth_light(pull_up_lamp_brt, get(pull_up_lamp)))
 	
 	
 	-- check alt left
@@ -193,7 +194,7 @@ local function lamps()
 	elseif not check_alt_left then check_alt_left_lit = 0 end
 	
 	local check_alt_left_lamp_brt = math.max(check_alt_left_lit * lamps_brt * alarm, test_btn)
-	set(check_alt_left_lamp, check_alt_left_lamp_brt)
+	set(check_alt_left_lamp, smooth_light(check_alt_left_lamp_brt, get(check_alt_left_lamp)))
 	
 	
 	
@@ -209,7 +210,7 @@ local function lamps()
 	elseif not check_alt_right then check_alt_right_lit = 0 end
 	
 	local check_alt_right_lamp_brt = math.max(check_alt_right_lit * lamps_brt * alarm, test_btn)
-	set(check_alt_right_lamp, check_alt_right_lamp_brt)
+	set(check_alt_right_lamp, smooth_light(check_alt_right_lamp_brt, get(check_alt_right_lamp)))
 	
 	
 	-- terrain
@@ -223,7 +224,7 @@ local function lamps()
 	elseif not terrain then terrain_lit = 0 end
 	
 	local warning_terrain_lamp_brt = math.max(terrain_lit * lamps_brt * alarm, test_btn)
-	set(warning_terrain_lamp, warning_terrain_lamp_brt)
+	set(warning_terrain_lamp, smooth_light(warning_terrain_lamp_brt, get(warning_terrain_lamp)))
 	
 	
 	-- glideslope
@@ -237,7 +238,7 @@ local function lamps()
 	elseif not gs then gs_lit = 0 end
 	
 	local gs_low_lamp_brt = math.max(gs_lit * lamps_brt * alarm, test_btn)
-	set(gs_low_lamp, gs_low_lamp_brt)
+	set(gs_low_lamp, smooth_light(gs_low_lamp_brt, get(gs_low_lamp)))
 	
 	
 	
@@ -252,10 +253,7 @@ local function lamps()
 	elseif not fail then fail_lit = 0 end
 	
 	local srpbz_fail_lamp_brt = math.max(fail_lit * lamps_brt, test_btn) -- fake
-	set(srpbz_fail_lamp, srpbz_fail_lamp_brt)
-	
-	
-
+	set(srpbz_fail_lamp, smooth_light(srpbz_fail_lamp_brt, get(srpbz_fail_lamp)))
 end
 
 

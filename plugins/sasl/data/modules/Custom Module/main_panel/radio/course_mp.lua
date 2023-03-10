@@ -79,9 +79,6 @@ defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have 
 
 
 local rot_small_sound = loadSample('Custom Sounds/cursmp.wav')
-local button_sound = loadSample('Custom Sounds/plastic_btn.wav')
-local rotary_sound = loadSample('Custom Sounds/plastic_switch.wav')
-local switcher_sound = loadSample('Custom Sounds/plastic_switch.wav')
 
 
 setSampleGain(rot_small_sound, 700)
@@ -105,7 +102,7 @@ local function rotary()
 	
 	local summ = nav_left_sw + nav_right_sw
 	
-	if summ ~= rot_summ_last then playSample(rot_small_sound, false) end
+	if summ ~= rot_summ_last then  end
 
 	rot_summ_last = summ
 
@@ -121,7 +118,7 @@ local function buttons()
 	
 	local summ = nav_but_1_sw + nav_but_2_sw + nav_but_3_sw
 	
-	if summ ~= but_summ_last then playSample(button_sound, false) end
+	if summ ~= but_summ_last then  end
 	
 	but_summ_last = summ
 	
@@ -136,7 +133,7 @@ local function switchers()
 	
 	local summ = nav_mode_sw + nav_man_auto_sw + nav_mile_km_sw
 	
-	if summ ~= sw_summ_last then playSample(switcher_sound, false) end
+	if summ ~= sw_summ_last then  end
 	
 	sw_summ_last = summ
 
@@ -444,19 +441,15 @@ end
 
 
 components = {
-
-
-	text_draw {
+	radio_display {
 		position = {35, 20, 160, 140},
 		color = {1, 0.3, 0.2, 1},
-		font = text_font,
+		freq = function()
+			return freq_show
+		end,
 		visible = function()
 			return power
 		end,
-		text = function()
-			return freq_show
-		end,
-	
 	},
 
 

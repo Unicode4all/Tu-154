@@ -119,7 +119,7 @@ defineProperty("fire_vlv_open_3", globalPropertyf("tu154ce/fuel/fire_vlv_open_3"
 
 defineProperty("fire_detected", globalPropertyi("tu154ce/fire/fire_detected")) -- обнаружен пожар
 defineProperty("fire_siren", globalPropertyi("tu154ce/fire/fire_siren")) -- работа сирены
-
+include("smooth_light.lua")
 -- sounds
 local rotary_sound = loadSample('Custom Sounds/plastic_switch.wav')
 local switcher_sound = loadSample('Custom Sounds/metal_switch.wav')
@@ -193,17 +193,17 @@ local function swichers_check()
 	changes_but = changes_but - lamp_test_last - smoke_test_last - ext_test_last - fire_ext_1_last - fire_ext_2_last - fire_ext_3_last
 	changes_but = changes_but - cold_eng_1_last - cold_eng_2_last - cold_eng_3_last - cold_apu_last - neutral_gas_last
 	
-	if changes_but ~= 0 then playSample(button_sound, false) end -- play sound
+	if changes_but ~= 0 then  end -- play sound
 	
 	local changes_rot = fire_sensor_sel_sw + fire_place_sel_sw - fire_sensor_sel_last - fire_place_sel_last
 	
-	if changes_rot ~= 0 then playSample(rotary_sound, false) end -- play sound
+	if changes_rot ~= 0 then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end -- play sound
 	
 	local changes_sw = fire_main_switch_sw + fire_buzzer_sw - fire_main_switch_last - fire_buzzer_last
 	
-	if changes_sw ~= 0 then playSample(switcher_sound, false) end -- play sound
+	if changes_sw ~= 0 then  end -- play sound
 	
-	if fire_buzzer_cap_sw ~= fire_buzzer_cap_last then playSample(cap_sound, false) end -- play sound
+	if fire_buzzer_cap_sw ~= fire_buzzer_cap_last then  end -- play sound
 	
 	
 	if fire_buzzer_cap_sw == 0 then set(fire_buzzer, 1) end
@@ -256,31 +256,31 @@ local function lamps()
 	local smoke_test_but = get(smoke_test)
 	
 	local smoke_1_brt = math.max(smoke_test_but * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_1, smoke_1_brt)
+	set(smoke_1, smooth_light(smoke_1_brt, get(smoke_1)))
 	
 	local smoke_2_brt = math.max(smoke_test_but * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_2, smoke_2_brt)	
+	set(smoke_2, smooth_light(smoke_2_brt, get(smoke_2)))
 
 	local smoke_zone2_left_brt = math.max(smoke_test_but * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_zone2_left, smoke_zone2_left_brt)
+	set(smoke_zone2_left, smooth_light(smoke_zone2_left_brt, get(smoke_zone2_left)))
 	
 	local smoke_zone2_right_brt = math.max(smoke_test_but * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_zone2_right, smoke_zone2_right_brt)
+	set(smoke_zone2_right, smooth_light(smoke_zone2_right_brt, get(smoke_zone2_right)))
 
 	local smoke_zone3_brt = math.max(smoke_test_but * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_zone3, smoke_zone3_brt)
+	set(smoke_zone3, smooth_light(smoke_zone3_brt, get(smoke_zone3)))
 	
 	local smoke_zone4_brt = math.max(smoke_test_but * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_zone4, smoke_zone4_brt)
+	set(smoke_zone4, smooth_light(smoke_zone4_brt, get(smoke_zone4)))
 	
 	local smoke_zone5_left_brt = math.max(smoke_test_but * power_sw * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_zone5_left, smoke_zone5_left_brt)
+	set(smoke_zone5_left, smooth_light(smoke_zone5_left_brt, get(smoke_zone5_left)))
 	
 	local smoke_zone5_right_brt = math.max(smoke_test_but * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_zone5_right, smoke_zone5_right_brt)
+	set(smoke_zone5_right, smooth_light(smoke_zone5_right_brt, get(smoke_zone5_right)))
 	
 	local smoke_zone6_brt = math.max(smoke_test_but * power_sw * lamps_brt * day_night, test_btn) -- fake for now
-	set(smoke_zone6, smoke_zone6_brt)
+	set(smoke_zone6, smooth_light(smoke_zone6_brt, get(smoke_zone6)))
 	
 	
 	local eng_fire_1 = get(engine_fire_state_1)
@@ -291,65 +291,65 @@ local function lamps()
 	local fire_eng_1_brt = 0
 	if eng_fire_1 == 2 then fire_eng_1_brt = 1 end
 	fire_eng_1_brt = math.max(fire_eng_1_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(fire_eng_1, fire_eng_1_brt)
+	set(fire_eng_1, smooth_light(fire_eng_1_brt, get(fire_eng_1)))
 	
 	local fire_eng_2_brt = 0
 	if eng_fire_2 == 2 then fire_eng_2_brt = 1 end
 	fire_eng_2_brt = math.max(fire_eng_2_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(fire_eng_2, fire_eng_2_brt)
+	set(fire_eng_2, smooth_light(fire_eng_2_brt, get(fire_eng_2)))
 	
 	local fire_eng_3_brt = 0
 	if eng_fire_3 == 2 then fire_eng_3_brt = 1 end
 	fire_eng_3_brt = math.max(fire_eng_3_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(fire_eng_3, fire_eng_3_brt)
+	set(fire_eng_3, smooth_light(fire_eng_3_brt, get(fire_eng_3)))
 	
 	local overheat_eng_1_brt = 0
 	if eng_fire_1 > 0 then overheat_eng_1_brt = 1 end
 	overheat_eng_1_brt = math.max(overheat_eng_1_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(overheat_eng_1, overheat_eng_1_brt)
+	set(overheat_eng_1, smooth_light(overheat_eng_1_brt, get(overheat_eng_1)))
 	
 	local overheat_eng_2_brt = 0
 	if eng_fire_2 > 0 then overheat_eng_2_brt = 1 end
 	overheat_eng_2_brt = math.max(overheat_eng_2_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(overheat_eng_2, overheat_eng_2_brt)
+	set(overheat_eng_2, smooth_light(overheat_eng_2_brt, get(overheat_eng_2)))
 	
 	local overheat_eng_3_brt = 0
 	if eng_fire_3 > 0 then overheat_eng_3_brt = 1 end
 	overheat_eng_3_brt = math.max(overheat_eng_3_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(overheat_eng_3, overheat_eng_3_brt)
+	set(overheat_eng_3, smooth_light(overheat_eng_3_brt, get(overheat_eng_3)))
 
 
 	local throttle_1_fire_brt = 0
 	if eng_fire_1 > 0 or get(eng1_dangerous_vibro) > 0 then throttle_1_fire_brt = 1 end
 	throttle_1_fire_brt = math.max(throttle_1_fire_brt * lamps_brt, test_btn)
-	set(throttle_1_fire, throttle_1_fire_brt)
+	set(throttle_1_fire, smooth_light(throttle_1_fire_brt, get(throttle_1_fire)))
 
 	local throttle_2_fire_brt = 0
 	if eng_fire_2 > 0 or get(eng2_dangerous_vibro) > 0 then throttle_2_fire_brt = 1 end
 	throttle_2_fire_brt = math.max(throttle_2_fire_brt * lamps_brt, test_btn)
-	set(throttle_2_fire, throttle_2_fire_brt)
+	set(throttle_2_fire, smooth_light(throttle_2_fire_brt, get(throttle_2_fire)))
 	
 	local throttle_3_fire_brt = 0
 	if eng_fire_3 > 0 or get(eng3_dangerous_vibro) > 0 then throttle_3_fire_brt = 1 end
 	throttle_3_fire_brt = math.max(throttle_3_fire_brt * lamps_brt, test_btn)
-	set(throttle_3_fire, throttle_3_fire_brt)
+	set(throttle_3_fire, smooth_light(throttle_3_fire_brt, get(throttle_3_fire)))
 
 	
 
 	local fuel_off_eng_1_brt = 0
 	if get(fire_vlv_open_1) < 0.5 then fuel_off_eng_1_brt = 1 end
 	fuel_off_eng_1_brt = math.max(fuel_off_eng_1_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(fuel_off_eng_1, fuel_off_eng_1_brt)
+	set(fuel_off_eng_1, smooth_light(fuel_off_eng_1_brt, get(fuel_off_eng_1)))
 	
 	local fuel_off_eng_2_brt = 0
 	if get(fire_vlv_open_2) < 0.5 then fuel_off_eng_2_brt = 1 end
 	fuel_off_eng_2_brt = math.max(fuel_off_eng_2_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(fuel_off_eng_2, fuel_off_eng_2_brt)
+	set(fuel_off_eng_2, smooth_light(fuel_off_eng_2_brt, get(fuel_off_eng_2)))
 	
 	local fuel_off_eng_3_brt = 0
 	if get(fire_vlv_open_3) < 0.5 then fuel_off_eng_3_brt = 1 end
 	fuel_off_eng_3_brt = math.max(fuel_off_eng_3_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(fuel_off_eng_3, fuel_off_eng_3_brt)
+	set(fuel_off_eng_3, smooth_light(fuel_off_eng_3_brt, get(fuel_off_eng_3)))
 	
 	local fire_det = get(fire_detected)
 	if fire_det == 1 and get(fire_siren) == 0 then 
@@ -367,43 +367,43 @@ local function lamps()
 	local check_overheat_brt = 0
 	if sheck_smoke_lit then check_overheat_brt = 1 end
 	check_overheat_brt = math.max(check_overheat_brt * lamps_brt * day_night, test_btn)
-	set(check_overheat, check_overheat_brt)
+	set(check_overheat, smooth_light(check_overheat_brt, get(check_overheat)))
 	
 	local fire_apu_brt = 0
 	if get(engine_fire_state_4) > 0 then fire_apu_brt = 1 end
 	fire_apu_brt = math.max(fire_apu_brt * power_sw * lamps_brt * day_night, test_btn)
-	set(fire_apu, fire_apu_brt)
+	set(fire_apu, smooth_light(fire_apu_brt, get(fire_apu)))
 	
 	local turn_on_spz_brt = math.max((1 - power_sw) * lamps_brt * day_night, test_btn)
-	set(turn_on_spz, turn_on_spz_brt)
+	set(turn_on_spz, smooth_light(turn_on_spz_brt, get(turn_on_spz)))
 	
 	
 	
 	local button_fire_eng_1_brt = math.max(get(valve_open_1) * power_sw * lamps_brt * day_night, test_btn)
-	set(button_fire_eng_1, button_fire_eng_1_brt)
+	set(button_fire_eng_1, smooth_light(button_fire_eng_1_brt, get(button_fire_eng_1)))
 	
 	local button_fire_eng_2_brt = math.max(get(valve_open_2) * power_sw * lamps_brt * day_night, test_btn)
-	set(button_fire_eng_2, button_fire_eng_2_brt)
+	set(button_fire_eng_2, smooth_light(button_fire_eng_2_brt, get(button_fire_eng_2)))
 	
 	local button_fire_eng_3_brt = math.max(get(valve_open_3) * power_sw * lamps_brt * day_night, test_btn)
-	set(button_fire_eng_3, button_fire_eng_3_brt)
+	set(button_fire_eng_3, smooth_light(button_fire_eng_3_brt, get(button_fire_eng_3)))
 	
 	local button_fire_apu_brt = math.max(get(valve_open_4) * power_sw * lamps_brt * day_night, test_btn)
-	set(button_fire_apu, button_fire_apu_brt)
+	set(button_fire_apu, smooth_light(button_fire_apu_brt, get(button_fire_apu)))
 	
 	local button_fire_ng_brt = math.max(get(ng_used) * power_sw * lamps_brt * day_night, test_btn)
-	set(button_fire_ng, button_fire_ng_brt)
+	set(button_fire_ng, smooth_light(button_fire_ng_brt, get(button_fire_ng)))
 	
 	local ext_test_but = get(ext_test)
 	
 	local button_fire_turn_3_brt = math.max(math.max(get(ext_used_3), ext_test_but) * power_sw * lamps_brt * day_night, test_btn)
-	set(button_fire_turn_3, button_fire_turn_3_brt)
+	set(button_fire_turn_3, smooth_light(button_fire_turn_3_brt, get(button_fire_turn_3)))
 	
 	local button_fire_turn_2_brt = math.max(math.max(get(ext_used_2), ext_test_but) * power_sw * lamps_brt * day_night, test_btn)
-	set(button_fire_turn_2, button_fire_turn_2_brt)
+	set(button_fire_turn_2, smooth_light(button_fire_turn_2_brt, get(button_fire_turn_2)))
 
 	local button_fire_turn_1_brt = math.max(math.max(get(ext_used_1), ext_test_but) * power_sw * lamps_brt * day_night, test_btn)
-	set(button_fire_turn_1, button_fire_turn_1_brt)	
+	set(button_fire_turn_1, smooth_light(button_fire_turn_1_brt, get(button_fire_turn_1)))
 	
 	
 	if fire_det == 1 then
@@ -419,7 +419,7 @@ local function lamps()
 	local fire_lamp_brt = 0
 	if fire_lit then fire_lamp_brt = 1 end
 	fire_lamp_brt = math.max(fire_lamp_brt * lamps_brt * day_night, test_btn_frnt)
-	set(fire_lamp, fire_lamp_brt)
+	set(fire_lamp, smooth_light(fire_lamp_brt, get(fire_lamp)))
 
 
 

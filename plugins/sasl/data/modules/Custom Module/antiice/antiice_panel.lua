@@ -88,7 +88,7 @@ defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) 
 defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
 
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
-
+include("smooth_light.lua")
 -- sounds
 local switcher_sound = loadSample('Custom Sounds/metal_switch.wav')
 local button_sound = loadSample('Custom Sounds/plastic_btn.wav')
@@ -185,11 +185,11 @@ local function check_controls()
 	changes = changes - soi21_on_last - antiice_slats_last - antiice_eng_1_last - antiice_eng_2_last - antiice_eng_3_last - antiice_wing_last
 	changes = changes - window_heat_1_last - window_heat_2_last - window_heat_3_last - pitot_heat_1_last - pitot_heat_2_last - pitot_heat_3_last
 	
-	if 0 ~= changes then playSample(switcher_sound, false) end
+	if 0 ~= changes then  end
 	
 	local soi21_test_sw = get(soi21_test)
 	
-	if soi21_test_sw ~= soi21_test_last then playSample(button_sound, false) end
+	if soi21_test_sw ~= soi21_test_last then  end
 	
 	
 	soi21_on_last = soi21_on_sw
@@ -220,42 +220,42 @@ local function lamps()
 	
 	local heat_ok_1_brt = 0
 	if get(rel_ice_pitot_heat1) < 6 and get(pitot_heat_1) == -1 then heat_ok_1_brt = lamps_brt end
-	set(heat_ok_1, heat_ok_1_brt)
+	set(heat_ok_1, smooth_light(heat_ok_1_brt, get(heat_ok_1)))
 	
 	local heat_ok_2_brt = 0
 	if get(rel_ice_pitot_heat2) < 6 and get(pitot_heat_2) == -1 then heat_ok_2_brt = lamps_brt end
-	set(heat_ok_2, heat_ok_2_brt)
+	set(heat_ok_2, smooth_light(heat_ok_2_brt, get(heat_ok_2)))
 	
 	local heat_ok_3_brt = 0
 	if get(ppd_3_heat_fail) == 0 and get(pitot_heat_3) == -1 then heat_ok_3_brt = lamps_brt end
-	set(heat_ok_3, heat_ok_3_brt)
+	set(heat_ok_3, smooth_light(heat_ok_3_brt, get(heat_ok_3)))
 	
 	
 	local soi_work_brt = get(ice_detect_ok) * lamps_brt
-	set(soi_work, soi_work_brt)
+	set(soi_work, smooth_light(soi_work_brt, get(soi_work)))
 	
 	local soi_ice_detected_brt = get(ice_detected) * lamps_brt
-	set(soi_ice_detected, soi_ice_detected_brt)
+	set(soi_ice_detected, smooth_light(soi_work_brt, get(soi_work)))
 	
 	
 	
 	local antiice_slats_brt = get(slat_heating) * lamps_brt
-	set(antiice_slats_lamp, antiice_slats_brt)
+	set(antiice_slats_lamp, smooth_light(antiice_slats_brt, get(antiice_slats_lamp)))
 	
 	local antiice_eng_1_brt = 0 
 	if get(eng_heat_open_1) == 1 then antiice_eng_1_brt = lamps_brt end
-	set(antiice_eng_1_lamp, antiice_eng_1_brt)
+	set(antiice_eng_1_lamp, smooth_light(antiice_eng_1_brt, get(antiice_eng_1_lamp)))
 	
 	local antiice_eng_2_brt = 0 
 	if get(eng_heat_open_2) == 1 then antiice_eng_2_brt = lamps_brt end
-	set(antiice_eng_2_lamp, antiice_eng_2_brt)
+	set(antiice_eng_2_lamp, smooth_light(antiice_eng_2_brt, get(antiice_eng_2_lamp)))
 	
 	local antiice_eng_3_brt = 0
 	if get(eng_heat_open_3) == 1 then antiice_eng_3_brt = lamps_brt end
-	set(antiice_eng_3_lamp, antiice_eng_3_brt)
+	set(antiice_eng_3_lamp, smooth_light(antiice_eng_3_brt, get(antiice_eng_3_lamp)))
 	
 	local antiice_wings_brt = get(wing_heating) * lamps_brt
-	set(antiice_wings_lamp, antiice_wings_brt)
+	set(antiice_wings_lamp, smooth_light(antiice_wings_brt, get(antiice_wings_lamp)))
 	
 	
 

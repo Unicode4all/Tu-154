@@ -147,3 +147,6 @@ createGlobalPropertyi("tu154ce/failures/pitot2", 0) -- отказ Пито
 createGlobalPropertyi("tu154ce/failures/static1", 0) -- отказ полного давления
 createGlobalPropertyi("tu154ce/failures/static2", 0) -- отказ полного давления
 createGlobalPropertyi("tu154ce/failures/AOA", 0) -- отказ УА
+
+createGlobalPropertyf("scp/api/ismaster", 0)
+createGlobalPropertyf("scp/api/hascontrol_1", 0)

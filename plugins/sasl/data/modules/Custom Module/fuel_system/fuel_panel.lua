@@ -190,8 +190,43 @@ defineProperty("fuel_flowmeter_1_fail", globalPropertyi("tu154ce/failures/fuel_f
 defineProperty("fuel_flowmeter_2_fail", globalPropertyi("tu154ce/failures/fuel_flowmeter_2_fail"))
 defineProperty("fuel_flowmeter_3_fail", globalPropertyi("tu154ce/failures/fuel_flowmeter_3_fail"))
 
+--[[lamp_drefs = {
+	[0] =   globalPropertyf("tu154ce/lights/small/fuel_2500"), -- остаток топлива 2500
+	[1] =   globalPropertyf("tu154ce/lights/small/fuel_tank1_used"), -- расход из бака 1
+	[2] =   globalPropertyf("tu154ce/lights/small/fuel_tank3_left_fail"), -- красная лампа бака 3 лев
+	[3] =   globalPropertyf("tu154ce/lights/small/fuel_tank2_left_fail"), -- красная лампа бака 2 лев
+	[4] =   globalPropertyf("tu154ce/lights/small/fuel_tank2_right_fail"), -- красная лампа бака 2 прав
+	[5] =   globalPropertyf("tu154ce/lights/small/fuel_tank3_right_fail"), -- красная лампа бака 3 прав
+	[6] =   globalPropertyf("tu154ce/lights/small/fuel_pump_left_5"), -- насос бака 5 лев
+	[7] =   globalPropertyf("tu154ce/lights/small/fuel_pump_left_6"), -- насос бака 6 лев
+	[8] =   globalPropertyf("tu154ce/lights/small/fuel_pump_left_7"), -- насос бака 7 лев
+	[9] =   globalPropertyf("tu154ce/lights/small/fuel_pump_left_8"), -- насос бака 8 лев
+	[10] =  globalPropertyf("tu154ce/lights/small/fuel_pump_left_9"), -- насос бака 9 лев
+	[11] =  globalPropertyf("tu154ce/lights/small/fuel_pump_right_5"), -- насос бака 5 прав
+	[12] =  globalPropertyf("tu154ce/lights/small/fuel_pump_right_6"), -- насос бака 6 прав
+	[13] =  globalPropertyf("tu154ce/lights/small/fuel_pump_right_7"), -- насос бака 7 прав
+	[14] =  globalPropertyf("tu154ce/lights/small/fuel_pump_right_8"), -- насос бака 8 прав
+	[15] =  globalPropertyf("tu154ce/lights/small/fuel_pump_right_9"), -- насос бака 9 прав
+	[16] =  globalPropertyf("tu154ce/lights/small/fuel_pump_10"), -- насос бака 10 прав
+	[17] =  globalPropertyf("tu154ce/lights/small/fuel_pump_11"), -- насос бака 11 прав
+	[18] =  globalPropertyf("tu154ce/lights/small/fuel_pump_1"), -- насос бака 1 прав
+	[19] =  globalPropertyf("tu154ce/lights/small/fuel_pump_2"), -- насос бака 2 прав
+	[20] =  globalPropertyf("tu154ce/lights/small/fuel_pump_3"), -- насос бака 3 прав
+	[21] =  globalPropertyf("tu154ce/lights/small/fuel_pump_4"), -- насос бака 4 прав
+	[22] =  globalPropertyf("tu154ce/lights/small/fuel_cut_off_1"), -- перекрывные краны
+	[23] =  globalPropertyf("tu154ce/lights/small/fuel_cut_off_2"), -- перекрывные краны
+	[24] =  globalPropertyf("tu154ce/lights/small/fuel_cut_off_3"), -- перекрывные краны
+	[25] =  globalPropertyf("tu154ce/lights/small/fuel_flow_from_2"), -- порядок расхода
+	[26] =  globalPropertyf("tu154ce/lights/small/fuel_flow_from_3"), -- порядок расхода
+	[27] =  globalPropertyf("tu154ce/lights/small/fuel_flow_from_4"), -- порядок расхода
+	[28] =  globalPropertyf("tu154ce/lights/small/fuel_flow_auto_fail"), -- автомат расхода не работает
+	[29] =  globalPropertyf("tu154ce/lights/small/fuel_reserv_trans_left"), -- резервная перекачка в бак 1 
+	[30] =  globalPropertyf("tu154ce/lights/small/fuel_reserv_trans_right"), -- резервная перекачка в бак 1 
+	[31] =  globalPropertyf("tu154ce/lights/small/fuel_porc_reserv") ,-- порцевание
+	[32] =  globalPropertyf("tu154ce/lights/small/fuel_level_automat") -- автомат выравнивания
+}]]
 
-
+include("smooth_light.lua")
 
 
 -- sounds
@@ -223,126 +258,153 @@ local function lamps()
 	local fuel_tank3_left_brt = 0
 	if tank_level_3 == -1 then fuel_tank3_left_brt = 1 end
 	fuel_tank3_left_brt = math.max(fuel_tank3_left_brt * lamps_brt, test_btn)
-	set(fuel_tank3_left_fail, fuel_tank3_left_brt)
+
 	
 	local fuel_tank2_left_brt = 0
 	if tank_level_2 == -1 then fuel_tank2_left_brt = 1 end
 	fuel_tank2_left_brt = math.max(fuel_tank2_left_brt * lamps_brt, test_btn)
-	set(fuel_tank2_left_fail, fuel_tank2_left_brt)
+
 	
 	local fuel_tank3_right_brt = 0
 	if tank_level_3 == 1 then fuel_tank3_right_brt = 1 end
 	fuel_tank3_right_brt = math.max(fuel_tank3_right_brt * lamps_brt, test_btn)
-	set(fuel_tank3_right_fail, fuel_tank3_right_brt)
+	
 	
 	local fuel_tank2_right_brt = 0
 	if tank_level_2 == 1 then fuel_tank2_right_brt = 1 end
 	fuel_tank2_right_brt = math.max(fuel_tank2_right_brt * lamps_brt, test_btn)
-	set(fuel_tank2_right_fail, fuel_tank2_right_brt)	
+
 	
 	
 	local fuel_pump_left_5_brt = math.max(bool2int(pump_2L > 0) * lamps_brt, test_btn)
-	set(fuel_pump_left_5, fuel_pump_left_5_brt)	
+
 	
 	local fuel_pump_left_6_brt = math.max(bool2int(pump_2L > 1) * lamps_brt, test_btn)
-	set(fuel_pump_left_6, fuel_pump_left_6_brt)	
+
 	
 	local fuel_pump_left_7_brt = math.max(bool2int(pump_3L > 2) * lamps_brt, test_btn)
-	set(fuel_pump_left_7, fuel_pump_left_7_brt)	
+
 	
 	local fuel_pump_left_8_brt = math.max(bool2int(pump_3L > 0) * lamps_brt, test_btn) 
-	set(fuel_pump_left_8, fuel_pump_left_8_brt)	
+
 	
 	local fuel_pump_left_9_brt = math.max(bool2int(pump_3L > 1) * lamps_brt, test_btn)
-	set(fuel_pump_left_9, fuel_pump_left_9_brt)	
+
 	
 	
 	local fuel_pump_right_5_brt = math.max(bool2int(pump_2R > 1) * lamps_brt, test_btn) 
-	set(fuel_pump_right_5, fuel_pump_right_5_brt)	
+
 	
 	local fuel_pump_right_6_brt = math.max(bool2int(pump_2R > 0) * lamps_brt, test_btn) 
-	set(fuel_pump_right_6, fuel_pump_right_6_brt)	
+
 	
 	local fuel_pump_right_7_brt = math.max(bool2int(pump_3R > 0) * lamps_brt, test_btn) 
-	set(fuel_pump_right_7, fuel_pump_right_7_brt)	
+
 	
 	local fuel_pump_right_8_brt = math.max(bool2int(pump_3R > 2) * lamps_brt, test_btn)
-	set(fuel_pump_right_8, fuel_pump_right_8_brt)	
+
 	
 	local fuel_pump_right_9_brt = math.max(bool2int(pump_3R > 1) * lamps_brt, test_btn) 
-	set(fuel_pump_right_9, fuel_pump_right_9_brt)	
+
 	
 	
 	local fuel_pump_10_brt = math.max(bool2int(pump4 > 0) * lamps_brt, test_btn)
-	set(fuel_pump_10, fuel_pump_10_brt)	
+	
 	
 	local fuel_pump_11_brt = math.max(bool2int(pump4 > 1) * lamps_brt, test_btn)
-	set(fuel_pump_11, fuel_pump_11_brt)	
+
 	
 	local fuel_pump_1_brt = math.max(pump_1_1 * lamps_brt, test_btn)
-	set(fuel_pump_1, fuel_pump_1_brt)	
+
 	
 	local fuel_pump_2_brt = math.max(pump_1_2 * lamps_brt, test_btn) 
-	set(fuel_pump_2, fuel_pump_2_brt)	
+	
 	
 	local fuel_pump_3_brt = math.max(pump_1_3 * lamps_brt, test_btn) 
-	set(fuel_pump_3, fuel_pump_3_brt)	
+	
 	
 	local fuel_pump_4_brt = math.max(pump_1_4 * lamps_brt, test_btn)
-	set(fuel_pump_4, fuel_pump_4_brt)
+	
 	
 	
 	
 	local fuel_cut_off_1_brt = 0
 	if get(fire_vlv_open_1) > 0.7 then fuel_cut_off_1_brt = 1 end
 	fuel_cut_off_1_brt = math.max(fuel_cut_off_1_brt * lamps_brt, test_btn)
-	set(fuel_cut_off_1, fuel_cut_off_1_brt)
+	set(fuel_cut_off_1, smooth_light(fuel_cut_off_1_brt, get(fuel_cut_off_1)))
 	
 	local fuel_cut_off_2_brt = 0
 	if get(fire_vlv_open_2) > 0.7 then fuel_cut_off_2_brt = 1 end
 	fuel_cut_off_2_brt = math.max(fuel_cut_off_2_brt * lamps_brt, test_btn)
-	set(fuel_cut_off_2, fuel_cut_off_2_brt)
+	set(fuel_cut_off_2, smooth_light(fuel_cut_off_2_brt, get(fuel_cut_off_2)))
 	
 	local fuel_cut_off_3_brt = 0
 	if get(fire_vlv_open_3) > 0.7 then fuel_cut_off_3_brt = 1 end
 	fuel_cut_off_3_brt = math.max(fuel_cut_off_3_brt * lamps_brt, test_btn) 
-	set(fuel_cut_off_3, fuel_cut_off_3_brt)	
+	
 	
 	
 	local fuel_flow_from_2_brt = 0
 	local tank_turn = get(auto_tanks_turn)
 	if tank_turn == 1 or tank_turn == 2 then fuel_flow_from_2_brt = 1 end
 	fuel_flow_from_2_brt = math.max(fuel_flow_from_2_brt * lamps_brt, test_btn) 
-	set(fuel_flow_from_2, fuel_flow_from_2_brt)
+	
 
 	local fuel_flow_from_3_brt = 0
 	if tank_turn == 2 or tank_turn == 3 then fuel_flow_from_3_brt = 1 end
 	fuel_flow_from_3_brt = math.max(fuel_flow_from_3_brt * lamps_brt, test_btn)
-	set(fuel_flow_from_3, fuel_flow_from_3_brt)
+	
 	
 	local fuel_flow_from_4_brt = 0
 	if tank_turn == 4 then fuel_flow_from_4_brt = 1 end
 	fuel_flow_from_4_brt = math.max(fuel_flow_from_4_brt * lamps_brt, test_btn)
-	set(fuel_flow_from_4, fuel_flow_from_4_brt)
+	
 
 	local fuel_flow_auto_fail_brt = 0
 	if tank_turn == 0 then fuel_flow_auto_fail_brt = 1 end
 	fuel_flow_auto_fail_brt = math.max(fuel_flow_auto_fail_brt * lamps_brt, test_btn)
-	set(fuel_flow_auto_fail, fuel_flow_auto_fail_brt)
+	
 	
 	local fuel_reserv_trans_left_brt = math.max(get(reserv_trans) * lamps_brt, test_btn) 
-	set(fuel_reserv_trans_left, fuel_reserv_trans_left_brt)
+	
 	
 	local fuel_reserv_trans_right_brt = math.max(get(reserv_trans) * lamps_brt, test_btn)
-	set(fuel_reserv_trans_right, fuel_reserv_trans_right_brt)
+	
 	
 	local fuel_porc_reserv_brt = math.max(get(reserv_pump_test) * lamps_brt, test_btn) 
-	set(fuel_porc_reserv, fuel_porc_reserv_brt)
+	
 	
 	--local fuel_level_automat_brt = math.max(get(fuel_level) * get(fuel_flow_mode) * get(fuel_flow_on) * lamps_brt, test_btn)
 	local fuel_level_automat_brt = math.max(get(fuel_level) * (1-get(fuel_level_fail)) * lamps_brt, test_btn)
-	set(fuel_level_automat, fuel_level_automat_brt)
-	
+	set(fuel_flow_from_4, 		smooth_light(fuel_flow_from_4_brt 		,get(fuel_flow_from_4)))
+	set(fuel_flow_auto_fail, 	smooth_light(fuel_flow_auto_fail_brt	,get(fuel_flow_auto_fail)))
+	set(fuel_reserv_trans_left, smooth_light(fuel_reserv_trans_left_brt	,get(fuel_reserv_trans_left)))
+	set(fuel_reserv_trans_right,smooth_light(fuel_reserv_trans_right_brt,get(fuel_reserv_trans_right)))
+	set(fuel_porc_reserv, 		smooth_light(fuel_porc_reserv_brt		,get(fuel_porc_reserv)))
+	set(fuel_level_automat, 	smooth_light(fuel_level_automat_brt		,get(fuel_level_automat)))
+	set(fuel_flow_from_3, 		smooth_light(fuel_flow_from_3_brt		,get(fuel_flow_from_3)))
+	set(fuel_flow_from_2, 		smooth_light(fuel_flow_from_2_brt		,get(fuel_flow_from_2)))
+	set(fuel_cut_off_3, 		smooth_light(fuel_cut_off_3_brt			,get(fuel_cut_off_3)))
+	set(fuel_pump_4, 			smooth_light(fuel_pump_4_brt				,get(fuel_pump_4)))
+	set(fuel_pump_3, 			smooth_light(fuel_pump_3_brt			,get(fuel_pump_3)))
+	set(fuel_pump_2, 			smooth_light(fuel_pump_2_brt			,get(fuel_pump_2)))
+	set(fuel_pump_1, 			smooth_light(fuel_pump_1_brt			,get(fuel_pump_1)))
+	set(fuel_pump_11, 			smooth_light(fuel_pump_11_brt			,get(fuel_pump_11)))
+	set(fuel_pump_10, 			smooth_light(fuel_pump_10_brt			,get(fuel_pump_10)))
+	set(fuel_pump_right_9, 		smooth_light(fuel_pump_right_9_brt		,get(fuel_pump_right_9)))
+	set(fuel_pump_right_8, 		smooth_light(fuel_pump_right_8_brt		,get(fuel_pump_right_8)))
+	set(fuel_pump_right_7, 		smooth_light(fuel_pump_right_7_brt		,get(fuel_pump_right_7)))
+	set(fuel_pump_right_6, 		smooth_light(fuel_pump_right_6_brt		,get(fuel_pump_right_6)))
+	set(fuel_pump_right_5, 		smooth_light(fuel_pump_right_5_brt		,get(fuel_pump_right_5)))
+	set(fuel_pump_left_9, 		smooth_light(fuel_pump_left_9_brt		,get(fuel_pump_left_9)))
+	set(fuel_pump_left_8, 		smooth_light(fuel_pump_left_8_brt		,get(fuel_pump_left_8)))
+	set(fuel_pump_left_7, 		smooth_light(fuel_pump_left_7_brt		,get(fuel_pump_left_7)))
+	set(fuel_pump_left_6, 		smooth_light(fuel_pump_left_6_brt		,get(fuel_pump_left_6)))
+	set(fuel_pump_left_5, 		smooth_light(fuel_pump_left_5_brt		,get(fuel_pump_left_5)))
+	set(fuel_tank2_right_fail, 	smooth_light(fuel_tank2_right_brt		,get(fuel_tank2_right_fail)))
+	set(fuel_tank3_right_fail, 	smooth_light(fuel_tank3_right_brt		,get(fuel_tank3_right_fail)))
+	set(fuel_tank2_left_fail, 	smooth_light(fuel_tank2_left_brt		,get(fuel_tank2_left_fail)))
+	set(fuel_tank3_left_fail, 	smooth_light(fuel_tank3_left_brt		,get(fuel_tank3_left_fail)))
 end
 
 
@@ -438,7 +500,7 @@ local function check_switchers()
 	sw_change = sw_change - fuel_trans_last - fuel_porc_last - fuel_level_last - fuel_flow_mode_last - fuel_flow_on_last
 	sw_change = sw_change - fuel_meter_on_last - fuel_meter_mech_on_last - fire_valve_1_last - fire_valve_2_last - fire_valve_3_last
 	
-	if sw_change ~= 0 then playSample(switcher_sound, false) end -- play sound
+	if sw_change ~= 0 then  end -- play sound
 
 	pump_tank2_left_last = pump_tank2_left_sw
 	pump_tank2_right_last = pump_tank2_right_sw
@@ -488,7 +550,7 @@ local function caps_check()
 	
 	cap_change = cap_change - fuel_trans_cap_last - fuel_porc_cap_last - fuel_flow_on_cap_last - fire_valve_1_cap_last - fire_valve_2_cap_last - fire_valve_3_cap_last
 	
-	if cap_change ~= 0 then playSample(cap_sound, false) end -- play sound
+	if cap_change ~= 0 then  end -- play sound
 	
 	fuel_trans_cap_last = fuel_trans_cap_sw
 	fuel_porc_cap_last = fuel_porc_cap_sw

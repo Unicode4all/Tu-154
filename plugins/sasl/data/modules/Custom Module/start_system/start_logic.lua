@@ -87,7 +87,7 @@ defineProperty("fuel_in_3", globalPropertyi("tu154ce/start/fuel_in_3")) -- по�
 
 
 -------------
-defineProperty("starter_torq", globalPropertyf("sim/aircraft/engine/acf_starter_torque_ratio")) -- мощность стартера. 0.18 для нормального запуска
+starter_torq = globalPropertyf("sim/aircraft/engine/acf_starter_torque_ratio") -- мощность стартера. 0.18 для нормального запуска
 defineProperty("starter_rpm", globalPropertyf("sim/aircraft/engine/acf_starter_max_rpm_ratio")) -- макс обороты стартера 0-1
 defineProperty("jet_spoolup_time", globalPropertyf("sim/aircraft/engine/acf_spooltime_jet")) -- время раскрутки двигателя. 5 сек по дефолту
 
@@ -109,14 +109,19 @@ defineProperty("apu_bleed", globalPropertyf("sim/cockpit2/bleedair/actuators/apu
 -- XP 11.10 fix
 defineProperty("sim_vers", globalPropertyi("sim/version/xplane_internal_version")) -- версия сима
 
-if get(sim_vers) then
-	if get(sim_vers) >= 111000 then
-		set(starter_torq, 0.2)
-	end
-end
---set(starter_torq, 0.18)
---set(jet_spoolup_time, 5)
---set(starter_rpm, 0.24)
+asu_press = globalPropertyf("tu154ce/asu/press")
+
+bleed_available_center = globalPropertyf("sim/cockpit2/bleedair/indicators/bleed_available_center")
+bleed_available_left = globalPropertyf("sim/cockpit2/bleedair/indicators/bleed_available_left")
+bleed_available_right = globalPropertyf("sim/cockpit2/bleedair/indicators/bleed_available_right")
+--if get(sim_vers) then
+--	if get(sim_vers) >= 111000 then
+--		set(starter_torq, 0.2)
+--	end
+--end
+set(starter_torq, 0.18)
+set(jet_spoolup_time, 5)
+set(starter_rpm, 0.24)
 
 
 
@@ -169,7 +174,7 @@ local eng_start_press_t = {{ -100000, 0.0 },    -- bugs walkaround
 	
 function update()
 	
-	set(APU_N1, 100) -- XP11 bug
+	--set(APU_N1, 100) -- XP11 bug
 	
 	starter_press = get(starter_pressure)
 	
@@ -226,10 +231,15 @@ function update()
 		set(start_sys_work, 1)
 		-- air start system logic
 		starter_press = starter_press + (get(apu_air_doors) * get(apu_n1) * 0.01 + (press_1 + press_2 + press_3)) * passed
+		if get(asu_press) > 0 then
+			starter_press = get(asu_press)
+		end
 		
 		-- start engine starting process
 		local fuel_system = get(auto_tanks_turn) > 0 and get(fuel_flow_mode) == 1 and get(tank1_1) + get(tank1_2) + get(tank1_3) + get(tank1_4) == 4
 		
+		set(starter_torq, (starter_press * 0.04))
+
 		if not eng1_starting and not eng2_starting and not eng3_starting and start_button and starter_press > 3 and fuel_system then
 			if eng_select == 1 and power27L and rpm1 < RPM_APD_OFF then
 				eng1_start_time = time_now

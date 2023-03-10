@@ -1,6 +1,6 @@
 I
 10 Version
-_hobs_time 125374.632420
+_hobs_time 443392.087081
 _iql_view_type_0 v_3dc
 _iql_pe_x_0 0.112098
 _iql_pe_y_0 0.082449
@@ -121,7 +121,7 @@ _iql_circ_the_9 -74.239761
 _iql_circ_dis_9 57.166611
 _iql_pscroll_x_pix_9 0.000000
 _iql_pscroll_y_pix_9 910.000000
-_livery_req 0
+_livery_req 3
 _track_up_0 0
 _data_fields_0 1
 _ils_cdi_auto_0 0
@@ -143,3 +143,12 @@ _filter_rnp_2 0
 _baro_hpa_2 0
 _wind_display_2 0
 _inset_map_2 1
+_dg_lat_adjust_0 0.000000
+_dg_lat_adjust_1 0.000000
+_dg_lat_adjust_2 59.801727
+_dg_lat_adjust_3 59.801727
+_dg_lat_adjust_4 59.801727
+_dg_lat_adjust_5 59.801727
+atc/_acf_make_ TUPOLEV
+atc/_acf_model_ Tu-154
+atc/_acf_tailnumber_ 85748

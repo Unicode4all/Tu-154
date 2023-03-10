@@ -18,7 +18,7 @@ function draw()
 	
 	for k,v in ipairs(runtime) do
 		
-		drawText(text_font, 0, -runPos * 30, v[1].." : "..v[2].." "..val, 12, false, false, 0, 0, 0, 1)
+		drawText(text_font, 0, -runPos * 30, v[1].." : "..v[2].." "..val, 32, false, false, 0, 0, 0, 1)
 		runPos = runPos + 1
 	end
 	

@@ -438,7 +438,7 @@ components = {
 	clickable {
 		position = {290, 550, 170, 30},
       
-		onMouseClick = function()
+		onMouseDown = function()
 			set(runtime_tbl[1][2], math.random(280,320) * 3600)
 			
 			set(runtime_tbl[2][2], math.random(280,320) * 3600)
@@ -484,7 +484,7 @@ components = {
 	clickable {
 		position = {290, 465, 170, 30},
       
-		onMouseClick = function()
+		onMouseDown = function()
 			set(brakes_tbl[1][2], 1)
 			set(brakes_tbl[2][2], 1)
 			set(save_state, 1)
@@ -530,7 +530,7 @@ components = {
 	clickable {
 		position = {290, 390, 170, 30},
       
-		onMouseClick = function()
+		onMouseDown = function()
 			set(liqd_tbl[1][2], math.random() + 26)
 			set(liqd_tbl[2][2], math.random() + 26)
 			set(liqd_tbl[3][2], math.random() + 26)
@@ -574,7 +574,7 @@ components = {
 	
 	clickable {
 		position = {210, 25, 85, 40},
-   		onMouseClick = fixAll,
+   		onMouseDown = fixAll,
 	}, 
 	
 
@@ -605,7 +605,7 @@ components = {
 	clickable {
 		position = {290, 420, 170, 30},
       
-		onMouseClick = function()
+		onMouseDown = function()
 			set(liqd_tbl[1][2], 58)
 			set(liqd_tbl[2][2], 58)
 			set(liqd_tbl[3][2], 45)
@@ -623,7 +623,7 @@ components = {
 	clickable {
 		position = {size[1] - 30, size[2] - 30, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(show_fail_panel, 0)
 			
 			return true

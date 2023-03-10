@@ -2,7 +2,7 @@ size = {205, 305}
 
 defineProperty("bg", loadImage("UMETAR.png", 0, 0, 205, 305))
 
-local font = loadBitmapFont("UPhone.fnt")
+local font = loadFont("UPhone.fnt")
 
 local METAR1 = ""
 local METAR2 = ""

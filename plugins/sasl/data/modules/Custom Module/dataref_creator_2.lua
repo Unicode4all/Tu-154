@@ -2,6 +2,11 @@ createGlobalPropertyi("tu154ce/lang/hide_rus_objects", 0) -- спрятать р
 createGlobalPropertyi("tu154ce/lang/hide_eng_objects", 1) -- спрятать английские объекты кабины
 createGlobalPropertyi("tu154ce/have_pedals", 0) -- есть педали с тормозами
 createGlobalPropertyi("tu154ce/sounds_voulme", 1000) -- общая громкость звуков
+
+createGlobalPropertyi("tu154ce/sounds/master_voulme", 1000) -- общая громкость звуков
+createGlobalPropertyi("tu154ce/sounds/engines_voulme", 1000) -- громкость двигателей
+createGlobalPropertyi("tu154ce/sounds/avionics_voulme", 1000) -- громкость авионики
+createGlobalPropertyi("tu154ce/sounds/switches_voulme", 1000) -- громкость манипуляторов (кнопки, выключатели)
 createGlobalPropertyf("tu154ce/elec/bat_volt_1", 25) -- напряжение батареи
 createGlobalPropertyf("tu154ce/elec/bat_volt_2", 25) -- напряжение батареи
 createGlobalPropertyf("tu154ce/elec/bat_volt_3", 25) -- напряжение батареи
@@ -36,6 +41,7 @@ createGlobalPropertyi("tu154ce/elec/bat_is_source_1", 1) -- батарея яв�
 createGlobalPropertyi("tu154ce/elec/bat_is_source_2", 1) -- батарея является источником
 createGlobalPropertyi("tu154ce/elec/bat_is_source_3", 1) -- батарея является источником
 createGlobalPropertyi("tu154ce/elec/bat_is_source_4", 1) -- батарея является источником
+createGlobalPropertyi("tu154ce/elec/bat_connected", 0) -- подключена ли хотя бы какая-либо из батарей (для FMOD)
 createGlobalPropertyi("tu154ce/elec/bus_connected", 0) -- сети соеденены
 createGlobalPropertyf("tu154ce/elec/bus36_volt_left", 36) -- напряжение левой сети 36
 createGlobalPropertyf("tu154ce/elec/bus36_volt_right", 36) -- напряжение правой сети 36

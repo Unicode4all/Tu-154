@@ -17,8 +17,8 @@ defineProperty("fuel_q_3L", globalProperty("sim/flightmodel/weight/m_fuel[5]")) 
 defineProperty("gear1_deflect", globalProperty("sim/flightmodel2/gear/tire_vertical_deflection_mtr[0]"))
 
 -- load images
-defineProperty("bg_img1", loadImage("palette.png", 0, 0, 251, 305))
-defineProperty("bg_img2", loadImage("palette.png", 250, 0, 251, 305))
+defineProperty("bg_img1", loadImage("palette.png", 0, 207, 251, 305))
+defineProperty("bg_img2", loadImage("palette.png", 250, 207, 251, 305))
 
 defineProperty("cg_pos_actual", globalPropertyf("tu154ce/misc/cg_pos_actual")) -- актуальное положение CG
 defineProperty("weight_actual", globalPropertyf("tu154ce/misc/weight_actual")) -- актуальная масса
@@ -406,7 +406,7 @@ components = {
 	clickable {
 		position = {size[1]-15, size[2]-15, 15, 15 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(show_palette, 0)
 			return true
 		end,
@@ -416,7 +416,7 @@ components = {
 	clickable {
 		position = {51, 281, 153, 21 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			show_side = 1 - show_side
 			return true
 		end,

@@ -21,7 +21,7 @@ defineProperty("sim_time", globalPropertyf("sim/time/zulu_time_sec"))  -- zulu t
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 -- images
-defineProperty("wc_screen_img", loadImage("taws_welcome.png", 0, 0, 1000, 770))
+defineProperty("wc_screen_img", loadImage("taws_welcome.png", 0, 255, 1000, 770))
 local text_font = loadBitmapFont("taws_scr.fnt")
 
 
@@ -205,8 +205,9 @@ components = {
 
 
 	-- counter text
-	text_draw {
+	text_draw2 {
 		position = {413, 480, 220, 150},
+		bitmap = true,
 		text = function()
 			return counter_text
 		end,
@@ -249,8 +250,9 @@ components = {
 	},	
 	
 	-- counter text
-	text_draw {
+	text_draw2 {
 		position = {360, 350, 185, 160},
+		bitmap = true,
 		text = function()
 			return "НЕТ РП"
 		end,

@@ -11,7 +11,7 @@ defineProperty("distance_set", globalPropertyi("tu154ce/taws/distance_set")) -- 
 defineProperty("brt_handle", globalPropertyf("tu154ce/rotary/srpbz/brightness")) -- ручка яркости
 
 -- load images
-defineProperty("scale_top_img", loadImage("taws_scale_1.png", 0, 0, 1000, 770))
+defineProperty("scale_top_img", loadImage("taws_scale_1.png", 0, 255, 1000, 770))
 
 
 
@@ -31,10 +31,9 @@ defineProperty("gear3_deploy", globalProperty("sim/aircraft/parts/acf_gear_deplo
 
 
 
-
 local rows = 60
 local cols = 80
-
+local error = false
 local low_qlty = false
 
 if low_qlty then
@@ -133,7 +132,7 @@ local plane_z = get(pos_z)
 
 local LG = false
 
-local text_font = loadBitmapFont("taws_scr.fnt")
+local text_font = loadFont("taws.ttf")
 
 local range_text = " 20"
 
@@ -152,7 +151,7 @@ function update()
 		frame_counter = 1
 	else brightness = get(brt_handle)
 	end
-	
+
 	local dist = get(distance_set)
 
 	local distance = 20
@@ -207,10 +206,12 @@ function update()
 				local prob, locationX, locationY, locationZ, normalX, normalY, normalZ, velocityX, velocityY, vlocityZ, isWet = probeTerrain(p_x, plane_y, p_z)
 								
 				--local probe_dist = math.sqrt((p_x)^2 + (p_z)^2) / 1000
-				--local correct = interpolate(correct_tbl, probe_dist) - 130
-				
+				--local correct = interpolate(correct_tbl, probe_dist) - 
+				if locationX == nil or locationY == nil or locationZ == nil then
+					 tempHeightTable[col][row] = giveColor(acf_alt, 100, isWet, LG)
+					 goto error
+				end
 				local lat, lon, alt = localToWorld(locationX, locationY, locationZ)
-				
 				tempHeightTable[col][row] = giveColor(acf_alt, alt, isWet, LG)
 				
 				--if row == 1 and col == 50 then print(probe_dist, correct, locationY + correct, locationY) end
@@ -228,7 +229,7 @@ function update()
 		frame_counter = 0
 		
 	end
-	
+	::error::
 	frame_counter = frame_counter + 1	
 	
 end
@@ -284,6 +285,7 @@ components = {
 			return range_text
 		end,
 		font = text_font,
+		font_size = 42,
 		color = {1,1,1,1},
 		visible = function()
 			return screen_work
@@ -294,6 +296,7 @@ components = {
 	text_draw {
 		position = {20, 610, 160, 160},
 		text = "км",
+		font_size = 42,
 		font = text_font,
 		color = {1,1,1,1},
 		visible = function()

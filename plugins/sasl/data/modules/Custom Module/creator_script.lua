@@ -15,8 +15,8 @@
 
 print("panel dir = ",sasl.getAircraftPath())
 
-local dataref_filename = sasl.getAircraftPath() .. "/Custom Avionics/DataRefsTu154_int.txt" -- path for source file
-local save_filename = sasl.getAircraftPath() .. "/Custom Avionics/dataref_creator_2.lua" -- path for output files
+local dataref_filename = sasl.getAircraftPath() .. "/plugins/SASL/data/modules/Custom Module/DataRefsTu154_CB.txt" -- path for source file
+local save_filename = sasl.getAircraftPath() .. "/plugins/SASL/data/modules/Custom Module/dataref_creator_4.lua" -- path for output files
 
 --local save_filename = sasl.getAircraftPath() .. "/Custom Avionics/smart_copilot_datarefs_2.txt" -- path for output files
 
@@ -54,7 +54,7 @@ if dataref_file then
 			
 			--local save_text = dataref_name.." = "..dataref_value.."\n" -- for Smart Copilot
 			local save_text = "createGlobalProperty"..dataref_type.."\040\""..dataref_name.."\", "..dataref_value.."\041".." -- "..dataref_descr.."\n" -- for regular use
-
+			print(save_text)
 			save_file:write (save_text) -- save text to output file
 	
 		end

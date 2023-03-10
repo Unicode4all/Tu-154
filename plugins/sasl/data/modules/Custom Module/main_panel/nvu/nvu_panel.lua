@@ -205,7 +205,7 @@ defineProperty("compas_knob", globalPropertyf("tu154ce/gauges/misc/compas_knob")
 defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
 defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
 defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
-
+include("smooth_light.lua")
 
 local notLoaded = true
 local start_timer = 0
@@ -490,7 +490,7 @@ local function switchers()
 	
 	local summ = get(nvu_power_on) + get(nvu_calc_on) + get(nvu_corr_on)
 	
-	if summ ~= switchers_summ then playSample(switcher_sound, false) end
+	if summ ~= switchers_summ then  end
 	
 	
 	switchers_summ = summ
@@ -505,7 +505,7 @@ local function buttons()
 	local summ = get(nvu_left_btn) + get(nvu_ctr_btn) + get(nvu_right_btn) + get(zpu_1_left_btn) + get(zpu_1_ctr_btn) + get(zpu_1_right_btn)
 	summ = summ + get(zpu_2_left_btn) + get(zpu_2_ctr_btn) + get(zpu_2_right_btn)
 	
-	if summ ~= but_summ then playSample(button_sound, false) end
+	if summ ~= but_summ then  end
 	
 	but_summ = summ
 
@@ -518,7 +518,7 @@ local function rotary()
 	
 	local summ = get(nvu_param_sel) + get(nvu_turn_sel)
 	
-	if summ ~= rot_summ then playSample(rotary_sound, false) end
+	if summ ~= rot_summ then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
 	
 	rot_summ = summ
 
@@ -535,28 +535,28 @@ local function lamps()
 	local active = get(nvu_active)
 	
 	local nvu_on_lit_brt = bool2int(mode > 0 and get(nvu_fail) == 0) * small_lamps_brt
-	set(nvu_on_lit, nvu_on_lit_brt)
+	set(nvu_on_lit, smooth_light(nvu_on_lit_brt, get(nvu_on_lit)))
 	
 	local nvu_corr_lit_brt = bool2int(mode == 3) * small_lamps_brt
-	set(nvu_corr_lit, nvu_corr_lit_brt)
+	set(nvu_corr_lit, smooth_light(nvu_corr_lit_brt, get(nvu_corr_lit)))
 	
 	local nvu_1_active_brt = bool2int(active == 1 and mode > 0) * small_lamps_brt
-	set(nvu_1_active, nvu_1_active_brt)
+	set(nvu_1_active, smooth_light(nvu_1_active_brt, get(nvu_1_active)))
 	
 	local nvu_2_active_brt = bool2int(active == 2 and mode > 0) * small_lamps_brt
-	set(nvu_2_active, nvu_2_active_brt)
+	set(nvu_2_active, smooth_light(nvu_2_active_brt, get(nvu_2_active)))
 	
 	local nvu_fail_lit_brt = math.max(bool2int(get(nvu_fail) == 1) * lamps_brt, test_btn)
-	set(nvu_fail_lit, nvu_fail_lit_brt)
+	set(nvu_fail_lit, smooth_light(nvu_fail_lit_brt, get(nvu_fail_lit)))
 	
 	local nvu_vor_automat_brt = math.max(bool2int(false) * lamps_brt, test_btn) -- temp
-	set(nvu_vor_automat, nvu_vor_automat_brt)
+	set(nvu_vor_automat, smooth_light(nvu_vor_automat_brt, get(nvu_vor_automat)))
 	
 	local correct_on_lit_brt = math.max(bool2int(mode == 3 and get(rsbn_distance) ~= 0) * lamps_brt, test_btn)
-	set(correct_on_lit, correct_on_lit_brt)
+	set(correct_on_lit, smooth_light(correct_on_lit_brt, get(correct_on_lit)))
 	
 	local change_ch_o_brt = math.max(bool2int(get(nvu_changing_ort) == 1) * lamps_brt, test_btn)
-	set(change_ch_o, change_ch_o_brt)
+	set(change_ch_o, smooth_light(change_ch_o_brt, get(change_ch_o)))
 
 end
 

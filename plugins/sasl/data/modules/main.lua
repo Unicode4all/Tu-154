@@ -1,19 +1,27 @@
---print("this is Tu154M v1.1.6 by Felis")
-size = { 2048, 2048 }
+print("This is Tu154M Community Edition, v1.0.0")
+size = { 4096, 4096 }
 print("Lua version is", _VERSION)
+
 
 sasl.options.set3DRendering(true)
 sasl.options.setAircraftPanelRendering(true)
 sasl.options.setInteractivity(true)
+sasl.options.setRenderingMode2D(SASL_RENDER_2D_MULTIPASS)
 
-addSearchPath(moduleDirectory.."/Custom Module/KLN90/")
-addSearchPath(moduleDirectory.."/Custom Module/sounds")
+addSearchPath(moduleDirectory .. "/Custom Module/KLN90/")
+addSearchPath(moduleDirectory .. "/Custom Module/sounds")
+addSearchPath(moduleDirectory .. "/Custom Module/gui")
+
+
+sasl.gl.setRenderTextPixelAligned(true )
 
 -- 3D panel issue workaround
-fixedPanelWidth = 2048
-fixedPanelHeight = 2048
+fixedPanelWidth = 4096
+fixedPanelHeight = 4096
 
 math.randomseed(os.time()) -- randomise random :)
+
+xplane_version = globalProperty("sim/version/xplane_internal_version")
 
 -- global functions
 function interpolate(tbl, value)
@@ -41,8 +49,11 @@ end
 
 -- return the integer 0 or 1 by give boolean
 function bool2int(var)
-	if var then return 1
-	else return 0 end
+	if var then
+		return 1
+	else
+		return 0
+	end
 end
 
 function line(x, x1, y1, x2, y2) -- returns Y on the line with two points by given X
@@ -50,9 +61,9 @@ function line(x, x1, y1, x2, y2) -- returns Y on the line with two points by giv
 
 	if x2 - x1 ~= 0 then
 		return (x - x1) * (y2 - y1) / (x2 - x1) + y1
-	else return 0
+	else
+		return 0
 	end
-
 end
 
 -- returns true if current beacon is ILS
@@ -89,36 +100,40 @@ test_panel = subpanel {
 
 test_panel.visible = true
 --]]
-
 components = {
 
 	-- internal logic
-
-
 	--creator_script {}, -- script for converting custom DataRef file to creator code.
 	dataref_creator_1 {}, -- main datarefs. controls and indicatios
 	dataref_creator_2 {}, -- internal datarefs
 	dataref_creator_3 {}, -- failures datarefs
+	dataref_creator_4 {}, -- circuit breakers
 
-	save_state {}, -- safe current state
+	papers {},
+
+	save_state {},     -- safe current state
 
 	time_logic {},
 	flap_aero {},
-
+--]]
 	KLN90 {
 		--position = { 0, 0, 2048, 2048 }
-		position = { 1018, 506, 1029, 329 }
+		position = { 1295, 582, 1770, 227 }
 	},
 
 	-- gauges and systems
+
 	main_panel { -- panel for simulated 2D gauges
 		position = { 0, 0, 2048, 2048 },
 	},
+		--
+	--
 	overhead {},
 	animation {},
 	electric_system {},
 	lights_system {},
 	apu_system {},
+	asu {},
 	engines_system {},
 	fuel_system {},
 	hydro_system {},
@@ -132,5 +147,7 @@ components = {
 	sounds {},
 
 	panels_2d {},
+	smooth_anim {},
+	--]]
 
 }

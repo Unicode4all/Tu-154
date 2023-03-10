@@ -2,111 +2,115 @@ I
 800
 OBJ
 
-TEXTURE lites.png	
-POINT_COUNTS	0 0 0 0
+TEXTURE lites.png
 
-
+POINT_COUNTS 0 0 0 0
 ANIM_begin
-	ANIM_trans	   7.2201   -2.9153    0.1676	   7.2201   -2.9153    0.1676	0 0	no_ref
-	ANIM_rotate_begin	   0.5299   -0.0000   -0.8480	tu154ce/anim/wing_flx_right
-		ANIM_rotate_key	-1.0	  1.00
-		ANIM_rotate_key	0.0	  0.00
-		ANIM_rotate_key	1	  0.00
-	ANIM_rotate_end
-	ANIM_begin
-		ANIM_trans	  -0.0102   -0.4496    0.0162	  -0.0102   -0.4496    0.0162	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299   -0.0000    0.8480	tu154ce/anim/wing_flx_right
-			ANIM_rotate_key	-1.0	  0.00
-			ANIM_rotate_key	0.0	  0.00
-			ANIM_rotate_key	1	  1.00
-		ANIM_rotate_end
-		ANIM_begin
-			ANIM_trans	   6.8324    0.2632    4.8588	   6.8324    0.2632    4.8588	0 0	no_ref
-			ANIM_rotate_begin	  -0.0000    0.0000   -1.0000	tu154ce/anim/wing_flx_right
-				ANIM_rotate_key	-1.0	  1.00
-				ANIM_rotate_key	0.0	  0.00
-				ANIM_rotate_key	1	  0.00
-			ANIM_rotate_end
-			ANIM_begin
-				ANIM_trans	   0.0000   -0.2788    0.0222	   0.0000   -0.2788    0.0222	0 0	no_ref
-				ANIM_rotate_begin	   0.0000   -0.0000    1.0000	tu154ce/anim/wing_flx_right
-					ANIM_rotate_key	-1.0	  0.00
-					ANIM_rotate_key	0.0	  0.00
-					ANIM_rotate_key	1	  1.00
-				ANIM_rotate_end
-                ANIM_begin
-					ANIM_hide -0.1 0.5 sim/cockpit2/switches/navigation_lights_on
-						LIGHT_NAMED	airplane_nav_right	   4.6849    0.0769    2.8063
-						LIGHT_PARAM full_custom_halo 4.6849 0.0769 2.8063 0.000 0.238 0.000 0.1 20.0 0.7 -0.3 -0.7 0.1
-						ANIM_begin
-							ANIM_hide -0.1 0.5 tu154ce/lights/white_light_right
-							LIGHT_NAMED	airplane_nav_tail	   4.5712   -0.0496    3.5151
-							LIGHT_PARAM full_custom_halo 4.5712 -0.0496 3.5151 0.240 0.248 0.255 0.1 20.0 0.0 -1.0 0.0 0.1
-						ANIM_end	
-                ANIM_end
-			ANIM_end
-		ANIM_end
-	ANIM_end
+ANIM_trans 7.220100 -2.915300 0.167600 7.220100 -2.915300 0.167600 0.000000 0.000000 none
+ANIM_rotate_begin 0.529927 0.000000 -0.848043 tu154ce/anim/wing_flx_right
+ANIM_rotate_key -1.000000 1.000000
+ANIM_rotate_key 0.000000 0.000000
+ANIM_rotate_key 1.000000 0.000000
+ANIM_rotate_end
+ANIM_trans -7.220100 2.915300 -0.167600 -7.220100 2.915300 -0.167600 0.000000 0.000000 none
+ANIM_begin
+ANIM_trans 7.209900 -3.364900 0.183800 7.209900 -3.364900 0.183800 0.000000 0.000000 none
+ANIM_rotate_begin -0.529927 0.000000 0.848043 tu154ce/anim/wing_flx_right
+ANIM_rotate_key -1.000000 0.000000
+ANIM_rotate_key 0.000000 0.000000
+ANIM_rotate_key 1.000000 1.000000
+ANIM_rotate_end
+ANIM_trans -7.209900 3.364900 -0.183800 -7.209900 3.364900 -0.183800 0.000000 0.000000 none
+ANIM_begin
+ANIM_trans 14.042299 -3.101700 5.042600 14.042299 -3.101700 5.042600 0.000000 0.000000 none
+ANIM_rotate_begin 0.000000 0.000000 -1.000000 tu154ce/anim/wing_flx_right
+ANIM_rotate_key -1.000000 1.000000
+ANIM_rotate_key 0.000000 0.000000
+ANIM_rotate_key 1.000000 0.000000
+ANIM_rotate_end
+ANIM_trans -14.042299 3.101700 -5.042600 -14.042299 3.101700 -5.042600 0.000000 0.000000 none
+ANIM_begin
+ANIM_trans 14.042299 -3.380500 5.064799 14.042299 -3.380500 5.064799 0.000000 0.000000 none
+ANIM_rotate_begin 0.000000 0.000000 1.000000 tu154ce/anim/wing_flx_right
+ANIM_rotate_key -1.000000 0.000000
+ANIM_rotate_key 0.000000 0.000000
+ANIM_rotate_key 1.000000 1.000000
+ANIM_rotate_end
+ANIM_trans -14.042299 3.380500 -5.064799 -14.042299 3.380500 -5.064799 0.000000 0.000000 none
+ANIM_begin
+ANIM_hide -0.100000 0.500000 sim/cockpit2/switches/navigation_lights_on
+LIGHT_NAMED airplane_nav_right 18.648563 -3.303600 7.911740
+LIGHT_PARAM full_custom_halo 18.648563 -3.303600 7.911740 0.00 0.24 0.00 0.10 20.00 0.70 -0.30 -0.70 0.10
+ANIM_begin
+ANIM_hide -0.100000 0.500000 tu154ce/lights/white_light_right
+LIGHT_NAMED airplane_nav_tail 18.613501 -3.395296 8.579900
+LIGHT_PARAM full_custom_halo 18.613501 -3.395296 8.579900 0.24 0.25 0.25 0.10 20.00 0.00 -1.00 0.00 0.10
+ANIM_end
+ANIM_end
+ANIM_end
+ANIM_end
+ANIM_end
 ANIM_end
 ANIM_begin
-	ANIM_trans	  -7.2200   -2.9153    0.1676	  -7.2200   -2.9153    0.1676	0 0	no_ref
-	ANIM_rotate_begin	   0.5299    0.0000    0.8480	tu154ce/anim/wing_flx_left
-		ANIM_rotate_key	-1.0	  1.00
-		ANIM_rotate_key	0.0	  0.00
-		ANIM_rotate_key	1	  0.00
-	ANIM_rotate_end
-	ANIM_begin
-		ANIM_trans	   0.0100   -0.4496    0.0162	   0.0100   -0.4496    0.0162	0 0	no_ref
-		ANIM_rotate_begin	  -0.5299    0.0000   -0.8480	tu154ce/anim/wing_flx_left
-			ANIM_rotate_key	-1.0	  0.00
-			ANIM_rotate_key	0.0	  0.00
-			ANIM_rotate_key	1	  1.00
-		ANIM_rotate_end
-		ANIM_begin
-			ANIM_trans	  -6.8320    0.2633    4.8588	  -6.8320    0.2633    4.8588	0 0	no_ref
-			ANIM_rotate_begin	  -0.0000   -0.0000    1.0000	tu154ce/anim/wing_flx_left
-				ANIM_rotate_key	-1.0	  1.00
-				ANIM_rotate_key	0.0	  0.00
-				ANIM_rotate_key	1	  0.00
-			ANIM_rotate_end
-			ANIM_begin
-				ANIM_trans	   0.0000   -0.2789    0.0222	   0.0000   -0.2789    0.0222	0 0	no_ref
-				ANIM_rotate_begin	   0.0000    0.0000   -1.0000	tu154ce/anim/wing_flx_left
-					ANIM_rotate_key	-1.0	  0.00
-					ANIM_rotate_key	0.0	  0.00
-					ANIM_rotate_key	1	  1.00
-				ANIM_rotate_end
-                ANIM_begin
-					ANIM_hide -0.1 0.5 sim/cockpit2/switches/navigation_lights_on
-						LIGHT_NAMED	airplane_nav_left	  -4.6852    0.0769    2.8063
-						LIGHT_PARAM full_custom_halo -4.6852 0.0769 2.8063 0.255 0.000 0.000 0.1 20.0 -0.7 -0.3 -0.7 0.1
-						ANIM_begin
-							ANIM_hide -0.1 0.5 tu154ce/lights/white_light_left
-							LIGHT_NAMED	airplane_nav_tail	  -4.5715   -0.0495    3.5151
-							LIGHT_PARAM full_custom_halo -4.5715 -0.0495 3.5151 0.240 0.248 0.255 0.1 20.0 0.0 -1.0 0.0 0.1
-						ANIM_end	
-                    ANIM_end
-			ANIM_end
-		ANIM_end
-	ANIM_end
+ANIM_trans -7.220000 -2.915300 0.167600 -7.220000 -2.915300 0.167600 0.000000 0.000000 none
+ANIM_rotate_begin 0.529927 0.000000 0.848043 tu154ce/anim/wing_flx_left
+ANIM_rotate_key -1.000000 1.000000
+ANIM_rotate_key 0.000000 0.000000
+ANIM_rotate_key 1.000000 0.000000
+ANIM_rotate_end
+ANIM_trans 7.220000 2.915300 -0.167600 7.220000 2.915300 -0.167600 0.000000 0.000000 none
+ANIM_begin
+ANIM_trans -7.210000 -3.364900 0.183800 -7.210000 -3.364900 0.183800 0.000000 0.000000 none
+ANIM_rotate_begin -0.529927 0.000000 -0.848043 tu154ce/anim/wing_flx_left
+ANIM_rotate_key -1.000000 0.000000
+ANIM_rotate_key 0.000000 0.000000
+ANIM_rotate_key 1.000000 1.000000
+ANIM_rotate_end
+ANIM_trans 7.210000 3.364900 -0.183800 7.210000 3.364900 -0.183800 0.000000 0.000000 none
+ANIM_begin
+ANIM_trans -14.042000 -3.101600 5.042600 -14.042000 -3.101600 5.042600 0.000000 0.000000 none
+ANIM_rotate_begin 0.000000 0.000000 1.000000 tu154ce/anim/wing_flx_left
+ANIM_rotate_key -1.000000 1.000000
+ANIM_rotate_key 0.000000 0.000000
+ANIM_rotate_key 1.000000 0.000000
+ANIM_rotate_end
+ANIM_trans 14.042000 3.101600 -5.042600 14.042000 3.101600 -5.042600 0.000000 0.000000 none
+ANIM_begin
+ANIM_trans -14.042000 -3.380500 5.064799 -14.042000 -3.380500 5.064799 0.000000 0.000000 none
+ANIM_rotate_begin 0.000000 0.000000 -1.000000 tu154ce/anim/wing_flx_left
+ANIM_rotate_key -1.000000 0.000000
+ANIM_rotate_key 0.000000 0.000000
+ANIM_rotate_key 1.000000 1.000000
+ANIM_rotate_end
+ANIM_trans 14.042000 3.380500 -5.064799 14.042000 3.380500 -5.064799 0.000000 0.000000 none
+ANIM_begin
+ANIM_hide -0.100000 0.500000 sim/cockpit2/switches/navigation_lights_on
+LIGHT_NAMED airplane_nav_left -18.624327 -3.303600 7.908685
+LIGHT_PARAM full_custom_halo -18.624327 -3.303600 7.908685 0.25 0.00 0.00 0.10 20.00 -0.70 -0.30 -0.70 0.10
+ANIM_begin
+ANIM_hide -0.100000 0.500000 tu154ce/lights/white_light_left
+LIGHT_NAMED airplane_nav_tail -18.614262 -3.392854 8.580488
+LIGHT_PARAM full_custom_halo -18.614262 -3.392854 8.580488 0.24 0.25 0.25 0.10 20.00 0.00 -1.00 0.00 0.10
+ANIM_end
+ANIM_end
+ANIM_end
+ANIM_end
+ANIM_end
 ANIM_end
 ANIM_begin
-ANIM_hide -0.1 0.5 sim/cockpit2/switches/navigation_lights_on
-LIGHT_PARAM full_custom_halo 0.0 -1.9 17.6 0.240 0.248 0.255 0.1 20.0 0.0 -0.3 0.7 0.1
+ANIM_hide -0.100000 0.500000 sim/cockpit2/switches/navigation_lights_on
+LIGHT_PARAM full_custom_halo 0.000000 -1.900000 17.600000 0.24 0.25 0.25 0.10 20.00 0.00 -0.30 0.70 0.10
 ANIM_end
 ANIM_begin
-	ANIM_hide -0.1 0.5 tu154ce/lights/beacon_light_B
-        LIGHT_CUSTOM 0.0000 -3.360037 10.939 1.0 1.0 1.0 0.8 1.0 0.7598 0.0156 0.9902 0.4766
-        LIGHT_PARAM full_custom_halo 0.0000 -2.2 10.939 0.255 0.000 0.000 0.7 90.0 0.0 -1.0 0.2 0.0
-        LIGHT_PARAM full_custom_halo 0.0000 -7.5 10.95 0.255 0.000 0.000 2.5 5.5 0.0 1.0 -0.2 0.0
+ANIM_hide -0.100000 0.500000 tu154ce/lights/beacon_light_B
+LIGHT_CUSTOM 0.000000 -3.360037 10.939000 1.000000 1.000000 1.000000 0.800000 1.000000 0.759800 0.015600 0.990200 0.476600 
+LIGHT_PARAM full_custom_halo 0.000000 -2.200000 10.939000 0.25 0.00 0.00 0.70 90.00 0.00 -1.00 0.20 0.00
+LIGHT_PARAM full_custom_halo 0.000000 -7.500000 10.950000 0.25 0.00 0.00 2.50 5.50 0.00 1.00 -0.20 0.00
 ANIM_end
 ANIM_begin
-	ANIM_hide -0.1 0.5 tu154ce/lights/beacon_light_T
-        LIGHT_CUSTOM 0.0000 5.723819 16.310787 1.0 1.0 1.0 0.8 1.0 0.7598 0.0156 0.9902 0.4766
-        LIGHT_PARAM full_custom_halo 0.0000 8.723819 16.310787 0.255 0.000 0.000 1.2 7.5 0.0 -1.0 0.4 0.0
-        LIGHT_PARAM full_custom_halo 0.0000 6.0 16.310787 0.255 0.000 0.000 0.7 30.0 0.8 -0.05 -0.7 0.75
-        LIGHT_PARAM full_custom_halo 0.0000 6.0 16.310787 0.255 0.000 0.000 0.7 30.0 -0.8 -0.05 -0.7 0.75
+ANIM_hide -0.100000 0.500000 tu154ce/lights/beacon_light_T
+LIGHT_CUSTOM 0.000000 5.723819 16.310787 1.000000 1.000000 1.000000 0.800000 1.000000 0.759800 0.015600 0.990200 0.476600 
+LIGHT_PARAM full_custom_halo 0.000000 8.723819 16.310787 0.25 0.00 0.00 1.20 7.50 0.00 -1.00 0.40 0.00
+LIGHT_PARAM full_custom_halo 0.000000 6.000000 16.310787 0.25 0.00 0.00 0.70 30.00 0.80 -0.05 -0.70 0.75
+LIGHT_PARAM full_custom_halo 0.000000 6.000000 16.310787 0.25 0.00 0.00 0.70 30.00 -0.80 -0.05 -0.70 0.75
 ANIM_end
-
-
-# Built with Blender 2.49. Exported with XPlane2Blender 3.09.

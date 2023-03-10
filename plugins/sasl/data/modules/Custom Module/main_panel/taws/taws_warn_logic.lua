@@ -453,6 +453,9 @@ function update()
 				local p_z = plane_z + dir_z * dist - right_z * 250
 				
 				local prob, locationX, locationY, locationZ, normalX, normalY, normalZ, velocityX, velocityY, vlocityZ, isWet = probeTerrain(p_x, plane_y, p_z)
+				if locationX == nil or locationY == nil or locationZ == nil then
+					goto error
+				end
 				local lat, lon, alt = localToWorld(locationX, locationY, locationZ) -- we need alt of prob from here
 				
 				local gnd_alt = alt - acf_alt
@@ -515,6 +518,10 @@ function update()
 				local p_z = plane_z + dir_z * dist
 				
 				local prob, locationX, locationY, locationZ, normalX, normalY, normalZ, velocityX, velocityY, vlocityZ, isWet = probeTerrain(p_x, plane_y, p_z)
+				if locationX == nil or locationY == nil or locationZ == nil then
+					goto error
+				end
+				
 				local lat, lon, alt = localToWorld(locationX, locationY, locationZ) -- we need alt of prob from here
 				
 				local gnd_alt = alt - acf_alt
@@ -578,6 +585,9 @@ function update()
 				local p_z = plane_z + dir_z * dist + right_z * 250
 				
 				local prob, locationX, locationY, locationZ, normalX, normalY, normalZ, velocityX, velocityY, vlocityZ, isWet = probeTerrain(p_x, plane_y, p_z)
+				if locationX == nil or locationY == nil or locationZ == nil then
+					goto error
+				end
 				local lat, lon, alt = localToWorld(locationX, locationY, locationZ) -- we need alt of prob from here
 				
 				local gnd_alt = alt - acf_alt
@@ -622,7 +632,7 @@ function update()
 
 		
 		--set(taws_english, 0)
-		
+		::error::
 		
 		-- set final message according to priorities
 		local eng = get(taws_english)

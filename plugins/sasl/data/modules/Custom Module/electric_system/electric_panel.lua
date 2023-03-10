@@ -160,7 +160,7 @@ defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) 
 
 defineProperty("sim_avionics", globalPropertyi("sim/cockpit2/switches/avionics_power_on")) -- default sim avionics switcher
 
-
+include("smooth_light.lua")
 -- sounds
 local rotary_sound = loadSample('Custom Sounds/plastic_switch.wav')
 local switcher_sound = loadSample('Custom Sounds/metal_switch.wav')
@@ -225,7 +225,7 @@ local function voltmetr115()
 	if v115_sw ~= v115_sw_last or phaseSel_115 ~= phaseSel_115_last then
 		volt115_timer = 0
 		freq115_timer = 0
-		playSample(rotary_sound, false)
+		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
 	end
 	
 	v115_sw_last = v115_sw
@@ -310,7 +310,7 @@ local function ampermeter115()
 	-- play sound and reset timers
 	if ampSel_115 ~= ampSel_115_last or ampPhaseSel_115 ~= ampPhaseSel_115_last then
 		amp115_timer = 0
-		playSample(rotary_sound, false)
+		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
 	end	
 	ampSel_115_last = ampSel_115
 	ampPhaseSel_115_last = ampPhaseSel_115
@@ -366,7 +366,7 @@ local function voltmeter36()
 	-- play sound and reset timers
 	if volSel_36 ~= volSel_36_last then
 		volt36_timer = 0
-		playSample(rotary_sound, false)
+		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
 	end	
 	
 	local volt36_angle = -120
@@ -443,15 +443,15 @@ local function bus27_gaug()
 	-- play sounds and reset timers
 	if volSel_27 ~= volSel_27_last then
 		volt27_timer = 0
-		playSample(rotary_sound, false)
+		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
 	end
 	if ampSel_27_1 ~= ampSel_27_1_last then
 		amp27_1_timer = 0
-		playSample(rotary_sound, false)
+		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
 	end
 	if ampSel_27_2 ~= ampSel_27_2_last then
 		amp27_2_timer = 0
-		playSample(rotary_sound, false)
+		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
 	end
 	
 	volSel_27_last = volSel_27
@@ -578,7 +578,7 @@ local function swichers_check()
 	sw_change = sw_change + vu1 - vu1_last + vu2 - vu2_last + bat1 - bat1_last + bat2 - bat2_last + bat3 - bat3_last + bat4 - bat4_last
 	sw_change = sw_change + emerg_115 + bus_con - emerg_115_last - bus_con_last
 	
-	if sw_change ~= 0 then playSample(switcher_sound, false) end -- play sound
+	--if sw_change ~= 0 then  end -- play sound
 	
 	gpu_sw_last = gpu_sw
 	apu_sw_last = apu_sw
@@ -618,7 +618,7 @@ local function caps_check()
 	
 	local cap_change = em115_cap + pts_on_cap + pts_mod_cap + bus_con_cap - em115_cap_last - pts_on_cap_last - pts_mod_cap_last - bus_con_cap_last
 	
-	if cap_change ~= 0 then playSample(cap_sound, false) end -- play sound
+	--if cap_change ~= 0 then  end -- play sound
 	
 	if em115_cap == 0 then set(emerg_inv115, 0) end
 	if pts_on_cap == 0 then set(pts250_on, 0) end
@@ -696,29 +696,29 @@ local function lamps()
 	local pts_2_brt = math.max(get(bus36_pts2_work) * lamps_brt, test_btn)
 
 	-- set results
-	set(lamp_apu_gen_on, gpu_brt)
-	set(bus_npk_1, npk_brt)
-	set(bus_npk_2, npk_brt)
-	set(emerg_inv_115, emerg115_brt)
-	set(gen_fail_1, gen_1_brt)
-	set(gen_fail_2, gen_2_brt)
-	set(gen_fail_3, gen_3_brt)
-	set(bus_connected, bus_con_brt)
-	set(left_bus_use_bat, left_bat_brt)
-	set(right_bus_use_bat, right_bat_brt)
+	set(lamp_apu_gen_on, smooth_light(gpu_brt, get(lamp_apu_gen_on)))
+	set(bus_npk_1, smooth_light(npk_brt, get(bus_npk_1)))
+	set(bus_npk_2, smooth_light(npk_brt, get(bus_npk_2)))
+	set(emerg_inv_115, smooth_light(emerg115_brt, get(emerg_inv_115)))
+	set(gen_fail_1, smooth_light(gen_1_brt, get(gen_fail_1)))
+	set(gen_fail_2, smooth_light(gen_2_brt, get(gen_fail_2)))
+	set(gen_fail_3, smooth_light(gen_3_brt, get(gen_fail_3)))
+	set(bus_connected, smooth_light(bus_con_brt, get(bus_connected)))
+	set(left_bus_use_bat, smooth_light(left_bat_brt, get(left_bus_use_bat)))
+	set(right_bus_use_bat, smooth_light(right_bat_brt, get(right_bus_use_bat)))
 	
-	set(turn_off_bat_1, bat_1_brt)
-	set(turn_off_bat_2, bat_2_brt)
-	set(turn_off_bat_3, bat_3_brt)
-	set(turn_off_bat_4, bat_4_brt)
+	set(turn_off_bat_1, smooth_light(bat_1_brt, get(turn_off_bat_1)))
+	set(turn_off_bat_2, smooth_light(bat_2_brt, get(turn_off_bat_2)))
+	set(turn_off_bat_3, smooth_light(bat_3_brt, get(turn_off_bat_3)))
+	set(turn_off_bat_4, smooth_light(bat_4_brt, get(turn_off_bat_4)))
 	
-	set(vu_on_1, left_VU_brt)
-	set(vu_on_2, right_VU_brt)
+	set(vu_on_1, smooth_light(left_VU_brt,  get(vu_on_1)))
+	set(vu_on_2, smooth_light(right_VU_brt, get(vu_on_2)))
 	
-	set(left_bus_on_tr2, L_R_brt)
-	set(right_bus_on_tr1, R_L_brt)
-	set(pts250_n1, pts_1_brt)
-	set(pts250_n2, pts_2_brt)
+	set(left_bus_on_tr2, smooth_light(L_R_brt,  get(left_bus_on_tr2)))
+	set(right_bus_on_tr1, smooth_light(R_L_brt, get(right_bus_on_tr1)))
+	set(pts250_n1, smooth_light(pts_1_brt, get(pts250_n1)))
+	set(pts250_n2, smooth_light(pts_2_brt, get(pts250_n2)))
 	
 end
 
@@ -735,7 +735,7 @@ function update()
 	if sim_start_timer > 0.3 then 
 		if notLoaded then reset_switchers() end
 	
-		swichers_check() -- make them sound
+		--swichers_check() -- make them sound
 		caps_check() -- make them sound
 	end
 	voltmetr115()

@@ -5,7 +5,7 @@ size = {480, 94}
 defineProperty("course", 0)
 
 
-local text_font = loadBitmapFont("taws_scr.fnt")
+local fid = loadFont("Verdana.ttf")
 
 
 
@@ -34,7 +34,7 @@ function draw()
 				
 				if text < 10 then text = " "..text end
 				
-				drawText(text_font, text_pos, 10, text, 12, false, false, 1,1,1,1)
+				drawText(fid, text_pos, 10, text, 32, false, false, TEXT_ALIGN_LEFT, {1,1,1,1})
 			end --]]
 		else -- small lines
 			local line_pos = 240 + (i - crs) * 6

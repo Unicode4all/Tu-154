@@ -71,14 +71,14 @@ local flaps_sound = loadSample('Custom Sounds/flaps_hnd.wav') --
 
 function flaps_up_handler(phase)
 	if 0 == phase then
-		if get(external_view) == 0 then playSample(flaps_sound, false) end
+		if get(external_view) == 0 then if get(xplane_version) < 120000 then playSample(flaps_sound, false) end end
 	end
 	return 0
 end
 
 function flaps_down_handler(phase)
 	if 0 == phase then
-		if get(external_view) == 0 then playSample(flaps_sound, false) end
+		if get(external_view) == 0 then if get(xplane_version) < 120000 then playSample(flaps_sound, false) end end
 	end
 	return 0
 end
@@ -247,7 +247,7 @@ if MASTER then
 	-- flap sounds
 	
 	if flaps_lever_last ~= flap_lever_pos and (flap_lever_pos == 0 or flap_lever_pos == 15 or flap_lever_pos == 28 or flap_lever_pos == 36 or flap_lever_pos == 45) then
-		playSample(flaps_sound, false)
+		if get(xplane_version) < 120000 then playSample(flaps_sound, false) end
 	end
 	
 	flaps_lever_last = flap_lever_pos

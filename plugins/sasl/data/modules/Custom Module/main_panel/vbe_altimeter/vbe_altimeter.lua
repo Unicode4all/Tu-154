@@ -50,20 +50,20 @@ defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have 
 
 
 -- load images
-defineProperty("scale_img", loadImage("vbe_scale.png", 0, 4, 424, 424))
-defineProperty("green_img", loadImage("vbe_scale.png", 445, 0, 60, 60))
-defineProperty("yellow_img", loadImage("vbe_scale.png", 445, 65, 60, 60))
-defineProperty("hpa_rus_img", loadImage("vbe_scale.png", 441, 135, 68, 35))
-defineProperty("hpa_eng_img", loadImage("vbe_scale.png", 441, 176, 68, 35))
-defineProperty("borderg_img", loadImage("vbe_scale.png", 5, 458, 153, 50))
-defineProperty("ft_img", loadImage("vbe_scale.png", 448, 220, 46, 35))
-defineProperty("mtr_img", loadImage("vbe_scale.png", 448, 257, 46, 35))
-defineProperty("ALT_img", loadImage("vbe_scale.png", 437, 301, 68, 33))
-defineProperty("E_img", loadImage("vbe_scale.png", 442, 345, 27, 46))
-defineProperty("minus_img", loadImage("vbe_scale.png", 442, 350, 27, 35))
-defineProperty("needle_img", loadImage("vbe_scale.png", 178, 482, 320, 6))
-defineProperty("digitsImage", loadImage("black_digit_strip.png", 12, 0, 40, 784))
-defineProperty("bold_digitsImage", loadImage("bold_digit_strip.png", 12, 0, 40, 784))
+defineProperty("scale_img", loadImage("vbe_scale.png", 0, 82, 424, 424))
+defineProperty("green_img", loadImage("vbe_scale.png", 445, 450, 60, 60))
+defineProperty("yellow_img", loadImage("vbe_scale.png", 445, 387, 60, 60))
+defineProperty("hpa_rus_img", loadImage("vbe_scale.png", 441, 346, 68, 35))
+defineProperty("hpa_eng_img", loadImage("vbe_scale.png", 441, 304, 68, 35))
+defineProperty("borderg_img", loadImage("vbe_scale.png", 5, 3, 153, 50))
+defineProperty("ft_img", loadImage("vbe_scale.png", 448, 259, 46, 35))
+defineProperty("mtr_img", loadImage("vbe_scale.png", 448, 224, 46, 35))
+defineProperty("ALT_img", loadImage("vbe_scale.png", 437, 182, 68, 33))
+defineProperty("E_img", loadImage("vbe_scale.png", 442, 122, 27, 46))
+defineProperty("minus_img", loadImage("vbe_scale.png", 442, 128, 27, 35))
+defineProperty("needle_img", loadImage("vbe_scale.png", 178, 26, 320, 6))
+defineProperty("digitsImage", loadImage("black_digit_strip.png", 12, 195, 40, 784))
+defineProperty("bold_digitsImage", loadImage("bold_digit_strip.png", 12, 195, 40, 784))
 
 -- sounds
 local switcher_sound = loadSample('Custom Sounds/metal_switch.wav')
@@ -112,7 +112,7 @@ function update()
 	local num = get(gauge_num)
 	-- check switchers and make it sound
 	if get(vbe_on) ~= switcher_last then
-		playSample(switcher_sound, false)
+		
 	end
 	switcher_last = get(vbe_on)
 	
@@ -310,7 +310,7 @@ end
 	-- sounds
 	local external = get(external_view) == 1
 	if ((mode_last ~= border_mode and border_mode == 1) or (mode_last == 0 and border_mode == 2) or (mode_last == 2 and border_mode == 1)) and self_test_timer > 8 and num == 0 and not external then
-		playSample(vbe_alarm_snd, false)
+		if get(xplane_version) < 120000 then playSample(vbe_alarm_snd, false) end
 	end
 	mode_last = border_mode
 	
@@ -333,9 +333,9 @@ end
 			border_mode = 2
 		elseif self_test_timer < 8 then
 			if not isSamplePlaying(vbe_alarm_snd) and self_test_timer < 5 and num == 0 and not external then
-				playSample(vbe_alarm_snd, false)
+				if get(xplane_version) < 120000 then playSample(vbe_alarm_snd, false) end
 			elseif external or self_test_timer >= 6 then
-				stopSample(vbe_alarm_snd)
+				if get(xplane_version) < 120000 then stopSample(vbe_alarm_snd) end
 			end
 			mode = 1
 			show_E = false
@@ -567,6 +567,7 @@ components = {
         showLeadingZeros = false,
 		allowNonRound = false,
 		fractional = 0,
+		size = 2,
 		showSign = false,
         value = function()
            if self_test_timer <=4 then return 1888

@@ -156,7 +156,7 @@ defineProperty("main_gear_flaps", globalPropertyi("tu154ce/alarm/main_gear_flaps
 defineProperty("ismaster", globalPropertyf("scp/api/ismaster")) -- Master. 0 = plugin not found, 1 = slave 2 = master
 defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have control. 0 = plugin not found, 1 = no control 2 = has control
 
-
+include("smooth_light.lua")
 
 
 
@@ -226,7 +226,7 @@ local function lamps()
 	end
 	if stab_work_lit then stab_work_brt = 1 end
 	stab_work_brt = math.max(stab_work_brt * lamps_brt, test_btn)
-	if get(ismaster) ~= 1 then set(stab_work, stab_work_brt) end
+	if get(ismaster) ~= 1 then set(stab_work, smooth_light(stab_work_brt, get(stab_work))) end
 
 	stab_pos_last = stab_pos_now
 	
@@ -237,42 +237,42 @@ local function lamps()
 	local flaps_1_valve_brt = 0--math.min(1, get(flap_inn_L))
 	if flap_L_pos_last ~= flap_pos_now_L then flaps_1_valve_brt = 1 end
 	flaps_1_valve_brt = math.max(flaps_1_valve_brt * lamps_brt, test_btn)
-	if get(ismaster) ~= 1 then set(flaps_1_valve, flaps_1_valve_brt) end
+	if get(ismaster) ~= 1 then set(flaps_1_valve, smooth_light(flaps_1_valve_brt, get(flaps_1_valve))) end
 	
 	local flaps_2_valve_brt = 0--math.min(1, get(flap_inn_R))
 	if flap_R_pos_last ~= flap_pos_now_R then flaps_2_valve_brt = 1 end
 	flaps_2_valve_brt = math.max(flaps_2_valve_brt * lamps_brt, test_btn)
-	if get(ismaster) ~= 1 then set(flaps_2_valve, flaps_2_valve_brt) end
+	if get(ismaster) ~= 1 then set(flaps_2_valve, smooth_light(flaps_2_valve_brt, get(flaps_2_valve))) end
 	
 	flap_L_pos_last = flap_pos_now_L
 	flap_R_pos_last = flap_pos_now_R
 		
 	local spoilers_mid_left_brt = math.min(1, get(spd_brk_mid_L))
 	spoilers_mid_left_brt = math.max(spoilers_mid_left_brt * lamps_brt, test_btn)
-	set(spoilers_mid_left, spoilers_mid_left_brt)	
+	set(spoilers_mid_left, smooth_light(spoilers_mid_left_brt, get(spoilers_mid_left)))
 
 	local spoilers_mid_right_brt = math.min(1, get(spd_brk_mid_R))
 	spoilers_mid_right_brt = math.max(spoilers_mid_right_brt * lamps_brt, test_btn) 
-	set(spoilers_mid_right, spoilers_mid_right_brt)	
+	set(spoilers_mid_right, smooth_light(spoilers_mid_right_brt, get(spoilers_mid_right)))
 
 	local spoilers_inn_left_brt = math.min(1, get(spd_brk_inn_L))
 	spoilers_inn_left_brt = math.max(spoilers_inn_left_brt * lamps_brt, test_btn) 
-	set(spoilers_inn_left, spoilers_inn_left_brt)	
+	set(spoilers_inn_left, smooth_light(spoilers_inn_left_brt, get(spoilers_inn_left)))	
 
 	local spoilers_inn_right_brt = math.min(1, get(spd_brk_inn_R))
 	spoilers_inn_right_brt = math.max(spoilers_inn_right_brt * lamps_brt, test_btn)
-	set(spoilers_inn_right, spoilers_inn_right_brt)		
+	set(spoilers_inn_right, smooth_light(spoilers_inn_right_brt, get(spoilers_inn_right)))		
 	
 	
 	
 	local flaps_unsync_brt = 0
 	if math.abs(flap_pos_now_L - flap_pos_now_R) >= 3 then flaps_unsync_brt = 1 end
 	flaps_unsync_brt = math.max(flaps_unsync_brt * lamps_brt, test_btn)
-	set(flaps_unsync, flaps_unsync_brt)	
+	set(flaps_unsync, smooth_light(flaps_unsync_brt, get(flaps_unsync)))
 
 	local slats_unsync_brt = 0
 	slats_unsync_brt = math.max(slats_unsync_brt * lamps_brt, test_btn)
-	set(slats_unsync, slats_unsync_brt)	
+	set(slats_unsync, smooth_light(slats_unsync_brt, get(slats_unsync)))
 
 	local slats_extended_brt = 0
 	local slats_now = get(slats)
@@ -293,7 +293,7 @@ local function lamps()
 
 	slats_last = slats_now
 	slats_extended_brt = math.max(slats_extended_brt * lamps_brt, test_btn)
-	if get(ismaster) ~= 1 then set(slats_extended, slats_extended_brt) end	
+	if get(ismaster) ~= 1 then set(slats_extended, smooth_light(slats_extended_brt, get(slats_extended))) end	
 	
 
 	
@@ -340,25 +340,25 @@ local function lamps()
 	
 	
 	to_rudder_brt = math.max(to_rudder_brt * lamps_brt, test_btn)
-	set(to_rudder, to_rudder_brt)	
+	set(to_rudder, smooth_light(to_rudder_brt, get(to_rudder)))
 	
 	to_elevator_brt = math.max(to_elevator_brt * lamps_brt, test_btn)
-	set(to_elevator, to_elevator_brt)	
+	set(to_elevator, smooth_light(to_elevator_brt, get(to_elevator)))
 
 	local trimm_zero_course_brt = 0
 	if math.abs(get(int_yaw_trim)) < 0.002 then trimm_zero_course_brt = 1 end
 	trimm_zero_course_brt = math.max(trimm_zero_course_brt * lamps_brt, test_btn)
-	set(trimm_zero_course, trimm_zero_course_brt)	
+	set(trimm_zero_course, smooth_light(trimm_zero_course_brt, get(trimm_zero_course)))
 
 	local trimm_zero_roll_brt = 0
 	if math.abs(get(int_roll_trim)) < 0.002 then trimm_zero_roll_brt = 1 end
 	trimm_zero_roll_brt = math.max(trimm_zero_roll_brt * lamps_brt, test_btn)
-	set(trimm_zero_roll, trimm_zero_roll_brt)	
+	set(trimm_zero_roll, smooth_light(trimm_zero_roll_brt, get(trimm_zero_roll)))	
 
 	local trimm_zero_pitch_brt = 0
 	if math.abs(get(int_pitch_trim)) < 0.004 then trimm_zero_pitch_brt = 1 end
 	trimm_zero_pitch_brt = math.max(trimm_zero_pitch_brt * lamps_brt, test_btn)
-	set(trimm_zero_pitch, trimm_zero_pitch_brt)		
+	set(trimm_zero_pitch, smooth_light(trimm_zero_pitch_brt, get(trimm_zero_pitch))) 
 
 	local gear_F_pos = get(gear1_deploy)
 	local gear_L_pos = get(gear2_deploy)
@@ -382,57 +382,57 @@ local function lamps()
 	
 	
 	
-	set(gears_not_ext, gears_not_ext_brt)	
+	set(gears_not_ext, smooth_light(gears_not_ext_brt, get(gears_not_ext))) 
 	
 	local gears_red_left_brt = bool2int(gear_L_pos < 0.99 and gear_L_pos > 0.01)
 	gears_red_left_brt = math.max(gears_red_left_brt * lamps_brt, test_btn)
-	set(gears_red_left, gears_red_left_brt)
+	set(gears_red_left, smooth_light(gears_red_left_brt, get(gears_red_left))) 
 	
 	local gears_red_front_brt = bool2int(gear_F_pos < 0.99 and gear_F_pos > 0.01)
 	gears_red_front_brt = math.max(gears_red_front_brt * lamps_brt, test_btn)
-	set(gears_red_front, gears_red_front_brt)
+	set(gears_red_front, smooth_light(gears_red_front_brt, get(gears_red_front))) 
 	
 	local gears_red_right_brt = bool2int(gear_R_pos < 0.99 and gear_R_pos > 0.01)
 	gears_red_right_brt = math.max(gears_red_right_brt * lamps_brt, test_btn)
-	set(gears_red_right, gears_red_right_brt)
+	set(gears_red_right, smooth_light(gears_red_right_brt, get(gears_red_right))) 
 	
 	local gears_green_left_brt = bool2int(gear_L_pos >= 0.99)
 	gears_green_left_brt = math.max(gears_green_left_brt * lamps_brt, test_btn)
-	set(gears_green_left, gears_green_left_brt)
+	set(gears_green_left, smooth_light(gears_green_left_brt, get(gears_green_left))) 
 	
 	local gears_green_front_brt = bool2int(gear_F_pos >= 0.99)
 	gears_green_front_brt = math.max(gears_green_front_brt * lamps_brt, test_btn)
-	set(gears_green_front, gears_green_front_brt)
+	set(gears_green_front, smooth_light(gears_green_front_brt, get(gears_green_front))) 
 	
 	local gears_green_right_brt = bool2int(gear_L_pos >= 0.99)
 	gears_green_right_brt = math.max(gears_green_right_brt * lamps_brt, test_btn)
-	set(gears_green_right, gears_green_right_brt)
+	set(gears_green_right, smooth_light(gears_green_right_brt, get(gears_green_right))) 
 	
 	
 	
 	local gears_red_left_eng_brt = bool2int(gear_L_pos < 0.99 and gear_L_pos > 0.01)
 	gears_red_left_eng_brt = math.max(gears_red_left_eng_brt * lamps_brt, test_btn_eng)
-	set(gears_red_left_eng, gears_red_left_eng_brt)
+	set(gears_red_left_eng, smooth_light(gears_red_left_eng_brt, get(gears_red_left_eng))) 
 	
 	local gears_red_front_eng_brt = bool2int(gear_F_pos < 0.99 and gear_F_pos > 0.01)
 	gears_red_front_eng_brt = math.max(gears_red_front_eng_brt * lamps_brt, test_btn_eng)
-	set(gears_red_front_eng, gears_red_front_eng_brt)
+	set(gears_red_front_eng, smooth_light(gears_red_front_eng_brt, get(gears_red_front_eng))) 
 	
 	local gears_red_right_eng_brt = bool2int(gear_R_pos < 0.99 and gear_R_pos > 0.01)
 	gears_red_right_eng_brt = math.max(gears_red_right_eng_brt * lamps_brt, test_btn_eng)
-	set(gears_red_right_eng, gears_red_right_eng_brt)
+	set(gears_red_right_eng, smooth_light(gears_red_right_eng_brt, get(gears_red_right_eng))) 
 	
 	local gears_green_left_eng_brt = bool2int(gear_L_pos >= 0.99)
 	gears_green_left_eng_brt = math.max(gears_green_left_eng_brt * lamps_brt, test_btn_eng)
-	set(gears_green_left_eng, gears_green_left_eng_brt)
+	set(gears_green_left_eng, smooth_light(gears_green_left_eng_brt, get(gears_green_left_eng))) 
 	
 	local gears_green_front_eng_brt = bool2int(gear_F_pos >= 0.99)
 	gears_green_front_eng_brt = math.max(gears_green_front_eng_brt * lamps_brt, test_btn_eng)
-	set(gears_green_front_eng, gears_green_front_eng_brt)
+	set(gears_green_front_eng, smooth_light(gears_green_front_eng_brt, get(gears_green_front_eng))) 
 	
 	local gears_green_right_eng_brt = bool2int(gear_L_pos >= 0.99)
 	gears_green_right_eng_brt = math.max(gears_green_right_eng_brt * lamps_brt, test_btn_eng)
-	set(gears_green_right_eng, gears_green_right_eng_brt)	
+	set(gears_green_right_eng, smooth_light(gears_green_right_eng_brt, get(gears_green_right_eng))) 
 	
 	
 	
@@ -546,7 +546,7 @@ local function caps_check()
 	
 	changes = changes - stab_man_cap_last - contr_force_cap_last - nosewheel_turn_cap_last - slat_man_cap_last - gears_retr_lock_cap_last - gears_ext_3GS_cap_last - busters_cap_last - flaps_sel_cap_last - emerg_elev_trimm_cap_last
 	
-	if changes ~= 0 then playSample(cap_sound, false) end
+	if changes ~= 0 then  end
 	
 
 	stab_man_cap_last = stab_man_cap_sw
@@ -611,7 +611,7 @@ local function swichers_check()
 	changes = changes - stab_manual_last - stab_setting_last - ail_trimm_sw_last - rudd_trimm_sw_last - contr_force_set_last - nosewheel_turn_enable_last - nosewheel_turn_sel_last
 	changes = changes - slat_man_last - flaps_sel_last - gears_retr_lock_last - gears_ext_3GS_last - buster_on_1_last - buster_on_2_last - buster_on_3_last - emerg_elev_trimm_last
 	
-	if changes ~= 0 then playSample(switcher_sound, false) end
+	if changes ~= 0 then  end
 
 	stab_manual_last = stab_manual_sw
 	stab_setting_last = stab_setting_sw

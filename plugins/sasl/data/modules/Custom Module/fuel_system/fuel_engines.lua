@@ -104,14 +104,14 @@ function update()
 	set(fuel_cutoff_3, mix_3)
 	
 	-- set sound
-	if mix_1 ~= mix_1_last and mix_1 == 1 then playSample(rod_on, false)
-	elseif mix_1 ~= mix_1_last and mix_1_last == 1 then playSample(rod_off, false) end
+	if mix_1 ~= mix_1_last and mix_1 == 1 then if get(xplane_version) < 120000 then playSample(rod_on, false) end
+	elseif mix_1 ~= mix_1_last and mix_1_last == 1 then if get(xplane_version) < 120000 then playSample(rod_off, false) end end
 	
-	if mix_2 ~= mix_2_last and mix_2 == 1 then playSample(rod_on, false)
-	elseif mix_2 ~= mix_2_last and mix_2_last == 1 then playSample(rod_off, false) end
+	if mix_2 ~= mix_2_last and mix_2 == 1 then if get(xplane_version) < 120000 then playSample(rod_on, false) end
+	elseif mix_2 ~= mix_2_last and mix_2_last == 1 then if get(xplane_version) < 120000 then playSample(rod_off, false) end end
 	
-	if mix_3 ~= mix_3_last and mix_3 == 1 then playSample(rod_on, false)
-	elseif mix_3 ~= mix_3_last and mix_3_last == 1 then playSample(rod_off, false) end
+	if mix_3 ~= mix_3_last and mix_3 == 1 then if get(xplane_version) < 120000 then playSample(rod_on, false) end
+	elseif mix_3 ~= mix_3_last and mix_3_last == 1 then if get(xplane_version) < 120000 then playSample(rod_off, false) end end
 	
 	
 	

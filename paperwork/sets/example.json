@@ -1,0 +1,95 @@
+{
+    "name": "Example Set",
+    "regions": {
+        "eng_sm": {
+            "region": {
+                "x": 2953,
+                "y": 0,
+                "w": 1079,
+                "h": 1553
+            },
+            "widgets": {
+                "1": {
+                    "type": "image",
+                    "pos": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "image": "img3.png",
+                    "scale": 2
+                }
+            }
+        },
+        "eng_lg": {
+            "region": {
+                "x": 1045,
+                "y": 2731,
+                "w": 3026,
+                "h": 1280
+            },
+            "widgets": {}
+        },
+        "dashboard": {
+            "region": {
+                "x": 2177,
+                "y": 138,
+                "w": 560,
+                "h": 605
+            },
+            "widgets": {
+                "1": {
+                    "type": "image",
+                    "pos": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "image": "sticky.png",
+                    "scale": 1
+                },
+                "2": {
+                    "type": "text",
+                    "pos": {
+                        "x": 72,
+                        "y": 427
+                    },
+                    "rotation": 2,
+                    "font": "segoe.ttf",
+                    "size": 32,
+                    "text": "Takeoff Speeds, flaps 28\nV1:\nVr:\nV2:\n\nWeight, kgs:\nCG %MAC:\n"
+                }
+            },
+            "drefs": {
+                "1": {
+                    "dref": "tu154ce/speeds/v1_28",
+                    "x": 136,
+                    "y": 377,
+                    "size": 32
+                },
+                "2": {
+                    "dref": "tu154ce/speeds/vr_28",
+                    "x": 136,
+                    "y": 315,
+                    "size": 32
+                },
+                "3": {
+                    "dref": "tu154ce/speeds/v2_28",
+                    "x": 136,
+                    "y": 255,
+                    "size": 32
+                },
+                "4": {
+                    "dref": "tu154ce/misc/weight_actual",
+                    "x": 273,
+                    "y": 136,
+                    "size": 32
+                },
+                "5": {
+                    "dref": "tu154ce/misc/cg_pos_actual",
+                    "x": 273,
+                    "y": 85,
+                    "size": 32
+                }
+            }
+        }
+    }
+}

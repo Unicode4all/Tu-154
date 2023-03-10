@@ -76,7 +76,7 @@ defineProperty("ark15_R_cc", globalPropertyf("tu154ce/radio/ark15_R_cc")) -- п�
 defineProperty("diss_cc", globalPropertyf("tu154ce/nvu/diss_cc")) -- потребление от ДИСС
 defineProperty("radar_cc", globalPropertyf("tu154ce/radio/radar_cc")) -- потребление тока от РЛС Гроза
 defineProperty("rsbn_cc", globalPropertyf("tu154ce/radio/rsbn_cc")) -- потребление тока от РСБН
-
+defineProperty("kln_cc", globalPropertyf("tu154ce/KLN90/power_draw"))
 
 -- bus 36v
 defineProperty("ctr_36L_cc", globalPropertyf("tu154ce/control/ctr_36L_cc")) -- нагрузка на сеть
@@ -137,7 +137,7 @@ if MASTER then
 
 	-- bus 27v
 	local bus27_L = get(bat_amp_cc_1) + get(bat_amp_cc_3) + get(cockpit_light_cc_left) + get(ext_light_cc_left) + get(fuel_pumps_27_cc) * 0.5 + get(ai_27_L_cc) + get(ctr_27_L_cc) + get(msrp_27_L_cc)
-	bus27_L = bus27_L + get(svs27_cc) + get(rv_cc_1) + get(taws_cc) + get(vhf1_cc) + get(km5_1_cc) * 2 + get(ga_1_cc) * 0.5 + get(ga_2_cc) * 0.5 + get(ga_heat_cc) + get(bgmk_1_cc) + get(agr_cc)
+	bus27_L = bus27_L + get(svs27_cc) + get(kln_cc) + get(rv_cc_1) + get(taws_cc) + get(vhf1_cc) + get(km5_1_cc) * 2 + get(ga_1_cc) * 0.5 + get(ga_2_cc) * 0.5 + get(ga_heat_cc) + get(bgmk_1_cc) + get(agr_cc)
 	bus27_L = bus27_L + get(nvu_cc) * 10 + get(ark15_L_cc) + get(diss_cc) + get(rsbn_cc) * 5
 	--
 	local bus27_R = get(bat_amp_cc_2) + get(bat_amp_cc_4) + get(cockpit_light_cc_right) + get(ext_light_cc_right) + get(fuel_pumps_27_cc) * 0.5 + get(ai_27_R_cc) + get(ctr_27_R_cc) + get(msrp_27_R_cc)

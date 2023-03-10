@@ -168,7 +168,7 @@ defineProperty("egt_2", globalPropertyf("tu154ce/gauges/eng/egt_2")) -- ТВГ �
 defineProperty("egt_3", globalPropertyf("tu154ce/gauges/eng/egt_3")) -- ТВГ двиг 3
 
 defineProperty("speaker_fuel", globalPropertyi("tu154ce/alarm/speaker_fuel")) -- остаток топлива 2500 в баке 1
-
+include("smooth_light.lua")
 local passed = get(frame_time)
 local notLoaded = true
 
@@ -194,14 +194,15 @@ local function small_lamps()
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0)
 	
 	
+	-- TODO: Implement starter overspeeding failure
 	local starter_high_rpm_1_brt = math.max(0, test_btn) -- fake for now
-	set(starter_high_rpm_1, starter_high_rpm_1_brt)
-	
+	set(starter_high_rpm_1, smooth_light(starter_high_rpm_1_brt, get(starter_high_rpm_1)))
+	 
 	local starter_high_rpm_2_brt = math.max(0, test_btn) -- fake for now
-	set(starter_high_rpm_2, starter_high_rpm_2_brt)
+	set(starter_high_rpm_2, smooth_light(starter_high_rpm_2_brt, get(starter_high_rpm_2)))
 	
 	local starter_high_rpm_3_brt = math.max(0, test_btn) -- fake for now
-	set(starter_high_rpm_3, starter_high_rpm_3_brt)
+	set(starter_high_rpm_3, smooth_light(starter_high_rpm_3_brt, get(starter_high_rpm_3)))
 	
 	local fuel_2500_brt = 0
 	if get(tank1_w) < 2500 then fuel_2500_brt = 1 end
@@ -242,60 +243,60 @@ local function lamps_eng1()
 	local vibr = get(vibra_1)
 	if vibr > 65 then eng1_dangerous_vibro_brt = 1 end
 	eng1_dangerous_vibro_brt = math.max(eng1_dangerous_vibro_brt * lamps_brt, test_btn)
-	set(eng1_dangerous_vibro, eng1_dangerous_vibro_brt)
+	set(eng1_dangerous_vibro, smooth_light(eng1_dangerous_vibro_brt, get(eng1_dangerous_vibro)))
 	
 	local eng1_oil_level_brt = math.max(bool2int(get(oil_qty_1) < 8) * get(gauges_on_1) * lamps_brt, test_btn) 
-	set(eng1_oil_level, eng1_oil_level_brt)
+	set(eng1_oil_level, smooth_light(eng1_oil_level_brt, get(eng1_oil_level)))
 	
 	local eng1_oil_p_brt = 0
 	local oil_p = get(oil_p_1)
 	if oil_p < 10 then eng1_oil_p_brt = lamps_brt end
 	eng1_oil_p_brt = math.max(eng1_oil_p_brt, test_btn)
-	set(eng1_oil_p, eng1_oil_p_brt)
+	set(eng1_oil_p, smooth_light(eng1_oil_p_brt, get(eng1_oil_p)))
 	
 	local eng1_bypass_valve_brt = 0
 	if RPM > 12 and RPM < 73 then eng1_bypass_valve_brt = 1 end
 	eng1_bypass_valve_brt = math.max(eng1_bypass_valve_brt * lamps_brt, test_btn)
-	set(eng1_bypass_valve, eng1_bypass_valve_brt)
+	set(eng1_bypass_valve, smooth_light(eng1_bypass_valve_brt, get(eng1_bypass_valve)))
 
 	local eng1_vna33_brt = 0
 	if RPM < 74 then eng1_vna33_brt = 1 end
 	eng1_vna33_brt = math.max(eng1_vna33_brt * lamps_brt, test_btn)
-	set(eng1_vna33, eng1_vna33_brt)
+	set(eng1_vna33, smooth_light(eng1_vna33_brt, get(eng1_vna33)))
 	
 	local rev_L = get(revers_flap_L)
 	local eng1_reverse_lock_brt = 0 
 	if rev_L < revers_flap_L_last and rev_L > 0.05 and rev_L < 0.95 then eng1_reverse_lock_brt = 1 end
-	eng1_reverse_lock_brt = math.max(eng1_reverse_lock_brt, test_btn) -- fake for now
-	set(eng1_reverse_lock, eng1_reverse_lock_brt)
+	eng1_reverse_lock_brt = math.max(eng1_reverse_lock_brt * lamps_brt, test_btn) -- fake for now
+	set(eng1_reverse_lock, smooth_light(eng1_reverse_lock_brt, get(eng1_reverse_lock)))
 	
 	local eng1_high_vibro_brt = 0
 	if vibr > 55 then eng1_high_vibro_brt = 1 end
 	eng1_high_vibro_brt = math.max(eng1_high_vibro_brt * lamps_brt, test_btn)
-	set(eng1_high_vibro, eng1_high_vibro_brt)
+	set(eng1_high_vibro, smooth_light(eng1_high_vibro_brt, get(eng1_high_vibro)))
 	
 	local chip_det = get(chip_detect1)
 	local eng1_chips_brt = chip_det
 	eng1_chips_brt = math.max(eng1_chips_brt * lamps_brt, test_btn)
-	set(eng1_chips, eng1_chips_brt)
+	set(eng1_chips, smooth_light(eng1_chips_brt, get(eng1_chips)))
 	
 	local fuel_p = get(eng_fuel_press_1)
 	local eng1_fuel_p_brt = (1 - fuel_p) * lamps_brt -- * get(gauges_on_1)
 	eng1_fuel_p_brt = math.max(eng1_fuel_p_brt, test_btn)
-	set(eng1_fuel_p, eng1_fuel_p_brt)
+	set(eng1_fuel_p, smooth_light(eng1_fuel_p_brt, get(eng1_fuel_p)))
 	
 	local eng1_filter_fail_brt = math.max(bool2int(get(eng_filter_1) == 6), test_btn)
-	set(eng1_filter_fail, eng1_filter_fail_brt)
+	set(eng1_filter_fail, smooth_light(eng1_filter_fail_brt, get(eng1_filter_fail)))
 	
 	local eng1_vna0_brt = 0
 	if RPM < 91 then eng1_vna0_brt = 1 end
 	eng1_vna0_brt = math.max(eng1_vna0_brt * lamps_brt, test_btn)
-	set(eng1_vna0, eng1_vna0_brt)
+	set(eng1_vna0, smooth_light(eng1_vna0_brt, get(eng1_vna0)))
 	
 	local eng1_reverse_doors_brt = 0
 	if rev_L > 0.7 then eng1_reverse_doors_brt = 1 end
 	eng1_reverse_doors_brt = math.max(eng1_reverse_doors_brt * lamps_brt, test_btn) 
-	set(eng1_reverse_doors, eng1_reverse_doors_brt)
+	set(eng1_reverse_doors, smooth_light(eng1_reverse_doors_brt, get(eng1_reverse_doors)))
 		
 	
 	
@@ -320,56 +321,56 @@ local function lamps_eng2()
 	local vibr = get(vibra_2)
 	if vibr > 65 then eng2_dangerous_vibro_brt = 1 end
 	eng2_dangerous_vibro_brt = math.max(eng2_dangerous_vibro_brt * lamps_brt, test_btn)
-	set(eng2_dangerous_vibro, eng2_dangerous_vibro_brt)
+	set(eng2_dangerous_vibro, smooth_light(eng2_dangerous_vibro_brt, get(eng2_dangerous_vibro)))
 	
 	local eng2_oil_level_brt = math.max(bool2int(get(oil_qty_2) < 8) * get(gauges_on_2) * lamps_brt, test_btn) 
-	set(eng2_oil_level, eng2_oil_level_brt)
+	set(eng2_oil_level, smooth_light(eng2_oil_level_brt, get(eng2_oil_level)))
 	
 	local eng2_oil_p_brt = 0
 	local oil_p = get(oil_p_2)
 	if oil_p < 10 then eng2_oil_p_brt = 1 end
 	eng2_oil_p_brt = math.max(eng2_oil_p_brt * lamps_brt, test_btn)
-	set(eng2_oil_p, eng2_oil_p_brt)
-	
+	set(eng2_oil_p, smooth_light(eng2_oil_p_brt, get(eng2_oil_p)))
+
 	local eng2_bypass_valve_brt = 0
 	if RPM > 13 and RPM < 78 then eng2_bypass_valve_brt = 1 end
 	eng2_bypass_valve_brt = math.max(eng2_bypass_valve_brt * lamps_brt, test_btn)
-	set(eng2_bypass_valve, eng2_bypass_valve_brt)
+	set(eng2_bypass_valve, smooth_light(eng2_bypass_valve_brt, get(eng2_bypass_valve)))
 
 	local eng2_vna33_brt = 0
 	if RPM < 74 then eng2_vna33_brt = 1 end
 	eng2_vna33_brt = math.max(eng2_vna33_brt * lamps_brt, test_btn)
-	set(eng2_vna33, eng2_vna33_brt)
+	set(eng2_vna33, smooth_light(eng2_vna33_brt, get(eng2_vna33)))
 	
 	local eng_at_on_brt = math.max(bool2int(get(stu_mode) > 2), test_btn) * lamps_brt
-	set(eng_at_on, eng_at_on_brt)
+	set(eng_at_on, smooth_light(eng_at_on_brt, get(eng_at_on)))
 	
 	local eng2_high_vibro_brt = 0
 	if vibr > 55 then eng2_high_vibro_brt = 1 end
 	eng2_high_vibro_brt = math.max(eng2_high_vibro_brt * lamps_brt, test_btn)
-	set(eng2_high_vibro, eng2_high_vibro_brt)
+	set(eng2_high_vibro, smooth_light(eng2_high_vibro_brt, get(eng2_high_vibro)))
 	
 	local chip_det = get(chip_detect2)
 	local eng2_chips_brt = math.max(chip_det * lamps_brt, test_btn)
-	set(eng2_chips, eng2_chips_brt)
+	set(eng2_chips, smooth_light(eng2_chips_brt, get(eng2_chips)))
 	
 	local fuel_p = get(eng_fuel_press_2)
 	local eng2_fuel_p_brt = (1 - fuel_p) * lamps_brt-- * get(gauges_on_2)
 	eng2_fuel_p_brt = math.max(eng2_fuel_p_brt, test_btn)
-	set(eng2_fuel_p, eng2_fuel_p_brt)
+	set(eng2_fuel_p, smooth_light(eng2_fuel_p_brt, get(eng2_fuel_p)))
 	
 	local eng2_filter_fail_brt = math.max(bool2int(get(eng_filter_2) == 6), test_btn) 
-	set(eng2_filter_fail, eng2_filter_fail_brt)
+	set(eng2_filter_fail, smooth_light(eng2_filter_fail_brt, get(eng2_filter_fail)))
 	
 	local eng2_vna0_brt = 0
 	if RPM < 91 then eng2_vna0_brt = 1 end
 	eng2_vna0_brt = math.max(eng2_vna0_brt * lamps_brt, test_btn)
-	set(eng2_vna0, eng2_vna0_brt)
+	set(eng2_vna0, smooth_light(eng2_vna0_brt, get(eng2_vna0)))
 	
 	local eng_block_brt = 0
 	if get(throttle_lock) > 0.2 then eng_block_brt = 1 end
 	eng_block_brt = math.max(eng_block_brt * lamps_brt, test_btn)
-	set(eng_block, eng_block_brt)
+	set(eng_block, smooth_light(eng_block_brt, get(eng_block)))
 		
 
 	eng_2_fail_src = bool2int(oil_p < 10 or vibr > 55 or chip_det == 1 or fuel_p == 0 or (get(fire_main_switch) * get(sim_engine_on_fire2) == 6) or get(egt_2) > 710)
@@ -389,60 +390,60 @@ local function lamps_eng3()
 	local vibr = get(vibra_3)
 	if vibr > 65 then eng3_dangerous_vibro_brt = 1 end
 	eng3_dangerous_vibro_brt = math.max(eng3_dangerous_vibro_brt * lamps_brt, test_btn)
-	set(eng3_dangerous_vibro, eng3_dangerous_vibro_brt)
+	set(eng3_dangerous_vibro, smooth_light(eng3_dangerous_vibro_brt, get(eng3_dangerous_vibro)))
 	
 	local eng3_oil_level_brt = math.max(bool2int(get(oil_qty_3) < 8) * get(gauges_on_3) * lamps_brt, test_btn) 
-	set(eng3_oil_level, eng3_oil_level_brt)
+	set(eng3_oil_level, smooth_light(eng3_oil_level_brt, get(eng3_oil_level)))
 	
 	local eng3_oil_p_brt = 0
 	local oil_p = get(oil_p_3)
 	if oil_p < 10 then eng3_oil_p_brt = 1 end
 	eng3_oil_p_brt = math.max(eng3_oil_p_brt * lamps_brt, test_btn) 
-	set(eng3_oil_p, eng3_oil_p_brt)
+	set(eng3_oil_p, smooth_light(eng3_oil_p_brt, get(eng3_oil_p)))
 	
 	local eng3_bypass_valve_brt = 0
 	if RPM > 12.5 and RPM < 75 then eng3_bypass_valve_brt = 1 end
 	eng3_bypass_valve_brt = math.max(eng3_bypass_valve_brt * lamps_brt, test_btn)
-	set(eng3_bypass_valve, eng3_bypass_valve_brt)
+	set(eng3_bypass_valve, smooth_light(eng3_bypass_valve_brt, get(eng3_bypass_valve)))
 
 	local eng3_vna33_brt = 0
 	if RPM < 74 then eng3_vna33_brt = 1 end
 	eng3_vna33_brt = math.max(eng3_vna33_brt * lamps_brt , test_btn)
-	set(eng3_vna33, eng3_vna33_brt)
+	set(eng3_vna33, smooth_light(eng3_vna33_brt, get(eng3_vna33)))
 	
 	local rev_R = get(revers_flap_R)
 	local eng3_reverse_lock_brt = 0 
 	if rev_R < revers_flap_R_last and rev_R > 0.05 and rev_R < 0.9 then eng3_reverse_lock_brt = 1 end
 	eng3_reverse_lock_brt = math.max(eng3_reverse_lock_brt * lamps_brt, test_btn) 
-	set(eng3_reverse_lock, eng3_reverse_lock_brt)
+	set(eng3_reverse_lock, smooth_light(eng3_reverse_lock_brt, get(eng3_reverse_lock)))
 	
 	local eng3_high_vibro_brt = 0
 	if vibr > 55 then eng3_high_vibro_brt = 1 end
 	eng3_high_vibro_brt = math.max(eng3_high_vibro_brt * lamps_brt , test_btn)
-	set(eng3_high_vibro, eng3_high_vibro_brt)
+	set(eng3_high_vibro, smooth_light(eng3_high_vibro_brt, get(eng3_high_vibro)))
 	
 	local chip_det = get(chip_detect3)
 	local eng3_chips_brt = chip_det
 	eng3_chips_brt = math.max(eng3_chips_brt * lamps_brt, test_btn)
-	set(eng3_chips, eng3_chips_brt)
+	set(eng3_chips, smooth_light(eng3_chips_brt, get(eng3_chips)))
 	
 	local fuel_p = get(eng_fuel_press_3)
 	local eng3_fuel_p_brt = (1 - fuel_p) * lamps_brt
 	eng3_fuel_p_brt = math.max(eng3_fuel_p_brt, test_btn) 
-	set(eng3_fuel_p, eng3_fuel_p_brt)
+	set(eng3_fuel_p, smooth_light(eng3_fuel_p_brt, get(eng3_fuel_p)))
 	
 	local eng3_filter_fail_brt = math.max(bool2int(get(eng_filter_3) == 6), test_btn)
-	set(eng3_filter_fail, eng3_filter_fail_brt)
+	set(eng3_filter_fail, smooth_light(eng3_filter_fail_brt, get(eng3_filter_fail)))
 	
 	local eng3_vna0_brt = 0
 	if RPM < 91 then eng3_vna0_brt = 1 end
 	eng3_vna0_brt = math.max(eng3_vna0_brt * lamps_brt, test_btn)
-	set(eng3_vna0, eng3_vna0_brt)
+	set(eng3_vna0, smooth_light(eng3_vna0_brt, get(eng3_vna0)))
 	
 	local eng3_reverse_doors_brt = 0
 	if rev_R > 0.7 then eng3_reverse_doors_brt = 1 end
 	eng3_reverse_doors_brt = math.max(eng3_reverse_doors_brt * lamps_brt, test_btn)
-	set(eng3_reverse_doors, eng3_reverse_doors_brt)
+	set(eng3_reverse_doors, smooth_light(eng3_reverse_doors_brt, get(eng3_reverse_doors)))
 		
 	eng_3_fail_src = bool2int(oil_p < 10 or (rev_R < revers_flap_R_last and rev_R > 0.05 and rev_R < 0.95) or vibr > 55 or chip_det == 1 or fuel_p == 0 or (get(fire_main_switch) * get(sim_engine_on_fire3) == 6) or get(egt_3) > 710)	
 	
@@ -464,21 +465,21 @@ local function lamps_fwd()
 	local eng1_reverse_doors_brt = 0
 	if rev_L > 0.7 then eng1_reverse_doors_brt = 1 end
 	eng1_reverse_doors_brt = math.max(eng1_reverse_doors_brt * lamps_brt_L, test_btn) 
-	set(fp_reverse_1, eng1_reverse_doors_brt)
+	set(fp_reverse_1, smooth_light(eng1_reverse_doors_brt,get(fp_reverse_1)))
 	
 	local eng3_reverse_doors_brt = 0
 	if rev_R > 0.7 then eng3_reverse_doors_brt = 1 end
 	eng3_reverse_doors_brt = math.max(eng3_reverse_doors_brt * lamps_brt_R, test_btn) 
-	set(fp_reverse_3, eng3_reverse_doors_brt)
+	set(fp_reverse_3, smooth_light(eng3_reverse_doors_brt,get(fp_reverse_3)))
 	
 	local fp_eng_fail_1_brt = math.max(eng_1_fail_src * lamps_brt_L, test_btn) 
-	set(fp_eng_fail_1, fp_eng_fail_1_brt)
+	set(fp_eng_fail_1, smooth_light(fp_eng_fail_1_brt,get(fp_eng_fail_1)))
 	
 	local fp_eng_fail_2_brt = math.max(eng_2_fail_src * lamps_brt_R, test_btn) 
-	set(fp_eng_fail_2, fp_eng_fail_2_brt)
+	set(fp_eng_fail_2, smooth_light(fp_eng_fail_2_brt,get(fp_eng_fail_2)))
 	
 	local fp_eng_fail_3_brt = math.max(eng_3_fail_src * lamps_brt_R, test_btn) 
-	set(fp_eng_fail_3, fp_eng_fail_3_brt)
+	set(fp_eng_fail_3, smooth_light(fp_eng_fail_3_brt,get(fp_eng_fail_3)))
 
 end
 
@@ -535,10 +536,9 @@ local function check_controls()
 	
 	local caps_change = gauges_on_1_cap_sw + gauges_on_2_cap_sw + gauges_on_3_cap_sw - gauges_on_1_cap_last - gauges_on_2_cap_last - gauges_on_3_cap_last
 	
-	if change_but ~= 0 then	playSample(button_sound, false)	end
-	if change_sw ~= 0 then playSample(rotary_sound, false) end
-	if caps_change ~= 0 then playSample(cap_sound, false) end 
-	
+	if change_but ~= 0 then		end
+	if change_sw ~= 0 then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
+	if caps_change ~= 0 then  end 
 	-- check caps
 	if gauges_on_1_cap_sw == 0 then set(gauges_on_1, 1) end
 	if gauges_on_2_cap_sw == 0 then set(gauges_on_2, 1) end

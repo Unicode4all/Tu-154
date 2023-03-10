@@ -1,33 +1,34 @@
 -- absu failures
 
 -- failures
-defineProperty("absu_ra56_roll_fail", globalPropertyi("tu154ce/failures/absu_ra56_roll_fail")) -- отказ ra56
-defineProperty("absu_ra56_pitch_fail", globalPropertyi("tu154ce/failures/absu_ra56_pitch_fail")) -- отказ ra56
-defineProperty("absu_ra56_yaw_fail", globalPropertyi("tu154ce/failures/absu_ra56_yaw_fail")) -- отказ ra56
+--defineProperty("absu_ra56_roll_fail", globalPropertyi("tu154ce/failures/absu_ra56_roll_fail")) -- отказ ra56
+--defineProperty("absu_ra56_pitch_fail", globalPropertyi("tu154ce/failures/absu_ra56_pitch_fail")) -- отказ ra56
+--defineProperty("absu_ra56_yaw_fail", globalPropertyi("tu154ce/failures/absu_ra56_yaw_fail")) -- отказ ra56
+--
+--defineProperty("absu_at1_fail", globalPropertyi("tu154ce/failures/absu_at1_fail")) -- отказ AT
+--defineProperty("absu_at2_fail", globalPropertyi("tu154ce/failures/absu_at2_fail")) -- отказ AT
+--
+--
+--
+--defineProperty("absu_damp_roll_fail", globalPropertyi("tu154ce/failures/absu_damp_roll_fail")) -- отказ демперов крена
+--defineProperty("absu_damp_pitch_fail", globalPropertyi("tu154ce/failures/absu_damp_pitch_fail")) -- отказ демперов тангажа
+--defineProperty("absu_damp_yaw_fail", globalPropertyi("tu154ce/failures/absu_damp_yaw_fail")) -- отказ демперов курса
+--defineProperty("absu_contr_roll_fail", globalPropertyi("tu154ce/failures/absu_contr_roll_fail")) -- отказ бокового управления
+--defineProperty("absu_contr_pitch_fail", globalPropertyi("tu154ce/failures/absu_contr_pitch_fail")) -- отказ продольного управления
+--defineProperty("absu_calc_toga_fail", globalPropertyi("tu154ce/failures/absu_calc_toga_fail")) -- отказ вычислителя УХОД
+--
+--defineProperty("absu_calc_roll_fail", globalPropertyi("tu154ce/failures/absu_calc_roll_fail")) -- отказ бокового канала СТУ
+--defineProperty("absu_calc_pitch_fail", globalPropertyi("tu154ce/failures/absu_calc_pitch_fail")) -- отказ продольного канала СТУ
 
-defineProperty("absu_at1_fail", globalPropertyi("tu154ce/failures/absu_at1_fail")) -- отказ AT
-defineProperty("absu_at2_fail", globalPropertyi("tu154ce/failures/absu_at2_fail")) -- отказ AT
 
 
-
-defineProperty("absu_damp_roll_fail", globalPropertyi("tu154ce/failures/absu_damp_roll_fail")) -- отказ демперов крена
-defineProperty("absu_damp_pitch_fail", globalPropertyi("tu154ce/failures/absu_damp_pitch_fail")) -- отказ демперов тангажа
-defineProperty("absu_damp_yaw_fail", globalPropertyi("tu154ce/failures/absu_damp_yaw_fail")) -- отказ демперов курса
-defineProperty("absu_contr_roll_fail", globalPropertyi("tu154ce/failures/absu_contr_roll_fail")) -- отказ бокового управления
-defineProperty("absu_contr_pitch_fail", globalPropertyi("tu154ce/failures/absu_contr_pitch_fail")) -- отказ продольного управления
-defineProperty("absu_calc_toga_fail", globalPropertyi("tu154ce/failures/absu_calc_toga_fail")) -- отказ вычислителя УХОД
-
-defineProperty("absu_calc_roll_fail", globalPropertyi("tu154ce/failures/absu_calc_roll_fail")) -- отказ бокового канала СТУ
-defineProperty("absu_calc_pitch_fail", globalPropertyi("tu154ce/failures/absu_calc_pitch_fail")) -- отказ продольного канала СТУ
-
-
--- define sources
-defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
-defineProperty("failures_enabled", globalPropertyi("tu154ce/failures/failures_enabled"))
-
--- Smart Copilot
-defineProperty("ismaster", globalPropertyf("scp/api/ismaster")) -- Master. 0 = plugin not found, 1 = slave 2 = master
-defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have control. 0 = plugin not found, 1 = no control 2 = has control
+---- define sources
+--defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
+--defineProperty("failures_enabled", globalPropertyi("tu154ce/failures/failures_enabled"))
+--
+---- Smart Copilot
+--defineProperty("ismaster", globalPropertyf("scp/api/ismaster")) -- Master. 0 = plugin not found, 1 = slave 2 = master
+--defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have control. 0 = plugin not found, 1 = no control 2 = has control
 
 
 

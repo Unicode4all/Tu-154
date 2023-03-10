@@ -364,9 +364,9 @@ function update()
 	
 	-- sound
 	if (window_L ~= window_L_last and window_L_last == 0) or (window_R ~= window_R_last and window_R_last == 0) then
-		playSample(window_open, false)
+		if get(xplane_version) < 120000 then playSample(window_open, false) end
 	elseif (window_L ~= window_L_last and window_L_last == 1) or (window_R ~= window_R_last and window_R_last == 1) then
-		playSample(window_close, false)
+		if get(xplane_version) < 120000 then playSample(window_close, false) end
 	end
 	
 	window_L_last = window_L

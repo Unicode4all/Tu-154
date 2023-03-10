@@ -13,9 +13,9 @@ function draw(self)
         max = h
     end
 
-    local rw = (w / max) * 100
-    local rh = (h / max) * 100
+    local rw = (w / max) * (get(position)[3] or 100)
+    local rh = (h / max) * (get(position)[4] or 100)
     drawRotatedTexture(get(image), get(angle), 
-        (100 - rw) / 2, (100 - rh) / 2, rw, rh, 1, 1, 1)
+        ((get(position)[3] or 100) - rw) / 2, ((get(position)[4] or 100) - rh) / 2, rw, rh, 1, 1, 1)
 end
 

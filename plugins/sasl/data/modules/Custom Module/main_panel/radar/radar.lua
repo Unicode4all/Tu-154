@@ -71,7 +71,7 @@ defineProperty("EFIS_fail", globalPropertyi("sim/operation/failures/rel_efis_2")
 defineProperty("mask1", loadImage("radar_mask1.png", 0, 0, 256, 256))
 defineProperty("mask2", loadImage("radar_mask2.png", 0, 0, 256, 256))
 
-defineProperty("scale", loadImage("radar_scale.png", 0, 0, 512, 345))
+defineProperty("scale", loadImage("radar_scale.png", 0, 170, 512, 345))
 
 --[[
 defineProperty("needle_1", loadImage("radar_scale.png", 0, 190, 256, 4))
@@ -79,12 +79,12 @@ defineProperty("needle_2", loadImage("radar_scale.png", 0, 200, 256, 4))
 defineProperty("needle_3", loadImage("radar_scale.png", 0, 210, 256, 4))
 --]]
 
-defineProperty("scale_1", loadImage("radar_scale_marks.png", 0, 0, 130, 80))
-defineProperty("scale_3", loadImage("radar_scale_marks.png", 144, 0, 250, 156))
+defineProperty("scale_1", loadImage("radar_scale_marks.png", 0, 437, 130, 80))
+defineProperty("scale_3", loadImage("radar_scale_marks.png", 144, 365, 250, 156))
 
-defineProperty("scale_4", loadImage("radar_scale_marks.png", 0, 310, 250, 156))
-defineProperty("scale_5", loadImage("radar_scale_marks.png", 0, 154, 250, 156))
-defineProperty("scale_6", loadImage("radar_scale_marks.png", 251, 154, 250, 156))
+defineProperty("scale_4", loadImage("radar_scale_marks.png", 0, 59, 250, 156))
+defineProperty("scale_5", loadImage("radar_scale_marks.png", 0, 217, 250, 156))
+defineProperty("scale_6", loadImage("radar_scale_marks.png", 251, 217, 250, 156))
 
 
 -- engines
@@ -157,15 +157,15 @@ function update()
 	
 	-- panel sounds
 	local power_switch = get(rls_on)
-	if power_switch ~= power_sw_last then playSample(button_sound, false) end
+	if power_switch ~= power_sw_last then  end
 	power_sw_last = power_switch
 	
 	mode = get(rls_mode)
-	if mode ~= mode_sw_last then playSample(rotary_sound, false) end
+	if mode ~= mode_sw_last then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
 	mode_sw_last = mode
 
 	range = get(map_range)
-	if range ~= range_last then playSample(rotary_sound_pl, false) end
+	if range ~= range_last then if get(xplane_version) < 120000 then playSample(rotary_sound_pl, false) end end
 	range_last = range
 
 

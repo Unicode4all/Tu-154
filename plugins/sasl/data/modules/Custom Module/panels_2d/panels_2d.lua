@@ -38,17 +38,18 @@ defineProperty("control_thro_other", globalPropertyf("tu154ce/SC/control_thro_ot
 
 local coef = (get(window_height) / 1024) * 0.8
 if coef > 1 then coef = 1 end  -- set initial coefficient for float panel's size - make 'em smaller, if screen resolution less then 1024 by height.
-
+local cursorOnEdge = false
 
 
 
 defineProperty("closeImage", loadImage("close.png"))  -- close cross image
 
 
-palette = subpanel {
+palette = contextWindow {
 	position = { 50, 50, 251 * coef, 305 * coef };
 	noBackground = true;
 	noClose = true;
+	noDecore = true;
 	resizeProportional = true;
 	savePosition = true;
 	name = "palette";	
@@ -70,9 +71,10 @@ palette = subpanel {
 
 
 
-payload_panel = subpanel {
+payload_panel = contextWindow {
 	position = { 50, 50, 1024 * coef, 683 * coef };
 	noBackground = true;
+	noDecore = true;
 	noClose = true;
 	resizeProportional = true;
 	savePosition = true;
@@ -158,9 +160,10 @@ nvu_2D_panel = subpanel {
 
 }
 
-checklist_panel = subpanel {
+checklist_panel = contextWindow {
 	position = { 50, 50, 240 * coef, 850 * coef };
 	noBackground = true;
+	noDecore = true;
 	noClose = true;
 	resizeProportional = true;
 	savePosition = true;
@@ -180,10 +183,11 @@ checklist_panel = subpanel {
 
 }
 
-ground_srv_panel = subpanel {
+ground_srv_panel = contextWindow {
 	position = { 50, 50, 655 * coef, 880 * coef };
 	noBackground = true;
 	noClose = true;
+	noDecore = true;
 	resizeProportional = true;
 	savePosition = true;
 	name = "ground_srv_panel";	
@@ -202,25 +206,26 @@ ground_srv_panel = subpanel {
 
 }
 
-uphone = subpanel {
-    position = { 40, 20, 241 * coef , 446 * coef };
-    noBackground = true;
-    noClose = true;
-	movable = true;
-	resizeble = true;
-	resizeProportional = true;
-	savePosition = true;
-	name = "uphone";
-    components = {
-		UPhone {
-         position = { 0, 0, 241 * coef, 446 * coef  },
-         };
-		textureLit {
- 		 position = {(241 - 16) * coef , (446 - 16) * coef , 16 * coef , 16 * coef },
-		 image = get(closeImage),
-		 };
-	};
-}
+--uphone = contextWindow {
+--    position = { 40, 20, 241 * coef , 446 * coef };
+--    noBackground = true;
+--    noClose = true;
+--	noDecore = true;
+--	movable = true;
+--	resizeble = true;
+--	resizeProportional = true;
+--	savePosition = true;
+--	name = "uphone";
+--    components = {
+--		UPhone {
+--         position = { 0, 0, 241 * coef, 446 * coef  },
+--         };
+--		textureLit {
+-- 		 position = {(241 - 16) * coef , (446 - 16) * coef , 16 * coef , 16 * coef },
+--		 image = get(closeImage),
+--		 };
+--	};
+--}
 
 
 camera_panel = subpanel {
@@ -245,10 +250,11 @@ camera_panel = subpanel {
 
 }
 
-fails_panel = subpanel {
+fails_panel = contextWindow {
 	position = { 50, 100, 512 * coef, 700 * coef };
 	noBackground = true;
 	noClose = true;
+	noDecore = true;
 	resizeProportional = true;
 	savePosition = false;
 	name = "fails_panel";	
@@ -268,22 +274,23 @@ fails_panel = subpanel {
 }
 
 -- images for main menu
-defineProperty("menu_wt", loadImage("menus.png", 0, 0, 31, 30))
-defineProperty("menu_gr", loadImage("menus.png", 30, 0, 31, 30))
-defineProperty("menu_ex_wt", loadImage("menus.png", 0, 30, 31, 90))
+defineProperty("menu_wt", loadImage("menus.png", 0, 136 + (30*3), 31, 30))
+defineProperty("menu_gr", loadImage("menus.png", 0, 136 + (30*3), 31, 30))
+defineProperty("menu_ex_wt", loadImage("menus.png", 0, 136, 31, 90))
 
-defineProperty("nav_ext_gr", loadImage("menus.png", 30, 30, 31, 30))
-defineProperty("serv_ext_gr", loadImage("menus.png", 30, 60, 31, 30))
-defineProperty("misc_ext_gr", loadImage("menus.png", 30, 90, 31, 30))
+defineProperty("nav_ext_gr", loadImage("menus.png", 30, 136 + 60, 31, 30))
+defineProperty("serv_ext_gr", loadImage("menus.png", 30, 136 + 30, 31, 30))
+defineProperty("misc_ext_gr", loadImage("menus.png", 30, 136, 31, 30))
 
-defineProperty("nav_menu_wt", loadImage("menus.png", 60, 29, 121, 31))
+defineProperty("nav_menu_wt", loadImage("menus.png", 60, 136 + 60, 121, 31))
 
-defineProperty("nav_menu_wt", loadImage("menus.png", 60, 29, 121, 31))
-defineProperty("serv_menu_wt", loadImage("menus.png", 60, 59, 61, 31))
-defineProperty("misc_menu_wt", loadImage("menus.png", 60, 89, 121, 31))
+defineProperty("serv_menu_wt", loadImage("menus.png", 60, 136 + 30, 61, 31))
+defineProperty("misc_menu_wt", loadImage("menus.png", 60, 136, 121, 31))
 
 defineProperty("thro_red", loadImage("menus.png", 90, 0, 31, 30))
 defineProperty("thro_grn", loadImage("menus.png", 120, 0, 31, 30))
+
+
 
 local main_menu_ext = false
 local nav_ext = false
@@ -521,9 +528,10 @@ ext_menu = subpanel {
 }
 
 
-main_menu = subpanel {
+main_menu = contextWindow {
 	position = { 0, 600, 31, 30 };
-	noBackground = false;
+	noBackground = true;
+	noDecore = true;
 	noClose = true;
 	noResize = true;
 	noMove = true;
@@ -603,27 +611,37 @@ thro_button = subpanel {
 function update()
 	
 	-- main menu logic
-	main_menu.visible = true
-	ext_menu.visible = main_menu_ext
+	if sasl.getCSMouseXPos() < 256 then
+		cursorOnEdge = true
+	else
+		cursorOnEdge = false
+	end
 	
-	nav_menu.visible = main_menu_ext and nav_ext
-	serv_menu.visible = main_menu_ext and serv_ext
-	misc_menu.visible = main_menu_ext and misc_ext
+	main_menu:setIsVisible(true and cursorOnEdge)
+
+	ext_menu.visible = main_menu_ext and cursorOnEdge 
+	
+	nav_menu.visible = main_menu_ext and nav_ext and cursorOnEdge
+	serv_menu.visible = main_menu_ext and serv_ext and cursorOnEdge 
+	misc_menu.visible = main_menu_ext and misc_ext and cursorOnEdge
 	
 	
 	
-	payload_panel.visible = get(show_load_panel) == 1
+	payload_panel:setIsVisible(get(show_load_panel) == 1)
 	absu_2d_panel.visible = get(show_absu_panel) == 1
 	ovhd_2d_panel.visible = get(show_ohvd_panel) == 1
 	nvu_2D_panel.visible = get(show_nvu_panel) == 1
-	checklist_panel.visible = get(show_checklist_panel) == 1
-	ground_srv_panel.visible = get(show_ground_panel) == 1
-	uphone.visible = get(show_phone) == 1
+	checklist_panel:setIsVisible(get(show_checklist_panel) == 1)
+	ground_srv_panel:setIsVisible(get(show_ground_panel) == 1)
+	--uphone:setIsVisible((show_phone) == 1)
 	camera_panel.visible = get(show_cam) == 1
-	palette.visible = get(show_palette) == 1
-	fails_panel.visible = get(show_fail_panel) == 1
+	palette:setIsVisible(get(show_palette) == 1)
+	fails_panel:setIsVisible(get(show_fail_panel) == 1)
 	
-	thro_button.visible = get(ismaster) > 0
+	if get(ismaster) then
+		thro_button.visible = get(ismaster) > 0
+	end
+	
 	
 	
 end

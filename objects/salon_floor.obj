@@ -480,7 +480,7 @@ IDX10	378 372 373 379 373 377 378 373 378 379
 ATTR_shiny_rat	 0.500
 ATTR_solid_camera
 # salon_walls.085
-ATTR_light_level  0.000  1.000 tu154ce/lights/cabin_2d_light
+ATTR_light_level  0.000  1.000 sim/custom/lights/cabin_2d_light
 TRIS	0 870
 
 # Built with Blender 2.49. Exported with XPlane2Blender 3.10.

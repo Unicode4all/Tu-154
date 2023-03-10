@@ -94,17 +94,15 @@ local function rotary()
 	local ark_ones_right_sw = get(ark_ones_right)
 	
 	local big_summ = ark_hundr_left_sw + ark_hundr_right_sw
-	if big_summ ~= rot_big_last then playSample(rotary_big_sound, false) end
 	
 	rot_big_last = big_summ
 	
 	local mid_summ = ark_tens_left_sw + ark_tens_right_sw
-	if mid_summ ~= rot_mid_last then playSample(rot_mid_sound, false) end
 	
 	rot_mid_last = mid_summ
 	
 	local inn_summ = ark_ones_left_sw + ark_ones_right_sw
-	if inn_summ ~= rot_inn_last then playSample(rot_small_sound, false) end
+	if inn_summ ~= rot_inn_last then  end
 	
 	rot_inn_last = inn_summ
 	
@@ -119,7 +117,7 @@ local function buttons()
 	
 	local summ = ark_ramka_sw
 	
-	if summ ~= but_summ_last then playSample(button_sound, false) end
+	if summ ~= but_summ_last then  end
 	
 	but_summ_last = summ
 	
@@ -134,7 +132,7 @@ local function switchers()
 	
 	local summ = ark_mode_sw + ark_channel_sw
 	
-	if summ ~= sw_summ_last then playSample(switcher_sound, false) end
+	if summ ~= sw_summ_last then  end
 	
 	sw_summ_last = summ
 

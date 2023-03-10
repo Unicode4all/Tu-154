@@ -79,7 +79,7 @@ include("fuel_tables.lua")
 
 
 
-local draw_font = loadFont('Verdana.ttf')
+local draw_font = loadFont('AVIA.ttf')
 
 ---local EMPTY_WEIGHT = 54865
 
@@ -689,7 +689,7 @@ components = {
 
 
 	-- cargo_1 fill
-	rectangle_ctr {
+	rectangle_ctr_fuel {
 		R = 0.5,
 		G = 0.5,
 		B = 1.0,
@@ -703,7 +703,7 @@ components = {
 	},	
 	
 	-- cargo_2 fill
-	rectangle_ctr {
+	rectangle_ctr_fuel {
 		R = 0.5,
 		G = 0.5,
 		B = 1.0,
@@ -718,7 +718,7 @@ components = {
 
 	
 	-- tank_1_fill
-	rectangle_ctr {
+	rectangle_ctr_fuel {
 		R = 0.5,
 		G = 0.5,
 		B = 1.0,
@@ -732,7 +732,7 @@ components = {
 	},		
 	
 	-- tank_4_fill
-	rectangle_ctr {
+	rectangle_ctr_fuel {
 		R = 0.5,
 		G = 0.5,
 		B = 1.0,
@@ -746,7 +746,7 @@ components = {
 	},		
 	
 	-- tank_2L_fill
-	rectangle_ctr {
+	rectangle_ctr_fuel {
 		R = 0.5,
 		G = 0.5,
 		B = 1.0,
@@ -760,7 +760,7 @@ components = {
 	},		
 	
 	-- tank_2R_fill
-	rectangle_ctr {
+	rectangle_ctr_fuel {
 		R = 0.5,
 		G = 0.5,
 		B = 1.0,
@@ -774,7 +774,7 @@ components = {
 	},		
 	
 	-- tank_3L_fill
-	rectangle_ctr {
+	rectangle_ctr_fuel {
 		R = 0.5,
 		G = 0.5,
 		B = 1.0,
@@ -788,7 +788,7 @@ components = {
 	},	
 	
 	-- tank_3R_fill
-	rectangle_ctr {
+	rectangle_ctr_fuel {
 		R = 0.5,
 		G = 0.5,
 		B = 1.0,
@@ -1337,7 +1337,7 @@ components = {
 	clickable {
 		position = {121, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(crew_num_pr) - 1
 			if a < 3 then a = 3 end
 			set(crew_num_pr, a)
@@ -1349,7 +1349,7 @@ components = {
 	clickable {
 		position = {163, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(crew_num_pr) + 1
 			if a > 5 then a = 5 end
 			set(crew_num_pr, a)
@@ -1362,7 +1362,7 @@ components = {
 	clickable {
 		position = {194, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_1_pr) - 1
 			if a < 0 then a = 0 end
 			set(zone_1_pr, a)
@@ -1374,7 +1374,7 @@ components = {
 	clickable {
 		position = {237, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_1_pr) + 1
 			if a > 18 then a = 18 end
 			set(zone_1_pr, a)
@@ -1387,7 +1387,7 @@ components = {
 	clickable {
 		position = {278, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_2_pr) - 1
 			if a < 0 then a = 0 end
 			set(zone_2_pr, a)
@@ -1399,7 +1399,7 @@ components = {
 	clickable {
 		position = {338, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_2_pr) + 1
 			if a > 44 then a = 44 end
 			set(zone_2_pr, a)
@@ -1412,7 +1412,7 @@ components = {
 	clickable {
 		position = {378, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(cabin_num_pr) - 1
 			if a < 0 then a = 0 end
 			set(cabin_num_pr, a)
@@ -1424,7 +1424,7 @@ components = {
 	clickable {
 		position = {431, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(cabin_num_pr) + 1
 			if a > 7 then a = 7 end
 			set(cabin_num_pr, a)
@@ -1437,7 +1437,7 @@ components = {
 	clickable {
 		position = {481, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_4_pr) - 1
 			if a < 0 then a = 0 end
 			set(zone_4_pr, a)
@@ -1449,7 +1449,7 @@ components = {
 	clickable {
 		position = {540, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_4_pr) + 1
 			if a > 48 then a = 48 end
 			set(zone_4_pr, a)
@@ -1462,7 +1462,7 @@ components = {
 	clickable {
 		position = {606, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_5_pr) - 1
 			if a < 0 then a = 0 end
 			set(zone_5_pr, a)
@@ -1474,7 +1474,7 @@ components = {
 	clickable {
 		position = {665, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_5_pr) + 1
 			if a > 42 then a = 42 end
 			set(zone_5_pr, a)
@@ -1487,7 +1487,7 @@ components = {
 	clickable {
 		position = {703, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_6_pr) - 1
 			if a < 0 then a = 0 end
 			set(zone_6_pr, a)
@@ -1499,7 +1499,7 @@ components = {
 	clickable {
 		position = {748, 572, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(zone_6_pr) + 1
 			if a > 14 then a = 14 end
 			set(zone_6_pr, a)
@@ -1513,7 +1513,7 @@ components = {
 	clickable {
 		position = {211, 533, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(cargo_1_pr) - 100
 			if a < 0 then a = 0 end
 			set(cargo_1_pr, a)
@@ -1525,7 +1525,7 @@ components = {
 	clickable {
 		position = {362, 533, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(cargo_1_pr) + 100
 			if a > 12900 then a = 12900 end
 			set(cargo_1_pr, a)
@@ -1538,7 +1538,7 @@ components = {
 	clickable {
 		position = {572, 533, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(cargo_2_pr) - 100
 			if a < 0 then a = 0 end
 			set(cargo_2_pr, a)
@@ -1550,7 +1550,7 @@ components = {
 	clickable {
 		position = {706, 533, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(cargo_2_pr) + 100
 			if a > 10400 then a = 10400 end
 			set(cargo_2_pr, a)
@@ -1564,7 +1564,7 @@ components = {
 	clickable {
 		position = {631, 488, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(kitchens_pr) - 10
 			if a < 0 then a = 0 end
 			set(kitchens_pr, a)
@@ -1576,7 +1576,7 @@ components = {
 	clickable {
 		position = {705, 488, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(kitchens_pr) + 10
 			if a > 500 then a = 500 end
 			set(kitchens_pr, a)
@@ -1589,7 +1589,7 @@ components = {
 	clickable {
 		position = {896, 488, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(various_pr) - 10
 			if a < 50 then a = 50 end
 			set(various_pr, a)
@@ -1601,7 +1601,7 @@ components = {
 	clickable {
 		position = {971, 488, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(various_pr) + 10
 			if a > 500 then a = 500 end
 			set(various_pr, a)
@@ -1615,7 +1615,7 @@ components = {
 	clickable {
 		position = {185, 486, 45, 35 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(zone_1_pr, 0)
 			set(zone_2_pr, 0)
 			set(zone_4_pr, 0)
@@ -1631,7 +1631,7 @@ components = {
 	clickable {
 		position = {233, 486, 53, 35 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(zone_1_pr, math.random(3, 6))
 			set(zone_2_pr, math.random(8, 14))
 			set(zone_4_pr, math.random(9, 15))
@@ -1647,7 +1647,7 @@ components = {
 	clickable {
 		position = {290, 486, 53, 35 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(zone_1_pr, math.random(7, 11))
 			set(zone_2_pr, math.random(19, 25))
 			set(zone_4_pr, math.random(21, 27))
@@ -1663,7 +1663,7 @@ components = {
 	clickable {
 		position = {346, 486, 53, 35 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(zone_1_pr, math.random(12, 16))
 			set(zone_2_pr, math.random(30, 36))
 			set(zone_4_pr, math.random(33, 39))
@@ -1679,7 +1679,7 @@ components = {
 	clickable {
 		position = {402, 486, 61, 35 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(zone_1_pr, 18)
 			set(zone_2_pr, 44)
 			set(zone_4_pr, 48)
@@ -1695,7 +1695,7 @@ components = {
 	clickable {
 		position = {186, 398, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(main_dist_pr) - 100
 			if a < 0 then a = 0 end
 			set(main_dist_pr, a)
@@ -1707,7 +1707,7 @@ components = {
 	clickable {
 		position = {263, 398, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(main_dist_pr) + 100
 			if a > 5000 then a = 5000 end
 			set(main_dist_pr, a)
@@ -1720,7 +1720,7 @@ components = {
 	clickable {
 		position = {471, 398, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(alt_dist_pr) - 100
 			if a < 0 then a = 0 end
 			set(alt_dist_pr, a)
@@ -1732,7 +1732,7 @@ components = {
 	clickable {
 		position = {549, 398, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(alt_dist_pr) + 100
 			if a > 5000 then a = 5000 end
 			set(alt_dist_pr, a)
@@ -1746,7 +1746,7 @@ components = {
 	clickable {
 		position = {186, 366, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(main_fl_pr) - 10
 			if a < 200 then a = 200 end
 			set(main_fl_pr, a)
@@ -1758,7 +1758,7 @@ components = {
 	clickable {
 		position = {263, 366, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(main_fl_pr) + 10
 			if a > 390 then a = 390 end
 			set(main_fl_pr, a)
@@ -1771,7 +1771,7 @@ components = {
 	clickable {
 		position = {471, 366, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(alt_fl_pr) - 10
 			if a < 200 then a = 200 end
 			set(alt_fl_pr, a)
@@ -1783,7 +1783,7 @@ components = {
 	clickable {
 		position = {549, 366, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(alt_fl_pr) + 10
 			if a > 390 then a = 390 end
 			set(alt_fl_pr, a)
@@ -1797,7 +1797,7 @@ components = {
 	clickable {
 		position = {133, 362, 50, 35 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local fl = calc_opt_fl(get(main_dist_pr))
 			set(main_fl_pr, fl)
 			return true
@@ -1809,7 +1809,7 @@ components = {
 	clickable {
 		position = {419, 362, 50, 35 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local fl = calc_opt_fl(get(alt_dist_pr))
 			set(alt_fl_pr, fl)
 			return true
@@ -1821,7 +1821,7 @@ components = {
 	clickable {
 		position = {186, 282, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(nav_fuel_pr) - 100
 			if a < 0 then a = 0 end
 			set(nav_fuel_pr, a)
@@ -1833,7 +1833,7 @@ components = {
 	clickable {
 		position = {263, 282, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(nav_fuel_pr) + 100
 			if a > 5000 then a = 5000 end
 			set(nav_fuel_pr, a)
@@ -1846,7 +1846,7 @@ components = {
 	clickable {
 		position = {471, 282, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(taxi_fuel_pr) - 100
 			if a < 0 then a = 0 end
 			set(taxi_fuel_pr, a)
@@ -1858,7 +1858,7 @@ components = {
 	clickable {
 		position = {549, 282, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(taxi_fuel_pr) + 100
 			if a > 1000 then a = 1000 end
 			set(taxi_fuel_pr, a)
@@ -1871,7 +1871,7 @@ components = {
 	clickable {
 		position = {20, 202, 56, 37 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(tank_1_pr, 3300)
 			set(tank_4_pr, 0)
 			set(tank_2L_pr, 1500)
@@ -1887,7 +1887,7 @@ components = {
 	clickable {
 		position = {84, 202, 56, 37 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(tank_1_pr, 3300)
 			set(tank_4_pr, 6595)
 			set(tank_2L_pr, 9500)
@@ -1904,7 +1904,7 @@ components = {
 	clickable {
 		position = {242, 161, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_4_pr) - 25
 			if a < 0 then a = 0 end
 			set(tank_4_pr, a)
@@ -1916,7 +1916,7 @@ components = {
 	clickable {
 		position = {310, 161, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_4_pr) + 25
 			if a > 6595 then a = 6595 end
 			set(tank_4_pr, a)
@@ -1929,7 +1929,7 @@ components = {
 	clickable {
 		position = {242, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_1_pr) - 25
 			if a < 0 then a = 0 end
 			set(tank_1_pr, a)
@@ -1941,7 +1941,7 @@ components = {
 	clickable {
 		position = {310, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_1_pr) + 25
 			if a > 3300 then a = 3300 end
 			set(tank_1_pr, a)
@@ -1955,7 +1955,7 @@ components = {
 	clickable {
 		position = {29, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_3L_pr) - 25
 			if a < 0 then a = 0 end
 			set(tank_3L_pr, a)
@@ -1967,7 +1967,7 @@ components = {
 	clickable {
 		position = {102, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_3L_pr) + 25
 			if a > 5405 then a = 5405 end
 			set(tank_3L_pr, a)
@@ -1980,7 +1980,7 @@ components = {
 	clickable {
 		position = {137, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_2L_pr) - 25
 			if a < 0 then a = 0 end
 			set(tank_2L_pr, a)
@@ -1992,7 +1992,7 @@ components = {
 	clickable {
 		position = {211, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_2L_pr) + 25
 			if a > 9500 then a = 9500 end
 			set(tank_2L_pr, a)
@@ -2005,7 +2005,7 @@ components = {
 	clickable {
 		position = {341, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_2R_pr) - 25
 			if a < 0 then a = 0 end
 			set(tank_2R_pr, a)
@@ -2017,7 +2017,7 @@ components = {
 	clickable {
 		position = {416, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_2R_pr) + 25
 			if a > 9500 then a = 9500 end
 			set(tank_2R_pr, a)
@@ -2031,7 +2031,7 @@ components = {
 	clickable {
 		position = {448, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_3R_pr) - 25
 			if a < 0 then a = 0 end
 			set(tank_3R_pr, a)
@@ -2043,7 +2043,7 @@ components = {
 	clickable {
 		position = {523, 93, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(tank_3R_pr) + 25
 			if a > 5405 then a = 5405 end
 			set(tank_3R_pr, a)
@@ -2068,7 +2068,7 @@ components = {
 	
 	
 	-- fast load
-		clickable {
+	clickable {
 		position = {20, 17, 160, 45 },
       
 		onMouseDown = function() 
@@ -2103,7 +2103,7 @@ components = {
 	clickable {
 		position = {429, 17, 130, 45 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(show_load_panel, 0)
 			return true
 		end,
@@ -2112,7 +2112,7 @@ components = {
 	clickable {
 		position = {size[1]-15, size[2]-15, 15, 15 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(show_load_panel, 0)
 			return true
 		end,

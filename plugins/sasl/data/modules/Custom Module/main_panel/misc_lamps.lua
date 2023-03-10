@@ -148,7 +148,7 @@ function update()
 	
 	-- power and controlls
 	local test_btn = get(lamp_test)-- 
-	if button_last ~= test_btn then playSample(button_sound, false) end
+	if button_last ~= test_btn then  end
 	button_last = test_btn
 	test_btn = test_btn * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
 	

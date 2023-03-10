@@ -4,7 +4,6 @@ OBJ
 
 TEXTURE		snow_window.png
 TEXTURE_LIT	snow_window_LIT.png
-TEXTURE_NORMAL	snow_window_NML.png
 POINT_COUNTS	876 0 0 2544
 
 VT	  -0.7684   -1.4777  -21.7466	 0.404 -0.714  0.571	2.064  -0.924

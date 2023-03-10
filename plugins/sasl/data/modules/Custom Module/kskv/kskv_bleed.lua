@@ -52,7 +52,7 @@ defineProperty("bus27_volt_right", globalPropertyf("tu154ce/elec/bus27_volt_righ
 
 defineProperty("start_sys_work", globalPropertyf("tu154ce/start/start_sys_work")) -- работа системы запуска
 
-
+asu_press = globalPropertyf("tu154ce/asu/press")
 
 defineProperty("engine_bleed_sov_1", globalProperty("sim/cockpit2/bleedair/actuators/engine_bleed_sov[0]")) -- открытие отбора воздуха от двигателя
 defineProperty("engine_bleed_sov_2", globalProperty("sim/cockpit2/bleedair/actuators/engine_bleed_sov[1]")) -- открытие отбора воздуха от двигателя
@@ -173,7 +173,7 @@ if MASTER then
 	local eng_airflow_1 = valve_1 * interpolate(air_usage_tbl, get(rpm_high_1)) * alt_coef
 	local eng_airflow_2 = valve_2 * interpolate(air_usage_tbl, get(rpm_high_2)) * alt_coef
 	local eng_airflow_3 = valve_3 * interpolate(air_usage_tbl, get(rpm_high_3)) * alt_coef
-	local eng_airflow_4 = get(apu_air_doors) * get(apu_n1) * 11 * alt_coef
+	local eng_airflow_4 = (get(apu_air_doors) * get(apu_n1) * 11 * alt_coef) + get(asu_press) * 111
 	
 	
 	-- calculate main tubes valves

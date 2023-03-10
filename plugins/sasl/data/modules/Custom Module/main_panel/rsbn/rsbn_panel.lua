@@ -39,7 +39,7 @@ defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flig
 -- other sources
 defineProperty("bus27_volt_left", globalPropertyf("tu154ce/elec/bus27_volt_left")) -- напряжение сети 27
 defineProperty("bus27_volt_right", globalPropertyf("tu154ce/elec/bus27_volt_right")) -- напряжение сети 27
-
+include("smooth_light.lua")
 
 
 local button_sound = loadSample('Custom Sounds/plastic_btn.wav')
@@ -57,7 +57,7 @@ local function buttons()
 
 	local but_summ = rsbn_control_strobe_sw + rsbn_control_azimuth_sw + rsbn_control_distance_sw
 	
-	if but_summ ~= but_summ_last then playSample(button_sound, false) end
+	if but_summ ~= but_summ_last then  end
 	
 	but_summ_last = but_summ
 
@@ -73,7 +73,7 @@ local function rotary()
 	
 	local summ = rsbn_ch_ten_sw + rsbn_ch_one_sw
 	
-	if summ ~= rot_summ_last then playSample(rotary_sound, false) end
+	if summ ~= rot_summ_last then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
 	
 	rot_summ_last = summ
 
@@ -142,13 +142,13 @@ local function lamps()
 	
 	local test_btn = get(test_lamps) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
 	local day_night = 1 - get(day_night_set) * 0.25
-	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0) * day_night
+	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0) * day_night * get(rsbn_on)
 
 	local dist_autonom_brt = math.max(bool2int(get(distance) == 0) * lamps_brt, test_btn)
-	set(dist_autonom, dist_autonom_brt)
+	set(dist_autonom, smooth_light(dist_autonom_brt, get(dist_autonom)))
 	
 	local azimuth_autonom_brt = math.max(bool2int(get(azimuth) == 0) * lamps_brt, test_btn)
-	set(azimuth_autonom, azimuth_autonom_brt)
+	set(azimuth_autonom, smooth_light(azimuth_autonom_brt, get(azimuth_autonom)))
 	
 end
 

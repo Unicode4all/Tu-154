@@ -94,7 +94,7 @@ defineProperty("apu_fail",globalPropertyi("tu154ce/failures/apu_fail")) -- от�
 defineProperty("apu_press_fail", globalPropertyi("tu154ce/failures/apu_press_fail")) -- отказ отбора воздуха от двигателя
 
 
-
+include("smooth_light.lua")
 
 
 -- sounds
@@ -110,7 +110,7 @@ local function default_APU()
 	set(APU_generator_on, 1)
 	set(bleed_air_mode, 4)
 	-- start APU if it's not running
-	if (get(APU_running) ~= 1 or get(APU_N1_percent) < 50) and (get(bus27_volt_left) > 10 or get(bus27_volt_right) > 10) then 
+	if (get(APU_running) ~= 1 or get(APU_N1_percent) < 50) and (get(bus27_volt_left) > 10 or get(bus27_volt_right) > 10) then
 		set(APU_starter_switch, 2)
 	elseif get(bus27_volt_left) > 10 or get(bus27_volt_right) > 10 then
 		set(APU_starter_switch, 1)
@@ -147,15 +147,15 @@ local function gauges()
 	if n1 > n1_actual then n1_angle = interpolate(n1_table_start, n1) -- if starting, add needle trembling
 	else n1_angle = interpolate(n1_table_off, n1) end
 	EGT_angle = get(apu_egt)
-	
+
 	if EGT_angle < -10 then EGT_angle = -10 end
-	
+
 	if get(bus27_volt_right) > 13 then
 		oil_t_angle = get(apu_oil_t)
 	else
 		oil_t_angle = -75
 	end
-	
+
 	--n1_angle = 99
 	--EGT_angle = 300
 	--oil_t_angle = 100
@@ -164,12 +164,12 @@ local function gauges()
 	n1_actual = n1_actual + (n1_angle - n1_actual) * passed * 5
 	EGT_actual = EGT_actual + (EGT_angle - EGT_actual) * passed * 3
 	oil_t_actual = oil_t_actual + (oil_t_angle - oil_t_actual) * passed * 3
-	
+
 	-- set results
 	set(apu_rpm, n1_actual)
 	set(apu_egt_gau, EGT_actual)
 	set(apu_oil_temp, oil_t_actual)
-	
+
 end
 
 
@@ -182,20 +182,20 @@ local apu_stop_last = get(apu_stop)
 local test_lamps_last = get(test_lamps)
 
 local function check_controls()
-	
+
 	local apu_main_sw = get(apu_main_switch)
 	local apu_start_mod_sw = get(apu_start_mode)
 	local apu_air_sw = get(apu_air_bleed)
 	local apu_start_but = get(apu_start)
 	local apu_stop_but = get(apu_stop)
 	local test_lamps_but = get(test_lamps)
-	
+
 	local changes_sw = apu_main_sw + apu_start_mod_sw + apu_air_sw - apu_main_last - apu_start_mod_last - apu_air_last
 	local changes_but = apu_start_but + apu_stop_but + test_lamps_but - apu_start_last - apu_stop_last - test_lamps_last
 
-	if changes_sw ~= 0 then playSample(switcher_sound, false) end
-	if changes_but ~= 0 then playSample(button_sound, false) end
-	
+	if changes_sw ~= 0 then  end
+	if changes_but ~= 0 then  end
+
 	apu_main_last = apu_main_sw
 	apu_start_mod_last = apu_start_mod_sw
 	apu_air_last = apu_air_sw
@@ -210,80 +210,83 @@ local high_temp_sign = 0
 local high_rpm_sign = 0
 
 local start_ready_brt = 0
-
+local t = 0
 local function lamps()
-	
+
 	local test_btn = get(test_lamps) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
 	local day_night = 1 - get(day_night_set) * 0.25
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0) * day_night
-	
+
 	-- local variables
 	local rpm = get(apu_n1)
 	local start_seq = get(apu_start_seq) == 1
 	local thermo = get(apu_egt)
 	local main_sw = get(apu_main_switch) == 1
-	
+
 	-- red signs. resets only after disabling APU switcher
 	if get(apu_oil_p) < 1 then low_oil_press_sign = 1 end
 	if (start_seq and thermo > 700) or (not start_seq and thermo > 570) then high_temp_sign = 1 end
 	if rpm > 105 then high_rpm_sign = 1 end
-	
+
 	-- reset red signs
 	if not main_sw then
 		low_oil_press_sign = 0
 		high_temp_sign = 0
-		high_rpm_sign = 0		
+		high_rpm_sign = 0
 	end
-	
+
 	local low_oil_brt = 0
 	if get(apu_oil_q) < 0.4 then low_oil_brt = 1 end
-	low_oil_brt = math.max(low_oil_brt * lamps_brt, test_btn)
-	set(low_oil, low_oil_brt)
-	
+
+
+	low_oil_brt = math.max(low_oil_brt * lamps_brt, test_btn) * math.max(math.fmod(sasl.getCurrentCycle() * 0.01, 1), 1.0)
+
+	set(low_oil, smooth_light(low_oil_brt, get(low_oil)))
+
 	local low_oil_press_brt = math.max(low_oil_press_sign * lamps_brt, test_btn)
-	set(low_oil_press, low_oil_press_brt)
+	set(low_oil_press, smooth_light(low_oil_press_brt, get(low_oil_press)))
 
 	local high_temp_brt = math.max(high_temp_sign * lamps_brt, test_btn)
-	set(high_temp, high_temp_brt)
+	set(high_temp, smooth_light(high_temp_brt, get(high_temp)))
 
 	local high_rpm_brt = math.max(high_rpm_sign * lamps_brt, test_btn)
-	set(high_rpm, high_rpm_brt)
-	
-	local pta6_fail_brt = math.max(0, test_btn) -- fake for now
-	set(pta6_fail, pta6_fail_brt)
-	
+	set(high_rpm, smooth_light(high_rpm_brt, get(high_rpm)))
+
+	local pta6_fail_brt = math.max(0, test_btn) -- TODO: implement PTA-6
+	set(pta6_fail, smooth_light(pta6_fail_brt, get(pta6_fail)))
+
 	local doors_open_brt = 0
 	if get(apu_doors) > 0.9 then doors_open_brt = 1 end
 	doors_open_brt = math.max(doors_open_brt * lamps_brt, test_btn)
-	set(doors_open, doors_open_brt)
-	
+	set(doors_open, smooth_light(doors_open_brt, get(doors_open)))
+
 	local fuel_press_brt = 0
 	if get(apu_fuel_p) > 0.8 then fuel_press_brt = 1 end
 	fuel_press_brt = math.max(fuel_press_brt * lamps_brt, test_btn)
-	set(fuel_press, fuel_press_brt)
-	
-	
+	set(fuel_press, smooth_light(fuel_press_brt, get(fuel_press)))
+
+
 	if get(apu_air_doors) == 0 and get(apu_doors) == 1 then start_ready_brt = 1 end
 	if get(apu_air_doors) == 1 or get(apu_doors) < 0.9 then start_ready_brt = 0 end
 	local start_ready_lit = math.max(start_ready_brt * lamps_brt, test_btn)
-	set(start_ready, start_ready_lit)
-	
+	set(start_ready, smooth_light(start_ready_lit, get(start_ready)))
+
 	local work_mode_brt = 0
 	if rpm > 92 and main_sw then work_mode_brt = 1 end
 	work_mode_brt = math.max(work_mode_brt * lamps_brt, test_btn)
-	set(work_mode, work_mode_brt)
-	
+	set(work_mode, smooth_light(work_mode_brt, get(work_mode)))
+
 	local start_apu_brt = 0
 	if rpm < 92 and get(gear_vent_set) == 1 then start_apu_brt = 1 end
 	start_apu_brt = math.max(start_apu_brt * lamps_brt, test_btn) -- вентиляция щасси и когда ВСУ выклчюено.
-	set(start_apu, start_apu_brt)
+	set(start_apu, smooth_light(start_apu_brt, get(start_apu)))
 
 end
 
 
 function update()
 	passed = get(frame_time)
-	
+
 	default_APU()
 	check_controls()
 	lamps()

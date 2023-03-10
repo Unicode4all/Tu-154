@@ -12,7 +12,7 @@ defineProperty("brt_handle", globalPropertyf("tu154ce/rotary/srpbz/brightness"))
 defineProperty("mode_set", globalPropertyi("tu154ce/taws/mode_set")) -- режим работы экрана. 0 - выкл, 1 - карта высот, 2 - вид сбоку, 3 - часы, 4 - процесс включения
 
 local text_font = loadBitmapFont("taws_scr.fnt")
-
+local font2 = loadFont("taws.ttf")
 local msg = 0
 local eng = false
 local brightness = 0.8
@@ -28,7 +28,6 @@ function update()
 	if get(mode_set) == 0 then brightness = 0 end
 	
 	set(taws_english, 1 - get(hide_eng_objects))
-	
 
 end
 
@@ -45,7 +44,7 @@ components = {
 
 	-- russian text --
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {250, 710, 185, 160},
 		text = function()
 			return "ТЯНИ ВВЕРХ"
@@ -58,7 +57,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {350, 710, 185, 160},
 		text = function()
 			return "ЗЕМЛЯ"
@@ -71,7 +70,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {160, 710, 185, 160},
 		text = function()
 			return "ВПЕРЕДИ ЗЕМЛЯ"
@@ -84,7 +83,7 @@ components = {
 	},
 	
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {210, 710, 185, 160},
 		text = function()
 			return "НИЗКО ЗЕМЛЯ"
@@ -97,7 +96,7 @@ components = {
 	},	
 	
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {210, 710, 185, 160},
 		text = function()
 			return "НИЗКО ШАССИ"
@@ -110,7 +109,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {140, 710, 185, 160},
 		text = function()
 			return "НИЗКО ЗАКРЫЛКИ"
@@ -123,7 +122,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {140, 710, 185, 160},
 		text = function()
 			return "ПРОВЕРЬ ВЫСОТУ"
@@ -136,7 +135,7 @@ components = {
 	},	
 	
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {140, 710, 185, 160},
 		text = function()
 			return "ОПАСНЫЙ СПУСК"
@@ -149,7 +148,7 @@ components = {
 	},		
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {210, 710, 185, 160},
 		text = function()
 			return "НЕ СНИЖАЙСЯ"
@@ -162,7 +161,7 @@ components = {
 	},	
 	
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {300, 710, 185, 160},
 		text = function()
 			return "ГЛИССАДА"
@@ -172,11 +171,24 @@ components = {
 		visible = function()
 			return not eng and msg == 13
 		end,
-	},		
+	},	
+	
+	text_draw {
+		position = {300, 700, 185, 160},
+		text = function()
+			return "ОШИБКА"
+		end,
+		font_size = 62,
+		font = font2,
+		color = {1, 1 ,0.3 ,1},
+		visible = function()
+			return not eng and msg == 99
+		end,
+	},
 
 	-- english text --
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {340, 710, 185, 160},
 		text = function()
 			return "PULL UP"
@@ -189,7 +201,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {320, 710, 185, 160},
 		text = function()
 			return "TERRAIN"
@@ -202,7 +214,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {200, 710, 185, 160},
 		text = function()
 			return "TERRAIN AHEAD"
@@ -215,7 +227,7 @@ components = {
 	},
 	
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {150, 710, 185, 160},
 		text = function()
 			return "TOO LOW TERRAIN"
@@ -228,7 +240,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {200, 710, 185, 160},
 		text = function()
 			return "TOO LOW GEAR"
@@ -241,7 +253,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {190, 710, 185, 160},
 		text = function()
 			return "TOO LOW FLAPS"
@@ -254,7 +266,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {180, 710, 185, 160},
 		text = function()
 			return "CHECK ALTITUDE"
@@ -267,7 +279,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {300, 710, 185, 160},
 		text = function()
 			return "SINK RATE"
@@ -280,7 +292,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {280, 710, 185, 160},
 		text = function()
 			return "DON'T SINK"
@@ -293,7 +305,7 @@ components = {
 	},
 
 	-- 
-	text_draw {
+	text_draw2 {
 		position = {250, 710, 185, 160},
 		text = function()
 			return "GLIDESLOPE"

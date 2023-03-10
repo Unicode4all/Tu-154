@@ -1,5 +1,5 @@
 -- this is engines sounds
-
+--[[
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 defineProperty("external_view", globalPropertyi("sim/graphics/view/view_is_external")) -- enviroment
@@ -102,33 +102,33 @@ local out_apu_right = loadSample('Custom Sounds/engines/out_apu_right.wav')
 local inn_reverse = loadSample('Custom Sounds/engines/inn_reverse.wav')
 
 -- play all sounds
-playSample(inn_middle_left_1, true)
-playSample(inn_middle_right_1, true)
-playSample(out_behind_left_1, true)
-playSample(out_behind_right_1, true)
-playSample(out_idle_left_1, true)
-playSample(out_idle_right_1, true)
+if get(xplane_version) < 120000 then playSample(inn_middle_left_1, true) end
+if get(xplane_version) < 120000 then playSample(inn_middle_right_1, true) end
+if get(xplane_version) < 120000 then playSample(out_behind_left_1, true) end
+if get(xplane_version) < 120000 then playSample(out_behind_right_1, true) end
+if get(xplane_version) < 120000 then playSample(out_idle_left_1, true) end
+if get(xplane_version) < 120000 then playSample(out_idle_right_1, true) end
 
-playSample(inn_middle_left_2, true)
-playSample(inn_middle_right_2, true)
-playSample(out_behind_left_2, true)
-playSample(out_behind_right_2, true)
-playSample(out_idle_left_2, true)
-playSample(out_idle_right_2, true)
+if get(xplane_version) < 120000 then playSample(inn_middle_left_2, true) end
+if get(xplane_version) < 120000 then playSample(inn_middle_right_2, true) end
+if get(xplane_version) < 120000 then playSample(out_behind_left_2, true) end
+if get(xplane_version) < 120000 then playSample(out_behind_right_2, true) end
+if get(xplane_version) < 120000 then playSample(out_idle_left_2, true) end
+if get(xplane_version) < 120000 then playSample(out_idle_right_2, true) end
 
-playSample(inn_middle_left_3, true)
-playSample(inn_middle_right_3, true)
-playSample(out_behind_left_3, true)
-playSample(out_behind_right_3, true)
-playSample(out_idle_left_3, true)
-playSample(out_idle_right_3, true)
+if get(xplane_version) < 120000 then playSample(inn_middle_left_3, true) end
+if get(xplane_version) < 120000 then playSample(inn_middle_right_3, true) end
+if get(xplane_version) < 120000 then playSample(out_behind_left_3, true) end
+if get(xplane_version) < 120000 then playSample(out_behind_right_3, true) end
+if get(xplane_version) < 120000 then playSample(out_idle_left_3, true) end
+if get(xplane_version) < 120000 then playSample(out_idle_right_3, true) end
 
-playSample(inn_apu_left, true)
-playSample(inn_apu_right, true)
-playSample(out_apu_left, true)
-playSample(out_apu_right, true)
+if get(xplane_version) < 120000 then playSample(inn_apu_left, true) end
+if get(xplane_version) < 120000 then playSample(inn_apu_right, true) end
+if get(xplane_version) < 120000 then playSample(out_apu_left, true) end
+if get(xplane_version) < 120000 then playSample(out_apu_right, true) end
 
---playSample(inn_reverse, true)
+--if get(xplane_version) < 120000 then playSample(inn_reverse, true) end
 
 		
 setSampleGain(out_behind_left_1, 0)
@@ -400,42 +400,42 @@ function update()
 	local starter_3 = get(apd_working_3)
 	
 	if starter_1 ~= starter_1_last and starter_1 == 1 and rpm_1 < 20 then
-		playSample(inn_starter_left_true, false)
-		playSample(inn_starter_right_true, false)
-		playSample(out_starter_left_true, false)
-		playSample(out_starter_right_true, false)
+		if get(xplane_version) < 120000 then playSample(inn_starter_left_1, false) end
+		if get(xplane_version) < 120000 then playSample(inn_starter_right_1, false) end
+		if get(xplane_version) < 120000 then playSample(out_starter_left_1, false) end
+		if get(xplane_version) < 120000 then playSample(out_starter_right_1, false) end
 	
 	elseif starter_1 ~= starter_1_last and starter_1 == 0 then
-		stopSample(inn_starter_left_1)
-		stopSample(inn_starter_right_1)
-		stopSample(out_starter_left_1)
-		stopSample(out_starter_right_1)
+		if get(xplane_version) < 120000 then stopSample(inn_starter_left_1) end
+		if get(xplane_version) < 120000 then stopSample(inn_starter_right_1) end
+		if get(xplane_version) < 120000 then stopSample(out_starter_left_1) end
+		if get(xplane_version) < 120000 then stopSample(out_starter_right_1) end
 	end
 	
 	if starter_2 ~= starter_2_last and starter_2 == 1 and rpm_2 < 20 then
-		playSample(inn_starter_left_2, false)
-		playSample(inn_starter_right_2, false)
-		playSample(out_starter_left_2, false)
-		playSample(out_starter_right_2, false)
+		if get(xplane_version) < 120000 then playSample(inn_starter_left_2, false) end
+		if get(xplane_version) < 120000 then playSample(inn_starter_right_2, false) end
+		if get(xplane_version) < 120000 then playSample(out_starter_left_2, false) end
+		if get(xplane_version) < 120000 then playSample(out_starter_right_2, false) end
 	
 	elseif starter_2 ~= starter_2_last and starter_2 == 0 then
-		stopSample(inn_starter_left_2)
-		stopSample(inn_starter_right_2)
-		stopSample(out_starter_left_2)
-		stopSample(out_starter_right_2)
+		if get(xplane_version) < 120000 then stopSample(inn_starter_left_2) end
+		if get(xplane_version) < 120000 then stopSample(inn_starter_right_2) end
+		if get(xplane_version) < 120000 then stopSample(out_starter_left_2) end
+		if get(xplane_version) < 120000 then stopSample(out_starter_right_2) end
 	end
 
 	if starter_3 ~= starter_3_last and starter_3 == 1 and rpm_3 < 20 then
-		playSample(inn_starter_left_3, false)
-		playSample(inn_starter_right_3, false)
-		playSample(out_starter_left_3, false)
-		playSample(out_starter_right_3, false)
+		if get(xplane_version) < 120000 then playSample(inn_starter_left_3, false) end
+		if get(xplane_version) < 120000 then playSample(inn_starter_right_3, false) end
+		if get(xplane_version) < 120000 then playSample(out_starter_left_3, false) end
+		if get(xplane_version) < 120000 then playSample(out_starter_right_3, false) end
 	
 	elseif starter_3 ~= starter_3_last and starter_3 == 0 then
-		stopSample(inn_starter_left_3)
-		stopSample(inn_starter_right_3)
-		stopSample(out_starter_left_3)
-		stopSample(out_starter_right_3)
+		if get(xplane_version) < 120000 then stopSample(inn_starter_left_3) end
+		if get(xplane_version) < 120000 then stopSample(inn_starter_right_3) end
+		if get(xplane_version) < 120000 then stopSample(out_starter_left_3) end
+		if get(xplane_version) < 120000 then stopSample(out_starter_right_3) end
 	end	
 	
 	
@@ -448,9 +448,9 @@ function update()
 	local rev_flaps = math.max(get(revers_flap_L) * rpm_1, get(revers_flap_R) * rpm_3)
 	
 	if rev_flaps > 1 then
-		if not isSamplePlaying(inn_reverse) then playSample(inn_reverse, true) end
+		if not isSamplePlaying(inn_reverse) then if get(xplane_version) < 120000 then playSample(inn_reverse, true) end end
 	else
-		stopSample(inn_reverse)
+		if get(xplane_version) < 120000 then stopSample(inn_reverse) end
 	end
 	
 	if external == 0 then -- internal
@@ -635,3 +635,4 @@ function update()
 	end
 
 end
+]]

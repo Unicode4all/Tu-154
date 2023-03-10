@@ -64,7 +64,7 @@ defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flig
 defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
 defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
 defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
-
+include("smooth_light.lua")
 
 local notLoaded = true
 local start_timer = 0
@@ -99,7 +99,7 @@ local function switchers()
 	
 	local summ = diss_on_sw + diss_mode_sw + nvu_mode_sw
 	
-	if summ ~= sw_summ_last then playSample(switcher_sound, false) end
+	if summ ~= sw_summ_last then  end
 	
 	sw_summ_last = summ
 	
@@ -123,7 +123,7 @@ local function buttons()
 	local summ = wind_course_left_sw + wind_course_ctr_sw + wind_course_right_sw
 	summ = summ + wind_spd_left_sw + wind_spd_ctr_sw + wind_spd_right_sw
 	
-	if summ ~= but_summ_last then playSample(button_sound, false) end
+	if summ ~= but_summ_last then  end
 
 	but_summ_last = summ
 
@@ -141,7 +141,7 @@ local function lamps()
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0) * day_night
 
 	local diss_memory_brt = math.max(bool2int(get(diss_mode_set) == 2 or get(diss_mode_set) == 10) * lamps_brt, test_btn)
-	set(diss_memory, diss_memory_brt)
+	set(diss_memory, smooth_light(diss_memory_brt, get(diss_memory)))
 	
 	--set(diss_memory, bool2int(get(diss_mode_set) == 2))
 

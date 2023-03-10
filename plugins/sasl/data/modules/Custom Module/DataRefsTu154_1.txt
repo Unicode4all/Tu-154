@@ -1593,3 +1593,13 @@ tu154ce/rotary/GNS430/LB_angle	int	поворот левой большой ру
 tu154ce/rotary/GNS430/LS_angle	int	поворот левой малой ручки GN430	0
 tu154ce/rotary/GNS430/RB_angle	int	поворот правой большой ручки GN430	0
 tu154ce/rotary/GNS430/RS_angle	int	поворот правой малой ручки GN430	0
+
+tu154ce/switchers/breakers/right/ap_subchannel3 int АЗС САУ III ПК       1
+tu154ce/switchers/breakers/right/fd_subchannel3 int АЗС СТУ III ПК       1
+tu154ce/switchers/breakers/right/fd_test int контроль СТУ                   1
+tu154ce/switchers/breakers/right/afcs_sc3 int АБСУ 3 ПК                     1
+tu154ce/switchers/breakers/right/afcs_sc2 int АБСУ 2 ПК                     1
+tu154ce/switchers/breakers/right/ahrs2 int МГВ 2                            1
+tu154ce/switchers/breakers/right/ga_calc_sc1 int вычислитель ухода 1 ПК     1
+tu154ce/switchers/breakers/right/ga_calc_sc2 int вычислитель ухода 2 ПК     1
+tu154ce/switchers/breakers/right/at_c2 int автомат тяги 2 канал             1

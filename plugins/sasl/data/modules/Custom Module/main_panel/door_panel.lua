@@ -33,8 +33,7 @@ defineProperty("pax_door_3", globalPropertyf("tu154ce/anim/pax_door_3")) -- по
 
 defineProperty("busters_cap", globalPropertyi("tu154ce/switchers/console/busters_cap")) -- крышка выключателей бустеров
 
-
-
+include("smooth_light.lua")
 
 local passed = get(frame_time)
 
@@ -46,36 +45,34 @@ local function lamps()
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0)
 	
 	local other_hatches_brt = math.max(0 * lamps_brt * day_night, test_btn) -- fake for now
-	set(other_hatches, other_hatches_brt)
+	set(other_hatches, smooth_light(other_hatches_brt, get(other_hatches)))
 	
 	local left_front_pax_door_brt = math.max(bool2int(get(pax_door_1) > 0) * lamps_brt * day_night, test_btn)
-	set(left_front_pax_door, left_front_pax_door_brt)
+	set(left_front_pax_door, smooth_light(left_front_pax_door_brt, get(left_front_pax_door)))
 	
 	local left_mid_pax_door_brt = math.max(bool2int(get(pax_door_2) > 0) * lamps_brt * day_night, test_btn) 
-	set(left_mid_pax_door, left_mid_pax_door_brt)
+	set(left_mid_pax_door, smooth_light(left_mid_pax_door_brt, get(left_mid_pax_door)))
 	
 	local right_mid_pax_door_brt = math.max(bool2int(get(pax_door_3) > 0) * lamps_brt * day_night, test_btn)
-	set(right_mid_pax_door, right_mid_pax_door_brt)
+	set(right_mid_pax_door, smooth_light(right_mid_pax_door_brt, get(right_mid_pax_door)))
 	
 	local cargo_front_door_brt = math.max(bool2int(get(cargo_1) > 0) * lamps_brt * day_night, test_btn)
-	set(cargo_front_door, cargo_front_door_brt)
+	set(cargo_front_door, smooth_light(cargo_front_door_brt, get(cargo_front_door)))
 	
 	local cargo_back_door_brt = math.max(bool2int(get(cargo_2) > 0) * lamps_brt * day_night, test_btn)
-	set(cargo_back_door, cargo_back_door_brt)
+	set(cargo_back_door, smooth_light(cargo_back_door_brt, get(cargo_back_door)))
 	
 	local turn63_lamp_brt = math.max(get(nosewheel_turn_sel) * lamps_brt * day_night, test_btn)
-	set(turn63_lamp, turn63_lamp_brt)
+	set(turn63_lamp, smooth_light(turn63_lamp_brt, get(turn63_lamp)))
 	
 	local nosewheel_turn_off_brt = math.max((1-get(nosewheel_turn_enable)) * lamps_brt * day_night, test_btn)
-	set(nosewheel_turn_off, nosewheel_turn_off_brt)
+	set(nosewheel_turn_off, smooth_light(nosewheel_turn_off_brt, get(nosewheel_turn_off)))
 	
 	local busters_off_brt = math.max(get(busters_cap) * lamps_brt * day_night, test_btn)
-	set(busters_off, busters_off_brt)
+	set(busters_off, smooth_light(busters_off_brt, get(busters_off)))
 	
 	
 end
-
-local button_sound = loadSample('Custom Sounds/plastic_btn.wav')
 
 local buttn_last = get(test_lamps)
 
@@ -85,7 +82,7 @@ function update()
 	
 	local button_sw = get(test_lamps)
 	
-	if button_sw ~= buttn_last then playSample(button_sound, false) end
+	if button_sw ~= buttn_last then  end
 	buttn_last = button_sw
 
 

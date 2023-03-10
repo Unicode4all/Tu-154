@@ -39,7 +39,7 @@ defineProperty("apd_working_1", globalPropertyf("tu154ce/start/apd_working_1")) 
 defineProperty("apd_working_2", globalPropertyf("tu154ce/start/apd_working_2")) -- работа системы запуска
 defineProperty("apd_working_3", globalPropertyf("tu154ce/start/apd_working_3")) -- работа системы запуска
 
-
+include("smooth_light.lua")
 
 -- sounds
 local switcher_sound = loadSample('Custom Sounds/metal_switch.wav')
@@ -71,7 +71,7 @@ local function check_controls()
 	local starter_mode_sw = get(starter_mode)
 	
 	----------------
-	if starter_cap_sw - starter_cap_last ~= 0 then playSample(cap_sound, false) end
+	if starter_cap_sw - starter_cap_last ~= 0 then  end
 	
 	if starter_cap_sw == 0 then
 		set(starter_switch, 0)
@@ -84,7 +84,7 @@ local function check_controls()
 	
 	switch_change = switch_change - starter_switch_last - starter_eng_select_last - starter_mode_last
 	
-	if switch_change ~= 0 then playSample(switcher_sound, false) end
+	if switch_change ~= 0 then  end
 	
 	----------------
 	local starter_start_sw = get(starter_start)
@@ -98,7 +98,7 @@ local function check_controls()
 	
 	button_change = button_change - starter_start_last - starter_stop_last - flight_start_1_last - flight_start_2_last - flight_start_3_last - reserv_pump_test_last
 	
-	if button_change ~= 0 then playSample(button_sound, false) end
+	if button_change ~= 0 then  end
 	
 	starter_cap_last = starter_cap_sw
 	
@@ -120,13 +120,13 @@ local function lamps()
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0)
 	
 	local apd_work_1_brt = get(apd_working_1) * lamps_brt 
-	set(apd_work_1, apd_work_1_brt)	
+	set(apd_work_1, smooth_light(apd_work_1_brt, get(apd_work_1)))
 	
 	local apd_work_2_brt = get(apd_working_2) * lamps_brt 
-	set(apd_work_2, apd_work_2_brt)	
+	set(apd_work_2, smooth_light(apd_work_2_brt, get(apd_work_2)))
 	
 	local apd_work_3_brt = get(apd_working_3) * lamps_brt 
-	set(apd_work_3, apd_work_3_brt)	
+	set(apd_work_3, smooth_light(apd_work_3_brt, get(apd_work_3)))
 	
 
 end

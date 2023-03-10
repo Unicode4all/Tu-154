@@ -29,7 +29,7 @@ defineProperty("gear3_deploy", globalProperty("sim/aircraft/parts/acf_gear_deplo
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 -- images
-defineProperty("scale_side_img", loadImage("taws_scale_2.png", 0, 0, 1000, 770))
+defineProperty("scale_side_img", loadImage("taws_scale_2.png", 0, 255, 1000, 770))
 
 
 local rows = 60
@@ -157,8 +157,10 @@ function update()
 		for row = 1, rows, 1 do
 			local p_x = plane_x + dir_x * height * row/rows
 			local p_z = plane_z + dir_z * height * row/rows
-			prob, locationX, locationY, locationZ, normalX, normalY, normalZ, velocityX, velocityY, vlocityZ, isWet = probeTerrain(p_x, plane_y, p_z)
-								
+			local prob, locationX, locationY, locationZ, normalX, normalY, normalZ, velocityX, velocityY, vlocityZ, isWet = probeTerrain(p_x, plane_y, p_z)
+			if not locationX or not locationY or not locationZ then
+				goto error
+			end				
 			--local probe_dist = math.sqrt((p_x)^2 + (p_z)^2) / 1000
 			--local correct = interpolate(correct_tbl, probe_dist) - 130
 			
@@ -168,7 +170,7 @@ function update()
 			
 			heightTable[row] = alt - acf_alt
 		end	
-		
+	::error::	
 		local elev_now = get(elevation)
 		vvi = (elev_now - elev_last)
 		elev_last = elev_now
@@ -235,7 +237,7 @@ components = {
 	},
 
 	-- distance text
-	text_draw {
+	text_draw2 {
 		position = {800, 100, 160, 160},
 		text = function()
 			return range_text

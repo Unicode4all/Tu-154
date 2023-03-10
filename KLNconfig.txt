@@ -2,18 +2,17 @@
   DO NOT MODIFY THIS FILE!
 YOU SHOULDN'T EVEN READ IT!
 ###########################
-#popx1
-#popy1
 #1                       
 #2    PRESS LEFT CRSR    
 #3      TO CUSTOMIZE     
 #4       THIS PAGE       
 #Timezone1
 #Barounit1
-#GPSHobbs113725.98740476
-#GPSTurnons284
-#LastLat0
-#LastLon0
+#GPSHobbs172257.32360922
+#GPSTurnons469
+#LastAPTEDDF 
+#LastLat59.802017211914
+#LastLon30.274034500122
 #RWYminlength1000
 #RWYsurface1
 #Fuelunit4
@@ -23,6 +22,18 @@ YOU SHOULDN'T EVEN READ IT!
 #Turnanti1
 #HSIinterf2
 #Volume50
+#VNV GS0
+#NAV5RNG0
+#NAV5BRNG13
+#NAV5LNS111
+#NAV5SHOW0000
+#NAV5Clut0
+#NAV5ORIS0
+#SHOWHELI0
+#SHOWWAT0
+#NAVSYNC0
+#GPSRATE1
+#PWRKNOB1
 Ok, here's something
 to keep you entertained:
 Go to the STA 4 page

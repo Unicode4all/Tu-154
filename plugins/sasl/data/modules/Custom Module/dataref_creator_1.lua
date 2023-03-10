@@ -1402,3 +1402,62 @@ createGlobalPropertyi("tu154ce/rotary/GNS430/LB_angle", 0) -- поворот л�
 createGlobalPropertyi("tu154ce/rotary/GNS430/LS_angle", 0) -- поворот левой малой ручки GN430
 createGlobalPropertyi("tu154ce/rotary/GNS430/RB_angle", 0) -- поворот правой большой ручки GN430
 createGlobalPropertyi("tu154ce/rotary/GNS430/RS_angle", 0) -- поворот правой малой ручки GN430
+
+
+createGlobalPropertyf("tu154ce/controll/stab_man_cap_anim", 0) -- крышка управления стабилизатором
+createGlobalPropertyf("tu154ce/controll/contr_force_cap_anim", 0) -- крышка переключателя загружателя РВ РН
+createGlobalPropertyf("tu154ce/switchers/nosewheel_turn_cap_anim", 0) -- крышка переключателя угла поворота
+createGlobalPropertyf("tu154ce/switchers/slat_man_cap_anim", 0) -- крышка ручного урпавления предкрылками
+createGlobalPropertyf("tu154ce/switchers/flaps_sel_cap_anim", 0) -- крышка выбора работы закрылков
+createGlobalPropertyf("tu154ce/switchers/gears_retr_lock_cap_anim", 0) -- крышка блокировки уборки шасси
+createGlobalPropertyf("tu154ce/switchers/gears_ext_3GS_cap_anim", 0) -- крышка выпуска шасси от 3ГС
+createGlobalPropertyf("tu154ce/switchers/ovhd/bkk_contr_cap_anim", 0) -- крышка тумблера контроля БКК
+createGlobalPropertyf("tu154ce/switchers/ovhd/bkk_on_cap_anim", 0) -- крышка выключателя БКК
+createGlobalPropertyf("tu154ce/switchers/ovhd/sau_stu_cap_anim", 0) -- крышка выключателя САУ СТУ
+createGlobalPropertyf("tu154ce/switchers/ovhd/pkp_left_cap_anim", 0) -- крылка ПКП лев
+createGlobalPropertyf("tu154ce/switchers/ovhd/pkp_right_cap_anim", 0) -- крышка ПКП прав
+createGlobalPropertyf("tu154ce/switchers/ovhd/mgv_contr_cap_anim", 0) -- контроль МГВ крышка
+createGlobalPropertyf("tu154ce/switchers/ovhd/emerg_light_cap_anim", 0) -- крышка аварийного освещения
+createGlobalPropertyf("tu154ce/switchers/ovhd/egpws_alarm_1_cap_anim", 0) -- сигнализация СРПБЗ общ
+createGlobalPropertyf("tu154ce/switchers/ovhd/egpws_alarm_2_cap_anim", 0) -- сигнализация СРПБЗ 
+createGlobalPropertyf("tu154ce/buttons/ovhd/transponder_emerg_cap_anim", 0) -- крышка кнопки аварии
+createGlobalPropertyf("tu154ce/switchers/eng/hydro_trimm_rud_1_cap_anim", 0) -- триммирование РВ 1
+createGlobalPropertyf("tu154ce/switchers/eng/hydro_trimm_rud_2_cap_anim", 0) -- триммирование РВ 2
+createGlobalPropertyf("tu154ce/switchers/eng/emerg_gen_on_1_cap_anim", 0) -- аварийное включение генераторов
+createGlobalPropertyf("tu154ce/switchers/eng/emerg_gen_on_2_cap_anim", 0) -- аварийное включение генераторов
+createGlobalPropertyf("tu154ce/switchers/eng/emerg_gen_on_3_cap_anim", 0) -- аварийное включение генераторов
+createGlobalPropertyf("tu154ce/switchers/eng/hydro_circuit_auto_man_cap_anim", 0) -- кольцевание автомат - ручное
+createGlobalPropertyf("tu154ce/switchers/eng/hydro_long_control_cap_anim", 0) -- продольная управляемость
+createGlobalPropertyf("tu154ce/switchers/eng/fire_buzzer_cap_anim", 0) -- пожарная сирена
+createGlobalPropertyf("tu154ce/switchers/eng/srd_buzzer_cap_anim", 0) -- СРД сирена
+createGlobalPropertyf("tu154ce/switchers/eng/fuel_buzzer_cap_anim", 0) -- сирена остатка топлива 2500кг
+createGlobalPropertyf("tu154ce/switchers/eng/sard_disable_cap_anim", 0) -- перекрытие клапана сброса воздуха
+createGlobalPropertyf("tu154ce/switchers/eng/emerg_inv115_cap_anim", 0) -- аварийн. преобраз 115в
+createGlobalPropertyf("tu154ce/switchers/eng/pts250_on_cap_anim", 0) -- выключатель ПТС250
+createGlobalPropertyf("tu154ce/switchers/eng/pts250_mode_cap_anim", 0) -- режим ПТС250. авто - ручное
+createGlobalPropertyf("tu154ce/switchers/eng/bus27_connect_cap_anim", 0) -- соединение сетей 27в
+createGlobalPropertyf("tu154ce/switchers/fuel/fuel_trans_cap_anim", 0) -- краны резервой перекачки
+createGlobalPropertyf("tu154ce/switchers/fuel/fuel_porc_cap_anim", 0) -- принуд порц
+createGlobalPropertyf("tu154ce/switchers/fuel/fuel_flow_on_cap_anim", 0) -- автомат расхода
+createGlobalPropertyf("tu154ce/switchers/fuel/fire_valve_1_cap_anim", 0) -- пожарный кран
+createGlobalPropertyf("tu154ce/switchers/fuel/fire_valve_2_cap_anim", 0) -- пожарный кран
+createGlobalPropertyf("tu154ce/switchers/fuel/fire_valve_3_cap_anim", 0) -- пожарный кран
+createGlobalPropertyf("tu154ce/switchers/hydro/connect2to1_cap_anim", 0) -- подключение 2 ГС на 1 ГС
+createGlobalPropertyf("tu154ce/switchers/airbleed/heat_close_cap_anim", 0) -- прекращение обогрева
+createGlobalPropertyf("tu154ce/switchers/airbleed/ground_cond_on_cap_anim", 0) -- наземное кондиционирование
+createGlobalPropertyf("tu154ce/switchers/airbleed/skv_faster_work_cap_anim", 0) -- крышка
+createGlobalPropertyf("tu154ce/switchers/airbleed/psvp_left_on_cap_anim", 0) -- ПСВП лев
+createGlobalPropertyf("tu154ce/switchers/airbleed/psvp_right_on_cap_anim", 0) -- ПСВП прав
+createGlobalPropertyf("tu154ce/switchers/airbleed/emerg_decompress_cap_anim", 0) -- сброс давления
+createGlobalPropertyf("tu154ce/switchers/airbleed/dubler_on_cap_anim", 0) -- дублер
+createGlobalPropertyf("tu154ce/switchers/eng/starter_cap_anim", 0) -- крышка панели запуска
+createGlobalPropertyf("tu154ce/switchers/eng/gauges_on_1_cap_anim", 0) -- приборы контроля двигателей
+createGlobalPropertyf("tu154ce/switchers/eng/gauges_on_2_cap_anim", 0) -- приборы контроля двигателей
+createGlobalPropertyf("tu154ce/switchers/eng/gauges_on_3_cap_anim", 0) -- приборы контроля двигателей
+createGlobalPropertyf("tu154ce/switchers/console/busters_cap_anim", 0) -- крышка выключателей бустеров
+createGlobalPropertyf("tu154ce/switchers/console/absu_speed_off_cap_anim", 0) -- отключение 1 и 2
+createGlobalPropertyf("tu154ce/switchers/console/absu_speed_prepare_cap_anim", 0) -- подготовка
+createGlobalPropertyf("tu154ce/switchers/console/absu_smooth_on_cap_anim", 0) -- выключатель "в болтанку"
+createGlobalPropertyf("tu154ce/buttons/console/absu_arrest_cap_anim", 0) -- крышка кнопок арретирования
+createGlobalPropertyf("tu154ce/switchers/console/emerg_elev_trimm_cap_anim", 0) -- аварийное управление триммером
+createGlobalPropertyf("tu154ce/lights/landing_light_off_cap_anim", 0) -- выключатель фар

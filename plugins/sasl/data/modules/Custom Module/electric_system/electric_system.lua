@@ -1,5 +1,7 @@
 -- this is overall electric system
 
+xplane_version = globalProperty("sim/version/xplane_internal_version")
+
 
 components = {
 	

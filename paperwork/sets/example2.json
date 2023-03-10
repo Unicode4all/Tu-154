@@ -1,0 +1,53 @@
+{
+    "name": "Example Set 2",
+    "regions": {
+        "eng_sm": {
+            "region": {
+                "x": 2953,
+                "y": 0,
+                "w": 1079,
+                "h": 1553
+            },
+            "widgets": {
+                "1": {
+                    "type": "image",
+                    "pos": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "image": "img3.png",
+                    "scale": 2
+                }
+            }
+        },
+        "eng_lg": {
+            "region": {
+                "x": 1045,
+                "y": 2731,
+                "w": 3026,
+                "h": 1280
+            },
+            "widgets": {}
+        },
+        "dashboard": {
+            "region": {
+                "x": 2177,
+                "y": 138,
+                "w": 560,
+                "h": 605
+            },
+            "widgets": {
+                "1": {
+                    "type": "image",
+                    "pos": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "rotation": -12,
+                    "image": "img6.png",
+                    "scale": 1.5
+                }
+            }
+        }
+    }
+}

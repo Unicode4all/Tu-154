@@ -175,7 +175,7 @@ defineProperty("ovhd_back_panel_flood", globalPropertyf("tu154ce/lights/ovhd_bac
 defineProperty("eng_panel_flood", globalPropertyf("tu154ce/lights/eng_panel_flood"))   -- ������� ��������� ������ ��
 defineProperty("azs_panel_flood", globalPropertyf("tu154ce/lights/azs_panel_flood"))   -- ��������� ������ ���
 defineProperty("left_spotlight_flood", globalPropertyf("tu154ce/lights/left_spotlight_flood"))   -- ������� ������ ��������
-
+defineProperty("eng_panel_flood", globalPropertyf("tu154ce/lights/eng_panel_flood"))
 
 -- controls
 defineProperty("cabinl_flood_set", globalPropertyi("tu154ce/lights/cabinl_flood_set"))   -- ����������� ��������� ������
@@ -203,7 +203,7 @@ defineProperty("sign_exit", globalPropertyi("tu154ce/switchers/ovhd/sign_exit"))
 
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- time of frame
 
-
+instrument_brightness_ratio = globalPropertyfa("sim/cockpit2/switches/instrument_brightness_ratio")
 
 local bright_tbl = {{ -5000, 0},    -- bugs workaround
 				  { 0, 0 },   -- 
@@ -337,6 +337,23 @@ current_27 = current_27 + ovhd_fr_flood * 0.7 + ovhd_bk_flood * 0.7 + eng_flood 
 set(cockpit_light_cc_left, current_27 * get(bus27_volt_left) / 58)
 set(cockpit_light_cc_right, current_27 * get(bus27_volt_right) / 58)
 
+set(instrument_brightness_ratio,get(front_panel_flood), 29)
 
+if get(bus27_volt_left) > 12 or get(bus27_volt_right) > 12 then
+	set(instrument_brightness_ratio, get(right_panel_flood), 21)
+	set(instrument_brightness_ratio, get(left_panel_flood), 22)
+else
+	set(instrument_brightness_ratio, 0, 21)
+	set(instrument_brightness_ratio, 0, 22)
+end
 
+set(instrument_brightness_ratio, get(eng_panel_flood), 24)
+set(instrument_brightness_ratio, get(ovhd_panel_int),  25)
+set(instrument_brightness_ratio, get(ovhd_back_panel_flood), 25)
+set(instrument_brightness_ratio, get(left_panel_int),  27)
+set(instrument_brightness_ratio, get(right_panel_int), 28)
+set(instrument_brightness_ratio, get(mid_left_panel_int),  30)
+set(instrument_brightness_ratio, get(mid_right_panel_int), 30)
+set(instrument_brightness_ratio, get(left_panel_flood),  31)
+set(instrument_brightness_ratio, get(ovhd_front_panel_flood), 31)
 end

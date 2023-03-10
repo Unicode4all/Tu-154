@@ -8,6 +8,6 @@ defineProperty("position_y", 0)
 defineProperty("width", 100)
 defineProperty("height", 100)
 function draw(self)
-    drawRectangle(get(position_x), get(position_y), get(width), get(height), get(R), get(G), get(B), get(A))
+    drawRectangle(get(position_x), get(position_y), get(position)[3], get(position)[4], get(R), get(G), get(B), get(A))
 end
 

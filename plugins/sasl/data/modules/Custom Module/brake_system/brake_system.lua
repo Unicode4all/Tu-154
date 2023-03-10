@@ -227,7 +227,7 @@ function park_brk_max_hnd(phase)
 			set(r_brake_add, 0) -- release pedals
 		end
 		
-		--if brk == 0 then playSample(brake_hnd_off, 0) else playSample(brake_hnd_on, false) end
+		--if brk == 0 then if get(xplane_version) < 120000 then playSample(brake_hnd_off, 0) end else if get(xplane_version) < 120000 then playSample(brake_hnd_on, false) end end
 		
 		set(parking_brake, brk)
 	else 
@@ -251,7 +251,7 @@ function park_brk_reg_hnd(phase)
 			set(r_brake_add, 0) -- release pedals
 		end
 		
-		--if brk == 0 then playSample(brake_hnd_off, 0) else playSample(brake_hnd_on, false) end
+		--if brk == 0 then if get(xplane_version) < 120000 then playSample(brake_hnd_off, 0) end else if get(xplane_version) < 120000 then playSample(brake_hnd_on, false) end end
 		
 		set(parking_brake, brk)
 	else 
@@ -389,8 +389,8 @@ function update()
 	
 	-- sounds
 	if park_lever_last ~= park_lvr then
-		if park_lvr == 1 then playSample(brake_hnd_on, false)
-		else playSample(brake_hnd_off, false) end
+		if park_lvr == 1 then if get(xplane_version) < 120000 then playSample(brake_hnd_on, false) end
+		else if get(xplane_version) < 120000 then playSample(brake_hnd_off, false) end end
 	
 	end
 	

@@ -118,7 +118,7 @@ defineProperty("airbleed_3", globalPropertyi("tu154ce/failures/airbleed_3")) -- 
 
 defineProperty("main_pressure", globalPropertyi("tu154ce/alarm/main_pressure")) -- разгерметизация или перенаддув кабины
 
-
+include("smooth_light.lua")
 -- sounds
 local rotary_sound = loadSample('Custom Sounds/plastic_switch.wav')
 local switcher_sound = loadSample('Custom Sounds/metal_switch.wav')
@@ -167,7 +167,7 @@ local cab_high_lit = 0
 local function lamps()
 	-- make sound for button
 	local test_btn = get(lamp_test_srd)
-	if test_btn ~= lamp_test_srd_last then playSample(button_sound, false) end
+	if test_btn ~= lamp_test_srd_last then  end
 	lamp_test_srd_last = test_btn
 	
 	local day_night = 1 - get(day_night_set) * 0.25
@@ -184,51 +184,51 @@ local function lamps()
 	local skv_overheat_brt = 0
 	if get(cold_tube1_t) > 75 or get(cold_tube2_t) > 75 then skv_overheat_brt = 1 end
 	skv_overheat_brt = math.max(skv_overheat_brt * lamps_brt, test_btn)
-	set(skv_overheat, skv_overheat_brt)
+	set(skv_overheat, smooth_light(skv_overheat_brt, get(skv_overheat)))
 	
 	local skv_overpress_left_brt = math.max(0, test_btn) -- fake for now
-	set(skv_overpress_left, skv_overpress_left_brt)	
+	set(skv_overpress_left, smooth_light(skv_overpress_left_brt, get(skv_overpress_left)))
 	
 	local skv_overpress_right_brt = math.max(0, test_btn) -- fake for now
-	set(skv_overpress_right, skv_overpress_right_brt)	
+	set(skv_overpress_right, smooth_light(skv_overpress_right_brt, get(skv_overpress_right)))
 	
 	local skv_tail_temp_brt = math.max(0, test_btn) -- fake for now
-	set(skv_tail_temp, skv_tail_temp_brt)	
+	set(skv_tail_temp, smooth_light(skv_tail_temp_brt, get(skv_tail_temp_brt)))
 
 	
 	
 	local skv_bleed_fail_1_brt = 0
 	if get(eng_valve_1) == 1 and get(airbleed_1) == 1 and power27_L > 10 then skv_bleed_fail_1_brt = 1 end
 	skv_bleed_fail_1_brt = math.max(skv_bleed_fail_1_brt * lamps_brt , test_btn)
-	set(skv_bleed_fail_1, skv_bleed_fail_1_brt)	
+	set(skv_bleed_fail_1, smooth_light(skv_bleed_fail_1_brt, get(skv_bleed_fail_1)))
 	
 	
 	local skv_bleed_fail_2_brt = 0
 	if get(eng_valve_2) == 1 and get(airbleed_2) == 1 and power27_R > 10 then skv_bleed_fail_2_brt = 1 end
 	skv_bleed_fail_2_brt = math.max(skv_bleed_fail_2_brt * lamps_brt, test_btn) 
-	set(skv_bleed_fail_2, skv_bleed_fail_2_brt)	
+	set(skv_bleed_fail_2, smooth_light(skv_bleed_fail_2_brt, get(skv_bleed_fail_2)))
 
 	local skv_bleed_fail_3_brt = 0
 	if get(eng_valve_3) == 1 and get(airbleed_3) == 1 and power27_R > 10 then skv_bleed_fail_3_brt = 1 end
 	skv_bleed_fail_3_brt = math.max(skv_bleed_fail_3_brt * lamps_brt, test_btn)
-	set(skv_bleed_fail_3, skv_bleed_fail_3_brt)		
+	set(skv_bleed_fail_3, smooth_light(skv_bleed_fail_3_brt, get(skv_bleed_fail_3)))
 
 	
 	
 	local skv_bleed_closed_1_brt = 0
 	if get(eng_airvalve_1) < 0.5 and power27_L > 10 then skv_bleed_closed_1_brt = 1 end
 	skv_bleed_closed_1_brt = math.max(skv_bleed_closed_1_brt * lamps_brt, test_btn) 
-	set(skv_bleed_closed_1, skv_bleed_closed_1_brt)	
+	set(skv_bleed_closed_1, smooth_light(skv_bleed_closed_1_brt, get(skv_bleed_closed_1)))
 
 	local skv_bleed_closed_2_brt = 0
 	if get(eng_airvalve_2) < 0.5 and power27_R > 10 then skv_bleed_closed_2_brt = 1 end
 	skv_bleed_closed_2_brt = math.max(skv_bleed_closed_2_brt * lamps_brt, test_btn) 
-	set(skv_bleed_closed_2, skv_bleed_closed_2_brt)	
+	set(skv_bleed_closed_2, smooth_light(skv_bleed_closed_2_brt, get(skv_bleed_closed_2)))
 	
 	local skv_bleed_closed_3_brt = 0
 	if get(eng_airvalve_3) < 0.5 and power27_R > 10 then skv_bleed_closed_3_brt = 1 end
 	skv_bleed_closed_3_brt = math.max(skv_bleed_closed_3_brt * lamps_brt, test_btn) 
-	set(skv_bleed_closed_3, skv_bleed_closed_3_brt)	
+	set(skv_bleed_closed_3, smooth_light(skv_bleed_closed_3_brt, get(skv_bleed_closed_3)))
 	
 	
 	-- other lamps
@@ -265,16 +265,13 @@ local function lamps()
 	
 	
 	local srd_low_press_brt = math.max(cab_P_lit * lamps_brt, 0)
-	set(srd_low_press, srd_low_press_brt)
+	set(srd_low_press, smooth_light(srd_low_press_brt, get(srd_low_press)))
 	
 	local srd_overpress_brt = math.max(cab_high_lit * lamps_brt, 0)
-	set(srd_overpress, srd_overpress_brt)
+	set(srd_overpress, smooth_light(srd_overpress_brt, get(srd_overpress)))
 	
 	local cockpit_p_low_brt = math.max(cab_P_lit * lamps_brt * day_night, test_btn_frnt)
-	set(cockpit_p_low, cockpit_p_low_brt)
-	
-	
-	
+	set(cockpit_p_low, smooth_light(cockpit_p_low_brt, get(cockpit_p_low)))
 end
 
 
@@ -297,7 +294,7 @@ local function rotary_sw()
 	local change = cockpit_temp_set_sw + cabin1_temp_set_sw + cabin2_temp_set_sw + left_sys_temp_set_sw + right_sys_temp_set_sw + sys_temp_select_sw
 	change = change - cockpit_temp_set_last - cabin1_temp_set_last - cabin2_temp_set_last - left_sys_temp_set_last - right_sys_temp_set_last - sys_temp_select_last
 	
-	if change ~= 0 then playSample(rotary_sound, false) end
+	if change ~= 0 then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
 	
 	
 	cockpit_temp_set_last = cockpit_temp_set_sw
@@ -473,7 +470,7 @@ local function check_switchers()
 	change = change - cockpit_mode_set_last - cabin1_mode_set_last - cabin2_mode_set_last - left_sys_mode_set_last - right_sys_mode_set_last
 	change = change - sard_disable_last - door_heat_last
 	
-	if change ~= 0 then playSample(switcher_sound, false) end
+	if change ~= 0 then  end
 	
 	
 	cabin_sel_last = cabin_sel_sw
@@ -547,7 +544,7 @@ local function caps_check()
 	change = change - heat_close_cap_last - ground_cond_on_cap_last - skv_faster_work_cap_last - psvp_left_on_cap_last - psvp_right_on_cap_last
 	change = change - emerg_decompress_cap_last - dubler_on_cap_last - sard_disable_cap_last
 
-	if change ~= 0 then playSample(cap_sound, false) end
+	if change ~= 0 then  end
 
 	heat_close_cap_last = heat_close_cap_sw
 	ground_cond_on_cap_last = ground_cond_on_cap_sw

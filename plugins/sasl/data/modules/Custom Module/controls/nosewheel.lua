@@ -19,7 +19,7 @@ tire_steer_command_deg = globalProperty("sim/flightmodel2/gear/tire_steer_comman
 tire_steer_actual_deg = globalProperty("sim/flightmodel2/gear/tire_steer_actual_deg[0]")
 
 
-pushback = globalPropertyi("bp/connected")
+pushback = globalPropertyi("bp/connected") or 0
 
 override_wheel_steer = globalPropertyi("sim/operation/override/override_wheel_steer")
 

@@ -42,7 +42,7 @@ defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flig
 defineProperty("eng1_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[0]")) -- engine 1 rpm
 defineProperty("eng2_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[1]")) -- engine 2 rpm
 defineProperty("eng3_N1", globalProperty("sim/flightmodel/engine/ENGN_N1_[2]")) -- engine 3 rpm
-
+include("smooth_light.lua")
 
 local notLoaded = true
 local start_timer = 0
@@ -161,7 +161,7 @@ local function check_controls()
 
 	local lamp_test_msrp_sw = get(lamp_test_msrp)
 
-	if lamp_test_msrp_sw ~= lamp_test_msrp_last then playSample(button_sound, false) end
+	if lamp_test_msrp_sw ~= lamp_test_msrp_last then  end
 	
 	local msrp_date_ten_sw = get(msrp_date_ten)
 	local msrp_date_one_sw = get(msrp_date_one)
@@ -181,7 +181,7 @@ local function check_controls()
 	changes = changes - msrp_date_ten_last - msrp_date_one_last - msrp_month_ten_last - msrp_month_one_last - msrp_year_ten_last - msrp_year_one_last
 	changes = changes - msrp_route_hun_last - msrp_route_ten_last - msrp_route_one_last
 	
-	if changes ~= 0 then playSample(rot_sound, false) end
+	if changes ~= 0 then if get(xplane_version) < 120000 then playSample(rot_sound, false) end end
 	
 	
 	local msrp_mlp_1_sw = get(msrp_mlp_1)
@@ -193,7 +193,7 @@ local function check_controls()
 	local swt = msrp_mlp_1_sw + msrp_mlp_2_sw + msrp_night_day_sw + msrp_main_switch_sw + mars_on_sw
 	swt = swt - msrp_mlp_1_last - msrp_mlp_2_last - msrp_night_day_last - msrp_main_switch_last - mars_on_last
 	
-	if swt ~= 0 then  playSample(switcher_sound, false) end
+	if swt ~= 0 then   end
 	
 	
 	msrp_date_ten_last = msrp_date_ten_sw
@@ -383,16 +383,16 @@ local function lamps()
 	
 	
 	local msrp_mlp_main_brt = math.max(mlp_1_brt * lamps_brt, test_btn)
-	set(msrp_mlp_main, msrp_mlp_main_brt)
+	set(msrp_mlp_main, smooth_light(msrp_mlp_main_brt, get(msrp_mlp_main)))
 	
 	local msrp_mlp_aux_brt = math.max(mlp_2_brt * lamps_brt, test_btn) 
-	set(msrp_mlp_aux, msrp_mlp_aux_brt)
+	set(msrp_mlp_aux, smooth_light(msrp_mlp_aux_brt, get(msrp_mlp_aux)))
 	
 	local msrp_up2_brt = math.max(lamps_brt, test_btn) 
-	set(msrp_up2, msrp_up2_brt)
+	set(msrp_up2, smooth_light(msrp_up2_brt, get(msrp_up2)))
 	
 	local msrp_mars_brt = math.max(get(mars_on) * lamps_brt, test_btn)
-	set(msrp_mars, msrp_mars_brt)
+	set(msrp_mars, smooth_light(msrp_mars_brt, get(msrp_mars)))
 	
 	
 end
