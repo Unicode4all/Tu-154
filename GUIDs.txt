@@ -1,8 +1,8 @@
 {e9aff90f-d20a-4f6d-901c-d2c13a843b80} bank:/Master Bank
 {71b2d9db-a371-032f-1655-583fcb773d18} bank:/Master Bank.strings
 {9f08114d-36ec-44cc-b8bf-b2babda09f9e} bus:/
-{9ed5fbd9-75e9-49a3-bd12-763947109cae} bus:/B
-{0f9e0d87-3e22-4a2b-9848-8f504f456f32} bus:/LowPass
+{31d83961-ac6c-4346-a70d-12cc63bdbd5a} bus:/A
+{0bf58de4-85c7-4fbc-a903-5a778d3601f5} bus:/B
 {7f7c05a4-e05a-4d44-94fe-d4691147a9b7} bus:/Master
 {e3492bec-f854-4fbb-b2bc-23586269032e} bus:/Master/Copilot
 {a5a85a81-afd5-4425-9dc2-6e50f7776e6a} bus:/Master/Exterior Processed
@@ -40,16 +40,21 @@
 {3d8ac583-c0c5-46c9-b754-b378ad79fdf9} event:/T154/equipment/avionics/battery
 {c0bb7960-0cdc-4ba3-bd4e-d8ee87fdcb5b} event:/T154/equipment/avionics/gpu
 {f9af30ef-4a5b-44d8-813b-74837ee4f756} event:/T154/equipment/avionics/long_buzzer
+{09469b35-b18c-44f1-9312-6f927201c9b1} event:/T154/equipment/gear_lock
 {b9f2a786-53f9-4fde-944d-7f31b220b8f6} event:/T154/equipment/manipulators/ark_inner_ring
 {faa9b8f1-02ac-4a25-8294-9498cb3c4534} event:/T154/equipment/manipulators/ark_mid_ring
 {637821e4-8539-44d6-94c0-5df91cbb8885} event:/T154/equipment/manipulators/ark_outer_ring
 {8095ace6-7f15-4524-b5fd-22572841a355} event:/T154/equipment/manipulators/cover_close
 {153c6484-55aa-4372-8269-853c3aeac1b6} event:/T154/equipment/manipulators/cover_open
+{9d089c81-34dc-4b5a-8602-d010b2b0b480} event:/T154/equipment/manipulators/flap_lever
+{ea31917b-f1ca-4d4e-bdbb-3d2a91ad0e00} event:/T154/equipment/manipulators/gear_lever
 {eaeda954-fb95-4b4d-8fae-b4414006c0cd} event:/T154/equipment/manipulators/metal_button_push
 {3b9a1bc8-a57a-40cf-a961-da6b5a25da8c} event:/T154/equipment/manipulators/metal_button_release
 {a33ead8b-75c0-4283-b782-b54a8d26fbf1} event:/T154/equipment/manipulators/metal_close
 {1417151d-8698-4925-8cbc-9288fd9629d2} event:/T154/equipment/manipulators/metal_open
 {7f45f95b-3f5f-4a0b-9552-80ab3788b11a} event:/T154/equipment/manipulators/metal_switch
+{216ea336-626e-4546-9868-2eb2f4ddd903} event:/T154/equipment/manipulators/parking_push
+{706c3dc0-0f94-4989-9eaf-0563a86c9af4} event:/T154/equipment/manipulators/parking_release
 {2e0623ec-4386-4b6c-927c-e0a0728523bd} event:/T154/equipment/manipulators/plastic_button_push
 {447421e6-0614-4c8c-9d83-9e855c7acb3f} event:/T154/equipment/manipulators/plastic_button_release
 {2c93681b-5065-4431-b113-d7c69052549d} event:/T154/equipment/manipulators/plastic_switch
@@ -67,6 +72,7 @@
 {e6a30f5b-b4b0-4838-8031-842d583b5b7c} parameter:/sim.flightmodel.misc.machno
 {3f0dc3f4-c333-4a83-a256-ad180966ea34} parameter:/sim.flightmodel2.engines.EGT_deg_C[#]
 {ba02ad26-d187-4905-9b60-ecad6cf5ed6b} parameter:/sim.flightmodel2.engines.N2_percent[#]
+{cfe526db-1902-45d2-8ac7-01b920ea002d} parameter:/sim.flightmodel2.gear.tire_rotation_speed_rad_sec[#]
 {e2c87eda-6fbc-4a91-b405-a7b6ad6ed946} parameter:/sim.weather.precipitation_on_aircraft_ratio
 {220d4800-4755-4b15-8132-ae879060ef72} parameter:/tu154ce.bleed.air_usage_L
 {70864e19-0479-4515-870e-14680cf67ca8} parameter:/tu154ce.bleed.air_usage_R

@@ -32,6 +32,59 @@ END_SOUND_ATTACHMENT
 
 
 
+# -------------------- Front gear stowed ---------------------
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /T154/equipment/gear_lock
+	VEH_PART tire 0
+	PARAM_DREF_IDX 0
+	EVENT_START_COND DELTA=sim/flightmodel2/gear/deploy_ratio[0] < 0
+	EVENT_START_COND sim/flightmodel2/gear/deploy_ratio[0] < 0.1
+	EVENT_END_COND DELTA=sim/flightmodel2/gear/deploy_ratio[0] >= 0
+END_SOUND_ATTACHMENT
+
+# -------------------- Gear roll ---------------------
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /T154/wheels_roll
+	VEH_PART tire 0
+	EVENT_ALLOWED_FOR_AI
+	PARAM_DREF_IDX 0
+	EVENT_START_COND sim/flightmodel2/gear/on_ground[0] == 1
+	EVENT_END_COND sim/flightmodel2/gear/on_ground[0] == 0
+END_SOUND_ATTACHMENT
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /T154/wheels_roll
+	VEH_PART tire 1
+	EVENT_ALLOWED_FOR_AI
+	PARAM_DREF_IDX 1
+	EVENT_START_COND sim/flightmodel2/gear/on_ground[1] == 1
+	EVENT_END_COND sim/flightmodel2/gear/on_ground[1] == 0
+END_SOUND_ATTACHMENT
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /T154/wheels_roll
+	VEH_PART tire 2
+	EVENT_ALLOWED_FOR_AI
+	PARAM_DREF_IDX 2
+	EVENT_START_COND sim/flightmodel2/gear/on_ground[2] == 1
+	EVENT_END_COND sim/flightmodel2/gear/on_ground[2] == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/gear_lever
+	VEH_XYZ			0.16 0.59 -21.72
+	EVENT_START_COND	DELTA=tu154ce/controll/gear_lever != 0.0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/parking_push
+	VEH_XYZ			-0.75 -0.19 -21.92
+	EVENT_START_COND	tu154ce/controll/parking_brake == 1
+END_SOUND_ATTACHMENT
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/parking_release
+	VEH_XYZ			-0.75 -0.19 -21.92
+	EVENT_START_COND	tu154ce/controll/parking_brake == 0
+END_SOUND_ATTACHMENT
+
 # -------------------- Exterior ---------------------
 BEGIN_SOUND_ATTACHMENT
 	SNAPSHOT_NAME /outside

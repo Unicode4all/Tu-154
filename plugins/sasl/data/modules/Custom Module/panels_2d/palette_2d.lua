@@ -239,21 +239,21 @@ local show_side = 0
 local show_weight = 0
 local CG_show = 0
 
-local show_V1_28 = "---"
-local show_Vr_28 = "---"
-local show_V2_28 = "---"
+local show_V1_28 = 0
+local show_Vr_28 = 0
+local show_V2_28 = 0
 local show_Vfl_15_28 = 330
 local show_Vfl_0 = 360
 
-local show_V1_15 = "---"
-local show_Vr_15 = "---"
-local show_V2_15 = "---"
+local show_V1_15 = 0
+local show_Vr_15 = 0
+local show_V2_15 = 0
 
-local show_Vapp_0 = "---"
-local show_Vapp_15 = "---"
-local show_Vapp_28 = "---"
-local show_Vapp_36 = "---"
-local show_Vapp_45 = "---"
+local show_Vapp_0 = 0
+local show_Vapp_15 = 0
+local show_Vapp_28 = 0
+local show_Vapp_36 = 0
+local show_Vapp_45 = 0
 
 
 
