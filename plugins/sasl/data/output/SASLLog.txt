@@ -381,18 +381,6 @@
 [TU154 INFO]: [LUA]: loading	msrp
 [TU154 INFO]: [LUA]: loading	msrp_panel
 [TU154 INFO]: [LUA]: including	smooth_light.lua
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/11_03_23_000.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/11_03_23_001.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/11_03_23_002.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/11_03_23_003.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/11_03_23_004.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/11_03_23_005.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
 [TU154 INFO]: [LUA]: loading	msrp_logic
 [TU154 INFO]: [LUA]: loading	brake_system
 [TU154 INFO]: [LUA]: loading	sounds
@@ -440,4 +428,3 @@
 [TU154 INFO]: Module loaded
 [TU154 INFO]: [LUA]: "crew_voices"	PREPARE
 [TU154 INFO]: [LUA]: "save_state"	reading last state: OK
-[TU154 INFO]: Disabling...

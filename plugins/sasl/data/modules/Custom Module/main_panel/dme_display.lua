@@ -10,13 +10,17 @@ local function split(str)
   end
 
 function draw()
-    local chars = {split(get(text))}
+    local t
+    if type(get(text)) ~= "string" then
+        t = tostring(get(text))
+    else
+        t = get(text)
+    end
+    
+    local chars = {split(t)}
     drawText(font, 0, 0, chars[1] or "", 65, true, true, TEXT_ALIGN_LEFT, get(color))
     drawText(font, 42, 0, chars[2] or "", 65, true, true, TEXT_ALIGN_LEFT, get(color))
     drawText(font, 94, 0, chars[3] or "", 65, true, true, TEXT_ALIGN_LEFT, get(color))
     drawText(font, 135, 0, chars[4] or "", 66, true, true, TEXT_ALIGN_LEFT, get(color))
     drawText(font, 148, 0, chars[5] or "", 65, true, true, TEXT_ALIGN_LEFT, get(color))
-end
-function update()
-    sasl.logError("asd")
 end

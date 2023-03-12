@@ -53197,7 +53197,7 @@ P acf/_spot1_3d_rgb/2 0.949999988
 P acf/_spot1_3d_rgb/count 3
 P acf/_spot1_3d_xyz/0 0.000000000
 P acf/_spot1_3d_xyz/1 3.700000048
-P acf/_spot1_3d_xyz/2 3.200000048
+P acf/_spot1_3d_xyz/2 3.182414770
 P acf/_spot1_3d_xyz/count 3
 P acf/_spot2_3d_rgb/0 1.000000000
 P acf/_spot2_3d_rgb/1 1.000000000
@@ -53219,9 +53219,9 @@ P acf/_spot_angle/0 0.000000000
 P acf/_spot_angle/1 70.000000000
 P acf/_spot_angle/2 50.000000000
 P acf/_spot_angle/count 3
-P acf/_spot_name_3d/0 sim/cockpit2/electrical/panel_brightness_ratio[0]
-P acf/_spot_name_3d/1 sim/cockpit2/electrical/panel_brightness_ratio[1]
-P acf/_spot_name_3d/2 sim/cockpit2/electrical/panel_brightness_ratio[2]
+P acf/_spot_name_3d/0 none
+P acf/_spot_name_3d/1 none
+P acf/_spot_name_3d/2 none
 P acf/_spot_name_3d/count 3
 P acf/_spot_psi/0 180.000000000
 P acf/_spot_psi/1 90.000000000
