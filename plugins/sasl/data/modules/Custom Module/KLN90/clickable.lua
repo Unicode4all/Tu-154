@@ -1,1 +1,0 @@
---dummy lua componnent

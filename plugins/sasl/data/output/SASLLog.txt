@@ -24,25 +24,6 @@
 [TU154 DEBUG]: [LUA]: "tu154ce/gauges/compas/pkp_helper_course_R": Casting float to int
 [TU154 INFO]: [LUA]: loading	time_logic
 [TU154 INFO]: [LUA]: loading	flap_aero
-[TU154 INFO]: [LUA]: loading	KLN90
-[TU154 DEBUG]: [LUA]: "sim/graphics/misc/current_scroll_pos": Casting float to int
-[TU154 INFO]: [LUA]: loading	KLN90_panel
-[TU154 WARN]: [STACK]:| listFiles : Can't list directory contents: Output/FMS plans/
-[TU154 WARN]: [STACK]:| ...s/SASL/data/modules/Custom Module/KLN90//KLN90_panel.lua:2593 in function <check_files>
-[TU154 WARN]: [STACK]:| ...s/SASL/data/modules/Custom Module/KLN90//KLN90_panel.lua:2607 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <KLN90_panel>
-[TU154 WARN]: [STACK]:| ...plugins/SASL/data/modules/Custom Module/KLN90//KLN90.lua:183 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <KLN90>
-[TU154 WARN]: [STACK]:| ...
-[TU154 INFO]: [LUA]: loading	rectangle2
-[TU154 INFO]: [LUA]: loading	texture
-[TU154 INFO]: [LUA]: loading	KLN90_2D
-[TU154 INFO]: [LUA]: loading	textureLit3
-[TU154 INFO]: [LUA]: loading	textureLit2
-[TU154 INFO]: [LUA]: loading	clickable
-[TU154 INFO]: [LUA]: loading	textureRotate
-[TU154 INFO]: [LUA]: loading	rectangle
-[TU154 INFO]: [LUA]: loading	KLN90_2D_display
 [TU154 INFO]: [LUA]: loading	main_panel
 [TU154 INFO]: [LUA]: loading	vers
 [TU154 INFO]: [LUA]: "vers"	Tu154 v2.0.6
@@ -64,6 +45,7 @@
 [TU154 DEBUG]: [LUA]: "tu154ce/gauges/alt/vbe_flightlevel_left": Casting float to int
 [TU154 INFO]: [LUA]: loading	textureLit
 [TU154 INFO]: [LUA]: loading	needle
+[TU154 INFO]: [LUA]: loading	texture
 [TU154 INFO]: [LUA]: loading	digitstape
 [TU154 INFO]: [LUA]: loading	rectangle_ctr
 [TU154 DEBUG]: [LUA]: "tu154ce/gauges/alt/vbe_flightlevel_right": Casting float to int
@@ -87,6 +69,7 @@
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	tcas_text
 [TU154 INFO]: [LUA]: loading	text_draw
+[TU154 INFO]: [LUA]: loading	rectangle
 [TU154 INFO]: [LUA]: loading	so72_panel
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/operation/failures/rel_g_xpndr> not found
 [TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
@@ -404,6 +387,7 @@
 [TU154 INFO]: [LUA]: including	chk_before_land.lua
 [TU154 INFO]: [LUA]: loading	panels_2d
 [TU154 INFO]: [LUA]: loading	palette_2d
+[TU154 INFO]: [LUA]: loading	clickable
 [TU154 INFO]: [LUA]: loading	load_panel
 [TU154 INFO]: [LUA]: including	fuel_tables.lua
 [TU154 INFO]: [LUA]: loading	rectangle_ctr_fuel
@@ -427,4 +411,3 @@
 [TU154 INFO]: [LUA]: loading	smooth_anim
 [TU154 INFO]: Module loaded
 [TU154 INFO]: [LUA]: "crew_voices"	PREPARE
-[TU154 INFO]: [LUA]: "save_state"	reading last state: OK

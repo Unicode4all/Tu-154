@@ -116,10 +116,10 @@ components = {
 	time_logic {},
 	flap_aero {},
 --]]
-	KLN90 {
-		--position = { 0, 0, 2048, 2048 }
-		position = { 1295, 582, 1770, 227 }
-	},
+	--KLN90 {
+	--	--position = { 0, 0, 2048, 2048 }
+	--	position = { 1295, 582, 1770, 227 }
+	--},
 
 	-- gauges and systems
 
