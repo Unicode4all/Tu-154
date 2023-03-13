@@ -411,4 +411,3 @@
 [TU154 INFO]: [LUA]: loading	smooth_anim
 [TU154 INFO]: Module loaded
 [TU154 INFO]: [LUA]: "crew_voices"	PREPARE
-[TU154 INFO]: [LUA]: "save_state"	reading last state: OK

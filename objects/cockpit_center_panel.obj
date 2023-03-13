@@ -4,8 +4,8 @@ OBJ
 
 GLOBAL_specular 1.0
 
-TEXTURE cockpit_center_panel_RUS.png
-TEXTURE_LIT cockpit_center_panel_RUS_LIT.png
+TEXTURE cockpit_center_panel.png
+TEXTURE_LIT cockpit_center_panel_LIT.png
 TEXTURE_NORMAL cockpit_center_panel_RUS_NML.png
 NORMAL_METALNESS
 POINT_COUNTS 8131 0 0 22527
