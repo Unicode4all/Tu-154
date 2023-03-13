@@ -6,7 +6,9 @@ size = {420, 90}
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 defineProperty("frequency", globalPropertyf("sim/cockpit2/radios/actuators/nav1_frequency_hz"))  -- set the frequency
-
+frequency2 = globalPropertyia("sim/cockpit2/radios/actuators/nav_frequency_hz")
+dme_hold = globalPropertyia("sim/cockpit2/radios/actuators/nav_dme_hold")
+defineProperty("index", 1)
 defineProperty("v_plank", globalPropertyf("sim/cockpit2/radios/indicators/nav1_hdef_dots_pilot")) -- horizontal deflection on course
 defineProperty("h_plank", globalPropertyf("sim/cockpit2/radios/indicators/nav1_vdef_dots_pilot")) -- vertical deflection on glideslope
 defineProperty("cr_flag", globalPropertyf("sim/cockpit2/radios/indicators/nav1_flag_from_to_pilot")) -- Nav-To-From indication, nav1, pilot, 0 is flag, 1 is to, 2 is from.
@@ -75,7 +77,7 @@ defineProperty("nav_from_lit", globalPropertyf("tu154ce/lights/small/nav_1_from"
 defineProperty("ismaster", globalPropertyf("scp/api/ismaster")) -- Master. 0 = plugin not found, 1 = slave 2 = master
 defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have control. 0 = plugin not found, 1 = no control 2 = has control
 
-
+capture = 0
 
 
 local rot_small_sound = loadSample('Custom Sounds/cursmp.wav')
@@ -144,7 +146,7 @@ end
 local function lamps(flag)
 	
 	local test_btn = get(test_lamps) * math.max(get(bus27_volt_right) - 10 / 18.5, 0)
-	--local day_night = 1 - get(day_night_set) * 0.25
+	--local day_night = 1 - get(day_night_set) * 0.8
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0)
 
 	local nav_to_lit_brt = math.max(bool2int(flag == 1) * lamps_brt, test_btn)
@@ -187,7 +189,12 @@ local obs_now = get(obs)
 function update()
 	
 	set(sim_fail, 0)
-	
+	capture = 1 - get(nav_mode)
+	if capture == 1 then
+		set(dme_hold, 1, get(index))
+	else
+		set(dme_hold, 0, get(index))
+	end
 	rotary()
 	buttons()
 	switchers()
@@ -266,7 +273,6 @@ if MASTER then
 	
 	
 	set(frequency, freq_100 * 100 + freq_10)
-
 end	
 	
 	knob_last_L = left_knob

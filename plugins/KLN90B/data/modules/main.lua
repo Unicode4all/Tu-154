@@ -320,3 +320,12 @@ menu_option = sasl.appendMenuItem(menu_main, "Toggle KLN90B Window", function()
 	KLN90B:setIsVisible(not KLN90B:isVisible())
 	return false
 end)
+
+local KLNpopupc_command = createCommand("xap/KLN90/Toggle_Popup_Panel", "KLN90popupvisible")
+function KLNpopupc_handler(phase)  -- for all commands phase equals: 0 on press; 1 while holding; 2 on release
+	if 0 == phase then
+		KLN90B:setIsVisible(not KLN90B:isVisible())
+	end
+	return 0
+end
+registerCommandHandler(KLNpopupc_command, 0, KLNpopupc_handler)

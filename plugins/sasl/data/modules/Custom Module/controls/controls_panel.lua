@@ -144,7 +144,7 @@ defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flig
 
 --defineProperty("slats", globalPropertyf("sim/flightmodel/controls/slatrat")) -- slats position. this one works
 defineProperty("slats", globalPropertyf("sim/flightmodel2/controls/slat1_deploy_ratio")) -- slats position. this one works too
-
+defineProperty("day_night_set", globalPropertyf("tu154ce/lights/day_night_set"))
 defineProperty("rv5_alt_L", globalPropertyf("tu154ce/misc/rv5_alt_left"))  -- высота на левом высотомере
 defineProperty("rv5_alt_R", globalPropertyf("tu154ce/misc/rv5_alt_right"))  -- высота на левом высотомере
 
@@ -206,9 +206,11 @@ local slats_last = 0
 local gear_timer = 0
 
 local function lamps()
-	local test_btn = get(lamp_test) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
-	local test_btn_eng = get(lamp_test_eng) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
-	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0)
+	local day_night = 1 - get(day_night_set) * 0.8
+	local test_btn = get(lamp_test) * math.max((get(bus27_volt_right) - 10) / 18.5, 0) * day_night
+	local test_btn_eng = get(lamp_test_eng) * math.max((get(bus27_volt_right) - 10) / 18.5, 0) * day_night
+	
+	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0) * day_night
 	
 	local stab_work_brt = 0
 	local stab_pos_now = get(stab_pos)

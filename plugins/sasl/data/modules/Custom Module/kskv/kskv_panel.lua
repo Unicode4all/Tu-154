@@ -170,7 +170,7 @@ local function lamps()
 	if test_btn ~= lamp_test_srd_last then  end
 	lamp_test_srd_last = test_btn
 	
-	local day_night = 1 - get(day_night_set) * 0.25
+	local day_night = 1 - get(day_night_set) * 0.8
 	
 	test_btn = test_btn * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
 	

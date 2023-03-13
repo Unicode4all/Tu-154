@@ -3333,3 +3333,52 @@ BEGIN_SOUND_ATTACHMENT
 	VEH_XYZ			0.8293744 0.67468536 -20.142796
 	EVENT_START_COND tu154ce/manipulators/buttons/absu/ppn13_t3 == 0
 END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/metal_switch
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	DELTA=tu154ce/controll/ail_trimm_sw != 0.0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/metal_switch
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	DELTA=tu154ce/controll/rudd_trimm_sw != 0.0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/metal_switch
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	DELTA=tu154ce/controll/stab_manual != 0.0
+END_SOUND_ATTACHMENT
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/metal_switch
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	DELTA=tu154ce/controll/stab_setting != 0.0
+END_SOUND_ATTACHMENT
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/metal_switch
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	DELTA=tu154ce/controll/contr_force_set != 0.0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/cover_open
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	tu154ce/controll/contr_force_cap == 1
+END_SOUND_ATTACHMENT
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/cover_close
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	tu154ce/controll/contr_force_cap == 0
+END_SOUND_ATTACHMENT
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/cover_open
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	tu154ce/controll/stab_man_cap == 1
+END_SOUND_ATTACHMENT
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/manipulators/cover_close
+	VEH_XYZ			-0.02 0.40 -21.91
+	EVENT_START_COND	tu154ce/controll/stab_man_cap == 0
+END_SOUND_ATTACHMENT

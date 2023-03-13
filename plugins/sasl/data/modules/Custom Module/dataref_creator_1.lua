@@ -392,7 +392,7 @@ createGlobalPropertyi("tu154ce/switchers/ovhd/curs_pnp_mode_2", 1) -- режим
 createGlobalPropertyi("tu154ce/buttons/ovhd/svs_contr", 0) -- кнопка контроля СВС
 createGlobalPropertyi("tu154ce/switchers/ovhd/svs_on", 1) -- выключатель СВС
 createGlobalPropertyi("tu154ce/switchers/ovhd/svs_heat", 1) -- обогрев СВС
-createGlobalPropertyi("tu154ce/switchers/ovhd/kln_on", 1) -- выключатель КЛН
+createGlobalPropertyi("tu154ce/switchers/ovhd/kln_on", 0) -- выключатель КЛН
 createGlobalPropertyi("tu154ce/switchers/ovhd/tcas_on", 1) -- выключатель TCAS
 createGlobalPropertyi("tu154ce/switchers/ovhd/emerg_light_cap", 0) -- крышка аварийного освещения
 createGlobalPropertyi("tu154ce/switchers/ovhd/emerg_light_on", 0) -- аварийное освещение

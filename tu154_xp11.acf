@@ -161,10 +161,10 @@ P _gear/0/_latN 0.0
 P _gear/0/_latR 0.0
 P _gear/0/_leg_len 5.400000095
 P _gear/0/_lonE -2.0
-P _gear/0/_lonN -77.800125122
+P _gear/0/_lonN -79.285644531
 P _gear/0/_lonR -97.0
 P _gear/0/_scon 138496.781250000
-P _gear/0/_stat_def 0.121554017
+P _gear/0/_stat_def 0.121554032
 P _gear/0/_steerdeg_hispeed 10.0
 P _gear/0/_steerdeg_lospeed 63.0
 P _gear/0/_strut_comp 0.0
@@ -195,10 +195,10 @@ P _gear/1/_latN 0.0
 P _gear/1/_latR 0.0
 P _gear/1/_leg_len 5.900000095
 P _gear/1/_lonE -15.0
-P _gear/1/_lonN -74.842208862
+P _gear/1/_lonN -76.014984131
 P _gear/1/_lonR -90.0
 P _gear/1/_scon 138496.781250000
-P _gear/1/_stat_def 0.751090646
+P _gear/1/_stat_def 0.751090467
 P _gear/1/_steerdeg_hispeed 0.0
 P _gear/1/_steerdeg_lospeed 0.0
 P _gear/1/_strut_comp 0.0
@@ -229,10 +229,10 @@ P _gear/2/_latN 0.0
 P _gear/2/_latR 0.0
 P _gear/2/_leg_len 5.900000095
 P _gear/2/_lonE -15.0
-P _gear/2/_lonN -74.842208862
+P _gear/2/_lonN -76.014984131
 P _gear/2/_lonR -90.0
 P _gear/2/_scon 138496.781250000
-P _gear/2/_stat_def 0.751090646
+P _gear/2/_stat_def 0.751090467
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
@@ -39566,7 +39566,7 @@ P _part/86/_part_specs_invis 1
 P _part/86/_part_tex 0
 P _part/86/_part_the 0.0
 P _part/86/_part_x -18.870000839
-P _part/86/_part_y -9.647871017
+P _part/86/_part_y -9.647871971
 P _part/86/_part_z 75.977027893
 P _part/86/_patt_con 0
 P _part/86/_patt_prt 0
@@ -41036,7 +41036,7 @@ P _part/87/_part_specs_invis 1
 P _part/87/_part_tex 0
 P _part/87/_part_the 0.0
 P _part/87/_part_x 18.870000839
-P _part/87/_part_y -9.647871017
+P _part/87/_part_y -9.647871971
 P _part/87/_part_z 75.977027893
 P _part/87/_patt_con 0
 P _part/87/_patt_prt 0

@@ -178,7 +178,8 @@ local overrideSet = false
 
 function update()
 
-	set(gps_power, get(kln_on) * bool2int(get(bus27_volt_left) > 13 or get(bus27_volt_right) > 13))
+	--set(gps_power, get(kln_on) * bool2int(get(bus27_volt_left) > 13 or get(bus27_volt_right) > 13))
+	set(gps_power, bool2int(get(bus27_volt_left) > 13 or get(bus27_volt_right) > 13))
 	set(gns_lit, get(gps_power) * 0.7)
 	
 	if get(show_gns) == 1 and not overrideSet then

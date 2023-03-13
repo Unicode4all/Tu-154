@@ -25,7 +25,7 @@ components = {
 	
 	course_mp {
 		position = {288, 914, 410, 108},
-	
+		index = 1,
 	},
 	
 	
@@ -34,7 +34,7 @@ components = {
 		position = {288, 797, 410, 108},
 		-- sources
 		frequency = globalPropertyf("sim/cockpit2/radios/actuators/nav2_frequency_hz"),  -- set the frequency
-
+		index = 2,
 		v_plank = globalPropertyf("sim/cockpit2/radios/indicators/nav2_hdef_dots_pilot"), -- horizontal deflection on course
 		h_plank = globalPropertyf("sim/cockpit2/radios/indicators/nav2_vdef_dots_pilot"), -- vertical deflection on glideslope
 		cr_flag = globalPropertyf("sim/cockpit2/radios/indicators/nav2_flag_from_to_pilot"), -- Nav-To-From indication, nav1, pilot, 0 is flag, 1 is to, 2 is from.

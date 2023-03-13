@@ -1,13 +1,13 @@
 state = {
     ['contextWindows'] = {
         ['KLN90B'] = {
-            ['visible'] = true;
+            ['visible'] = false;
             ['mode'] = {
                 [1] = 0;
             };
             ['position'] = {
-                [1] = 449;
-                [2] = 251;
+                [1] = 217;
+                [2] = 552;
                 [3] = 898;
                 [4] = 296;
             };

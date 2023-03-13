@@ -1,5 +1,5 @@
 -- this is engines sounds
---[[
+
 defineProperty("frame_time", globalPropertyf("tu154ce/time/frame_time")) -- flight time
 
 defineProperty("external_view", globalPropertyi("sim/graphics/view/view_is_external")) -- enviroment
@@ -635,4 +635,3 @@ function update()
 	end
 
 end
-]]
