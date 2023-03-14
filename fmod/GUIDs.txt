@@ -1,6 +1,7 @@
 {e9aff90f-d20a-4f6d-901c-d2c13a843b80} bank:/Master Bank
 {71b2d9db-a371-032f-1655-583fcb773d18} bank:/Master Bank.strings
 {9f08114d-36ec-44cc-b8bf-b2babda09f9e} bus:/
+{0d358f21-6522-40aa-aa7d-a3fe9f3d591a} bus:/A
 {7f7c05a4-e05a-4d44-94fe-d4691147a9b7} bus:/Master
 {e3492bec-f854-4fbb-b2bc-23586269032e} bus:/Master/Copilot
 {a5a85a81-afd5-4425-9dc2-6e50f7776e6a} bus:/Master/Exterior Processed
@@ -28,7 +29,9 @@
 {de8aad9f-56f8-463f-8230-7e3c2a55912f} event:/T154/engines_m/starter
 {5230ca9d-d417-42fb-bd15-171445125479} event:/T154/equipment/alarms/absu
 {0099754d-9dd9-4345-bd81-792df1929392} event:/T154/equipment/alarms/long_horn
+{b0737d67-a41c-4aac-9bf1-238b77fd0737} event:/T154/equipment/alarms/rad_alt
 {ebc2994b-ad17-4d67-a9cf-687f7c968f15} event:/T154/equipment/alarms/short_horn
+{a53e281e-438e-4321-b948-b19893a5a037} event:/T154/equipment/alarms/vbe
 {48ffdcf8-45c5-40da-9242-004a0c6b72ae} event:/T154/equipment/avionics/adc_b2
 {504cc013-efe6-4cd1-8831-c90f4a9955df} event:/T154/equipment/avionics/adc_m1
 {bd1d168f-2098-4ff1-96af-3f1d1d7415ce} event:/T154/equipment/avionics/adc_m2

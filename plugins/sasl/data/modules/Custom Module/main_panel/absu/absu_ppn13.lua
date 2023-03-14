@@ -1,6 +1,8 @@
 include("smooth_light.lua")
 include("smooth_anim.lua")
-
+local passed = get(frame_time)
+local notLoaded = true
+local start_timer = 0
 operating_mode = 0
 
 ppn_modes      = {
@@ -313,14 +315,14 @@ end
 function process_vars()
     check_hyd = (bool2int(get(pressure_ind_1) < 100) + bool2int(get(pressure_ind_2) < 100) + bool2int(get(pressure_ind_3) < 100) <
         2)
-    local nav_prep = get(absu_nav_on) == 1
-    local land_prep = get(absu_landing_on) == 1
-    local stu_test_1_cntr = 0
-    if get(absu_speed_test_2) == 1 and (nav_prep or land_prep) then
-        stu_test_1_cntr = stu_test_1_cntr + passed
-    else
-        stu_test_1_cntr = 0
-    end
+        local nav_prep = get(absu_nav_on) == 1
+        local land_prep = get(absu_landing_on) == 1
+        local stu_test_1_cntr = 0
+        if get(absu_speed_test_2) == 1 and (nav_prep or land_prep) then
+            stu_test_1_cntr = stu_test_1_cntr + passed
+        else
+            stu_test_1_cntr = 0
+        end
 
     chan_1_work = get(hydro_ra56_rud_1) * bool2int(get(absu_ra56_yaw_fail) ~= 3) +
         get(hydro_ra56_ail_1) * bool2int(get(absu_ra56_roll_fail) == 0) +
@@ -453,6 +455,9 @@ function lights()
 end
 
 function update()
+    passed = get(frame_time)
+	start_timer = start_timer + passed
+
     logic()
     lights()
     switches()

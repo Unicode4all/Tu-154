@@ -68,7 +68,7 @@ defineProperty("bold_digitsImage", loadImage("bold_digit_strip.png", 12, 195, 40
 -- sounds
 local switcher_sound = loadSample('Custom Sounds/metal_switch.wav')
 local vbe_alarm_snd = loadSample('Custom Sounds/vbe_alarm.wav')
-
+vbe_alarm = globalPropertyi("tu154ce/sound/vbe")
 local power = true
 local mode = get(vbe_mode) -- 0 - meters, 1 - feet
 local brightness = 0.5
@@ -311,6 +311,9 @@ end
 	local external = get(external_view) == 1
 	if ((mode_last ~= border_mode and border_mode == 1) or (mode_last == 0 and border_mode == 2) or (mode_last == 2 and border_mode == 1)) and self_test_timer > 8 and num == 0 and not external then
 		if get(xplane_version) < 120000 then playSample(vbe_alarm_snd, false) end
+		set(alarm_vbe, 1)
+	else
+		set(alarm_vbe, 0)
 	end
 	mode_last = border_mode
 	

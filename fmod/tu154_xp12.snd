@@ -74,6 +74,8 @@ BEGIN_SOUND_ATTACHMENT
 	EVENT_END_COND DELTA=sim/flightmodel2/gear/deploy_ratio[0] >= 0
 END_SOUND_ATTACHMENT
 
+
+
 # -------------------- Gear roll ---------------------
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME /T154/wheels_roll
@@ -294,37 +296,82 @@ END_SOUND_ATTACHMENT
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME		/T154/equipment/alarms/absu
 	VEH_XYZ			-1.08 0.01 -21.52
-	EVENT_START_COND	tu154ce/sound/absu_alarm == 1
+	EVENT_START_COND	tu154ce/alarm/speaker_absu == 1
 	EVENT_POLYPHONIC
 END_SOUND_ATTACHMENT
 
+#BEGIN_SOUND_ATTACHMENT
+#	EVENT_NAME		/T154/equipment/alarms/long_horn
+#	VEH_XYZ			-1.08 0.01 -21.52
+#	EVENT_START_COND	tu154ce/sound/long_horn[0] == 1
+#	EVENT_END_COND	tu154ce/sound/long_horn[0] == 0
+#END_SOUND_ATTACHMENT
+
+#BEGIN_SOUND_ATTACHMENT
+#	EVENT_NAME		/T154/equipment/alarms/long_horn
+#	VEH_XYZ			-1.08 0.01 -21.52
+#	EVENT_START_COND	tu154ce/sound/long_horn[1] == 1
+#	EVENT_END_COND	tu154ce/sound/long_horn[1] == 0
+#END_SOUND_ATTACHMENT
+#
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME		/T154/equipment/alarms/long_horn
 	VEH_XYZ			-1.08 0.01 -21.52
-	EVENT_START_COND	tu154ce/sound/long_horn[0] == 1
-	EVENT_END_COND	tu154ce/sound/long_horn[0] == 0
+	EVENT_START_COND	tu154ce/sound/flaps == 1
+	EVENT_END_COND	tu154ce/sound/flaps == 0
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME		/T154/equipment/alarms/long_horn
 	VEH_XYZ			-1.08 0.01 -21.52
-	EVENT_START_COND	tu154ce/sound/long_horn[1] == 1
-	EVENT_END_COND	tu154ce/sound/long_horn[1] == 0
+	EVENT_START_COND	tu154ce/sound/auasp == 1
+	EVENT_END_COND	tu154ce/sound/auasp == 0
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME		/T154/equipment/alarms/short_horn
 	VEH_XYZ			-1.08 0.01 -21.52
-	EVENT_START_COND	tu154ce/sound/short_horn[0] == 1
-	EVENT_END_COND	tu154ce/sound/short_horn[0] == 0
+	EVENT_START_COND	tu154ce/sound/srd == 1
+	EVENT_END_COND	tu154ce/sound/srd == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/alarms/absu
+	VEH_XYZ			-1.08 0.01 -21.52
+	EVENT_START_COND	tu154ce/sound/absu_alarm == 1
+	EVENT_END_COND	tu154ce/sound/absu_alarm == 0
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME		/T154/equipment/alarms/short_horn
 	VEH_XYZ			-1.08 0.01 -21.52
-	EVENT_START_COND	tu154ce/sound/short_horn[1] == 1
-	EVENT_END_COND	tu154ce/sound/short_horn[1] == 0
+	EVENT_START_COND	tu154ce/sound/overspeed == 1
+	EVENT_END_COND	tu154ce/sound/overspeed == 0
 END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/alarms/rad_alt
+	VEH_XYZ			-1.14 0.04 -21.30
+	EVENT_START_COND	tu154ce/misc/rv5_dh_signal_left == 1
+	EVENT_END_COND	tu154ce/misc/rv5_dh_signal_left == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/alarms/rad_alt
+	VEH_XYZ			0.92 0.05 -21.55
+	EVENT_START_COND	tu154ce/misc/rv5_dh_signal_right == 1
+	EVENT_END_COND	tu154ce/misc/rv5_dh_signal_right == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME		/T154/equipment/alarms/vbe
+	VEH_XYZ			-1.08 0.01 -21.52
+	EVENT_START_COND	tu154ce/sound/vbe == 1
+	EVENT_END_COND	tu154ce/sound/vbe == 0
+END_SOUND_ATTACHMENT
+
+
+
 ### ------------------- AIR
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME		/T154/equipment/avionics/air_cond_r

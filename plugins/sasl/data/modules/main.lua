@@ -12,6 +12,7 @@ addSearchPath(moduleDirectory .. "/Custom Module/KLN90/")
 addSearchPath(moduleDirectory .. "/Custom Module/sounds")
 addSearchPath(moduleDirectory .. "/Custom Module/gui")
 
+include("dataref_creator_4.lua")
 
 sasl.gl.setRenderTextPixelAligned(true )
 
@@ -107,7 +108,7 @@ components = {
 	dataref_creator_1 {}, -- main datarefs. controls and indicatios
 	dataref_creator_2 {}, -- internal datarefs
 	dataref_creator_3 {}, -- failures datarefs
-	dataref_creator_4 {}, -- circuit breakers
+	--dataref_creator_4 {}, -- circuit breakers
 
 	papers {},
 

@@ -1,1 +1,0 @@
-To disable the KLN, put all these files into the KLN90_3d folder. Replace, if prompted

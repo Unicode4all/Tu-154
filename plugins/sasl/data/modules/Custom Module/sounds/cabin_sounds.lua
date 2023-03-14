@@ -103,7 +103,12 @@ defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have 
 long_horn = globalPropertyia("tu154ce/sound/long_horn")
 short_horn = globalPropertyia("tu154ce/sound/short_horn")
 absu_alarm = globalPropertyi("tu154ce/sound/absu_alarm")
+overspeed = globalPropertyi("tu154ce/sound/overspeed")
+rv5_alarm = globalPropertyi("tu154ce/sound/rad_alt")
+vbe_alarm = globalPropertyi("tu154ce/sound/vbe")
 
+flaps_horn = globalPropertyia("tu154ce/sound/flaps")
+srd_horn = globalPropertyia("tu154ce/sound/srd")
 
 -- sound sources
 --if xplane_version < 120000 then
@@ -233,7 +238,7 @@ function update()
 
 	if (get(main_gear_flaps) == 1 or get(fire_siren) == 1) and power and get(srd_buzzer) == 1 and external == 0 and get(main_alarm_fail) == 0 then -- continous buzz
 		if not isSamplePlaying(long_sirena) and get(xplane_version) < 120000 then if get(xplane_version) < 120000 then playSample(long_sirena, true) end end
-		set(long_horn, 1, 1)
+		set(alarm_flaps, 1)
 		--if get(xplane_version) < 120000 then stopSample(short_sirena) end
 	elseif get(srd_buzzer) == 1 and get(main_pressure) == 1 and power and external == 0 and get(main_alarm_fail) == 0 then
 		short_siren_timer = short_siren_timer + passed
@@ -242,8 +247,8 @@ function update()
 			playSample(
 				long_sirena, true)
 		end
-		set(short_horn, 1, 1)
-
+		set(alarm_srd, 1)
+		
 		if short_siren_timer > 0.4 then
 			short_siren_timer = 0
 			if get(xplane_version) < 120000 then stopSample(long_sirena) end
@@ -255,8 +260,8 @@ function update()
 			if get(xplane_version) < 120000 then stopSample(long_sirena) end
 		end
 
-		set(long_horn, 0, 1)
-		set(short_horn, 0, 1)
+		set(alarm_flaps, 0)
+		set(alarm_srd, 0)
 		--if get(xplane_version) < 120000 then stopSample(short_sirena) end
 	end
 
@@ -283,27 +288,28 @@ function update()
 
 	if power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 and get(absu_fail_signal) == 1 then -- ABSU fails
 		if not isSamplePlaying(absu_sound) then if get(xplane_version) < 120000 then playSample(absu_sound, false) end end
-		set(absu_alarm, 1)
+		set(alarm_absu, 1)
 		if get(xplane_version) < 120000 then stopSample(long_speaker) end
 	elseif get(speaker_auasp) == 1 and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then -- long buzzer
 		if get(xplane_version) < 120000 then
 			if not isSamplePlaying(long_speaker) then if get(xplane_version) < 120000 then playSample(long_speaker, true) end end
 			if get(xplane_version) < 120000 then stopSample(absu_sound) end
+			set(alarm_auasp, 1)
 		else
-			set(long_horn, 1, 2)
+			set(alarm_fire, 1)
 		end
 	elseif (get(speaker_fuel) == 1 or get(speaker_speed) == 1) and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then
 		short_speaker_timer = short_speaker_timer + passed
 
 		if not isSamplePlaying(long_speaker) and short_speaker_timer > 0.3 then if get(xplane_version) < 120000 then playSample(long_speaker, true) end end
-		set(short_horn, 1, 2)
+		set(alarm_ospeed, 1)
 		if short_speaker_timer > 0.6 then
 			short_speaker_timer = 0
 			if get(xplane_version) < 120000 then stopSample(long_speaker) end
 		end
 		if get(xplane_version) < 120000 then stopSample(absu_sound) end
 	elseif ((absu_now ~= absu_last and absu_now < 4) or (stu_last >= 3 and stu_now <= 2)) and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then
-		set(absu_alarm, 1)
+		set(alarm_absu, 1)
 		if get(xplane_version) < 120000 then
 			if get(xplane_version) < 120000 then playSample(absu_sound, false) end 
 		if get(xplane_version) < 120000 then stopSample(long_speaker) end
@@ -311,9 +317,9 @@ function update()
 		
 	else
 		if get(xplane_version) < 120000 then stopSample(long_speaker) end
-		set(long_horn, 0, 2)
-		set(short_horn, 0, 2)
-		set(absu_alarm, 0)
+		set(alarm_absu, 0)
+		set(alarm_ospeed, 0)
+		set(alarm_fire, 0)
 		--if get(xplane_version) < 120000 then stopSample(absu_sound) end
 	end
 
@@ -325,9 +331,9 @@ function update()
 	
 	setSampleGain(long_speaker, 1000 * warn_vl)
 	if get(speaker_auasp) == 1 and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then
-		set(long_horn, 1, 1)
+		set(alarm_auasp, 1)
 	else
-
+		set(alarm_auasp, 0)
 	end
 
 	----------------------
@@ -342,6 +348,7 @@ function update()
 
 	if (inner or middle or outer) and mrp_power and external == 0 then
 		if not isSamplePlaying(bell) then if get(xplane_version) < 120000 then playSample(bell, false) end end
+		set(alarm_marker)
 	else
 		--if get(xplane_version) < 120000 then stopSample(bell) end
 	end
