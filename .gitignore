@@ -1,3 +1,6 @@
 plugins/sasl/data/output/SASLLog.txt
+plugins/sasl/data/modules/state.txt
+plugins/KLN90B/data/output/SASLLog.txt
 black_box/*
 GUIDS.txt
+*.*~
