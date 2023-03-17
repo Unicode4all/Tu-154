@@ -1,6 +1,7 @@
 -- this is ABSU 2D panel
 
 size = {917, 597}
+size_absu_ess_png = {512, 512}
 
 defineProperty("hide_eng_objects", globalPropertyi("tu154ce/lang/hide_eng_objects")) -- спрятать английские объекты кабины. 1 = RUS
 
@@ -88,121 +89,79 @@ defineProperty("at_2_lamp", globalPropertyf("tu154ce/lights/small/at_2")) -- А�
 -- load images ENG
 defineProperty("bg_img", loadImage("absu_bk.png"))
 
-defineProperty("contr_off_img", loadImage("absu_ess.png", 6, 342, 85, 69))
-defineProperty("contr_stab_img", loadImage("absu_ess.png", 6, 412, 85, 69))
+defineProperty("contr_off_img", loadImage("absu_ess.png", 6, size_absu_ess_png[2]-410, 85, 69))
+defineProperty("contr_stab_img", loadImage("absu_ess.png", 6, size_absu_ess_png[2]-480, 85, 69))
 
-defineProperty("reset_lamp_img", loadImage("absu_ess.png", 359, 160, 54, 54))
-defineProperty("zk_lamp_img", loadImage("absu_ess.png", 243, 160, 54, 54))
-defineProperty("nvu_lamp_img", loadImage("absu_ess.png", 243, 217, 54, 54))
-defineProperty("az1_lamp_img", loadImage("absu_ess.png", 301, 217, 54, 54))
-defineProperty("az2_lamp_img", loadImage("absu_ess.png", 360, 217, 54, 54))
-defineProperty("app_lamp_img", loadImage("absu_ess.png", 243, 273, 54, 54))
-defineProperty("gs_lamp_img", loadImage("absu_ess.png", 360, 273, 54, 54))
-defineProperty("m_lamp_img", loadImage("absu_ess.png", 243, 330, 54, 54))
-defineProperty("v_lamp_img", loadImage("absu_ess.png", 302, 330, 54, 54))
-defineProperty("h_lamp_img", loadImage("absu_ess.png", 361, 330, 54, 54))
-defineProperty("stab_lamp_img", loadImage("absu_ess.png", 302, 273, 54, 54))
-defineProperty("off_1_lamp_img", loadImage("absu_ess.png", 243, 388, 54, 54))
-defineProperty("off_2_lamp_img", loadImage("absu_ess.png", 303, 388, 54, 54))
-defineProperty("off_3_lamp_img", loadImage("absu_ess.png", 361, 388, 54, 54))
+defineProperty("reset_lamp_img", loadImage("absu_ess.png", 359, size_absu_ess_png[2]-213, 54, 54))
+defineProperty("zk_lamp_img", loadImage("absu_ess.png", 243, size_absu_ess_png[2]-75, 54, 54))
+defineProperty("nvu_lamp_img", loadImage("absu_ess.png", 243, size_absu_ess_png[2]-270, 54, 54))
+defineProperty("az1_lamp_img", loadImage("absu_ess.png", 301, size_absu_ess_png[2]-270, 54, 54))
+defineProperty("az2_lamp_img", loadImage("absu_ess.png", 360, size_absu_ess_png[2]-270, 54, 54))
+defineProperty("app_lamp_img", loadImage("absu_ess.png", 243, size_absu_ess_png[2]-326, 54, 54))
+defineProperty("gs_lamp_img", loadImage("absu_ess.png", 360, size_absu_ess_png[2]-326, 54, 54))
+defineProperty("m_lamp_img", loadImage("absu_ess.png", 243, size_absu_ess_png[2]-273, 54, 54))
+defineProperty("v_lamp_img", loadImage("absu_ess.png", 302, size_absu_ess_png[2]-273, 54, 54))
+defineProperty("h_lamp_img", loadImage("absu_ess.png", 361, size_absu_ess_png[2]-273, 54, 54))
+defineProperty("stab_lamp_img", loadImage("absu_ess.png", 302, size_absu_ess_png[2]-325, 54, 54))
+defineProperty("off_1_lamp_img", loadImage("absu_ess.png", 243, size_absu_ess_png[2]-440, 54, 54))
+defineProperty("off_2_lamp_img", loadImage("absu_ess.png", 303, size_absu_ess_png[2]-440, 54, 54))
+defineProperty("off_3_lamp_img", loadImage("absu_ess.png", 361, size_absu_ess_png[2]-440, 54, 54))
 
-defineProperty("sw_dn_img", loadImage("absu_ess.png", 86, 7, 32, 110))
-defineProperty("sw_up_img", loadImage("absu_ess.png", 125, 7, 32, 110))
-defineProperty("sw_ctr_img", loadImage("absu_ess.png", 165, 88, 36, 36))
+defineProperty("sw_dn_img", loadImage("absu_ess.png", 86, size_absu_ess_png[2]-120, 32, 110))
+defineProperty("sw_up_img", loadImage("absu_ess.png", 125, size_absu_ess_png[2]-120, 32, 110))
+defineProperty("sw_ctr_img", loadImage("absu_ess.png", 165, size_absu_ess_png[2]-120, 36, 36))
 
-defineProperty("switcher_big", loadImage("absu_ess.png", 0, 0, 78, 124))
-defineProperty("roll_knob", loadImage("absu_ess.png", 2, 132, 196, 196))
+defineProperty("switcher_big", loadImage("absu_ess.png", 0, size_absu_ess_png[2]-124, 78, 124))
+defineProperty("roll_knob", loadImage("absu_ess.png", 2, size_absu_ess_png[2]-330, 196, 196))
 
-defineProperty("spd_hnd", loadImage("absu_ess.png", 445, 13, 52, 114))
-defineProperty("wheel_img", loadImage("absu_ess.png", 212, 0, 21, 512))
+defineProperty("spd_hnd", loadImage("absu_ess.png", 445, size_absu_ess_png[2]-72, 52, 114))
+defineProperty("wheel_img", loadImage("absu_ess.png", 212, size_absu_ess_png[2]-512, 21, 512))
 
-defineProperty("arrest_cap_closed", loadImage("absu_ess.png", 244, 11, 55, 92))
-defineProperty("arrest_cap_open", loadImage("absu_ess.png", 243, 115, 55, 37))
+defineProperty("arrest_cap_closed", loadImage("absu_ess.png", 244, size_absu_ess_png[2]-100, 55, 92))
+defineProperty("arrest_cap_open", loadImage("absu_ess.png", 243, size_absu_ess_png[2]-145, 55, 37))
 
-defineProperty("smooth_cap_closed", loadImage("absu_ess.png", 315, 14, 47, 89))
-defineProperty("smooth_cap_open", loadImage("absu_ess.png", 314, 115, 48, 37))
+defineProperty("smooth_cap_closed", loadImage("absu_ess.png", 315, size_absu_ess_png[2]-99, 47, 89))
+defineProperty("smooth_cap_open", loadImage("absu_ess.png", 314, size_absu_ess_png[2]-145, 48, 37))
 
-defineProperty("black_cap_closed", loadImage("absu_ess.png", 374, 14, 56, 86))
-defineProperty("black_cap_open", loadImage("absu_ess.png", 374, 114, 56, 37))
+defineProperty("black_cap_closed", loadImage("absu_ess.png", 374, size_absu_ess_png[2]-99, 56, 86))
+defineProperty("black_cap_open", loadImage("absu_ess.png", 374, size_absu_ess_png[2]-145, 56, 37))
 
-defineProperty("small_lamp", loadImage("absu_ess.png", 167, 9, 31, 31))
+defineProperty("small_lamp", loadImage("absu_ess.png", 167, size_absu_ess_png[2]-76, 31, 31))
 
 
 
 -- load images RUS
 defineProperty("bg_img_RUS", loadImage("absu_bk_RUS.png"))
 
-defineProperty("contr_off_img_RUS", loadImage("absu_ess_RUS.png", 6, 342, 85, 69))
-defineProperty("contr_stab_img_RUS", loadImage("absu_ess_RUS.png", 6, 412, 85, 69))
+defineProperty("contr_off_img_RUS", loadImage("absu_ess_RUS.png", 6, size_absu_ess_png[2]-410, 85, 69))
+defineProperty("contr_stab_img_RUS", loadImage("absu_ess_RUS.png", 6, size_absu_ess_png[2]-480, 85, 69))
 
-defineProperty("reset_lamp_img_RUS", loadImage("absu_ess_RUS.png", 359, 160, 54, 54))
-defineProperty("zk_lamp_img_RUS", loadImage("absu_ess_RUS.png", 243, 160, 54, 54))
-defineProperty("nvu_lamp_img_RUS", loadImage("absu_ess_RUS.png", 243, 217, 54, 54))
-defineProperty("az1_lamp_img_RUS", loadImage("absu_ess_RUS.png", 301, 217, 54, 54))
-defineProperty("az2_lamp_img_RUS", loadImage("absu_ess_RUS.png", 360, 217, 54, 54))
-defineProperty("app_lamp_img_RUS", loadImage("absu_ess_RUS.png", 243, 273, 54, 54))
-defineProperty("gs_lamp_img_RUS", loadImage("absu_ess_RUS.png", 360, 273, 54, 54))
-defineProperty("stab_lamp_img_RUS", loadImage("absu_ess_RUS.png", 302, 273, 54, 54))
-defineProperty("off_1_lamp_img_RUS", loadImage("absu_ess_RUS.png", 243, 388, 54, 54))
-defineProperty("off_2_lamp_img_RUS", loadImage("absu_ess_RUS.png", 303, 388, 54, 54))
-defineProperty("off_3_lamp_img_RUS", loadImage("absu_ess_RUS.png", 361, 388, 54, 54))
+defineProperty("reset_lamp_img_RUS", loadImage("absu_ess_RUS.png", 359, size_absu_ess_png[2]-213, 54, 54))
+defineProperty("zk_lamp_img_RUS", loadImage("absu_ess_RUS.png", 243, size_absu_ess_png[2]-75, 54, 54))
+defineProperty("nvu_lamp_img_RUS", loadImage("absu_ess_RUS.png", 243, size_absu_ess_png[2]-270, 54, 54))
+defineProperty("az1_lamp_img_RUS", loadImage("absu_ess_RUS.png", 301, size_absu_ess_png[2]-270, 54, 54))
+defineProperty("az2_lamp_img_RUS", loadImage("absu_ess_RUS.png", 360, size_absu_ess_png[2]-270, 54, 54))
+defineProperty("app_lamp_img_RUS", loadImage("absu_ess_RUS.png", 243, size_absu_ess_png[2]-270, 54, 54))
+defineProperty("gs_lamp_img_RUS", loadImage("absu_ess_RUS.png", 360, size_absu_ess_png[2]-326, 54, 54))
+defineProperty("stab_lamp_img_RUS", loadImage("absu_ess_RUS.png", 302, size_absu_ess_png[2]-325, 54, 54))
+defineProperty("off_1_lamp_img_RUS", loadImage("absu_ess_RUS.png", 243, size_absu_ess_png[2]-440, 54, 54))
+defineProperty("off_2_lamp_img_RUS", loadImage("absu_ess_RUS.png", 303, size_absu_ess_png[2]-440, 54, 54))
+defineProperty("off_3_lamp_img_RUS", loadImage("absu_ess_RUS.png", 361, size_absu_ess_png[2]-440, 54, 54))
 
-defineProperty("arrest_cap_closed_RUS", loadImage("absu_ess_RUS.png", 244, 11, 55, 92))
+defineProperty("arrest_cap_closed_RUS", loadImage("absu_ess_RUS.png", 244, size_absu_ess_png[2]-99, 55, 92))
 
 
 
 
 local RUS = true
 
--- test
-
---[[
-local lang_last = RUS
-
-local bg_image = loadImage("absu_bk_RUS.png")
-
-local function changeBG()
-  if RUS then
-   
-    bg_image = loadImage("absu_bk_RUS.png") -- load a new one
-	
-	print(bg_image)
-  else
-    
-    bg_image = loadImage("absu_bk.png") -- load a new one
-	
-	print(bg_image)
-  end
-  
-end
-
---]]
-
-
-
-
 
 function update()
-
-	RUS = get(hide_eng_objects) == 1
- --[[
-	-- test
-	if lang_last ~= RUS then
-		--changeBG() -- change background on changing the language
-		lang_last = RUS
-	end
- 
---]]	
- 
+	RUS = get(hide_eng_objects) == 1 
 end
 
 
-
-components = {
-
-	
-	
-	
+components = {	
 	-- background
 
 	textureLit {
@@ -220,13 +179,9 @@ components = {
 		end,
 	},
 
-
-
-
 	----------------
 	-- gauges --
-	----------------
-	
+	----------------	
 	
 	-- roll off 
 	textureLit {
@@ -553,26 +508,6 @@ components = {
 		end,
 	},	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 	---------------------------
 	-- handles and switchers --
 	---------------------------
@@ -585,7 +520,7 @@ components = {
 		state = function()
 			return get(absu_nav_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(absu_nav_on, 1 - get(absu_nav_on))
 			return true
 		end,
@@ -599,7 +534,7 @@ components = {
 		state = function()
 			return get(absu_landing_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(absu_landing_on, 1 - get(absu_landing_on))
 			return true
 		end,
@@ -613,7 +548,7 @@ components = {
 		state = function()
 			return get(absu_needles_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(absu_needles_on, 1 - get(absu_needles_on))
 			return true
 		end,
@@ -627,7 +562,7 @@ components = {
 		state = function()
 			return get(absu_roll_ch_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(absu_roll_ch_on, 1 - get(absu_roll_ch_on))
 			return true
 		end,
@@ -641,7 +576,7 @@ components = {
 		state = function()
 			return get(absu_pitch_ch_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(absu_pitch_ch_on, 1 - get(absu_pitch_ch_on))
 			return true
 		end,
@@ -656,7 +591,7 @@ components = {
 		state = function()
 			return get(absu_smooth_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(absu_smooth_on, 1 - get(absu_smooth_on))
 			return true
 		end,
@@ -674,7 +609,7 @@ components = {
 		state = function()
 			return get(absu_speed_prepare) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(absu_speed_prepare, 1 - get(absu_speed_prepare))
 			return true
 		end,
@@ -691,7 +626,7 @@ components = {
 		state = function()
 			return get(absu_speed_us_right_left) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(absu_speed_us_right_left, 1 - get(absu_speed_us_right_left))
 			return true
 		end,
@@ -724,7 +659,7 @@ components = {
 	clickable {
 		position = {714, 148, 28, 50},
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			
 			local a = get(absu_speed_off) - 1
 			if a < -1 then a = 0 end
@@ -739,7 +674,7 @@ components = {
 	clickable {
 		position = {714, 198, 28, 50},
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			
 			local a = get(absu_speed_off) + 1
 			if a > 1 then a = 0 end
@@ -764,7 +699,7 @@ components = {
 	clickable {
 		position = {115, 458, 85, 85},
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(absu_zpu_sel, 1 - get(absu_zpu_sel))
 			
 			return true
@@ -783,7 +718,7 @@ components = {
 	clickable {
 		position = {341, 157, 50, 50},
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(absu_turn_handle) - 5
 			if a < -50 then a = -50 end
 			set(absu_turn_handle, a)
@@ -794,7 +729,7 @@ components = {
 	clickable {
 		position = {403, 157, 50, 50},
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(absu_turn_handle) + 5
 			if a > 50 then a = 50 end
 			set(absu_turn_handle, a)
@@ -805,7 +740,7 @@ components = {
 	clickable {
 		position = {372, 217, 50, 50},
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(absu_turn_handle, 0)
 			
 			return true
@@ -820,7 +755,7 @@ components = {
 	clickable {
 		position = {211, 464, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_reset, 1)
 			return true
 		end,
@@ -834,7 +769,7 @@ components = {
 	clickable {
 		position = {35, 464, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_zk, 1)
 			return true
 		end,
@@ -849,7 +784,7 @@ components = {
 	clickable {
 		position = {35, 376, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_nvu, 1)
 			return true
 		end,
@@ -863,7 +798,7 @@ components = {
 	clickable {
 		position = {123, 376, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_az1, 1)
 			return true
 		end,
@@ -877,7 +812,7 @@ components = {
 	clickable {
 		position = {211, 376, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_az2, 1)
 			return true
 		end,
@@ -891,7 +826,7 @@ components = {
 	clickable {
 		position = {35, 96, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_app, 1)
 			return true
 		end,
@@ -905,7 +840,7 @@ components = {
 	clickable {
 		position = {211, 96, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_gs, 1)
 			return true
 		end,
@@ -919,7 +854,7 @@ components = {
 	clickable {
 		position = {340, 319, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_stab_m, 1)
 			return true
 		end,
@@ -933,7 +868,7 @@ components = {
 	clickable {
 		position = {428, 319, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_stab_v, 1)
 			return true
 		end,
@@ -947,7 +882,7 @@ components = {
 	clickable {
 		position = {516, 319, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_stab_h, 1)
 			return true
 		end,
@@ -961,7 +896,7 @@ components = {
 	clickable {
 		position = {460, 266, 50, 50},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_stab, 1)
 			return true
 		end,
@@ -976,7 +911,7 @@ components = {
 	clickable {
 		position = {704, 315, 68, 68},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_stab_speed, 1)
 			return true
 		end,
@@ -1033,7 +968,7 @@ components = {
 	clickable {
 		position = {805, 355, 50, 50},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_speed_change, 1)
 			return true
 		end,
@@ -1046,7 +981,7 @@ components = {
 	clickable {
 		position = {805, 297, 50, 50},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_speed_change, -1)
 			return true
 		end,
@@ -1062,7 +997,7 @@ components = {
 	clickable {
 		position = {639, 120, 50, 50},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_speed_test_1, 1)
 			return true
 		end,
@@ -1076,7 +1011,7 @@ components = {
 	clickable {
 		position = {639, 299, 50, 50},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_speed_test_2, 1)
 			return true
 		end,
@@ -1100,7 +1035,7 @@ components = {
 	clickable {
 		position = {783, 443, 40, 80},
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(absu_speed_mode) - 1
 			if a < 0 then a = 0 end
 			set(absu_speed_mode, a)
@@ -1112,7 +1047,7 @@ components = {
 	clickable {
 		position = {823, 443, 40, 80},
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			local a = get(absu_speed_mode) + 1
 			if a > 4 then a = 4 end
 			set(absu_speed_mode, a)
@@ -1121,22 +1056,21 @@ components = {
 	},	
 	
 	
-	-- pitch wheel
-	tape_lit {
-		image = get(wheel_img),
-		position = {546, 165, 15, 100},
-		window = {1.0, 0.3},
-		scrollY = function()
-			return 0.3 - get(absu_pitch_wheel) * 0.0165
-		
-		end,
-	},
+	-- --pitch wheel
+	--tape_lit {
+	--	image = get(wheel_img),
+	--	position = {546, 165, 15, 100},
+	--	window = {1.0, 0.3},
+	--	scrollY = function()
+	--		return 0.3 - get(absu_pitch_wheel) * 0.0165		
+	--	end,
+	--},
 	
 
 	clickable {
 		position = {528, 150, 50, 60},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_pitch_wheel_dir, 1)
 			return true
 		end,
@@ -1149,7 +1083,7 @@ components = {
 	clickable {
 		position = {528, 220, 50, 60},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_pitch_wheel_dir, -1)
 			return true
 		end,
@@ -1166,7 +1100,7 @@ components = {
 	clickable {
 		position = {437, 467, 40, 80},
       
-		onMouseDown = function() 
+		onMouseHold = function() 
 			set(absu_arrest, 1)
 			return true
 		end,
@@ -1305,25 +1239,13 @@ components = {
 		end,
 	},		
 		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	--------------------------------
 
 	-- close button
 	clickable {
 		position = {size[1] - 30, size[2] - 30, 30, 30 },
       
-		onMouseClick = function() 
+		onMouseDown = function() 
 			set(show_absu_panel, 0)
 			
 			return true
