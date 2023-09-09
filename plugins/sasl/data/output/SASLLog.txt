@@ -1,6 +1,6 @@
 [TU154 INFO]: Initializing...
-[TU154 INFO]: [DISPLAY] Monitor 0: 0, 0, 1920, 1080
-[TU154 INFO]: Path to module: C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/plugins/SASL/data/modules/main.lua
+[TU154 INFO]: [DISPLAY] Main Screen Bounds: 0, 0, 1920, 1017
+[TU154 INFO]: Path to module: C:\X-Plane 12/Aircraft/Tu-154-open/plugins/sasl/data/modules/main.lua
 [TU154 INFO]: Loading module...
 [TU154 INFO]: [LUA]: loading	module
 [TU154 INFO]: [LUA]: "module"	This is Tu154M Community Edition, v1.0.0
@@ -8,11 +8,11 @@
 [TU154 INFO]: [LUA]: including	dataref_creator_4.lua
 [TU154 INFO]: [LUA]: loading	dataref_creator_1
 [TU154 WARN]: [STACK]:| createDataRef : DataRefsHandler::luaCreateDataRef: <tu154ce/lights/sns_lamp> already exists
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
-[TU154 WARN]: [STACK]:| ...ns/SASL/data/modules/Custom Module/dataref_creator_1.lua:1103 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <dataref_creator_1>
-[TU154 WARN]: [STACK]:| ...raft/Tu154_Felis_open/plugins/SASL/data/modules/main.lua:108 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <c>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
+[TU154 WARN]: [STACK]:| ...ns/sasl/data/modules/Custom Module/dataref_creator_1.lua:1103 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <dataref_creator_1>
+[TU154 WARN]: [STACK]:| .../Aircraft/Tu-154-open/plugins/sasl/data/modules/main.lua:108 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <c>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	dataref_creator_2
 [TU154 INFO]: [LUA]: loading	dataref_creator_3
@@ -61,31 +61,31 @@
 [TU154 INFO]: [LUA]: loading	tcas
 [TU154 INFO]: [LUA]: loading	tcas_panel
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/operation/failures/rel_g_xpndr> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:390 in function <globalPropertyi>
 [TU154 WARN]: [STACK]:| ...ata/modules/Custom Module/main_panel/tcas/tcas_panel.lua:39 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <tcas_panel>
-[TU154 WARN]: [STACK]:| ...SASL/data/modules/Custom Module/main_panel/tcas/tcas.lua:7 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <tcas>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <tcas_panel>
+[TU154 WARN]: [STACK]:| ...sasl/data/modules/Custom Module/main_panel/tcas/tcas.lua:7 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <tcas>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	tcas_text
 [TU154 INFO]: [LUA]: loading	text_draw
 [TU154 INFO]: [LUA]: loading	rectangle
 [TU154 INFO]: [LUA]: loading	so72_panel
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/operation/failures/rel_g_xpndr> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:390 in function <globalPropertyi>
 [TU154 WARN]: [STACK]:| ...ata/modules/Custom Module/main_panel/tcas/so72_panel.lua:9 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <so72_panel>
-[TU154 WARN]: [STACK]:| ...SASL/data/modules/Custom Module/main_panel/tcas/tcas.lua:11 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <tcas>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <so72_panel>
+[TU154 WARN]: [STACK]:| ...sasl/data/modules/Custom Module/main_panel/tcas/tcas.lua:11 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <tcas>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	tcas_logic
 [TU154 DEBUG]: [LUA]: "tu154ce/gauges/alt/radioalt_flag_left": Casting float to int
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/operation/failures/rel_g_xpndr> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:390 in function <globalPropertyi>
 [TU154 WARN]: [STACK]:| ...ata/modules/Custom Module/main_panel/tcas/tcas_logic.lua:47 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <tcas_logic>
-[TU154 WARN]: [STACK]:| ...SASL/data/modules/Custom Module/main_panel/tcas/tcas.lua:15 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <tcas>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <tcas_logic>
+[TU154 WARN]: [STACK]:| ...sasl/data/modules/Custom Module/main_panel/tcas/tcas.lua:15 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <tcas>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	tcas_draw
 [TU154 INFO]: [LUA]: loading	tcas_gau
@@ -122,48 +122,48 @@
 [TU154 DEBUG]: [LUA]: "sim/cockpit2/radios/actuators/nav1_obs_deg_mag_pilot": Casting float to int
 [TU154 DEBUG]: [LUA]: "sim/cockpit2/radios/actuators/nav2_obs_deg_mag_pilot": Casting float to int
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <RXP/radios/indicators/gps_course_degtm> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/main_panel/pnp.lua:67 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <pnp>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:125 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...ugins/sasl/data/modules/Custom Module/main_panel/pnp.lua:67 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <pnp>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:125 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <RXP/radios/indicators/gps_cross_track_nm> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/main_panel/pnp.lua:68 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <pnp>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:125 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...ugins/sasl/data/modules/Custom Module/main_panel/pnp.lua:68 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <pnp>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:125 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <RXP/radios/indicators/hsi_flag_from_to_pilot> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/main_panel/pnp.lua:69 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <pnp>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:125 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...ugins/sasl/data/modules/Custom Module/main_panel/pnp.lua:69 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <pnp>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:125 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
 [TU154 WARN]: [STACK]:| ...
 [TU154 DEBUG]: [LUA]: "sim/cockpit2/radios/actuators/nav1_obs_deg_mag_pilot": Casting float to int
 [TU154 DEBUG]: [LUA]: "sim/cockpit2/radios/actuators/nav2_obs_deg_mag_pilot": Casting float to int
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <RXP/radios/indicators/gps_course_degtm> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/main_panel/pnp.lua:67 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <pnp>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:127 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...ugins/sasl/data/modules/Custom Module/main_panel/pnp.lua:67 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <pnp>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:127 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <RXP/radios/indicators/gps_cross_track_nm> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/main_panel/pnp.lua:68 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <pnp>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:127 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...ugins/sasl/data/modules/Custom Module/main_panel/pnp.lua:68 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <pnp>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:127 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <RXP/radios/indicators/hsi_flag_from_to_pilot> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/main_panel/pnp.lua:69 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <pnp>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:127 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...ugins/sasl/data/modules/Custom Module/main_panel/pnp.lua:69 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <pnp>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:127 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	rmi
 [TU154 INFO]: [LUA]: loading	diss
@@ -192,18 +192,18 @@
 [TU154 INFO]: [LUA]: loading	spu
 [TU154 INFO]: [LUA]: loading	mrp
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <tu154ce/xap/An24_gauges/mrp_cc> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...SASL/data/modules/Custom Module/main_panel/radio/mrp.lua:24 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <mrp>
-[TU154 WARN]: [STACK]:| ...SL/data/modules/Custom Module/main_panel/radio/radio.lua:149 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <radio>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...sasl/data/modules/Custom Module/main_panel/radio/mrp.lua:24 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <mrp>
+[TU154 WARN]: [STACK]:| ...sl/data/modules/Custom Module/main_panel/radio/radio.lua:149 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <radio>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/operation/sim_failures/rel_marker> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
-[TU154 WARN]: [STACK]:| ...SASL/data/modules/Custom Module/main_panel/radio/mrp.lua:27 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <mrp>
-[TU154 WARN]: [STACK]:| ...SL/data/modules/Custom Module/main_panel/radio/radio.lua:149 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <radio>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:390 in function <globalPropertyi>
+[TU154 WARN]: [STACK]:| ...sasl/data/modules/Custom Module/main_panel/radio/mrp.lua:27 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <mrp>
+[TU154 WARN]: [STACK]:| ...sl/data/modules/Custom Module/main_panel/radio/radio.lua:149 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <radio>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	radio_fails
 [TU154 INFO]: [LUA]: loading	nvu
@@ -213,18 +213,18 @@
 [TU154 INFO]: [LUA]: loading	absu
 [TU154 DEBUG]: [LUA]: "tu154ce/switchers/console/absu_pitch_wheel": Casting float to int
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <RXP/radios/indicators/gps_course_degtm> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...SASL/data/modules/Custom Module/main_panel/absu/absu.lua:262 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <absu>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:199 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...sasl/data/modules/Custom Module/main_panel/absu/absu.lua:262 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <absu>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:199 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <RXP/radios/indicators/gps_cross_track_nm> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...SASL/data/modules/Custom Module/main_panel/absu/absu.lua:263 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <absu>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:199 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...sasl/data/modules/Custom Module/main_panel/absu/absu.lua:263 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <absu>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:199 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
 [TU154 WARN]: [STACK]:| ...
 [TU154 DEBUG]: [LUA]: "tu154ce/switchers/console/absu_pitch_wheel": Casting float to int
 [TU154 DEBUG]: [LUA]: "tu154ce/gauges/alt/radioalt_flag_left": Casting float to int
@@ -243,12 +243,12 @@
 [TU154 INFO]: [LUA]: loading	radar
 [TU154 DEBUG]: [LUA]: "sim/cockpit/switches/EFIS_weather_alpha": Casting float to int
 [TU154 WARN]: [LUA]: "sim/cockpit2/EFIS/EFIS_page": Can't cast int array to int
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:408 in function <globalPropertyi>
-[TU154 WARN]: [STACK]:| ...SL/data/modules/Custom Module/main_panel/radar/radar.lua:65 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <radar>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/main_panel/main_panel.lua:203 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <main_panel>
-[TU154 WARN]: [STACK]:| ...raft/Tu154_Felis_open/plugins/SASL/data/modules/main.lua:127 in function <f>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:408 in function <globalPropertyi>
+[TU154 WARN]: [STACK]:| ...sl/data/modules/Custom Module/main_panel/radar/radar.lua:65 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <radar>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/main_panel/main_panel.lua:203 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <main_panel>
+[TU154 WARN]: [STACK]:| .../Aircraft/Tu-154-open/plugins/sasl/data/modules/main.lua:127 in function <f>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	vent
 [TU154 INFO]: [LUA]: loading	water_panel
@@ -277,12 +277,12 @@
 [TU154 INFO]: [LUA]: loading	cockpit_lights
 [TU154 INFO]: [LUA]: loading	ext_lights
 [TU154 WARN]: [LUA]: "sim/cockpit2/switches/landing_lights_switch": Can't cast float array to int
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:408 in function <globalPropertyi>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:408 in function <globalPropertyi>
 [TU154 WARN]: [STACK]:| .../data/modules/Custom Module/lights_system/ext_lights.lua:94 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <ext_lights>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <ext_lights>
 [TU154 WARN]: [STACK]:| ...ta/modules/Custom Module/lights_system/lights_system.lua:8 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <lights_system>
-[TU154 WARN]: [STACK]:| ...raft/Tu154_Felis_open/plugins/SASL/data/modules/main.lua:135 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <lights_system>
+[TU154 WARN]: [STACK]:| .../Aircraft/Tu-154-open/plugins/sasl/data/modules/main.lua:135 in function <f>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	light_fails
 [TU154 INFO]: [LUA]: loading	apu_system
@@ -291,11 +291,11 @@
 [TU154 INFO]: [LUA]: loading	apu_panel
 [TU154 DEBUG]: [LUA]: "sim/cockpit2/electrical/APU_N1_percent": Casting float to int
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/aircraft/overflow/acf_has_APU_switch> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
-[TU154 WARN]: [STACK]:| ...SASL/data/modules/Custom Module/apu_system/apu_panel.lua:73 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
-[TU154 WARN]: [STACK]:| ...ASL/data/modules/Custom Module/apu_system/apu_system.lua:6 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:390 in function <globalPropertyi>
+[TU154 WARN]: [STACK]:| ...sasl/data/modules/Custom Module/apu_system/apu_panel.lua:73 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <apu_panel>
+[TU154 WARN]: [STACK]:| ...asl/data/modules/Custom Module/apu_system/apu_system.lua:6 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <apu_system>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: including	smooth_light.lua
 [TU154 INFO]: [LUA]: loading	asu
@@ -325,11 +325,11 @@
 [TU154 INFO]: [LUA]: loading	kskv_cond
 [TU154 INFO]: [LUA]: loading	kskv_sard
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/aircraft/view/acf_has_press_controls> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
-[TU154 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/kskv/kskv_sard.lua:61 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <kskv_sard>
-[TU154 WARN]: [STACK]:| ...en/plugins/SASL/data/modules/Custom Module/kskv/kskv.lua:7 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <kskv>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:297 in function <globalPropertyf>
+[TU154 WARN]: [STACK]:| ...ugins/sasl/data/modules/Custom Module/kskv/kskv_sard.lua:61 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <kskv_sard>
+[TU154 WARN]: [STACK]:| ...en/plugins/sasl/data/modules/Custom Module/kskv/kskv.lua:7 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <kskv>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	kskv_fails
 [TU154 INFO]: [LUA]: loading	start_system
@@ -343,13 +343,6 @@
 [TU154 INFO]: [LUA]: loading	trimmers
 [TU154 INFO]: [LUA]: loading	flaps
 [TU154 INFO]: [LUA]: loading	nosewheel
-[TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <bp/connected> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
-[TU154 WARN]: [STACK]:| ...s/SASL/data/modules/Custom Module/controls/nosewheel.lua:22 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <nosewheel>
-[TU154 WARN]: [STACK]:| ...ns/SASL/data/modules/Custom Module/controls/controls.lua:8 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <controls>
-[TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	landing_gears
 [TU154 INFO]: [LUA]: loading	control_fails
 [TU154 INFO]: [LUA]: loading	fire_system
@@ -364,49 +357,39 @@
 [TU154 INFO]: [LUA]: loading	msrp
 [TU154 INFO]: [LUA]: loading	msrp_panel
 [TU154 INFO]: [LUA]: including	smooth_light.lua
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/14_03_23_000.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/14_03_23_001.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/14_03_23_002.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/14_03_23_003.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
-[TU154 INFO]: [LUA]: "msrp_panel"	found Black Box file with same name - C:\Program Files (x86)/Steam/steamapps/common/X-Plane 12/Aircraft/Tu154_Felis_open/black_box/14_03_23_004.bbox
-[TU154 INFO]: [LUA]: "msrp_panel"	changing route number
 [TU154 INFO]: [LUA]: loading	msrp_logic
 [TU154 INFO]: [LUA]: loading	brake_system
 [TU154 INFO]: [LUA]: loading	sounds
 [TU154 INFO]: [LUA]: loading	cabin_sounds
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <tu154ce/sound/long_horn> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:586 in function <globalPropertyia>
-[TU154 WARN]: [STACK]:| .../SASL/data/modules/Custom Module/sounds/cabin_sounds.lua:103 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <cabin_sounds>
-[TU154 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/sounds/sounds.lua:5 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <sounds>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:586 in function <globalPropertyia>
+[TU154 WARN]: [STACK]:| .../sasl/data/modules/Custom Module/sounds/cabin_sounds.lua:103 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <cabin_sounds>
+[TU154 WARN]: [STACK]:| ...lugins/sasl/data/modules/Custom Module/sounds/sounds.lua:5 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <sounds>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <tu154ce/sound/short_horn> not found
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:586 in function <globalPropertyia>
-[TU154 WARN]: [STACK]:| .../SASL/data/modules/Custom Module/sounds/cabin_sounds.lua:104 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <cabin_sounds>
-[TU154 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/sounds/sounds.lua:5 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <sounds>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:586 in function <globalPropertyia>
+[TU154 WARN]: [STACK]:| .../sasl/data/modules/Custom Module/sounds/cabin_sounds.lua:104 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <cabin_sounds>
+[TU154 WARN]: [STACK]:| ...lugins/sasl/data/modules/Custom Module/sounds/sounds.lua:5 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <sounds>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [LUA]: "tu154ce/sound/flaps": Can't cast integer to int array
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:608 in function <globalPropertyia>
-[TU154 WARN]: [STACK]:| .../SASL/data/modules/Custom Module/sounds/cabin_sounds.lua:110 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <cabin_sounds>
-[TU154 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/sounds/sounds.lua:5 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <sounds>
-[TU154 WARN]: [STACK]:| ...raft/Tu154_Felis_open/plugins/SASL/data/modules/main.lua:148 in function <f>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:608 in function <globalPropertyia>
+[TU154 WARN]: [STACK]:| .../sasl/data/modules/Custom Module/sounds/cabin_sounds.lua:110 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <cabin_sounds>
+[TU154 WARN]: [STACK]:| ...lugins/sasl/data/modules/Custom Module/sounds/sounds.lua:5 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <sounds>
+[TU154 WARN]: [STACK]:| .../Aircraft/Tu-154-open/plugins/sasl/data/modules/main.lua:148 in function <f>
 [TU154 WARN]: [STACK]:| ...
 [TU154 WARN]: [LUA]: "tu154ce/sound/srd": Can't cast integer to int array
-[TU154 WARN]: [STACK]:| ...154_Felis_open/plugins/SASL/data/init/initProperties.lua:608 in function <globalPropertyia>
-[TU154 WARN]: [STACK]:| .../SASL/data/modules/Custom Module/sounds/cabin_sounds.lua:111 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <cabin_sounds>
-[TU154 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/sounds/sounds.lua:5 in function <f>
-[TU154 WARN]: [STACK]:| ...aft/Tu154_Felis_open/plugins/SASL/data/init/initMain.lua:260 in function <sounds>
-[TU154 WARN]: [STACK]:| ...raft/Tu154_Felis_open/plugins/SASL/data/modules/main.lua:148 in function <f>
+[TU154 WARN]: [STACK]:| ...ft/Tu-154-open/plugins/sasl/data/init/initProperties.lua:608 in function <globalPropertyia>
+[TU154 WARN]: [STACK]:| .../sasl/data/modules/Custom Module/sounds/cabin_sounds.lua:111 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <cabin_sounds>
+[TU154 WARN]: [STACK]:| ...lugins/sasl/data/modules/Custom Module/sounds/sounds.lua:5 in function <f>
+[TU154 WARN]: [STACK]:| ...Aircraft/Tu-154-open/plugins/sasl/data/init/initMain.lua:260 in function <sounds>
+[TU154 WARN]: [STACK]:| .../Aircraft/Tu-154-open/plugins/sasl/data/modules/main.lua:148 in function <f>
 [TU154 WARN]: [STACK]:| ...
 [TU154 INFO]: [LUA]: loading	engines_sound
 [TU154 INFO]: [LUA]: loading	crew_voices
@@ -434,7 +417,6 @@
 [TU154 INFO]: [LUA]: loading	absu_panel_2d
 [TU154 INFO]: [LUA]: loading	switch_lit
 [TU154 INFO]: [LUA]: loading	free_texture_lit
-[TU154 INFO]: [LUA]: loading	tape_lit
 [TU154 INFO]: [LUA]: loading	popupResizeButton
 [TU154 INFO]: [LUA]: loading	mouseFocusedZone
 [TU154 INFO]: [LUA]: loading	interactive
@@ -451,6 +433,77 @@
 [TU154 INFO]: [LUA]: loading	smooth_anim
 [TU154 INFO]: Module loaded
 [TU154 INFO]: [LUA]: "crew_voices"	PREPARE
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	75	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	50	 digitWidth=	25	 y=	0.4285714285716	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	25	 digitWidth=	25	 y=	0.6428571428574	 digitHeight=	0.0714285714286
+[TU154 INFO]: [LUA]: pos=	0	 digitWidth=	25	 y=	0.714285714286	 digitHeight=	0.0714285714286
 [TU154 INFO]: [LUA]: "save_state"	reading last state: OK
 [TU154 INFO]: Disabling...
-[TU154 INFO]: SASL plugin stopped...
