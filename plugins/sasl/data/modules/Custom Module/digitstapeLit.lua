@@ -44,7 +44,7 @@ function draw(self)
     local pos = 100 - digitWidth
     local digitHeight = 0.0714285714286
     local img = get(image)
-    local overlayImg = get(overlayImage)
+    local overlayImg = get(overlayImage)   
 
     if 0 < frac then
         local y = (12 + 1) * digitHeight
@@ -64,7 +64,9 @@ function draw(self)
             prevDigit = digit
             v = math.floor(v / 10)
             local y = (10 - digit + 1) * digitHeight
-            drawTexturePart(img, pos, 0, digitWidth, 100, 0, y, 1, digitHeight, 1, 1, 1) 
+            sasl.setLogLevel(LOG_INFO)
+            sasl.logInfo("pos=" ,pos," digitWidth=",digitWidth," y=",y," digitHeight=",digitHeight)
+            sasl.gl.drawTexturePart(img, pos, 0, digitWidth, 100, 0, y, 1, digitHeight)            
             pos = pos - digitWidth
             if frac == i then
                 pos = pos - digitWidth

@@ -1,5 +1,8 @@
 -- this is NVU panel
 size = {636, 786}
+size_nvu_tex_png = {1001,784}
+size_overhead_tex_png = {2048,1024}
+size_digits_png = {64,1024}
 
 defineProperty("hide_eng_objects", globalPropertyi("tu154ce/lang/hide_eng_objects")) -- спрятать английские объекты кабины. 1 = RUS
 defineProperty("show_nvu_panel",globalPropertyi("tu154ce/panels/show_nvu_panel")) -- показать панель НВУ
@@ -86,50 +89,37 @@ defineProperty("diss_wind_spd_10", globalPropertyf("tu154ce/gauges/misc/diss_win
 defineProperty("diss_wind_spd_100", globalPropertyf("tu154ce/gauges/misc/diss_wind_spd_100")) -- барабанчик единиц угла
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 -- images
-defineProperty("bg_img", loadImage("nvu_tex.png", 0, 0, 636, 786))
-defineProperty("bg_img_RUS", loadImage("nvu_tex_RUS.png", 0, 0, 636, 786))
+defineProperty("bg_img", loadImage("nvu_tex.png", 0, 0, 636, 784))
+defineProperty("bg_img_RUS", loadImage("nvu_tex_RUS.png", 0, 0, 636, 784))
 
-defineProperty("small_lamp", loadImage("overhead_tex.png", 1825, 299, 19, 19))
-defineProperty("sw_dn_img", loadImage("overhead_tex.png", 1831, 15, 39, 100))
-defineProperty("sw_up_img", loadImage("overhead_tex.png", 1871, 12, 39, 100))
-defineProperty("sw_ctr_img", loadImage("overhead_tex.png", 1916, 42, 36, 36))
+defineProperty("small_lamp", loadImage("overhead_tex.png", 1825, size_overhead_tex_png[2]-299, 19, 19))
+defineProperty("sw_dn_img", loadImage("overhead_tex.png", 1831, size_overhead_tex_png[2]-115, 39, 100))
+defineProperty("sw_up_img", loadImage("overhead_tex.png", 1871, size_overhead_tex_png[2]-115, 39, 100))
+defineProperty("sw_ctr_img", loadImage("overhead_tex.png", 1916, size_overhead_tex_png[2]-115, 36, 36))
 
-defineProperty("big_scale", loadImage("nvu_tex.png", 644, 5, 176, 176))
-defineProperty("small_scale", loadImage("nvu_tex.png", 836, 42, 102, 102))
-defineProperty("handle_img", loadImage("nvu_tex.png", 955, 68, 45, 45))
-defineProperty("switch_img", loadImage("nvu_tex.png", 648, 209, 42, 70))
+defineProperty("big_scale", loadImage("nvu_tex.png", 644, size_nvu_tex_png[2]-180, 176, 176))
+defineProperty("small_scale", loadImage("nvu_tex.png", 836, size_nvu_tex_png[2]-145, 102, 102))
+defineProperty("handle_img", loadImage("nvu_tex.png", 955, size_nvu_tex_png[2]-111, 45, 45))
+defineProperty("switch_img", loadImage("nvu_tex.png", 648, size_nvu_tex_png[2]-279, 42, 70))
 
-defineProperty("white_digits", loadImage("white_digits.png", 12, 0, 40, 784))
-defineProperty("white_digits_scale", loadImage("white_digits_scale.png", 12, 0, 40, 784))
-defineProperty("yellow_digits", loadImage("yellow_digits.png", 12, 0, 40, 784))
+defineProperty("white_digits", loadImage("white_digits.png", 12, size_digits_png[2]-0, 40, 784))
+defineProperty("white_digits_scale", loadImage("white_digits_scale.png", 12, size_digits_png[2]-0, 40, 784))
+defineProperty("yellow_digits", loadImage("yellow_digits.png", 12, size_digits_png[2]-0, 40, 784))
 
 
-defineProperty("sign_plane", loadImage("nvu_tex.png", 741, 216, 88, 18))
-defineProperty("sign_point", loadImage("nvu_tex.png", 741, 243, 88, 18))
-defineProperty("sign_beacon", loadImage("nvu_tex.png", 741, 271, 88, 18))
+defineProperty("sign_plane", loadImage("nvu_tex.png", 741, size_nvu_tex_png[2]-232, 88, 18))
+defineProperty("sign_point", loadImage("nvu_tex.png", 741, size_nvu_tex_png[2]-260, 88, 18))
+defineProperty("sign_beacon", loadImage("nvu_tex.png", 741, size_nvu_tex_png[2]-288, 88, 18))
 
-defineProperty("sign_plane_RUS", loadImage("nvu_tex_RUS.png", 741, 216, 88, 18))
-defineProperty("sign_point_RUS", loadImage("nvu_tex_RUS.png", 741, 243, 88, 18))
-defineProperty("sign_beacon_RUS", loadImage("nvu_tex_RUS.png", 741, 271, 88, 18))
+defineProperty("sign_plane_RUS", loadImage("nvu_tex_RUS.png", 741, size_nvu_tex_png[2]-216, 88, 18))
+defineProperty("sign_point_RUS", loadImage("nvu_tex_RUS.png", 741, size_nvu_tex_png[2]-243, 88, 18))
+defineProperty("sign_beacon_RUS", loadImage("nvu_tex_RUS.png", 741, size_nvu_tex_png[2]-271, 88, 18))
 
-defineProperty("sign_I", loadImage("nvu_tex.png", 741, 297, 26, 31))
-defineProperty("sign_II", loadImage("nvu_tex.png", 777, 297, 26, 31))
+defineProperty("sign_I", loadImage("nvu_tex.png", 741, size_nvu_tex_png[2]-328, 26, 31))
+defineProperty("sign_II", loadImage("nvu_tex.png", 777, size_nvu_tex_png[2]-328, 26, 31))
 
-defineProperty("black_plank", loadImage("nvu_tex.png", 850, 216, 60, 30))
+defineProperty("black_plank", loadImage("nvu_tex.png", 850, size_nvu_tex_png[2]-246, 60, 30))
 
 
 local RUS = true
@@ -321,7 +311,7 @@ components = {
         value = function()
            return (get(zpu1) * 10 % 10)
         end,
-    };	
+    };
 	
 	
 	digitstapeLit {
@@ -923,14 +913,6 @@ components = {
 		end,
 	},	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 	---------------------------
 	-- background
 	textureLit {
@@ -966,7 +948,7 @@ components = {
 	
 	clickable {
 		position = {512, 598+80, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = math.ceil(get(map_angle) * 2)/2 - 0.5
 			if a < 0 then a = a + 360 end
 			set(map_angle, a)
@@ -976,7 +958,7 @@ components = {
 	
 	clickable {
 		position = {512+30, 598+80, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = math.floor(get(map_angle) * 2)/2 + 0.5
 			if a > 360 then a = a - 360 end
 			set(map_angle, a)
@@ -986,7 +968,7 @@ components = {
 	
 	clickable {
 		position = {512, 598, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = math.ceil(get(map_angle)) - 5
 			if a < 0 then a = a + 360 end
 			set(map_angle, a)
@@ -996,7 +978,7 @@ components = {
 	
 	clickable {
 		position = {512+30, 598, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = math.floor(get(map_angle)) + 5
 			if a > 360 then a = a - 360 end
 			set(map_angle, a)
@@ -1034,7 +1016,7 @@ components = {
 	
 	clickable {
 		position = {228, 24, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(obs_1) - 1
 			if a < 1 then a = a + 360 end
 			set(obs_1, a)
@@ -1044,7 +1026,7 @@ components = {
 	
 	clickable {
 		position = {228+30, 24, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(obs_1) + 1
 			if a > 360 then a = a - 360 end
 			set(obs_1, a)
@@ -1097,7 +1079,7 @@ components = {
 	
 	clickable {
 		position = {228+286, 24, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(obs_2) - 1
 			if a < 1 then a = a + 360 end
 			set(obs_2, a)
@@ -1107,7 +1089,7 @@ components = {
 	
 	clickable {
 		position = {228+30+286, 24, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(obs_2) + 1
 			if a > 360 then a = a - 360 end
 			set(obs_2, a)
@@ -1149,7 +1131,7 @@ components = {
 	
 	clickable {
 		position = {135, 650, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(wind_set) - 0.5
 			if a < -99 then a = -99 end
 			set(wind_set, a)
@@ -1158,7 +1140,7 @@ components = {
 	},	
 	clickable {
 		position = {135+30, 650, 30, 50},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(wind_set) + 0.5
 			if a > 99 then a = 99 end
 			set(wind_set, a)
@@ -1169,7 +1151,7 @@ components = {
 	-- buttons
 	clickable {
 		position = {7, 657, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(wind_course_left, 1)
 			return true
 		end,
@@ -1180,14 +1162,14 @@ components = {
 	},	
 	clickable {
 		position = {7+43, 657, 38, 24},
-		onMouseClick = function()
+		onMouseDown = function()
 			set(wind_course_ctr, 1 - get(wind_course_ctr))
 			return true
 		end,
 	},	
 	clickable {
 		position = {7+86, 657, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(wind_course_right, 1)
 			return true
 		end,
@@ -1199,7 +1181,7 @@ components = {
 	
 	clickable {
 		position = {323, 657, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(wind_spd_left, 1)
 			return true
 		end,
@@ -1210,14 +1192,14 @@ components = {
 	},	
 	clickable {
 		position = {323+43, 657, 38, 24},
-		onMouseClick = function()
+		onMouseDown = function()
 			set(wind_spd_ctr, 1 - get(wind_spd_ctr))
 			return true
 		end,
 	},	
 	clickable {
 		position = {323+86, 657, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(wind_spd_right, 1)
 			return true
 		end,
@@ -1240,7 +1222,7 @@ components = {
 		state = function()
 			return get(nvu_power_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(nvu_power_on, 1 - get(nvu_power_on))
 			return true
 		end,
@@ -1254,7 +1236,7 @@ components = {
 		state = function()
 			return get(nvu_calc_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(nvu_calc_on, 1 - get(nvu_calc_on))
 			return true
 		end,
@@ -1268,7 +1250,7 @@ components = {
 		state = function()
 			return get(nvu_corr_on) == 1
 		end,
-		onMouseClick = function()
+		onMouseDown = function()
 			set(nvu_corr_on, 1 - get(nvu_corr_on))
 			return true
 		end,
@@ -1281,7 +1263,7 @@ components = {
 	-- ZPU 1
 	clickable {
 		position = {427, 467, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(zpu_1_left_btn, 1)
 			return true
 		end,
@@ -1292,14 +1274,14 @@ components = {
 	},	
 	clickable {
 		position = {427+49, 467, 38, 24},
-		onMouseClick = function()
+		onMouseDown = function()
 			set(zpu_1_ctr_btn, 1 - get(zpu_1_ctr_btn))
 			return true
 		end,
 	},	
 	clickable {
 		position = {427+97, 467, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(zpu_1_right_btn, 1)
 			return true
 		end,
@@ -1311,7 +1293,7 @@ components = {
 	-- ZPU 2
 	clickable {
 		position = {427, 373, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(zpu_2_left_btn, 1)
 			return true
 		end,
@@ -1322,14 +1304,14 @@ components = {
 	},	
 	clickable {
 		position = {427+49, 373, 38, 24},
-		onMouseClick = function()
+		onMouseDown = function()
 			set(zpu_2_ctr_btn, 1 - get(zpu_2_ctr_btn))
 			return true
 		end,
 	},	
 	clickable {
 		position = {427+97, 373, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(zpu_2_right_btn, 1)
 			return true
 		end,
@@ -1342,7 +1324,7 @@ components = {
 	-- NVU
 	clickable {
 		position = {428, 165, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(nvu_left_btn, 1)
 			return true
 		end,
@@ -1353,14 +1335,14 @@ components = {
 	},	
 	clickable {
 		position = {428+49, 165, 38, 24},
-		onMouseClick = function()
+		onMouseDown = function()
 			set(nvu_ctr_btn, 1 - get(nvu_ctr_btn))
 			return true
 		end,
 	},	
 	clickable {
 		position = {428+97, 165, 38, 24},
-		onMouseDown = function()
+		onMouseHold = function()
 			set(nvu_right_btn, 1)
 			return true
 		end,
@@ -1393,7 +1375,7 @@ components = {
 	-- nvu_param_sel
 	clickable {
 		position = {386, 248, 40, 75},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(nvu_param_sel) - 1
 			if a < -4 then a = -4 end
 			set(nvu_param_sel, a)
@@ -1402,7 +1384,7 @@ components = {
 	},	
 	clickable {
 		position = {386+40, 248, 40, 75},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(nvu_param_sel) + 1
 			if a > 4 then a = 4 end
 			set(nvu_param_sel, a)
@@ -1413,7 +1395,7 @@ components = {
 	-- nvu_turn_sel
 	clickable {
 		position = {525, 250, 40, 75},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(nvu_turn_sel) - 1
 			if a < -1 then a = -1 end
 			set(nvu_turn_sel, a)
@@ -1422,7 +1404,7 @@ components = {
 	},	
 	clickable {
 		position = {525+40, 250, 40, 75},
-		onMouseClick = function()
+		onMouseDown = function()
 			local a = get(nvu_turn_sel) + 1
 			if a > 5 then a = 5 end
 			set(nvu_turn_sel, a)
@@ -1542,9 +1524,6 @@ components = {
 		end,
 	},	
 	
-	
-	
-	
 	textureLit {
 		position = {402, 496, 26, 31},
 		image = get(sign_I),
@@ -1566,7 +1545,7 @@ components = {
 	-- close panel
 	clickable {
 		position = {size[1]-20, size[2]-20, 20, 20},
-		onMouseClick = function()
+		onMouseDown = function()
 			set(show_nvu_panel, 0)
 			return true
 		end,

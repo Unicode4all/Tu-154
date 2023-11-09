@@ -1,7 +1,7 @@
 I
 10 Version
-_hobs_time 52215.614848
-_livery_req 3
+_hobs_time 143294.961699
+_livery_req 0
 _track_up_0 0
 _data_fields_0 0
 _ils_cdi_auto_0 1
@@ -25,10 +25,10 @@ _wind_display_2 0
 _inset_map_2 1
 _dg_lat_adjust_0 0.000000
 _dg_lat_adjust_1 0.000000
-_dg_lat_adjust_2 60.720013
-_dg_lat_adjust_3 60.720013
-_dg_lat_adjust_4 60.720013
-_dg_lat_adjust_5 60.720013
+_dg_lat_adjust_2 47.431850
+_dg_lat_adjust_3 47.431850
+_dg_lat_adjust_4 47.431850
+_dg_lat_adjust_5 47.431850
 atc/_acf_make_ TUPOLEV
 atc/_acf_model_ Tu-154
 atc/_acf_tailnumber_ 85748
