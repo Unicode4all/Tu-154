@@ -170,7 +170,7 @@ local function lamps()
 	if test_btn ~= lamp_test_srd_last then  end
 	lamp_test_srd_last = test_btn
 	
-	local day_night = 1 - get(day_night_set) * 0.8
+	local day_night = 1 - get(day_night_set) * 0.9
 	
 	test_btn = test_btn * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
 	
@@ -294,7 +294,7 @@ local function rotary_sw()
 	local change = cockpit_temp_set_sw + cabin1_temp_set_sw + cabin2_temp_set_sw + left_sys_temp_set_sw + right_sys_temp_set_sw + sys_temp_select_sw
 	change = change - cockpit_temp_set_last - cabin1_temp_set_last - cabin2_temp_set_last - left_sys_temp_set_last - right_sys_temp_set_last - sys_temp_select_last
 	
-	if change ~= 0 then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
+	if change ~= 0 then --[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]] end
 	
 	
 	cockpit_temp_set_last = cockpit_temp_set_sw

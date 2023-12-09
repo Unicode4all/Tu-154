@@ -53,8 +53,8 @@ local flap2_cl_tbl = {
 
 
 
--- XP 11
-local XP11 = get(xp_version) > 11000 and get(xp_version) < 12000
+-- XP 11, 12
+local XP11 = get(xp_version) > 11000
 
 if XP11 then
 

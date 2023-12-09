@@ -225,7 +225,7 @@ local function voltmetr115()
 	if v115_sw ~= v115_sw_last or phaseSel_115 ~= phaseSel_115_last then
 		volt115_timer = 0
 		freq115_timer = 0
-		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
+		--[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]]
 	end
 	
 	v115_sw_last = v115_sw
@@ -310,7 +310,7 @@ local function ampermeter115()
 	-- play sound and reset timers
 	if ampSel_115 ~= ampSel_115_last or ampPhaseSel_115 ~= ampPhaseSel_115_last then
 		amp115_timer = 0
-		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
+		--[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]]
 	end	
 	ampSel_115_last = ampSel_115
 	ampPhaseSel_115_last = ampPhaseSel_115
@@ -366,7 +366,7 @@ local function voltmeter36()
 	-- play sound and reset timers
 	if volSel_36 ~= volSel_36_last then
 		volt36_timer = 0
-		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
+		--[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]]
 	end	
 	
 	local volt36_angle = -120
@@ -443,15 +443,15 @@ local function bus27_gaug()
 	-- play sounds and reset timers
 	if volSel_27 ~= volSel_27_last then
 		volt27_timer = 0
-		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
+		--[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]]
 	end
 	if ampSel_27_1 ~= ampSel_27_1_last then
 		amp27_1_timer = 0
-		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
+		--[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]]
 	end
 	if ampSel_27_2 ~= ampSel_27_2_last then
 		amp27_2_timer = 0
-		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
+		--[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]]
 	end
 	
 	volSel_27_last = volSel_27

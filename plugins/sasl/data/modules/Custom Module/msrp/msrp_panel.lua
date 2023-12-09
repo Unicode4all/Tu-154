@@ -181,7 +181,7 @@ local function check_controls()
 	changes = changes - msrp_date_ten_last - msrp_date_one_last - msrp_month_ten_last - msrp_month_one_last - msrp_year_ten_last - msrp_year_one_last
 	changes = changes - msrp_route_hun_last - msrp_route_ten_last - msrp_route_one_last
 	
-	if changes ~= 0 then if get(xplane_version) < 120000 then playSample(rot_sound, false) end end
+	if changes ~= 0 then if sasl.getXPVersion() < 12 then playSample(rot_sound, false) end end
 	
 	
 	local msrp_mlp_1_sw = get(msrp_mlp_1)

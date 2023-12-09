@@ -197,7 +197,7 @@ local function swichers_check()
 	
 	local changes_rot = fire_sensor_sel_sw + fire_place_sel_sw - fire_sensor_sel_last - fire_place_sel_last
 	
-	if changes_rot ~= 0 then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end -- play sound
+	if changes_rot ~= 0 then --[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]] end -- play sound
 	
 	local changes_sw = fire_main_switch_sw + fire_buzzer_sw - fire_main_switch_last - fire_buzzer_last
 	
@@ -250,7 +250,7 @@ local function lamps()
 	local test_btn_frnt = get(lamp_test_front) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)-- * power_sw
 	
 	
-	local day_night = 1 - get(day_night_set) * 0.8
+	local day_night = 1 - get(day_night_set) * 0.9
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0)
 	
 	local smoke_test_but = get(smoke_test)

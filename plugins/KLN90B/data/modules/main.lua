@@ -1,7 +1,8 @@
 print("This is KLN90B for Tu-154M, v1.0.0")
-size = { 4096, 4096 }
-print("Lua version is", _VERSION)
 
+
+sasl.setLogLevel(LOG_DEBUG)
+size = { 4096, 4096 }
 
 sasl.options.set3DRendering(true)
 sasl.options.setAircraftPanelRendering(true)
@@ -13,7 +14,8 @@ fixedPanelWidth = 4096
 fixedPanelHeight = 4096
 
 math.randomseed(os.time()) -- randomise random :)
-
+globalPropertyf("tu154ce/elec/bus27_volt_left")
+globalPropertyi("tu154ce/switchers/ovhd/kln_on")
 createGlobalPropertyi("tu154ce/xap/MD41/test", 0);
 createGlobalPropertyi("tu154ce/xap/MD41/OBSreq", 0);
 createGlobalPropertyi("tu154ce/xap/MD41/visible", 1);
@@ -28,6 +30,12 @@ createGlobalPropertyi("tu154ce/xap/KLN90pop/visible", 0);
 
 createGlobalPropertyi("tu154ce/xap/KLN90pop/x", 1);
 createGlobalPropertyi("tu154ce/xap/KLN90pop/y", 1);
+
+BodyPull = createGlobalPropertyf("tu154ce/anim/kln/body_pull", 0);
+CartridgePresent = createGlobalPropertyf("tu154ce/anim/kln/cartridge_present", 1);
+KeyTurn = createGlobalPropertyf("tu154ce/anim/kln/key_turn", 0);
+KeyShow = createGlobalPropertyf("tu154ce/anim/kln/key_show", 0);
+CartridgePull = createGlobalPropertyf("tu154ce/anim/kln/cartridge_pull", 0);
 
 defineProperty("MD41visible", globalPropertyi("tu154ce/xap/MD41/visible"))
 defineProperty("KLN90visible", globalPropertyi("tu154ce/xap/KLN90/visible"))
@@ -51,6 +59,14 @@ local popout_img = sasl.gl.loadImage("floating_window@1.5x.png", 27, 0, 28, 28)
 local close_img = sasl.gl.loadImage("floating_window@1.5x.png", 0, 28, 26, 26)
 local hide_ui_kln = true
 local hide_ui_md = true
+
+current_cartridge = createGlobalPropertyi("tu154ce/kln90/current_cartridge", 1)
+target_cartridge = createGlobalPropertyi("tu154ce/kln90/target_cartridge", 1)
+defineProperty("update_cartridge", 0)
+defineProperty("queue_update", 0)
+
+cartridge_effective_by = ""
+cartridge_expires = ""
 draw3d = true
 roll_rate = 8 --autopilot constant in degree per second. Have to find a way to extract it from acf file.
 if draw3d == true then
@@ -60,8 +76,8 @@ else
 end
 
 
-createGlobalPropertyf("tu154ce/elec/bus27_volt_left", 27)
-createGlobalPropertyi("tu154ce/switchers/ovhd/kln_on", 0)
+
+
 createGlobalPropertyf("tu154ce/KLN90/power_draw", 0.0)  
 createGlobalPropertyf("tu154ce/kln90/kln_course", 0) -- курс ЛЗП от КЛН
 createGlobalPropertyf("tu154ce/kln90/kln_dev", 0) -- отклонение от ЛЗП, мили
@@ -209,9 +225,12 @@ KLNpopup_panel = subpanel {
 components = {
 
 	KLN90_panel {
-		position = { 1295, 582, 480, 227 }
+		position = { 1446, 650, 210, 101 }
 
 	},
+	cartridge {
+		position = {2281,1236, 566,212}
+	}
 
 }
 
@@ -230,7 +249,7 @@ KLN90B = contextWindow {
 	components   = {
 		KLN90_2D {
 			position = { 0, 0, 898, 296 }
-		}
+		},
 	},
 	decoration   = {
 		headerHeight = 0,

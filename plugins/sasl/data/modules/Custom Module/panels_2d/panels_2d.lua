@@ -33,7 +33,12 @@ defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have 
 
 defineProperty("control_thro_other", globalPropertyf("tu154ce/SC/control_thro_other")) -- другой человек упраляет РУД-ами
 
+addSearchPath(sasl.getXPlanePath() .. "/Resources/bitmaps/interface")
+addSearchPath(sasl.getXPlanePath() .. "/Resources/bitmaps/interface11")
 
+
+popout_img = sasl.gl.loadImage("floating_window@1.5x.png", 27, 0, 28, 28)
+close_img = sasl.gl.loadImage("floating_window@1.5x.png", 0, 28, 26, 26)
 
 
 local coef = (get(window_height) / 1024) * 0.8
@@ -70,15 +75,45 @@ palette = contextWindow {
 
 
 
-
+local hide_window_controls_payload = true
 payload_panel = contextWindow {
 	position = { 50, 50, 1024 * coef, 683 * coef };
 	noBackground = true;
-	noDecore = true;
-	noClose = true;
+	noDecore = false;
+	noClose = false;
 	resizeProportional = true;
 	savePosition = true;
-	name = "payload_panel";	
+	customDecore = true,
+	name = "Load";	
+	decoration   = {
+		headerHeight = 0,
+		main = {
+			draw = function(w, h) -- draw  window  header...
+				if hide_window_controls_payload == false then
+					sasl.gl.drawTexture(popout_img, w - 20, h - 20, 20, 20)
+					sasl.gl.drawTexture(close_img, 0, h - 20, 20, 20)
+				end
+			end,
+			onMouseMove = function(x, y, w, h)
+				if y > h - 20 and y < h and payload_panel:isPoppedOut() == false then
+					hide_window_controls_payload = false
+				else
+					hide_window_controls_payload = true
+				end
+			end,
+			onMouseDown = function(x, y, w, h, button)
+				if payload_panel:isPoppedOut() == false and button == MB_LEFT then
+					if y > h - 20 then
+						if x > w - 20 then
+							payload_panel:setMode(SASL_CW_MODE_POPOUT)
+						elseif x < 20 then
+							payload_panel:setIsVisible(false)
+						end
+					end
+				end
+			end,
+		}
+	};
 	components = {
 		load_panel {
 			position = { 0, 0, 1024 * coef, 683 * coef },
@@ -381,6 +416,7 @@ serv_menu = subpanel {
 		  
 			onMouseDown = function() 
 				set(show_load_panel, 1 - get(show_load_panel))
+				payload_panel:setIsVisible(not payload_panel:isVisible())
 				return true
 			end,
 		},
@@ -606,6 +642,104 @@ thro_button = subpanel {
 	};
 }
 
+local hide_window_controls_absu = false
+local hide_window_controls_ctr = false
+absu_panel = contextWindow {
+	name         = "ABSU",
+	-- 1482, 926, 434, 128
+	position     = { 50, 50, 1738, 512 },
+	minimumSize  = { 1738 / 4, 512 / 4 },
+	maximumSize  = { 1738 * 2, 512 * 2 },
+	noDecore     = false,
+	customDecore = true,
+	resizeMode   = SASL_CW_RESIZE_RIGHT_BOTTOM,
+	proportional = true,
+	visible      = true,
+	savePosition = true,
+	noBackground = true,
+	saveState    = true,
+	components   = {
+		absu_overlay {}
+	},
+	decoration   = {
+		headerHeight = 0,
+		main = {
+			draw = function(w, h) -- draw  window  header...
+				if hide_window_controls_absu == false then
+					sasl.gl.drawTexture(popout_img, w - 20, h - 20, 20, 20, {255,255,255,255})
+					sasl.gl.drawTexture(close_img, 0, h - 20, 20, 20, {255,255,255,255})
+				end
+			end,
+			onMouseMove = function(x, y, w, h)
+				if y > h - 20 and y < h and absu_panel:isPoppedOut() == false then
+					hide_window_controls_absu = false
+				else
+					hide_window_controls_absu = true
+				end
+			end,
+			onMouseDown = function(x, y, w, h, button)
+				if absu_panel:isPoppedOut() == false and button == MB_LEFT then
+					if y > h - 20 then
+						if x > w - 20 then
+							absu_panel:setMode(SASL_CW_MODE_POPOUT)
+						elseif x < 20 then
+							absu_panel:setIsVisible(false)
+						end
+					end
+				end
+			end,
+		}
+	}
+}
+
+controls_panel = contextWindow {
+	name         = "Controls",
+	-- 9,867,225,206
+	position     = { 50, 50, 616, 560 },
+	minimumSize  = { 616 / 4, 560 / 4 },
+	maximumSize  = { 616 * 2, 560 * 2 },
+	noDecore     = false,
+	customDecore = true,
+	resizeMode   = SASL_CW_RESIZE_RIGHT_BOTTOM,
+	proportional = true,
+	visible      = true,
+	noBackground = true,
+	savePosition = true,
+	saveState    = true,
+	components   = {
+		controls_overlay {}
+	},
+	decoration   = {
+		headerHeight = 0,
+		main = {
+			draw = function(w, h) -- draw  window  header...
+				if hide_window_controls_ctr == false then
+					sasl.gl.drawTexture(popout_img, w - 20, h - 20, 20, 20)
+					sasl.gl.drawTexture(close_img, 0, h - 20, 20, 20)
+				end
+			end,
+			onMouseMove = function(x, y, w, h)
+				if y > h - 20 and y < h and controls_panel:isPoppedOut() == false then
+					hide_window_controls_ctr = false
+				else
+					hide_window_controls_ctr = true
+				end
+			end,
+			onMouseDown = function(x, y, w, h, button)
+				if controls_panel:isPoppedOut() == false and button == MB_LEFT then
+					if y > h - 20 then
+						if x > w - 20 then
+							controls_panel:setMode(SASL_CW_MODE_POPOUT)
+						elseif x < 20 then
+							controls_panel:setIsVisible(false)
+						end
+					end
+				end
+			end,
+		}
+	}
+}
+
 
 
 function update()
@@ -625,9 +759,7 @@ function update()
 	serv_menu.visible = main_menu_ext and serv_ext and cursorOnEdge 
 	misc_menu.visible = main_menu_ext and misc_ext and cursorOnEdge
 	
-	
-	
-	payload_panel:setIsVisible(get(show_load_panel) == 1)
+	payload_panel:setIsVisible(payload_panel:isVisible())
 	absu_2d_panel.visible = get(show_absu_panel) == 1
 	ovhd_2d_panel.visible = get(show_ohvd_panel) == 1
 	nvu_2D_panel.visible = get(show_nvu_panel) == 1
@@ -645,6 +777,16 @@ function update()
 	
 	
 end
+
+debug_item = sasl.appendMenuItem(AIRCRAFT_MENU_ID, "Debug")
+debug_menu = sasl.createMenu("", AIRCRAFT_MENU_ID, debug_item)
+sasl.appendMenuItem(debug_menu, "Toggle controls overlay", function ()
+	controls_panel:setIsVisible(not controls_panel:isVisible())
+end)
+sasl.appendMenuItem(debug_menu, "Toggle absu overlay", function ()
+	absu_panel:setIsVisible(not absu_panel:isVisible())
+end)
+
 
 function onAvionicsDone()
 	savePopupsPositions()

@@ -130,9 +130,9 @@ window_windshield_temp = globalPropertyf("tu154ce/antiice/window_windshield_temp
 window_left_temp = globalPropertyf("tu154ce/antiice/window_left_temp")
 window_right_temp = globalPropertyf("tu154ce/antiice/window_right_temp")
 
-window_windshield_act = globalPropertyi("tu154ce/antiice/window_windshield_act")
-window_left_act = globalPropertyi("tu154ce/antiice/window_left_act")
-window_right_act = globalPropertyi("tu154ce/antiice/window_right_act")
+window_windshield_act = globalProperty("sim/cockpit2/ice/ice_window_heat_on_window[0]")
+window_left_act = globalProperty("sim/cockpit2/ice/ice_window_heat_on_window[1]")
+window_right_act = globalProperty("sim/cockpit2/ice/ice_window_heat_on_window[2]")
 xplane_version = globalPropertyi("sim/version/xplane_internal_version")
 
 local ice_reseted = false
@@ -177,7 +177,7 @@ function update()
 		-- reset ice ratio
 		if ice_ratio > 0.9 or ice_ratio < 0.1 then
 			ice_ratio = 0.5
-			set(window_ice, 0.5)
+			--(window_ice, 0.5)
 			ice_reseted = true
 		else
 			ice_reseted = false
@@ -230,7 +230,7 @@ function update()
 		local win_heat_sw_1 = get(window_heat_1)
 		local win_heat_sw_2 = get(window_heat_2)
 		local win_heat_sw_3 = get(window_heat_3)
-		if get(xplane_version) < 120000 then
+		if sasl.getXPVersion() < 12 then
 			-- set amount of ice on windows
 			local window_heat_spd_1 = 0
 			
@@ -311,25 +311,25 @@ function update()
 			end
 
 			if win_heat_sw_1 == 1 then 
-				set(window_windshield_temp, 10)
+				set(window_windshield_temp, 60)
 			elseif win_heat_sw_1 == -1 then
-				set(window_windshield_temp,20)
+				set(window_windshield_temp,30)
 			else
 				set(window_windshield_temp,0)
 			end
 
 			if win_heat_sw_2 == 1 then 
-				set(window_left_temp, 10)
+				set(window_left_temp, 60)
 			elseif win_heat_sw_2 == -1 then
-				set(window_left_temp,20)
+				set(window_left_temp,30)
 			else
 				set(window_left_temp,0)
 			end
 
 			if win_heat_sw_3 == 1 then 
-				set(window_right_temp, 10)
+				set(window_right_temp, 60)
 			elseif win_heat_sw_3 == -1 then
-				set(window_right_temp,20)
+				set(window_right_temp,30)
 			else
 				set(window_right_temp,0)
 			end

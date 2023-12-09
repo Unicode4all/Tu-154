@@ -73,13 +73,13 @@ local function controls()
 	local switchers = get(wing_light) + get(gear_fan) + get(galley_heat) + get(lavatory_heat) + get(water_meter) + get(water_compressor_1)
 	switchers = switchers + get(water_compressor_2) + get(tail_temp_signal) + get(tail_temp_heat)
 	
-	if switchers ~= switchers_last then if get(xplane_version) < 120000 then playSample(switch_sound, false) end end
+	if switchers ~= switchers_last then if sasl.getXPVersion() < 12 then playSample(switch_sound, false) end end
 	
 	switchers_last = switchers
 	
 	local buttons = get(tail_temp_signal_control_1) + get(tail_temp_signal_control_2) + get(lamp_test_eng_up_1) + get(lamp_test_eng_up_2)
 
-	if buttons ~= buttons_last then if get(xplane_version) < 120000 then playSample(btn_click, false) end end
+	if buttons ~= buttons_last then if sasl.getXPVersion() < 12 then playSample(btn_click, false) end end
 	
 	buttons_last = buttons
 

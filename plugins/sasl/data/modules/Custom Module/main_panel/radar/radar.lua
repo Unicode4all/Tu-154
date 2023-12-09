@@ -161,11 +161,11 @@ function update()
 	power_sw_last = power_switch
 	
 	mode = get(rls_mode)
-	if mode ~= mode_sw_last then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
+	if mode ~= mode_sw_last then --[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]] end
 	mode_sw_last = mode
 
 	range = get(map_range)
-	if range ~= range_last then if get(xplane_version) < 120000 then playSample(rotary_sound_pl, false) end end
+	if range ~= range_last then if sasl.getXPVersion() < 12 then playSample(rotary_sound_pl, false) end end
 	range_last = range
 
 

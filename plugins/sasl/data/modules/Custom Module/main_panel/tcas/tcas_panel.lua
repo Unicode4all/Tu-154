@@ -204,7 +204,7 @@ function update()
 	
 	-- sounds	
 	if tcas_rot_big_now - tcas_rot_big_last + tcas_rot_small_now - tcas_rot_small_last + tcas_mode_now - tcas_mode_last ~= 0 then
-		if get(xplane_version) < 120000 then playSample(rot_sound, false) end
+		if sasl.getXPVersion() < 12 then playSample(rot_sound, false) end
 	end
 	
 	
@@ -374,68 +374,68 @@ function update()
 	
 	-- traffic sound
 	if mode >= 3 and scale == 0 and traffic and traffic ~= traffic_last then
-		if get(xplane_version) < 120000 then playSample(traffic_snd, false) end
+		if sasl.getXPVersion() < 12 then playSample(traffic_snd, false) end
 	end
 	
 	-- clear of conflict
 	if mode == 4 and scale == 0 and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(clear_conflict, false) end
+		if sasl.getXPVersion() < 12 then playSample(clear_conflict, false) end
 		
-		if get(xplane_version) < 120000 then stopSample(traffic_snd) end
-		if get(xplane_version) < 120000 then stopSample(ajust_v_speed) end
-		if get(xplane_version) < 120000 then stopSample(climb) end
-		if get(xplane_version) < 120000 then stopSample(climb_now) end
-		if get(xplane_version) < 120000 then stopSample(descend) end
-		if get(xplane_version) < 120000 then stopSample(descend_now) end
-		if get(xplane_version) < 120000 then stopSample(increase_climb) end
-		if get(xplane_version) < 120000 then stopSample(increase_descend) end
-		if get(xplane_version) < 120000 then stopSample(maintain_v_speed) end
-		if get(xplane_version) < 120000 then stopSample(monitor_v_speed) end
+		if sasl.getXPVersion() < 12 then stopSample(traffic_snd) end
+		if sasl.getXPVersion() < 12 then stopSample(ajust_v_speed) end
+		if sasl.getXPVersion() < 12 then stopSample(climb) end
+		if sasl.getXPVersion() < 12 then stopSample(climb_now) end
+		if sasl.getXPVersion() < 12 then stopSample(descend) end
+		if sasl.getXPVersion() < 12 then stopSample(descend_now) end
+		if sasl.getXPVersion() < 12 then stopSample(increase_climb) end
+		if sasl.getXPVersion() < 12 then stopSample(increase_descend) end
+		if sasl.getXPVersion() < 12 then stopSample(maintain_v_speed) end
+		if sasl.getXPVersion() < 12 then stopSample(monitor_v_speed) end
 	end
 	
 	-- climb
 	if mode == 4 and scale == 1 and scale_last == 0 and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(climb, false) end
+		if sasl.getXPVersion() < 12 then playSample(climb, false) end
 	end
 	
 	-- climb now
 	if mode == 4 and scale == 1 and scale_last == 3 and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(climb_now, false) end
+		if sasl.getXPVersion() < 12 then playSample(climb_now, false) end
 	end
 	
 	-- descend
 	if mode == 4 and scale == 3 and scale_last == 0 and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(descend, false) end
+		if sasl.getXPVersion() < 12 then playSample(descend, false) end
 	end	
 	
 	-- descend now
 	if mode == 4 and scale == 3 and scale_last == 1 and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(descend_now, false) end
+		if sasl.getXPVersion() < 12 then playSample(descend_now, false) end
 	end
 	
 	-- increase climb
 	if mode == 4 and scale == 2 and our_vvi < 12 and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(increase_climb, false) end
+		if sasl.getXPVersion() < 12 then playSample(increase_climb, false) end
 	end	
 	
 	-- increase descend
 	if mode == 4 and scale == 4 and our_vvi > -12 and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(increase_descend, false) end
+		if sasl.getXPVersion() < 12 then playSample(increase_descend, false) end
 	end		
 	
 	-- adjust VS
 	if mode == 4 and ((scale == 1 and our_vvi > 12) or (scale == 3 and our_vvi < -12) or (scale == 7 and our_vvi > 0) or (scale == 9 and our_vvi < 0) or (scale == 6 and our_vvi > 10) or (scale == 8 and our_vvi < -10)) and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(ajust_v_speed, false) end
+		if sasl.getXPVersion() < 12 then playSample(ajust_v_speed, false) end
 	end		
 	
 	-- maintain VS
 	if mode == 4 and ((scale == 2 and our_vvi > 12) or (scale == 4 and our_vvi < -12)) and scale ~= scale_last then
-		if get(xplane_version) < 120000 then playSample(maintain_v_speed, false) end
+		if sasl.getXPVersion() < 12 then playSample(maintain_v_speed, false) end
 	end	
 	
 	-- test OK
 	if mode == 0 and text == 0 and text_last == 5 and text_last ~= text then
-		if get(xplane_version) < 120000 then playSample(tcas_test_passed, false) end
+		if sasl.getXPVersion() < 12 then playSample(tcas_test_passed, false) end
 	end	
 	
 	

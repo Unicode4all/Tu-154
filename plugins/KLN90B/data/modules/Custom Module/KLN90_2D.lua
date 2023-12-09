@@ -18,11 +18,11 @@ local lknobbtex = sasl.gl.loadImage("kln90b_2d.png", 30, 351, 111, 111)
 components = {
 
     textureLit3 {
-      position = {250, 60, 399, 230},
+      position = {250, 60, 799, 430},
       image = get(display),
       brt2 = function() return get(display_brughtness) end, 
-      x = 399,
-      y = 230,
+      x = 910,
+      y = 470,
     },  
 
     textureLit2 {

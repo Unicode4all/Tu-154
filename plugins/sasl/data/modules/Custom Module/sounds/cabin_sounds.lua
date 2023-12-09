@@ -137,14 +137,14 @@ local absu_last = get(roll_main_mode) + get(pitch_main_mode)
 local stu_last = get(stu_mode)
 
 local invert_counter = 0
-if get(xplane_version) < 120000 then playSample(inverters, true) end
+if sasl.getXPVersion() < 12 then playSample(inverters, true) end
 setSampleGain(inverters, 0)
 
 local short_siren_timer = 0
 local short_speaker_timer = 0
 local long_speaker_timer = 0
 
-if get(xplane_version) < 120000 then playSample(air_cond_noise, true) end
+if sasl.getXPVersion() < 12 then playSample(air_cond_noise, true) end
 setSampleGain(air_cond_noise, 0)
 
 
@@ -227,8 +227,8 @@ function update()
 	end
 
 	RV_counter = RV_counter - passed
-	if not isSamplePlaying(rv5_tone) and RV_counter > 0 then if get(xplane_version) < 120000 then playSample(rv5_tone, true) end end
-	if RV_counter <= 0 then if get(xplane_version) < 120000 then stopSample(rv5_tone) end end
+	if not isSamplePlaying(rv5_tone) and RV_counter > 0 then if sasl.getXPVersion() < 12 then playSample(rv5_tone, true) end end
+	if RV_counter <= 0 then if sasl.getXPVersion() < 12 then stopSample(rv5_tone) end end
 
 	setSampleGain(rv5_tone, 1000 * warn_vl)
 
@@ -237,13 +237,13 @@ function update()
 	-------------------
 
 	if (get(main_gear_flaps) == 1 or get(fire_siren) == 1) and power and get(srd_buzzer) == 1 and external == 0 and get(main_alarm_fail) == 0 then -- continous buzz
-		if not isSamplePlaying(long_sirena) and get(xplane_version) < 120000 then if get(xplane_version) < 120000 then playSample(long_sirena, true) end end
+		if not isSamplePlaying(long_sirena) and sasl.getXPVersion() < 12 then if sasl.getXPVersion() < 12 then playSample(long_sirena, true) end end
 		set(alarm_flaps, 1)
-		--if get(xplane_version) < 120000 then stopSample(short_sirena) end
+		--if sasl.getXPVersion() < 12 then stopSample(short_sirena) end
 	elseif get(srd_buzzer) == 1 and get(main_pressure) == 1 and power and external == 0 and get(main_alarm_fail) == 0 then
 		short_siren_timer = short_siren_timer + passed
 
-		if not isSamplePlaying(long_sirena) and short_siren_timer > 0.2 and get(xplane_version) < 120000 then
+		if not isSamplePlaying(long_sirena) and short_siren_timer > 0.2 and sasl.getXPVersion() < 12 then
 			playSample(
 				long_sirena, true)
 		end
@@ -251,29 +251,29 @@ function update()
 		
 		if short_siren_timer > 0.4 then
 			short_siren_timer = 0
-			if get(xplane_version) < 120000 then stopSample(long_sirena) end
+			if sasl.getXPVersion() < 12 then stopSample(long_sirena) end
 		end
 
-		--if get(xplane_version) < 120000 then stopSample(long_sirena) end
+		--if sasl.getXPVersion() < 12 then stopSample(long_sirena) end
 	else
-		if get(xplane_version) < 120000 then
-			if get(xplane_version) < 120000 then stopSample(long_sirena) end
+		if sasl.getXPVersion() < 12 then
+			if sasl.getXPVersion() < 12 then stopSample(long_sirena) end
 		end
 
 		set(alarm_flaps, 0)
 		set(alarm_srd, 0)
-		--if get(xplane_version) < 120000 then stopSample(short_sirena) end
+		--if sasl.getXPVersion() < 12 then stopSample(short_sirena) end
 	end
 
 	if passed == 0 or external == 1 then
-		if get(xplane_version) < 120000 then
-			if get(xplane_version) < 120000 then stopSample(long_sirena) end
+		if sasl.getXPVersion() < 12 then
+			if sasl.getXPVersion() < 12 then stopSample(long_sirena) end
 		end
 	end
 
 	if short_siren_timer > 0.4 then short_siren_timer = 0 end
 
-	if get(xplane_version) < 120000 then
+	if sasl.getXPVersion() < 12 then
 		setSampleGain(long_sirena, 1000 * warn_vl)
 	end
 
@@ -287,13 +287,13 @@ function update()
 
 
 	if power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 and get(absu_fail_signal) == 1 then -- ABSU fails
-		if not isSamplePlaying(absu_sound) then if get(xplane_version) < 120000 then playSample(absu_sound, false) end end
+		if not isSamplePlaying(absu_sound) then if sasl.getXPVersion() < 12 then playSample(absu_sound, false) end end
 		set(alarm_absu, 1)
-		if get(xplane_version) < 120000 then stopSample(long_speaker) end
+		if sasl.getXPVersion() < 12 then stopSample(long_speaker) end
 	elseif get(speaker_auasp) == 1 and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then -- long buzzer
-		if get(xplane_version) < 120000 then
-			if not isSamplePlaying(long_speaker) then if get(xplane_version) < 120000 then playSample(long_speaker, true) end end
-			if get(xplane_version) < 120000 then stopSample(absu_sound) end
+		if sasl.getXPVersion() < 12 then
+			if not isSamplePlaying(long_speaker) then if sasl.getXPVersion() < 12 then playSample(long_speaker, true) end end
+			if sasl.getXPVersion() < 12 then stopSample(absu_sound) end
 			set(alarm_auasp, 1)
 		else
 			set(alarm_fire, 1)
@@ -301,26 +301,26 @@ function update()
 	elseif (get(speaker_fuel) == 1 or get(speaker_speed) == 1) and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then
 		short_speaker_timer = short_speaker_timer + passed
 
-		if not isSamplePlaying(long_speaker) and short_speaker_timer > 0.3 then if get(xplane_version) < 120000 then playSample(long_speaker, true) end end
+		if not isSamplePlaying(long_speaker) and short_speaker_timer > 0.3 then if sasl.getXPVersion() < 12 then playSample(long_speaker, true) end end
 		set(alarm_ospeed, 1)
 		if short_speaker_timer > 0.6 then
 			short_speaker_timer = 0
-			if get(xplane_version) < 120000 then stopSample(long_speaker) end
+			if sasl.getXPVersion() < 12 then stopSample(long_speaker) end
 		end
-		if get(xplane_version) < 120000 then stopSample(absu_sound) end
+		if sasl.getXPVersion() < 12 then stopSample(absu_sound) end
 	elseif ((absu_now ~= absu_last and absu_now < 4) or (stu_last >= 3 and stu_now <= 2)) and power and external == 0 and get(fuel_buzzer) == 1 and get(speaker_alarm_fail) == 0 then
 		set(alarm_absu, 1)
-		if get(xplane_version) < 120000 then
-			if get(xplane_version) < 120000 then playSample(absu_sound, false) end 
-		if get(xplane_version) < 120000 then stopSample(long_speaker) end
+		if sasl.getXPVersion() < 12 then
+			if sasl.getXPVersion() < 12 then playSample(absu_sound, false) end 
+		if sasl.getXPVersion() < 12 then stopSample(long_speaker) end
 		end
 		
 	else
-		if get(xplane_version) < 120000 then stopSample(long_speaker) end
+		if sasl.getXPVersion() < 12 then stopSample(long_speaker) end
 		set(alarm_absu, 0)
 		set(alarm_ospeed, 0)
 		set(alarm_fire, 0)
-		--if get(xplane_version) < 120000 then stopSample(absu_sound) end
+		if sasl.getXPVersion() < 12 then stopSample(absu_sound) end
 	end
 
 	absu_last = absu_now
@@ -347,10 +347,11 @@ function update()
 	local mrp_power = power -- need to extend this logic for MRP
 
 	if (inner or middle or outer) and mrp_power and external == 0 then
-		if not isSamplePlaying(bell) then if get(xplane_version) < 120000 then playSample(bell, false) end end
-		set(alarm_marker)
+		if not isSamplePlaying(bell) then if sasl.getXPVersion() < 12 then playSample(bell, false) end end
+		set(alarm_marker, 1)
 	else
-		--if get(xplane_version) < 120000 then stopSample(bell) end
+		if sasl.getXPVersion() < 12 then stopSample(bell) end
+		set(alarm_marker, 0)
 	end
 
 	setSampleGain(bell, 1000 * warn_vl)
@@ -405,9 +406,9 @@ function update()
 	-- 80 m/s
 
 	if taxi_gain > 0 then
-		if not isSamplePlaying(taxi_noise) then if get(xplane_version) < 120000 then playSample(taxi_noise, true) end end
+		if not isSamplePlaying(taxi_noise) then if sasl.getXPVersion() < 12 then playSample(taxi_noise, true) end end
 	else
-		if get(xplane_version) < 120000 then stopSample(taxi_noise) end
+		if sasl.getXPVersion() < 12 then stopSample(taxi_noise) end
 	end
 
 	setSampleGain(taxi_noise, taxi_gain * 10 * get(ground_volume_ratio))
@@ -425,7 +426,7 @@ function update()
 	local IAS = get(airspeed)
 
 	if light_L + light_R > 0.1 then
-		if not isSamplePlaying(lights_noise) then if get(xplane_version) < 120000 then playSample(lights_noise, true) end end
+		if not isSamplePlaying(lights_noise) then if sasl.getXPVersion() < 12 then playSample(lights_noise, true) end end
 
 		local gain = math.max(IAS - 150, 0) * (light_L + light_R) * (1 - external) * 1 * get(weather_volume_ratio)
 
@@ -433,7 +434,7 @@ function update()
 
 		setSamplePitch(lights_noise, 250 + IAS * 1)
 	else
-		if get(xplane_version) < 120000 then stopSample(lights_noise) end
+		if sasl.getXPVersion() < 12 then stopSample(lights_noise) end
 	end
 
 

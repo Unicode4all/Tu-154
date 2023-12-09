@@ -145,28 +145,28 @@ function update()
 			set(gpu_overload, 0)
 		end
 
-		if get(xplane_version) < 120000 then
+		if sasl.getXPVersion() < 12 then
 			-- set sounds
 			if work_timer > 0 and work_timer < 1 and not isSamplePlaying(gpu_start_out) and present == 1 then
-				if get(xplane_version) < 120000 then playSample(gpu_start_out, false) end
-				if get(xplane_version) < 120000 then playSample(gpu_start_inn, false) end
-				if get(xplane_version) < 120000 then stopSample(gpu_run_out) end
-				if get(xplane_version) < 120000 then stopSample(gpu_run_inn) end
+				if sasl.getXPVersion() < 12 then playSample(gpu_start_out, false) end
+				if sasl.getXPVersion() < 12 then playSample(gpu_start_inn, false) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_run_out) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_run_inn) end
 			elseif work_timer == 1 and not isSamplePlaying(gpu_run_out) then
-				if get(xplane_version) < 120000 then playSample(gpu_run_out, true) end
-				if get(xplane_version) < 120000 then playSample(gpu_run_inn, true) end
+				if sasl.getXPVersion() < 12 then playSample(gpu_run_out, true) end
+				if sasl.getXPVersion() < 12 then playSample(gpu_run_inn, true) end
 			elseif work_timer > 0 and work_timer < 1 and not isSamplePlaying(gpu_stop_out) and present == 0 then
-				if get(xplane_version) < 120000 then playSample(gpu_stop_out, false) end
-				if get(xplane_version) < 120000 then playSample(gpu_stop_inn, false) end
-				if get(xplane_version) < 120000 then stopSample(gpu_start_out) end
-				if get(xplane_version) < 120000 then stopSample(gpu_run_out) end
-				if get(xplane_version) < 120000 then stopSample(gpu_start_inn) end
-				if get(xplane_version) < 120000 then stopSample(gpu_run_inn) end
+				if sasl.getXPVersion() < 12 then playSample(gpu_stop_out, false) end
+				if sasl.getXPVersion() < 12 then playSample(gpu_stop_inn, false) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_start_out) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_run_out) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_start_inn) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_run_inn) end
 			elseif work_timer == 0 then
-				if get(xplane_version) < 120000 then stopSample(gpu_start_out) end
-				if get(xplane_version) < 120000 then stopSample(gpu_start_inn) end
-				if get(xplane_version) < 120000 then stopSample(gpu_run_out) end
-				if get(xplane_version) < 120000 then stopSample(gpu_run_inn) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_start_out) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_start_inn) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_run_out) end
+				if sasl.getXPVersion() < 12 then stopSample(gpu_run_inn) end
 			end
 
 			-- set effects to external GPU sound
@@ -210,10 +210,10 @@ function update()
 		set(gpu_overload, 0)
 		set(gpu_work_bus, 0)
 
-		if get(xplane_version) < 120000 then
-			if get(xplane_version) < 120000 then stopSample(gpu_run_out) end
-			if get(xplane_version) < 120000 then stopSample(gpu_start_out) end
-			if get(xplane_version) < 120000 then stopSample(gpu_stop_out) end
+		if sasl.getXPVersion() < 12 then
+			if sasl.getXPVersion() < 12 then stopSample(gpu_run_out) end
+			if sasl.getXPVersion() < 12 then stopSample(gpu_start_out) end
+			if sasl.getXPVersion() < 12 then stopSample(gpu_stop_out) end
 		end
 		-- unload sounds
 

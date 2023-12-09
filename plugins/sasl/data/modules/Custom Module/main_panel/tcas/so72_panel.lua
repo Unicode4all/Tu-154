@@ -66,7 +66,7 @@ local buttons_last = 0
 
 local function sounds()
 	local sw = get(transponder_mode)
-	if sw_last ~= sw then if get(xplane_version) < 120000 then playSample(rot_sound, false) end end
+	if sw_last ~= sw then if sasl.getXPVersion() < 12 then playSample(rot_sound, false) end end
 	
 	sw_last = sw
 	

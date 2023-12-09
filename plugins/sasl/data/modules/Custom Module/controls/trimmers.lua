@@ -167,10 +167,10 @@ pitch_UP_comm = findCommand("sim/flight_controls/pitch_trim_up")
 function pitch_UP_hnd(phase)  -- for all commands phase equals: 0 on press; 1 while holding; 2 on release
 	if (1 == phase or 0 == phase) then
 		set(elev_trimm_sw, 1)
-		if 0 == phase then if get(xplane_version) < 120000 then playSample(trimm_up, false) end end
+		if 0 == phase then if sasl.getXPVersion() < 12 then playSample(trimm_up, false) end end
 	else
 		set(elev_trimm_sw, 0)
-		if get(xplane_version) < 120000 then playSample(trimm_ctr, false) end
+		if sasl.getXPVersion() < 12 then playSample(trimm_ctr, false) end
     end
 return 0
 end
@@ -181,10 +181,10 @@ pitch_DOWN_comm = findCommand("sim/flight_controls/pitch_trim_down")
 function pitch_DOWN_hnd(phase)  -- for all commands phase equals: 0 on press; 1 while holding; 2 on release
 	if (1 == phase or 0 == phase) then
 		set(elev_trimm_sw, -1)
-		if 0 == phase then if get(xplane_version) < 120000 then playSample(trimm_down, false) end end
+		if 0 == phase then if sasl.getXPVersion() < 12 then playSample(trimm_down, false) end end
 	else
 		set(elev_trimm_sw, 0)
-		if get(xplane_version) < 120000 then playSample(trimm_ctr, false) end
+		if sasl.getXPVersion() < 12 then playSample(trimm_ctr, false) end
     end
 return 0
 end

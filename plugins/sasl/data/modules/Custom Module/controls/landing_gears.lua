@@ -289,7 +289,7 @@ local MASTER = get(ismaster) ~= 1
 		end
 		
 		-- sound
-		if lever ~= lever_last then if get(xplane_version) < 120000 then playSample(handle_sound, false) end end
+		if lever ~= lever_last then if sasl.getXPVersion() < 12 then playSample(handle_sound, false) end end
 		lever_last = lever
 		
 
@@ -377,7 +377,7 @@ local MASTER = get(ismaster) ~= 1
 	
 		-- sounds
 		if lock1_last ~= lock1 then --or lock2_last ~= lock2 or lock3_last ~= lock3 then
-			if get(xplane_version) < 120000 then playSample(lock_sound, false) end
+			if sasl.getXPVersion() < 12 then playSample(lock_sound, false) end
 		end
 		
 		

@@ -58,11 +58,6 @@ function update()
 		end
 
 	end
-	
-
-	
-	
-	
 end
 
 

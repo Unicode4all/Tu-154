@@ -57,20 +57,20 @@ function update()
 		if num == 0 then
 			
 		-- play selected sample
-		elseif num == 1 then if get(xplane_version) < 120000 then playSample(eng_alt_50, false) end
-		elseif num == 2 then if get(xplane_version) < 120000 then playSample(eng_alt_200, false) end
-		elseif num == 3 then if get(xplane_version) < 120000 then playSample(eng_alt_500, false) end
-		elseif num == 4 then if get(xplane_version) < 120000 then playSample(eng_alt_true000, false) end
-		elseif num == 11 then if get(xplane_version) < 120000 then playSample(eng_check_alt, false) end
-		elseif num == 12 then if get(xplane_version) < 120000 then playSample(eng_dont_sink, false) end
-		elseif num == 13 then if get(xplane_version) < 120000 then playSample(eng_glideslope, false) end
-		elseif num == 14 then if get(xplane_version) < 120000 then playSample(eng_pull_up, false) end
-		elseif num == 15 then if get(xplane_version) < 120000 then playSample(eng_sink_rate, false) end
-		elseif num == 16 then if get(xplane_version) < 120000 then playSample(eng_terrain, false) end
-		elseif num == 17 then if get(xplane_version) < 120000 then playSample(eng_terrain_ahead, false) end
-		elseif num == 18 then if get(xplane_version) < 120000 then playSample(eng_too_low_flaps, false) end
-		elseif num == 19 then if get(xplane_version) < 120000 then playSample(eng_too_low_gear, false) end
-		elseif num == 20 then if get(xplane_version) < 120000 then playSample(eng_too_low_terrain, false) end
+		elseif num == 1 then if sasl.getXPVersion() < 12 then playSample(eng_alt_50, false) end
+		elseif num == 2 then if sasl.getXPVersion() < 12 then playSample(eng_alt_200, false) end
+		elseif num == 3 then if sasl.getXPVersion() < 12 then playSample(eng_alt_500, false) end
+		elseif num == 4 then if sasl.getXPVersion() < 12 then playSample(eng_alt_true000, false) end
+		elseif num == 11 then if sasl.getXPVersion() < 12 then playSample(eng_check_alt, false) end
+		elseif num == 12 then if sasl.getXPVersion() < 12 then playSample(eng_dont_sink, false) end
+		elseif num == 13 then if sasl.getXPVersion() < 12 then playSample(eng_glideslope, false) end
+		elseif num == 14 then if sasl.getXPVersion() < 12 then playSample(eng_pull_up, false) end
+		elseif num == 15 then if sasl.getXPVersion() < 12 then playSample(eng_sink_rate, false) end
+		elseif num == 16 then if sasl.getXPVersion() < 12 then playSample(eng_terrain, false) end
+		elseif num == 17 then if sasl.getXPVersion() < 12 then playSample(eng_terrain_ahead, false) end
+		elseif num == 18 then if sasl.getXPVersion() < 12 then playSample(eng_too_low_flaps, false) end
+		elseif num == 19 then if sasl.getXPVersion() < 12 then playSample(eng_too_low_gear, false) end
+		elseif num == 20 then if sasl.getXPVersion() < 12 then playSample(eng_too_low_terrain, false) end
 		
 		
 		end
@@ -86,26 +86,26 @@ function update()
 		if num == 0 then 
 			
 		
-		elseif num == 1 then if get(xplane_version) < 120000 then playSample(rus_alt_5, false) end
-		elseif num == 2 then if get(xplane_version) < 120000 then playSample(rus_alt_true0, false) end
-		elseif num == 3 then if get(xplane_version) < 120000 then playSample(rus_alt_true5, false) end
-		elseif num == 4 then if get(xplane_version) < 120000 then playSample(rus_alt_20, false) end
-		elseif num == 5 then if get(xplane_version) < 120000 then playSample(rus_alt_25, false) end
-		elseif num == 6 then if get(xplane_version) < 120000 then playSample(rus_alt_30, false) end
-		elseif num == 7 then if get(xplane_version) < 120000 then playSample(rus_alt_40, false) end
-		elseif num == 8 then if get(xplane_version) < 120000 then playSample(rus_alt_50, false) end
-		elseif num == 9 then if get(xplane_version) < 120000 then playSample(rus_alt_60, false) end
-		elseif num == 10 then if get(xplane_version) < 120000 then playSample(rus_alt_true50, false) end
-		elseif num == 11 then if get(xplane_version) < 120000 then playSample(rus_check_alt, false) end
-		elseif num == 12 then if get(xplane_version) < 120000 then playSample(rus_dont_sink, false) end
-		elseif num == 13 then if get(xplane_version) < 120000 then playSample(rus_glideslope, false) end
-		elseif num == 14 then if get(xplane_version) < 120000 then playSample(rus_pull_up, false) end
-		elseif num == 15 then if get(xplane_version) < 120000 then playSample(rus_sink_rate, false) end
-		elseif num == 16 then if get(xplane_version) < 120000 then playSample(rus_terrain, false) end
-		elseif num == 17 then if get(xplane_version) < 120000 then playSample(rus_terrain_ahead, false) end
-		elseif num == 18 then if get(xplane_version) < 120000 then playSample(rus_too_low_flaps, false) end
-		elseif num == 19 then if get(xplane_version) < 120000 then playSample(rus_too_low_gear, false) end
-		elseif num == 20 then if get(xplane_version) < 120000 then playSample(rus_too_low_terrain, false) end	
+		elseif num == 1 then if sasl.getXPVersion() < 12 then playSample(rus_alt_5, false) end
+		elseif num == 2 then if sasl.getXPVersion() < 12 then playSample(rus_alt_true0, false) end
+		elseif num == 3 then if sasl.getXPVersion() < 12 then playSample(rus_alt_true5, false) end
+		elseif num == 4 then if sasl.getXPVersion() < 12 then playSample(rus_alt_20, false) end
+		elseif num == 5 then if sasl.getXPVersion() < 12 then playSample(rus_alt_25, false) end
+		elseif num == 6 then if sasl.getXPVersion() < 12 then playSample(rus_alt_30, false) end
+		elseif num == 7 then if sasl.getXPVersion() < 12 then playSample(rus_alt_40, false) end
+		elseif num == 8 then if sasl.getXPVersion() < 12 then playSample(rus_alt_50, false) end
+		elseif num == 9 then if sasl.getXPVersion() < 12 then playSample(rus_alt_60, false) end
+		elseif num == 10 then if sasl.getXPVersion() < 12 then playSample(rus_alt_true50, false) end
+		elseif num == 11 then if sasl.getXPVersion() < 12 then playSample(rus_check_alt, false) end
+		elseif num == 12 then if sasl.getXPVersion() < 12 then playSample(rus_dont_sink, false) end
+		elseif num == 13 then if sasl.getXPVersion() < 12 then playSample(rus_glideslope, false) end
+		elseif num == 14 then if sasl.getXPVersion() < 12 then playSample(rus_pull_up, false) end
+		elseif num == 15 then if sasl.getXPVersion() < 12 then playSample(rus_sink_rate, false) end
+		elseif num == 16 then if sasl.getXPVersion() < 12 then playSample(rus_terrain, false) end
+		elseif num == 17 then if sasl.getXPVersion() < 12 then playSample(rus_terrain_ahead, false) end
+		elseif num == 18 then if sasl.getXPVersion() < 12 then playSample(rus_too_low_flaps, false) end
+		elseif num == 19 then if sasl.getXPVersion() < 12 then playSample(rus_too_low_gear, false) end
+		elseif num == 20 then if sasl.getXPVersion() < 12 then playSample(rus_too_low_terrain, false) end	
 	
 	
 		end

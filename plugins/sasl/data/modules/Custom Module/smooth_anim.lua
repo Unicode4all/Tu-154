@@ -60,67 +60,70 @@ cap57 = globalPropertyf("tu154ce/lights/landing_light_off_cap") -- выключ�
 
 cap01_anim  = globalPropertyf("tu154ce/controll/stab_man_cap_anim") -- крышка управления стабилизатором
 cap02_anim  = globalPropertyf("tu154ce/controll/contr_force_cap_anim") -- крышка переключателя загружателя РВ РН
-cap03_anim  = globalPropertyf("tu154ce/switchers/nosewheel_turn_cap_anim") -- крышка переключателя угла поворота
-cap04_anim  = globalPropertyf("tu154ce/switchers/slat_man_cap_anim") -- крышка ручного урпавления предкрылками
-cap05_anim  = globalPropertyf("tu154ce/switchers/flaps_sel_cap_anim") -- крышка выбора работы закрылков
-cap06_anim  = globalPropertyf("tu154ce/switchers/gears_retr_lock_cap_anim") -- крышка блокировки уборки шасси
-cap07_anim  = globalPropertyf("tu154ce/switchers/gears_ext_3GS_cap_anim") -- крышка выпуска шасси от 3ГС
-cap08_anim  = globalPropertyf("tu154ce/switchers/ovhd/bkk_contr_cap_anim") -- крышка тумблера контроля БКК
-cap09_anim  = globalPropertyf("tu154ce/switchers/ovhd/bkk_on_cap_anim") -- крышка выключателя БКК
-cap10_anim = globalPropertyf("tu154ce/switchers/ovhd/sau_stu_cap_anim") -- крышка выключателя САУ СТУ
-cap11_anim = globalPropertyf("tu154ce/switchers/ovhd/pkp_left_cap_anim") -- крылка ПКП лев
-cap12_anim = globalPropertyf("tu154ce/switchers/ovhd/pkp_right_cap_anim") -- крышка ПКП прав
-cap13_anim = globalPropertyf("tu154ce/switchers/ovhd/mgv_contr_cap_anim") -- контроль МГВ крышка
-cap14_anim = globalPropertyf("tu154ce/switchers/ovhd/emerg_light_cap_anim") -- крышка аварийного освещения
-cap15_anim = globalPropertyf("tu154ce/switchers/ovhd/egpws_alarm_1_cap_anim") -- сигнализация СРПБЗ общ
-cap16_anim = globalPropertyf("tu154ce/switchers/ovhd/egpws_alarm_2_cap_anim") -- сигнализация СРПБЗ 
+cap03_anim  = globalPropertyf("tu154ce/switchers/anim/nosewheel_turn_cap_anim") -- крышка переключателя угла поворота
+cap04_anim  = globalPropertyf("tu154ce/switchers/anim/slat_man_cap_anim") -- крышка ручного урпавления предкрылками
+cap05_anim  = globalPropertyf("tu154ce/switchers/anim/flaps_sel_cap_anim") -- крышка выбора работы закрылков
+cap06_anim  = globalPropertyf("tu154ce/switchers/anim/gears_retr_lock_cap_anim") -- крышка блокировки уборки шасси
+cap07_anim  = globalPropertyf("tu154ce/switchers/anim/gears_ext_3GS_cap_anim") -- крышка выпуска шасси от 3ГС
+cap08_anim  = globalPropertyf("tu154ce/switchers/anim/ovhd/bkk_contr_cap_anim") -- крышка тумблера контроля БКК
+cap09_anim  = globalPropertyf("tu154ce/switchers/anim/ovhd/bkk_on_cap_anim") -- крышка выключателя БКК
+cap10_anim = globalPropertyf("tu154ce/switchers/anim/ovhd/sau_stu_cap_anim") -- крышка выключателя САУ СТУ
+cap11_anim = globalPropertyf("tu154ce/switchers/anim/ovhd/pkp_left_cap_anim") -- крылка ПКП лев
+cap12_anim = globalPropertyf("tu154ce/switchers/anim/ovhd/pkp_right_cap_anim") -- крышка ПКП прав
+cap13_anim = globalPropertyf("tu154ce/switchers/anim/ovhd/mgv_contr_cap_anim") -- контроль МГВ крышка
+cap14_anim = globalPropertyf("tu154ce/switchers/anim/ovhd/emerg_light_cap_anim") -- крышка аварийного освещения
+cap15_anim = globalPropertyf("tu154ce/switchers/anim/ovhd/egpws_alarm_1_cap_anim") -- сигнализация СРПБЗ общ
+cap16_anim = globalPropertyf("tu154ce/switchers/anim/ovhd/egpws_alarm_2_cap_anim") -- сигнализация СРПБЗ 
 cap17_anim = globalPropertyf("tu154ce/buttons/ovhd/transponder_emerg_cap_anim") -- крышка кнопки аварии
-cap18_anim = globalPropertyf("tu154ce/switchers/eng/hydro_trimm_rud_1_cap_anim") -- триммирование РВ 1
-cap19_anim = globalPropertyf("tu154ce/switchers/eng/hydro_trimm_rud_2_cap_anim") -- триммирование РВ 2
-cap20_anim = globalPropertyf("tu154ce/switchers/eng/emerg_gen_on_1_cap_anim") -- аварийное включение генераторов
-cap21_anim = globalPropertyf("tu154ce/switchers/eng/emerg_gen_on_2_cap_anim") -- аварийное включение генераторов
-cap22_anim = globalPropertyf("tu154ce/switchers/eng/emerg_gen_on_3_cap_anim") -- аварийное включение генераторов
-cap23_anim = globalPropertyf("tu154ce/switchers/eng/hydro_circuit_auto_man_cap_anim") -- кольцевание автомат - ручное
-cap24_anim = globalPropertyf("tu154ce/switchers/eng/hydro_long_control_cap_anim") -- продольная управляемость
-cap25_anim = globalPropertyf("tu154ce/switchers/eng/fire_buzzer_cap_anim") -- пожарная сирена
-cap26_anim = globalPropertyf("tu154ce/switchers/eng/srd_buzzer_cap_anim") -- СРД сирена
-cap27_anim = globalPropertyf("tu154ce/switchers/eng/fuel_buzzer_cap_anim") -- сирена остатка топлива 2500кг
-cap28_anim = globalPropertyf("tu154ce/switchers/eng/sard_disable_cap_anim") -- перекрытие клапана сброса воздуха
-cap29_anim = globalPropertyf("tu154ce/switchers/eng/emerg_inv115_cap_anim") -- аварийн. преобраз 115в
-cap30_anim = globalPropertyf("tu154ce/switchers/eng/pts250_on_cap_anim") -- выключатель ПТС250
-cap31_anim = globalPropertyf("tu154ce/switchers/eng/pts250_mode_cap_anim") -- режим ПТС250. авто - ручное
-cap32_anim = globalPropertyf("tu154ce/switchers/eng/bus27_connect_cap_anim") -- соединение сетей 27в
-cap33_anim = globalPropertyf("tu154ce/switchers/fuel/fuel_trans_cap_anim") -- краны резервой перекачки
-cap34_anim = globalPropertyf("tu154ce/switchers/fuel/fuel_porc_cap_anim") -- принуд порц
-cap35_anim = globalPropertyf("tu154ce/switchers/fuel/fuel_flow_on_cap_anim") -- автомат расхода
-cap36_anim = globalPropertyf("tu154ce/switchers/fuel/fire_valve_1_cap_anim") -- пожарный кран
-cap37_anim = globalPropertyf("tu154ce/switchers/fuel/fire_valve_2_cap_anim") -- пожарный кран
-cap38_anim = globalPropertyf("tu154ce/switchers/fuel/fire_valve_3_cap_anim") -- пожарный кран
-cap39_anim = globalPropertyf("tu154ce/switchers/hydro/connect2to1_cap_anim") -- подключение 2 ГС на 1 ГС
-cap40_anim = globalPropertyf("tu154ce/switchers/airbleed/heat_close_cap_anim") -- прекращение обогрева
-cap41_anim = globalPropertyf("tu154ce/switchers/airbleed/ground_cond_on_cap_anim") -- наземное кондиционирование
-cap42_anim = globalPropertyf("tu154ce/switchers/airbleed/skv_faster_work_cap_anim") -- крышка
-cap43_anim = globalPropertyf("tu154ce/switchers/airbleed/psvp_left_on_cap_anim") -- ПСВП лев
-cap44_anim = globalPropertyf("tu154ce/switchers/airbleed/psvp_right_on_cap_anim") -- ПСВП прав
-cap45_anim = globalPropertyf("tu154ce/switchers/airbleed/emerg_decompress_cap_anim") -- сброс давления
-cap46_anim = globalPropertyf("tu154ce/switchers/airbleed/dubler_on_cap_anim") -- дублер
-cap47_anim = globalPropertyf("tu154ce/switchers/eng/starter_cap_anim") -- крышка панели запуска
-cap48_anim = globalPropertyf("tu154ce/switchers/eng/gauges_on_1_cap_anim") -- приборы контроля двигателей
-cap49_anim = globalPropertyf("tu154ce/switchers/eng/gauges_on_2_cap_anim") -- приборы контроля двигателей
-cap50_anim = globalPropertyf("tu154ce/switchers/eng/gauges_on_3_cap_anim") -- приборы контроля двигателей
-cap51_anim = globalPropertyf("tu154ce/switchers/console/busters_cap_anim") -- крышка выключателей бустеров
-cap52_anim = globalPropertyf("tu154ce/switchers/console/absu_speed_off_cap_anim") -- отключение 1 и 2
-cap53_anim = globalPropertyf("tu154ce/switchers/console/absu_speed_prepare_cap_anim") -- подготовка
-cap54_anim = globalPropertyf("tu154ce/switchers/console/absu_smooth_on_cap_anim") -- выключатель "в болтанку"
+cap18_anim = globalPropertyf("tu154ce/switchers/anim/eng/hydro_trimm_rud_1_cap_anim") -- триммирование РВ 1
+cap19_anim = globalPropertyf("tu154ce/switchers/anim/eng/hydro_trimm_rud_2_cap_anim") -- триммирование РВ 2
+cap20_anim = globalPropertyf("tu154ce/switchers/anim/eng/emerg_gen_on_1_cap_anim") -- аварийное включение генераторов
+cap21_anim = globalPropertyf("tu154ce/switchers/anim/eng/emerg_gen_on_2_cap_anim") -- аварийное включение генераторов
+cap22_anim = globalPropertyf("tu154ce/switchers/anim/eng/emerg_gen_on_3_cap_anim") -- аварийное включение генераторов
+cap23_anim = globalPropertyf("tu154ce/switchers/anim/eng/hydro_circuit_auto_man_cap_anim") -- кольцевание автомат - ручное
+cap24_anim = globalPropertyf("tu154ce/switchers/anim/eng/hydro_long_control_cap_anim") -- продольная управляемость
+cap25_anim = globalPropertyf("tu154ce/switchers/anim/eng/fire_buzzer_cap_anim") -- пожарная сирена
+cap26_anim = globalPropertyf("tu154ce/switchers/anim/eng/srd_buzzer_cap_anim") -- СРД сирена
+cap27_anim = globalPropertyf("tu154ce/switchers/anim/eng/fuel_buzzer_cap_anim") -- сирена остатка топлива 2500кг
+cap28_anim = globalPropertyf("tu154ce/switchers/anim/eng/sard_disable_cap_anim") -- перекрытие клапана сброса воздуха
+cap29_anim = globalPropertyf("tu154ce/switchers/anim/eng/emerg_inv115_cap_anim") -- аварийн. преобраз 115в
+cap30_anim = globalPropertyf("tu154ce/switchers/anim/eng/pts250_on_cap_anim") -- выключатель ПТС250
+cap31_anim = globalPropertyf("tu154ce/switchers/anim/eng/pts250_mode_cap_anim") -- режим ПТС250. авто - ручное
+cap32_anim = globalPropertyf("tu154ce/switchers/anim/eng/bus27_connect_cap_anim") -- соединение сетей 27в
+cap33_anim = globalPropertyf("tu154ce/switchers/anim/fuel/fuel_trans_cap_anim") -- краны резервой перекачки
+cap34_anim = globalPropertyf("tu154ce/switchers/anim/fuel/fuel_porc_cap_anim") -- принуд порц
+cap35_anim = globalPropertyf("tu154ce/switchers/anim/fuel/fuel_flow_on_cap_anim") -- автомат расхода
+cap36_anim = globalPropertyf("tu154ce/switchers/anim/fuel/fire_valve_1_cap_anim") -- пожарный кран
+cap37_anim = globalPropertyf("tu154ce/switchers/anim/fuel/fire_valve_2_cap_anim") -- пожарный кран
+cap38_anim = globalPropertyf("tu154ce/switchers/anim/fuel/fire_valve_3_cap_anim") -- пожарный кран
+cap39_anim = globalPropertyf("tu154ce/switchers/anim/hydro/connect2to1_cap_anim") -- подключение 2 ГС на 1 ГС
+cap40_anim = globalPropertyf("tu154ce/switchers/anim/airbleed/heat_close_cap_anim") -- прекращение обогрева
+cap41_anim = globalPropertyf("tu154ce/switchers/anim/airbleed/ground_cond_on_cap_anim") -- наземное кондиционирование
+cap42_anim = globalPropertyf("tu154ce/switchers/anim/airbleed/skv_faster_work_cap_anim") -- крышка
+cap43_anim = globalPropertyf("tu154ce/switchers/anim/airbleed/psvp_left_on_cap_anim") -- ПСВП лев
+cap44_anim = globalPropertyf("tu154ce/switchers/anim/airbleed/psvp_right_on_cap_anim") -- ПСВП прав
+cap45_anim = globalPropertyf("tu154ce/switchers/anim/airbleed/emerg_decompress_cap_anim") -- сброс давления
+cap46_anim = globalPropertyf("tu154ce/switchers/anim/airbleed/dubler_on_cap_anim") -- дублер
+cap47_anim = globalPropertyf("tu154ce/switchers/anim/eng/starter_cap_anim") -- крышка панели запуска
+cap48_anim = globalPropertyf("tu154ce/switchers/anim/eng/gauges_on_1_cap_anim") -- приборы контроля двигателей
+cap49_anim = globalPropertyf("tu154ce/switchers/anim/eng/gauges_on_2_cap_anim") -- приборы контроля двигателей
+cap50_anim = globalPropertyf("tu154ce/switchers/anim/eng/gauges_on_3_cap_anim") -- приборы контроля двигателей
+cap51_anim = globalPropertyf("tu154ce/switchers/anim/console/busters_cap_anim") -- крышка выключателей бустеров
+cap52_anim = globalPropertyf("tu154ce/switchers/anim/console/absu_speed_off_cap_anim") -- отключение 1 и 2
+cap53_anim = globalPropertyf("tu154ce/switchers/anim/console/absu_speed_prepare_cap_anim") -- подготовка
+cap54_anim = globalPropertyf("tu154ce/switchers/anim/console/absu_smooth_on_cap_anim") -- выключатель "в болтанку"
 cap55_anim = globalPropertyf("tu154ce/buttons/console/absu_arrest_cap_anim") -- крышка кнопок арретирования
-cap56_anim = globalPropertyf("tu154ce/switchers/console/emerg_elev_trimm_cap_anim") -- аварийное управление триммером
+cap56_anim = globalPropertyf("tu154ce/switchers/anim/console/emerg_elev_trimm_cap_anim") -- аварийное управление триммером
 cap57_anim = globalPropertyf("tu154ce/lights/landing_light_off_cap_anim") -- выключатель фар
-
+enable_anim = true
+include("drefs_anim.lua")
 
 function smooth_anim(target, current_value)
 
     local fps_factor = math.min(1.0, 9.5* get(sim_period))
-
+    if target == nil or current_value == nil then
+        return 0
+    end
     if target >= (1 - 0.001) and current_value >= (1 - 0.01) then
         return 1
     elseif target <= (0 + 0.001) and current_value <= (0 + 0.01) then
@@ -131,7 +134,21 @@ function smooth_anim(target, current_value)
 
 end
 
+function smooth_anim_sw(target, current_value)
+
+    local fps_factor = math.min(1.0, 12.5* get(sim_period))
+    if target == current_value then
+        return current_value
+    else
+        return current_value + ((target - current_value) * fps_factor)
+    end
+
+end
+
 function update()
+    if enable_anim == false then
+        return
+    end
     set(cap01_anim, smooth_anim(get(cap01), get(cap01_anim)))
     set(cap02_anim, smooth_anim(get(cap02), get(cap02_anim)))
     set(cap03_anim, smooth_anim(get(cap03), get(cap03_anim)))
@@ -189,4 +206,12 @@ function update()
     set(cap55_anim, smooth_anim(get(cap55), get(cap55_anim)))
     set(cap56_anim, smooth_anim(get(cap56), get(cap56_anim)))
     set(cap57_anim, smooth_anim(get(cap57), get(cap57_anim)))
+
+    for i, v in ipairs(SwitchAnimDrefs) do
+        --print(v.new_dr)
+        --print(v.old_dr)
+        local old = get(v.old_dr)
+        local new = get(v.new_dr)
+        set(v.new_dr, smooth_anim_sw(old, new))
+    end
 end

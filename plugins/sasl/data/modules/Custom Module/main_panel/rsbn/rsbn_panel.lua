@@ -73,7 +73,7 @@ local function rotary()
 	
 	local summ = rsbn_ch_ten_sw + rsbn_ch_one_sw
 	
-	if summ ~= rot_summ_last then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
+	if summ ~= rot_summ_last then --[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]] end
 	
 	rot_summ_last = summ
 
@@ -141,7 +141,7 @@ end
 local function lamps()
 	
 	local test_btn = get(test_lamps) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
-	local day_night = 1 - get(day_night_set) * 0.8
+	local day_night = 1 - get(day_night_set) * 0.9
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0) * day_night * get(rsbn_on)
 
 	local dist_autonom_brt = math.max(bool2int(get(distance) == 0) * lamps_brt, test_btn)

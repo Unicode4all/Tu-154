@@ -146,7 +146,7 @@ end
 local function lamps(flag)
 	
 	local test_btn = get(test_lamps) * math.max(get(bus27_volt_right) - 10 / 18.5, 0)
-	--local day_night = 1 - get(day_night_set) * 0.8
+	--local day_night = 1 - get(day_night_set) * 0.9
 	local lamps_brt = math.max((math.max(get(bus27_volt_left), get(bus27_volt_right)) - 10) / 18.5, 0)
 
 	local nav_to_lit_brt = math.max(bool2int(flag == 1) * lamps_brt, test_btn)

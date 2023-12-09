@@ -102,33 +102,33 @@ local out_apu_right = loadSample('Custom Sounds/engines/out_apu_right.wav')
 local inn_reverse = loadSample('Custom Sounds/engines/inn_reverse.wav')
 
 -- play all sounds
-if get(xplane_version) < 120000 then playSample(inn_middle_left_1, true) end
-if get(xplane_version) < 120000 then playSample(inn_middle_right_1, true) end
-if get(xplane_version) < 120000 then playSample(out_behind_left_1, true) end
-if get(xplane_version) < 120000 then playSample(out_behind_right_1, true) end
-if get(xplane_version) < 120000 then playSample(out_idle_left_1, true) end
-if get(xplane_version) < 120000 then playSample(out_idle_right_1, true) end
+if sasl.getXPVersion() < 12 then playSample(inn_middle_left_1, true) end
+if sasl.getXPVersion() < 12 then playSample(inn_middle_right_1, true) end
+if sasl.getXPVersion() < 12 then playSample(out_behind_left_1, true) end
+if sasl.getXPVersion() < 12 then playSample(out_behind_right_1, true) end
+if sasl.getXPVersion() < 12 then playSample(out_idle_left_1, true) end
+if sasl.getXPVersion() < 12 then playSample(out_idle_right_1, true) end
 
-if get(xplane_version) < 120000 then playSample(inn_middle_left_2, true) end
-if get(xplane_version) < 120000 then playSample(inn_middle_right_2, true) end
-if get(xplane_version) < 120000 then playSample(out_behind_left_2, true) end
-if get(xplane_version) < 120000 then playSample(out_behind_right_2, true) end
-if get(xplane_version) < 120000 then playSample(out_idle_left_2, true) end
-if get(xplane_version) < 120000 then playSample(out_idle_right_2, true) end
+if sasl.getXPVersion() < 12 then playSample(inn_middle_left_2, true) end
+if sasl.getXPVersion() < 12 then playSample(inn_middle_right_2, true) end
+if sasl.getXPVersion() < 12 then playSample(out_behind_left_2, true) end
+if sasl.getXPVersion() < 12 then playSample(out_behind_right_2, true) end
+if sasl.getXPVersion() < 12 then playSample(out_idle_left_2, true) end
+if sasl.getXPVersion() < 12 then playSample(out_idle_right_2, true) end
 
-if get(xplane_version) < 120000 then playSample(inn_middle_left_3, true) end
-if get(xplane_version) < 120000 then playSample(inn_middle_right_3, true) end
-if get(xplane_version) < 120000 then playSample(out_behind_left_3, true) end
-if get(xplane_version) < 120000 then playSample(out_behind_right_3, true) end
-if get(xplane_version) < 120000 then playSample(out_idle_left_3, true) end
-if get(xplane_version) < 120000 then playSample(out_idle_right_3, true) end
+if sasl.getXPVersion() < 12 then playSample(inn_middle_left_3, true) end
+if sasl.getXPVersion() < 12 then playSample(inn_middle_right_3, true) end
+if sasl.getXPVersion() < 12 then playSample(out_behind_left_3, true) end
+if sasl.getXPVersion() < 12 then playSample(out_behind_right_3, true) end
+if sasl.getXPVersion() < 12 then playSample(out_idle_left_3, true) end
+if sasl.getXPVersion() < 12 then playSample(out_idle_right_3, true) end
 
-if get(xplane_version) < 120000 then playSample(inn_apu_left, true) end
-if get(xplane_version) < 120000 then playSample(inn_apu_right, true) end
-if get(xplane_version) < 120000 then playSample(out_apu_left, true) end
-if get(xplane_version) < 120000 then playSample(out_apu_right, true) end
+if sasl.getXPVersion() < 12 then playSample(inn_apu_left, true) end
+if sasl.getXPVersion() < 12 then playSample(inn_apu_right, true) end
+if sasl.getXPVersion() < 12 then playSample(out_apu_left, true) end
+if sasl.getXPVersion() < 12 then playSample(out_apu_right, true) end
 
---if get(xplane_version) < 120000 then playSample(inn_reverse, true) end
+--if sasl.getXPVersion() < 12 then playSample(inn_reverse, true) end
 
 		
 setSampleGain(out_behind_left_1, 0)
@@ -400,42 +400,42 @@ function update()
 	local starter_3 = get(apd_working_3)
 	
 	if starter_1 ~= starter_1_last and starter_1 == 1 and rpm_1 < 20 then
-		if get(xplane_version) < 120000 then playSample(inn_starter_left_1, false) end
-		if get(xplane_version) < 120000 then playSample(inn_starter_right_1, false) end
-		if get(xplane_version) < 120000 then playSample(out_starter_left_1, false) end
-		if get(xplane_version) < 120000 then playSample(out_starter_right_1, false) end
+		if sasl.getXPVersion() < 12 then playSample(inn_starter_left_1, false) end
+		if sasl.getXPVersion() < 12 then playSample(inn_starter_right_1, false) end
+		if sasl.getXPVersion() < 12 then playSample(out_starter_left_1, false) end
+		if sasl.getXPVersion() < 12 then playSample(out_starter_right_1, false) end
 	
 	elseif starter_1 ~= starter_1_last and starter_1 == 0 then
-		if get(xplane_version) < 120000 then stopSample(inn_starter_left_1) end
-		if get(xplane_version) < 120000 then stopSample(inn_starter_right_1) end
-		if get(xplane_version) < 120000 then stopSample(out_starter_left_1) end
-		if get(xplane_version) < 120000 then stopSample(out_starter_right_1) end
+		if sasl.getXPVersion() < 12 then stopSample(inn_starter_left_1) end
+		if sasl.getXPVersion() < 12 then stopSample(inn_starter_right_1) end
+		if sasl.getXPVersion() < 12 then stopSample(out_starter_left_1) end
+		if sasl.getXPVersion() < 12 then stopSample(out_starter_right_1) end
 	end
 	
 	if starter_2 ~= starter_2_last and starter_2 == 1 and rpm_2 < 20 then
-		if get(xplane_version) < 120000 then playSample(inn_starter_left_2, false) end
-		if get(xplane_version) < 120000 then playSample(inn_starter_right_2, false) end
-		if get(xplane_version) < 120000 then playSample(out_starter_left_2, false) end
-		if get(xplane_version) < 120000 then playSample(out_starter_right_2, false) end
+		if sasl.getXPVersion() < 12 then playSample(inn_starter_left_2, false) end
+		if sasl.getXPVersion() < 12 then playSample(inn_starter_right_2, false) end
+		if sasl.getXPVersion() < 12 then playSample(out_starter_left_2, false) end
+		if sasl.getXPVersion() < 12 then playSample(out_starter_right_2, false) end
 	
 	elseif starter_2 ~= starter_2_last and starter_2 == 0 then
-		if get(xplane_version) < 120000 then stopSample(inn_starter_left_2) end
-		if get(xplane_version) < 120000 then stopSample(inn_starter_right_2) end
-		if get(xplane_version) < 120000 then stopSample(out_starter_left_2) end
-		if get(xplane_version) < 120000 then stopSample(out_starter_right_2) end
+		if sasl.getXPVersion() < 12 then stopSample(inn_starter_left_2) end
+		if sasl.getXPVersion() < 12 then stopSample(inn_starter_right_2) end
+		if sasl.getXPVersion() < 12 then stopSample(out_starter_left_2) end
+		if sasl.getXPVersion() < 12 then stopSample(out_starter_right_2) end
 	end
 
 	if starter_3 ~= starter_3_last and starter_3 == 1 and rpm_3 < 20 then
-		if get(xplane_version) < 120000 then playSample(inn_starter_left_3, false) end
-		if get(xplane_version) < 120000 then playSample(inn_starter_right_3, false) end
-		if get(xplane_version) < 120000 then playSample(out_starter_left_3, false) end
-		if get(xplane_version) < 120000 then playSample(out_starter_right_3, false) end
+		if sasl.getXPVersion() < 12 then playSample(inn_starter_left_3, false) end
+		if sasl.getXPVersion() < 12 then playSample(inn_starter_right_3, false) end
+		if sasl.getXPVersion() < 12 then playSample(out_starter_left_3, false) end
+		if sasl.getXPVersion() < 12 then playSample(out_starter_right_3, false) end
 	
 	elseif starter_3 ~= starter_3_last and starter_3 == 0 then
-		if get(xplane_version) < 120000 then stopSample(inn_starter_left_3) end
-		if get(xplane_version) < 120000 then stopSample(inn_starter_right_3) end
-		if get(xplane_version) < 120000 then stopSample(out_starter_left_3) end
-		if get(xplane_version) < 120000 then stopSample(out_starter_right_3) end
+		if sasl.getXPVersion() < 12 then stopSample(inn_starter_left_3) end
+		if sasl.getXPVersion() < 12 then stopSample(inn_starter_right_3) end
+		if sasl.getXPVersion() < 12 then stopSample(out_starter_left_3) end
+		if sasl.getXPVersion() < 12 then stopSample(out_starter_right_3) end
 	end	
 	
 	
@@ -448,9 +448,9 @@ function update()
 	local rev_flaps = math.max(get(revers_flap_L) * rpm_1, get(revers_flap_R) * rpm_3)
 	
 	if rev_flaps > 1 then
-		if not isSamplePlaying(inn_reverse) then if get(xplane_version) < 120000 then playSample(inn_reverse, true) end end
+		if not isSamplePlaying(inn_reverse) then if sasl.getXPVersion() < 12 then playSample(inn_reverse, true) end end
 	else
-		if get(xplane_version) < 120000 then stopSample(inn_reverse) end
+		if sasl.getXPVersion() < 12 then stopSample(inn_reverse) end
 	end
 	
 	if external == 0 then -- internal

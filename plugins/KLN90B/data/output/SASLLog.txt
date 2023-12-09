@@ -4,11 +4,34 @@
 [KLN90B INFO]: Loading module...
 [KLN90B INFO]: [LUA]: loading	module
 [KLN90B INFO]: [LUA]: "module"	This is KLN90B for Tu-154M, v1.0.0
-[KLN90B INFO]: [LUA]: "module"	Lua version is	Lua 5.1
+[KLN90B WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <tu154ce/elec/bus27_volt_left> not found
+[KLN90B WARN]: [STACK]:| ...4_Felis_open/plugins/KLN90B/data/init/initProperties.lua:297 in function <globalPropertyf>
+[KLN90B WARN]: [STACK]:| ...ft/Tu154_Felis_open/plugins/KLN90B/data/modules/main.lua:17 in function <f>
+[KLN90B WARN]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:260 in function <c>
+[KLN90B WARN]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:1130 in function <?>
+[KLN90B WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <tu154ce/switchers/ovhd/kln_on> not found
+[KLN90B WARN]: [STACK]:| ...4_Felis_open/plugins/KLN90B/data/init/initProperties.lua:390 in function <globalPropertyi>
+[KLN90B WARN]: [STACK]:| ...ft/Tu154_Felis_open/plugins/KLN90B/data/modules/main.lua:18 in function <f>
+[KLN90B WARN]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:260 in function <c>
+[KLN90B WARN]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:1130 in function <?>
 [KLN90B DEBUG]: [LUA]: "sim/graphics/misc/current_scroll_pos": Casting float to int
 [KLN90B INFO]: [LUA]: loading	KLN90_panel
+[KLN90B WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <tu154ce/switchers/ovhd/kln_on> not found
+[KLN90B WARN]: [STACK]:| ...4_Felis_open/plugins/KLN90B/data/init/initProperties.lua:390 in function <globalPropertyi>
+[KLN90B WARN]: [STACK]:| ...lugins/KLN90B/data/modules/Custom Module/KLN90_panel.lua:15 in function <f>
+[KLN90B WARN]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:260 in function <KLN90_panel>
+[KLN90B WARN]: [STACK]:| ...ft/Tu154_Felis_open/plugins/KLN90B/data/modules/main.lua:227 in function <f>
+[KLN90B WARN]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:260 in function <c>
+[KLN90B WARN]: [STACK]:| ...
+[KLN90B WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <tu154ce/elec/bus27_volt_right> not found
+[KLN90B WARN]: [STACK]:| ...4_Felis_open/plugins/KLN90B/data/init/initProperties.lua:297 in function <globalPropertyf>
+[KLN90B WARN]: [STACK]:| ...lugins/KLN90B/data/modules/Custom Module/KLN90_panel.lua:16 in function <f>
+[KLN90B WARN]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:260 in function <KLN90_panel>
+[KLN90B WARN]: [STACK]:| ...ft/Tu154_Felis_open/plugins/KLN90B/data/modules/main.lua:227 in function <f>
+[KLN90B WARN]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:260 in function <c>
+[KLN90B WARN]: [STACK]:| ...
 [KLN90B INFO]: [LUA]: loading	rectangle2
-[KLN90B INFO]: [LUA]: loading	texture
+[KLN90B INFO]: [LUA]: loading	cartridge
 [KLN90B INFO]: [LUA]: loading	KLN90_2D
 [KLN90B INFO]: [LUA]: loading	textureLit3
 [KLN90B INFO]: [LUA]: loading	textureLit2
@@ -16,5 +39,17 @@
 [KLN90B INFO]: [LUA]: loading	textureRotate
 [KLN90B INFO]: [LUA]: loading	rectangle
 [KLN90B INFO]: Module loaded
+[KLN90B INFO]: [LUA]: loading	kln_master_switch
+[KLN90B ERROR]: [LUA]: can't load component	kln_master_switch
+[KLN90B ERROR]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:221 in function <__index>
+[KLN90B ERROR]: [STACK]:| ...lugins/KLN90B/data/modules/Custom Module/KLN90_panel.lua:11221 in function <update>
+[KLN90B ERROR]: [STACK]:| ...4_Felis_open/plugins/KLN90B/data/init/initProcessing.lua:114 in function <updateAll>
+[KLN90B ERROR]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:77 in function <update>
+[KLN90B ERROR]: [STACK]:| ...4_Felis_open/plugins/KLN90B/data/init/initProcessing.lua:195 in function <?>
+[KLN90B ERROR]: Error updating module
+[KLN90B ERROR]: [STACK]:| __index : ...lugins/KLN90B/data/modules/Custom Module/KLN90_panel.lua:11221: attempt to index global 'kln_master_switch' (a nil value)
+[KLN90B ERROR]: [STACK]:| ...lugins/KLN90B/data/modules/Custom Module/KLN90_panel.lua:11221 in function <update>
+[KLN90B ERROR]: [STACK]:| ...4_Felis_open/plugins/KLN90B/data/init/initProcessing.lua:114 in function <updateAll>
+[KLN90B ERROR]: [STACK]:| ...t/Tu154_Felis_open/plugins/KLN90B/data/init/initMain.lua:77 in function <update>
+[KLN90B ERROR]: [STACK]:| ...4_Felis_open/plugins/KLN90B/data/init/initProcessing.lua:195 in function <?>
 [KLN90B INFO]: Disabling...
-[KLN90B INFO]: SASL plugin stopped...

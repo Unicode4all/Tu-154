@@ -68,7 +68,7 @@ defineProperty("hascontrol_1", globalPropertyf("scp/api/hascontrol_1")) -- Have 
 local btn_click = loadSample('Custom Sounds/acs_btn.wav')
 --local tik_tak = loadSample('Custom Sounds/acs_tik_tik.wav')
 
---if get(xplane_version) < 120000 then playSample(tik_tak, true) end  -- clock now ticks :)
+--if sasl.getXPVersion() < 12 then playSample(tik_tak, true) end  -- clock now ticks :)
 --setSampleGain(tik_tak, 0)
 
 
@@ -144,7 +144,7 @@ local function knob_work()
 	end
 	
 	-- calculate on press
-if knob_summ ~= knob_last then if get(xplane_version) < 120000 then playSample(btn_click, false) end
+if knob_summ ~= knob_last then if sasl.getXPVersion() < 12 then playSample(btn_click, false) end
 	
 	knob_last = knob_summ
 	

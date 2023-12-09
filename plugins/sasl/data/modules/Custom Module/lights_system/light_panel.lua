@@ -158,7 +158,7 @@ function update()
 	
 	-- check changes and play sounds
 	if mid_left_panel + left_panel + right_panel + mid_right_panel + ovhd_panel - mid_left_panel_last - left_panel_last - right_panel_last - mid_right_panel_last - ovhd_panel_last ~= 0 then
-		--[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]]
+		--[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]]
 	end
 
 	local switchers = cabinl_flood + azs_panel_flood - cabinl_flood_last - azs_panel_flood_last + cargo_1 + cargo_2 + tech_light + gear_nacelle - cargo_1_last - cargo_2_last - tech_light_last - gear_nacelle_last

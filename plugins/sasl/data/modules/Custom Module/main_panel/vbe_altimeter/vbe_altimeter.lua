@@ -310,7 +310,7 @@ end
 	-- sounds
 	local external = get(external_view) == 1
 	if ((mode_last ~= border_mode and border_mode == 1) or (mode_last == 0 and border_mode == 2) or (mode_last == 2 and border_mode == 1)) and self_test_timer > 8 and num == 0 and not external then
-		if get(xplane_version) < 120000 then playSample(vbe_alarm_snd, false) end
+		if sasl.getXPVersion() < 12 then playSample(vbe_alarm_snd, false) end
 		set(alarm_vbe, 1)
 	else
 		set(alarm_vbe, 0)
@@ -336,9 +336,9 @@ end
 			border_mode = 2
 		elseif self_test_timer < 8 then
 			if not isSamplePlaying(vbe_alarm_snd) and self_test_timer < 5 and num == 0 and not external then
-				if get(xplane_version) < 120000 then playSample(vbe_alarm_snd, false) end
+				if sasl.getXPVersion() < 12 then playSample(vbe_alarm_snd, false) end
 			elseif external or self_test_timer >= 6 then
-				if get(xplane_version) < 120000 then stopSample(vbe_alarm_snd) end
+				if sasl.getXPVersion() < 12 then stopSample(vbe_alarm_snd) end
 			end
 			mode = 1
 			show_E = false

@@ -7,9 +7,15 @@ GLOBAL_specular 1.0
 TEXTURE glass.png
 TEXTURE_NORMAL glass_NML.png
 THERMAL_texture glass_THERMAL.png
-THERMAL_source tu154ce/antiice/window_windshield_temp  tu154ce/antiice/window_windshield_act
-THERMAL_source tu154ce/antiice/window_left_temp  tu154ce/antiice/window_left_act
-THERMAL_source tu154ce/antiice/window_right_temp  tu154ce/antiice/window_right_act
+
+THERMAL_source tu154ce/antiice/window_windshield_temp
+sim/cockpit2/ice/ice_window_heat_on_window[0]
+
+THERMAL_source tu154ce/antiice/window_left_temp
+sim/cockpit2/ice/ice_window_heat_on_window[1]
+
+THERMAL_source tu154ce/antiice/window_right_temp
+sim/cockpit2/ice/ice_window_heat_on_window[2]
 
 WIPER_texture    wipers.png
 WIPER_param tu154ce/anim/wiper_angle_right 0.0 62.0

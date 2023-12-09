@@ -154,19 +154,19 @@ function update()
 		if ball.x <= ball.size/2 then 
 			ball.x = ball.size/2
 			ball.vel_x = math.abs(ball.vel_x) 
-			if get(xplane_version) < 120000 then playSample(pong_sound, false) end 
+			if sasl.getXPVersion() < 12 then playSample(pong_sound, false) end 
 		end 
 		-- right wall
 		if ball.x >= size[1]-ball.size/2 then 
 			ball.x = size[1]-ball.size/2
 			ball.vel_x = -math.abs(ball.vel_x) 
-			if get(xplane_version) < 120000 then playSample(pong_sound, false) end 
+			if sasl.getXPVersion() < 12 then playSample(pong_sound, false) end 
 		end 
 		-- upper wall
 		if ball.y >= size[2]-ball.size/2 - 50 then 
 			ball.y = size[2]-ball.size/2 - 50
 			ball.vel_y = -math.abs(ball.vel_y) 
-			if get(xplane_version) < 120000 then playSample(pong_sound, false) end 
+			if sasl.getXPVersion() < 12 then playSample(pong_sound, false) end 
 		end 
 		
 		-- ball hit the floor
@@ -195,7 +195,7 @@ function update()
 				
 				score = score + 10
 				
-				if get(xplane_version) < 120000 then playSample(sqr_sound, false) end
+				if sasl.getXPVersion() < 12 then playSample(sqr_sound, false) end
 				
 				if ball.x + ball.size/2 < v.x + barrel_x / 10 or ball.x - ball.size/2 > v.x + barrel_x - barrel_x / 10 then
 					ball.vel_x = -ball.vel_x
@@ -219,7 +219,7 @@ function update()
 			ball.vel_x = math.sin((ball.x - player.x) / player.size_x * 2)
 			ball.vel_y = math.abs(math.cos((ball.x - player.x) / player.size_x * 2))
 			
-			if game_started then if get(xplane_version) < 120000 then playSample(pong_sound, false) end end
+			if game_started then if sasl.getXPVersion() < 12 then playSample(pong_sound, false) end end
 		
 		end
 		

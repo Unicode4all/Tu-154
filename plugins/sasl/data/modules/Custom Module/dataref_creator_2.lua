@@ -503,3 +503,5 @@ createGlobalPropertyi("tu154ce/sound/reset_crew", 0) -- сброс фраз ко
 createGlobalPropertyf("tu154ce/SC/GNS430_dtk", 0) -- курс на ГНС
 createGlobalPropertyf("tu154ce/SC/GNS430_dev", 0) -- отклонение от курса на ГНС
 createGlobalPropertyi("tu154ce/SC/GNS430_flag", 0) -- флаг на ГНС
+createGlobalPropertyi("tu154ce/switchers/ovhd/kln_on", 0)
+createGlobalPropertyf("tu154ce/KLN90/power_draw", 0)

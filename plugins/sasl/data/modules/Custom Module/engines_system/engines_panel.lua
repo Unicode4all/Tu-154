@@ -234,7 +234,7 @@ end
 local revers_flap_L_last = get(revers_flap_L)
 
 local function lamps_eng1()
-	local day_night = 1 - get(day_night_set) * 0.8
+	local day_night = 1 - get(day_night_set) * 0.9
 	local test_btn = get(test_lamps) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
 	
 	local lamps_brt = math.max((get(bus27_volt_left) - 10) / 18.5, 0) * day_night
@@ -313,7 +313,7 @@ end
 local function lamps_eng2()
 
 	local test_btn = get(test_lamps) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
-	local day_night = 1 - get(day_night_set) * 0.8
+	local day_night = 1 - get(day_night_set) * 0.9
 	local lamps_brt = math.max((get(bus27_volt_right) - 10) / 18.5, 0) * day_night
 	local RPM = get(rpm_high_2)
 	
@@ -382,7 +382,7 @@ local revers_flap_R_last = get(revers_flap_R)
 local function lamps_eng3()
 
 	local test_btn = get(test_lamps) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
-	local day_night = 1 - get(day_night_set) * 0.8
+	local day_night = 1 - get(day_night_set) * 0.9
 	local lamps_brt = math.max((get(bus27_volt_right) - 10) / 18.5, 0) * day_night
 	local RPM = get(rpm_high_3)
 	
@@ -452,7 +452,7 @@ end
 
 local function lamps_fwd()
 
-	local day_night = 1 - get(day_night_set) * 0.8
+	local day_night = 1 - get(day_night_set) * 0.9
 	local test_btn = get(lamp_test_fwd) * math.max((get(bus27_volt_right) - 10) / 18.5, 0)
 	
 	local lamps_brt_L = math.max((get(bus27_volt_left) - 10) / 18.5, 0) * day_night
@@ -537,7 +537,7 @@ local function check_controls()
 	local caps_change = gauges_on_1_cap_sw + gauges_on_2_cap_sw + gauges_on_3_cap_sw - gauges_on_1_cap_last - gauges_on_2_cap_last - gauges_on_3_cap_last
 	
 	if change_but ~= 0 then		end
-	if change_sw ~= 0 then --[[if get(xplane_version) < 120000 then playSample(rotary_sound, false) end]] end
+	if change_sw ~= 0 then --[[if sasl.getXPVersion() < 12 then playSample(rotary_sound, false) end]] end
 	if caps_change ~= 0 then  end 
 	-- check caps
 	if gauges_on_1_cap_sw == 0 then set(gauges_on_1, 1) end
